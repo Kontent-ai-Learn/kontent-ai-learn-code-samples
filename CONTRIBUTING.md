@@ -1,10 +1,10 @@
-# Ways to contribute 
+# Ways to contribute
 <img align="right" width="100" height="100" src="https://i.imgur.com/PYTV0jP.png">
 
 There are many different ways in which you can contribute. One of the easiest ways is simply to use our software and provide us with your feedback through the right channel. You can also help us improve the open-source projects by submitting pull requests with code and documentation changes.
 
 ## Where to get support
-Please note that **level of provided support is always determined by the [LICENSE](LICENSE.md)** of a given open-source project. Also, always make sure you use the **[latest version](../../releases)** of any given OS project. We can't provide any help for older versions. We don't want to make things complicated so we try to take the same approach in all our repositories. 
+Please note that **level of provided support is always determined by the [LICENSE](LICENSE.md)** of a given open-source project. Also, always make sure you use the **[latest version](../../releases)** of any given OS project. We can't provide any help for older versions. We don't want to make things complicated so we try to take the same approach in all our repositories.
 
 ### I found a bug in a Kentico's open-source project
 <img align="right" width="100" height="100" src="https://i.imgur.com/TYIQdpv.png">
@@ -35,21 +35,21 @@ Everybody loves new features! You can submit a new [feature request](../../issue
 ## Submitting pull requests
 <img align="right" width="100" height="100" src="https://i.imgur.com/aSeiliy.png">
 
-Unless you're fixing a typo, it's usually a good idea to discuss the feature before you submit a pull request with code changes, so let's start with submitting a new [GitHub issue](../../issues) and discussing the whether it fits the vision of a given project.
+Unless you're fixing a typo, it's usually a good idea to discuss the feature before you submit a pull request with code changes, so let's start with submitting a new [GitHub issue](../../issues) and discussing whether it fits the vision of a given project.
 You might also read these two blogs posts on contributing code: [Open Source Contribution Etiquette](http://tirania.org/blog/archive/2010/Dec-31.html) by Miguel de Icaza and [Don't "Push" Your Pull Requests](https://www.igvita.com/2011/12/19/dont-push-your-pull-requests/) by Ilya Grigorik. Note that all code submissions will be rigorously reviewed and tested by the Kentico Maintainers teams, and only those that meet an high bar for both quality and design/roadmap appropriateness will be merged into the source.
 
 
 ### Example - process of contribution
-If not stated otherwise, we use [feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow). 
+Unlike the majority of our OS repositories which use [feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow), in [Kentico Cloud Documentation repositories](https://github.com/Kentico?utf8=%E2%9C%93&q=kentico-cloud-docs), we prefer [gitflow workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
 
-To start with coding, fork the repository you want to contribute to, create a new branch, and start coding. Once the functionality is [done](#Definition-of-Done), you can submit a [pull request](https://help.github.com/articles/about-pull-requests/). 
+To start with coding, fork the repository you want to contribute to, create a new branch, and start coding. Once the functionality is [done](#Definition-of-Done), you can submit a [pull request](https://help.github.com/articles/about-pull-requests/).
 
 ### Definition of Done
 <img align="right" width="100" height="100" src="https://i.imgur.com/g82Ohdv.png">
 
 - New/fixed code is covered with tests
 - CI can build the code
-- All tests are pass
+- All tests are passing
 - New version number follows [semantic versioning](https://semver.org/)
 - Coding style (spaces, indentation) is in line with the rest of the code in a given repository
 - Documentation is updated (e.g. code examples in README, Wiki pages, etc.)
