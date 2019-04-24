@@ -1,0 +1,11 @@
+ <!-- DocSection: building_first_net_app_displaying_content -->
+@model Article
+
+<div class="body">
+  <h2>@Model.Title</h2>
+
+  <img src="@Model.TeaserImage.First().Url" class="img-responsive" alt="@Model.TeaserImage.First().Name"/>
+
+  @Model.Summary
+</div>
+<!-- EndDocSection -->
