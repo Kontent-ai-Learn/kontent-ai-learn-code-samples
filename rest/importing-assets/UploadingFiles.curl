@@ -1,0 +1,8 @@
+# DocSection: importing_assets_upload_file
+curl --request POST \
+  --url https://manage.kenticocloud.com/v1/projects/14372844-0a5d-434a-8423-605b8a631623/files/brno-cafe-1080px.jpg \
+  --data-binary "@brno-cafe-1080px.jpg" \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: image/jpeg' \
+  --header 'Content-length: 125770'
+  # EndDocSection

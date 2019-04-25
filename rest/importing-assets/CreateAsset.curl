@@ -1,0 +1,28 @@
+# DocSection: importing_assets_create_asset
+curl --request PUT \
+  --url https://manage.kenticocloud.com/v1/projects/14372844-0a5d-434a-8423-605b8a631623/assets/external-id/Ext-Asset-Xyz \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: application/json' \
+  --data '
+{
+    "file_reference": {
+        "id": "8660e19c-7bbd-48a3-bb51-721934c7756c",
+        "type": "internal"
+    },
+    "title": "Brno Cafe",
+    "descriptions": [
+        {
+            "language": {
+                "codename": "en-US"
+            },
+            "description": "Cafe in Brno"
+        },
+        {
+            "language": {
+                "codename": "es-ES"
+            },
+            "description": "Café en Brno"
+        }
+    ]
+}'
+# EndDocSection
