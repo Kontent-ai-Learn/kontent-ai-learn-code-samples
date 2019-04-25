@@ -1,4 +1,4 @@
-// DocSection: building_first_react_app_add_articlelisting
+// DocSection: first_react_app_add_articlelisting
 import React, { Component } from 'react';
 
 class ArticleListing extends Component {

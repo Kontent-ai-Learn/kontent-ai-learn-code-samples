@@ -1,4 +1,4 @@
-// DocSection: building_first_react_app_view_article
+// DocSection: first_react_app_view_article
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import { DeliveryClient } from 'kentico-cloud-delivery';

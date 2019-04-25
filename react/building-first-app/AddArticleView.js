@@ -1,4 +1,4 @@
-// DocSection: building_first_react_app_add_articleview
+// DocSection: first_react_app_add_articleview
 import React, { Component } from 'react';
 
 class ArticleView extends Component {
