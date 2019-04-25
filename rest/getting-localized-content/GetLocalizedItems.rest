@@ -1,0 +1,5 @@
+# DocSection: getting_localized_content_language
+curl --request GET \
+  --url 'https://deliver.kenticocloud.com/975bf280-fd91-488c-994c-2f04416e5ee3/items/on_roasts?language=es-ES' \
+  --header 'content-type: application/json'
+# EndDocSection

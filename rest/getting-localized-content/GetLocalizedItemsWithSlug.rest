@@ -1,0 +1,5 @@
+# DocSection: getting_localized_content_url_slug
+curl --request GET \
+  --url 'https://deliver.kenticocloud.com/975bf280-fd91-488c-994c-2f04416e5ee3/items?language=es-ES&system.type=home&elements.url_pattern=inicio' \
+  --header 'content-type: application/json'
+# EndDocSection
