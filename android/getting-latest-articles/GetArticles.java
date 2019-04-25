@@ -1,4 +1,4 @@
-// DocSection: getting_latest_articles_get_articles
+// DocSection: latest_articles_get_articles
 import com.kenticocloud.delivery_core.*;
 import com.kenticocloud.delivery_rx.*;
 

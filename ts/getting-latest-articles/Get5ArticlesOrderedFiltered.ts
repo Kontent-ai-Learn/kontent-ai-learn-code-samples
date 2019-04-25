@@ -1,4 +1,4 @@
-// DocSection: getting_latest_articles_get_5_articles_ord_filt
+// DocSection: latest_articles_get_5articles_orderfilt
 import { ContentItem, DeliveryClient, Fields, SortOrder, TypeResolver,  } from 'kentico-cloud-delivery';
 
 // Create strongly typed models according to https://developer.kenticocloud.com/docs/strongly-typed-models

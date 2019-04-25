@@ -1,4 +1,4 @@
-// DocSection: getting_latest_articles_get_articles
+// DocSection: latest_articles_get_articles
 import { ContentItem, DeliveryClient, Fields, TypeResolver } from 'kentico-cloud-delivery';
 
 // Create strongly typed models according to https://developer.kenticocloud.com/docs/strongly-typed-models

@@ -1,4 +1,4 @@
-# DocSection: getting_latest_articles_get_articles_ordered
+# DocSection: latest_articles_get_articles_ordered
 curl --request GET \
   --url 'https://deliver.kenticocloud.com/975bf280-fd91-488c-994c-2f04416e5ee3/items?system.type=article&order=elements.post_date[desc]'
   --header 'content-type: application/json'

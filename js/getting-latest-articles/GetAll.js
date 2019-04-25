@@ -1,4 +1,4 @@
-// DocSection: getting_latest_articles_get_all
+// DocSection: latest_articles_get_all
 const KenticoCloud = require('kentico-cloud-delivery');
 
 const deliveryClient = new DeliveryClient({

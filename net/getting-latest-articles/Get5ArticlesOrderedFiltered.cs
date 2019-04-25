@@ -1,4 +1,4 @@
-// DocSection: getting_latest_articles_get_5_articles_ord_filt
+// DocSection: latest_articles_get_5articles_orderfilt
 using KenticoCloud.Delivery;
 
 // Initializes a content delivery client
