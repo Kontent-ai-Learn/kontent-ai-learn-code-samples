@@ -1,4 +1,4 @@
-// DocSection: getting_latest_articles_get_5_articles_ordered
+// DocSection: latest_articles_get_5articles_ordered
 <?php
 
 // Defined by Composer to include required libraries

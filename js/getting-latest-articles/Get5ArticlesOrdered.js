@@ -1,4 +1,4 @@
-// DocSection: getting_latest_articles_get_5_articles_ordered
+// DocSection: latest_articles_get_5articles_ordered
 const KenticoCloud = require('kentico-cloud-delivery');
 
 // Create strongly typed models according to https://developer.kenticocloud.com/docs/strongly-typed-models
