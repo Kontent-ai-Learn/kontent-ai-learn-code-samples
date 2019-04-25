@@ -1,0 +1,5 @@
+# DocSection: getting_content_order_items
+curl --request GET \
+  --url 'https://deliver.kenticocloud.com/975bf280-fd91-488c-994c-2f04416e5ee3/items?system.type=article&limit=3&order=system.last_modified[desc]'
+  --header 'content-type: application/json'
+# EndDocSection
