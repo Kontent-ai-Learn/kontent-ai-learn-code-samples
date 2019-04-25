@@ -1,0 +1,19 @@
+curl --request PUT \
+  --url https://manage.kenticocloud.com/v1/projects/14372844-0a5d-434a-8423-605b8a631623/items/external-id/ext-cafe-brno-59713 \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: application/json' \
+  --data '
+{
+  "name": "Brno",
+  "type": {
+     "codename": "cafe"
+  },
+  "sitemap_locations": [
+  	{
+    	"codename":"cafes"
+   	},
+   	{
+  	  "codename":"europe"
+		}
+ 	]
+}'
