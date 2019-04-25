@@ -1,4 +1,4 @@
-// DocSection: importing-upsert-variant
+// DocSection: importing_upsert_variant
 using KenticoCloud.ContentManagement;
 
 ContentManagementOptions options = new ContentManagementOptions

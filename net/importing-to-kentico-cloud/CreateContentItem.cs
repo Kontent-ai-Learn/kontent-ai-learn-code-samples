@@ -1,4 +1,4 @@
-// DocSection: importing-create-item
+// DocSection: importing_create_item
 using KenticoCloud.ContentManagement;
 
 ContentManagementOptions options = new ContentManagementOptions
