@@ -1,4 +1,4 @@
-// DocSection: building_first_react_app_list_articles_takeuntil
+// DocSection: first_react_app_list_articles_takeuntil
 import { client } from './config';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';

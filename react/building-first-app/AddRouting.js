@@ -1,4 +1,4 @@
-// DocSection: building_first_react_app_add_routing
+// DocSection: first_react_app_add_routing
 import React, { Component } from 'react';
 import './App.css';
 
