@@ -1,0 +1,12 @@
+# DocSection: importing_assets_use_asset_rich_text
+curl --request PUT \
+  --url manage.kenticocloud.com/v1/projects/14372844-0a5d-434a-8423-605b8a631623/items/external-id/ext-new-cafes-485/variants/codename/en-US \
+  --header 'authorization: Bearer <YOUR_API_KEY>' \
+  --header 'content-type: application/json' \
+  --data '
+  {
+  "elements":{
+    "body_copy":"<p>...</p> <figure data-asset-external-id=\"Ext-Asset-Xyz\"></figure>"
+  }
+}'
+# EndDocSection
