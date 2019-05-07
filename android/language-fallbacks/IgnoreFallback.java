@@ -13,14 +13,14 @@ IDeliveryConfig config = DeliveryConfig.newConfig(projectId);
 // Initializes a DeliveryService for Java projects
 IDeliveryService deliveryService = new DeliveryService(config);
 
-// Gets the Spanish variant of all articles (while ignoring language fallbacks) using a simple request
-List<Article> articles = deliveryService.<Article>items()
+// Gets the Spanish variant of all content items (while ignoring language fallbacks) using a simple request
+List<ContentItem> items = deliveryService.<ContentItem>items()
     .languageParameter("es-ES")
     .equalsFilter("system.language", "es-ES")
     .get()
     .getItems();
 
-// Gets the Spanish variant of all articles (while ignoring language fallbacks) using RxJava2
+// Gets the Spanish variant of all content items (while ignoring language fallbacks) using RxJava2
 deliveryService.<ContentItem>items()
     .languageParameter("es-ES")
     .equalsFilter("system.language", "es-ES")
