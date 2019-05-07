@@ -6,48 +6,34 @@ import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 
-// Prepares an array to hold strongly-typed models
-List<TypeResolver<?>> typeResolvers = new ArrayList<>();
-
-// Registers the type resolver for articles
-typeResolvers.add(new TypeResolver<>(Article.TYPE, new Function<Void, Article>() {
-    @Override
-    public Article apply(Void input) {
-        return new Article();
-    }
-}));
-
 // Prepares the DeliveryService configuration object
 String projectId = "975bf280-fd91-488c-994c-2f04416e5ee3";
-IDeliveryConfig config = DeliveryConfig.newConfig(projectId)
-    .withTypeResolvers(typeResolvers);
+IDeliveryConfig config = DeliveryConfig.newConfig(projectId);
 
 // Initializes a DeliveryService for Java projects
 IDeliveryService deliveryService = new DeliveryService(config);
 
-// Gets the American English variant of all articles (while ignoring language fallbacks) using a simple request
+// Gets the Spanish variant of all articles (while ignoring language fallbacks) using a simple request
 List<Article> articles = deliveryService.<Article>items()
-    .languageParameter("en-US")
-    .equalsFilter("system.language", "en-US")
-    .equalsFilter("system.type", "article")
+    .languageParameter("es-ES")
+    .equalsFilter("system.language", "es-ES")
     .get()
     .getItems();
 
-// Gets the American English variant of all articles (while ignoring language fallbacks) using RxJava2
-deliveryService.<Article>items()
-    .languageParameter("en-US")
-    .equalsFilter("system.language", "en-US")
-    .equalsFilter("system.type", "article")
+// Gets the Spanish variant of all articles (while ignoring language fallbacks) using RxJava2
+deliveryService.<ContentItem>items()
+    .languageParameter("es-ES")
+    .equalsFilter("system.language", "es-ES")
     .getObservable()
-    .subscribe(new Observer<DeliveryItemListingResponse<Article>>() {
+    .subscribe(new Observer<DeliveryItemListingResponse<ContentItem>>() {
         @Override
         public void onSubscribe(Disposable d) {
         }
 
         @Override
-        public void onNext(DeliveryItemResponse<Article> response) {
+        public void onNext(DeliveryItemResponse<ContentItem> response) {
             // Gets the content items
-            Article item = response.getItem();
+            List<ConentItem> items = response.getItems();
         }
 
         @Override
