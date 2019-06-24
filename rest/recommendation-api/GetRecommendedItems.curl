@@ -1,0 +1,6 @@
+# DocSection: recommendation_api_get_recommended_items
+curl --request GET \
+  --url https://kc-recommender-api-beta.kenticocloud.com/api/recommend/items?currentItemId=item_codename_0&visitId=visitor01&limit=3&contentTypeName=blog \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: application/json'
+# EndDocSection
