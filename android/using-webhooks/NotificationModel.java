@@ -56,32 +56,32 @@ public class Item {
     @JsonProperty("id")
     String id;
 
+    @JsonProperty("codename")
+    String codename;
+
+    @JsonProperty("language")
+    String language;
+
     @JsonProperty("type")
     String type;
 
-    @JsonProperty("operation")
-    String operation;
-
-    @JsonProperty("api_name")
-    String apiName;
-
-    @JsonProperty("project_id")
-    String projectId;
-
     public String getId { return id; }
 
+    public String getCodename { return codename; }
+    
+    public String getLanguage { return language; }
+
     public String getType { return type; }
-
-    public String getOperation { return operation; }
-
-    public String getApiName { return apiName; }
-
-    public String getProjectId { return projectId; }
 }
 
 public class Taxonomy {
+    @JsonProperty("id")
+    String id;
+
     @JsonProperty("codename")
     String codename;
+
+    public String getId { return id; }
 
     public String getCodename { return codename; }
 }

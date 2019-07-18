@@ -55,6 +55,9 @@ public class Item
 
 public class Taxonomy
 {
+    [JsonProperty("id")]
+    public string Id { get; set; }
+
     [JsonProperty("codename")]
     public string Codename { get; set; }
 }

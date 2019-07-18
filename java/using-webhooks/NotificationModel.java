@@ -75,8 +75,13 @@ public class Item {
 }
 
 public class Taxonomy {
+    @JsonProperty("id")
+    String id;
+
     @JsonProperty("codename")
     String codename;
+
+    public String getId { return id; }
 
     public String getCodename { return codename; }
 }
