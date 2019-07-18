@@ -53,20 +53,25 @@ public class Data {
 }
 
 public class Item {
+    @JsonProperty("id")
+    String id;
+
+    @JsonProperty("codename")
+    String codename;
+
     @JsonProperty("language")
     String language;
 
     @JsonProperty("type")
     String type;
 
-    @JsonProperty("codename")
-    String codename;
+    public String getId { return id; }
 
+    public String getCodename { return codename; }
+    
     public String getLanguage { return language; }
 
     public String getType { return type; }
-
-    public String getCodename { return codename; }
 }
 
 public class Taxonomy {
