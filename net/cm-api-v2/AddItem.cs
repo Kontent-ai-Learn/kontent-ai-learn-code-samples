@@ -13,7 +13,7 @@ ContentItemCreateModel item = new ContentItemCreateModel
 {
     Name = "On Roasts",
     Type = ContentTypeIdentifier.ByCodename("article"),
-    ExternalId = "59713";
+    ExternalId = "59713"
 };
 
 ContentItemModel responseItem = await client.CreateContentItemAsync(item);
