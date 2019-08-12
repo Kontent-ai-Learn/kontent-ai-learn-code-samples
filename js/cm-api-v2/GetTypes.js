@@ -1,4 +1,4 @@
-// DocSection: delivery_api_get_types
+// DocSection: cm_api_v2_get_types
 // Using ES6 syntax
 import { ContentManagementClient } from 'kentico-cloud-content-management';
 
