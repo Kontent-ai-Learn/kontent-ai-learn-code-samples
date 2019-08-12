@@ -1,4 +1,4 @@
-// DocSection: cm_api_v2_add_item
+// DocSection: cm_api_v2_post_item
 using KenticoCloud.ContentManagement;
 
 ContentManagementOptions options = new ContentManagementOptions
