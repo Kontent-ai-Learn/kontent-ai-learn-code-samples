@@ -13,5 +13,5 @@ ContentItemIdentifier identifier = ContentItemIdentifier.ById(Guid.Parse("f4b3fc
 // ContentItemIdentifier identifier = ContentItemIdentifier.ByCodename("on_roasts");
 // ContentItemIdentifier identifier = ContentItemIdentifier.ByExternalId("59713");
 
-await client.DeleteContentItemAsync(ContentItemIdentifier identifier);
+await client.DeleteContentItemAsync(identifier);
 // EndDocSection
