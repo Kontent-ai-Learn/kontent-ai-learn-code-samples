@@ -2,7 +2,7 @@
 // Tip: Find more about JS/TS SDKs at https://developer.kenticocloud.com/docs/javascript
 import { ContentItem, DeliveryClient, Fields, TypeResolver } from 'kentico-cloud-delivery';
 
-// Create strongly typed models according to https://github.com/Enngage/kentico-cloud-js/blob/master/doc/delivery.md#creating-models
+// Create strongly typed models according to https://docs.kenticocloud.com/tutorials/develop-apps/get-content/using-strongly-typed-models
 export class Article extends ContentItem {
     public title: Fields.TextField;
     public summary: Fields.TextField;

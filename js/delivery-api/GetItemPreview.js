@@ -2,7 +2,7 @@
 // Tip: Find more about JS/TS SDKs at https://developer.kenticocloud.com/docs/javascript
 const KenticoCloud = require('kentico-cloud-delivery');
 
-// Create strongly typed models according to https://github.com/Enngage/kentico-cloud-js/blob/master/doc/delivery.md#creating-models
+// Create strongly typed models according to https://docs.kenticocloud.com/tutorials/develop-apps/get-content/using-strongly-typed-models
 class Article extends KenticoCloud.ContentItem {
     constructor() {
         super();
