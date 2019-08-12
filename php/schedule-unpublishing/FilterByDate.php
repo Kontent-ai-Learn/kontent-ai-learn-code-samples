@@ -8,7 +8,7 @@ use \Datetime;
 use KenticoCloud\Delivery\DeliveryClient;
 use KenticoCloud\Delivery\QueryParams;
 
-$client = new DeliveryClient('14372844-0a5d-434a-8423-605b8a631623');,
+$client = new DeliveryClient('14372844-0a5d-434a-8423-605b8a631623');
 
 $now = date_format(new DateTime(),'Y-m-d\TH:i:s\Z');
 
