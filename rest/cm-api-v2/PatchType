@@ -1,0 +1,52 @@
+# DocSection: cm_api_v2_patch_type
+curl --request PATCH \
+  --url https://manage.kenticocloud.com/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/types/0be13600-e57c-577d-8108-c8d860330985 \
+# --url https://manage.kenticocloud.com/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/types/codename/my_article \
+# --url https://manage.kenticocloud.com/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/types/external_id/my-article-id \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: application/json'
+  --data '
+[
+  {
+    "op": "replace",
+    "reference": {
+      "codename": "my_multiple_choice_element"
+    },
+    "property_name": "mode",
+    "value": "multiple"
+  },
+  {
+    "op": "replace",
+    "reference": {
+      "codename": "my_text_element"
+    },
+    "property_name": "guidelines",
+    "value": "Here you can tell users what to fill in the element."
+  },
+  {
+    "op": "addInto",
+    "reference": {
+      "codename": "my_content_type"
+    },
+    "property_name": "elements",
+    "value": {
+      "name": "My title",
+      "type": "text",
+      "guidelines": "Title of the article in plaintext.",
+      "external_id": "my-title-id"
+    }
+  },
+  {
+    "op": "remove",
+    "reference": {
+      "codename": "my_number_element"
+    }
+  },
+  {
+    "op": "remove",
+    "reference": {
+      "codename": "my_multiple_choice_option"
+    }
+  }
+]'
+# EndDocSection
