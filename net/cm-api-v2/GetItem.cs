@@ -13,5 +13,5 @@ ContentItemIdentifier identifier = ContentItemIdentifier.ById(Guid.Parse("f4b3fc
 // ContentItemIdentifier identifier = ContentItemIdentifier.ByCodename("on_roasts");
 // ContentItemIdentifier identifier = ContentItemIdentifier.ByExternalId("59713");
 
-ContentItemModel responseItems = await client.GetContentItemAsync(identifier);
+ContentItemModel responseItem = await client.GetContentItemAsync(identifier);
 // EndDocSection
