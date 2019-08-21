@@ -1,0 +1,45 @@
+# DocSection: cm_api_v2_post_taxonomy_group
+curl --request POST \
+  --url https://manage.kenticocloud.com/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/taxonomies \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: application/json' \
+  --data '
+  {
+  "name": "Personas",
+  "external_id": "Tax-Group-123",
+  "terms": [
+    {
+      "name": "Coffee expert",
+      "external_id": "Tax-term-456",
+      "terms": [
+        {
+          "name": "Barista",
+          "external_id": "Tax-term-789",
+          "terms": []
+        },
+        {
+          "name": "Cafe owner",
+          "external_id": "Tax-term-101",
+          "terms": []
+        }
+      ]
+    },
+    {
+      "name": "Coffee enthusiast",
+      "external_id": "Tax-term-112",
+      "terms": [
+        {
+          "name": "Coffee lover",
+          "external_id": "Tax-term-131",
+          "terms": []
+        },
+        {
+          "name": "Coffee blogger",
+          "external_id": "Tax-term-145",
+          "terms": []
+        }
+      ]
+    }
+  ]
+}'
+# EndDocSection
