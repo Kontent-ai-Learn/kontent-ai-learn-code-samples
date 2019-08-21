@@ -1,4 +1,4 @@
-# DocSection: cm_api_v2_post_types
+# DocSection: cm_api_v2_post_type
 curl --request POST \
   --url https://manage.kenticocloud.com/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/types
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
