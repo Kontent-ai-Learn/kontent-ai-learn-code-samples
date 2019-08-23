@@ -1,0 +1,60 @@
+# DocSection: cm_api_v2_patch_taxonomy_group
+curl --request PATCH \
+  --url https://manage.kenticocloud.com/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/taxonomies/0be13600-e57c-577d-8108-c8d860330985 \
+# --url https://manage.kenticocloud.com/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/taxonomies/codename/personas/ \
+# --url https://manage.kenticocloud.com/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/taxonomies/external-id/Tax-Group-123 \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: application/json'
+  --data '
+[
+  {
+    "op": "replace",
+    "reference": {
+      "codename": "coffee_expert"
+    },
+    "property_name": "name",
+    "value": "Coffee Experts"
+  },
+  {
+    "op": "replace",
+    "reference": {
+      "codename": "coffee_enthusiast"
+    },
+    "property_name": "terms",
+    "value": [
+      {
+        "name": "Coffee Lovers",
+        "terms": []
+      },
+      {
+        "name": "Coffee Bloggers",
+        "terms": [
+          {
+            "name": "Coffee Connoisseurs",
+            "terms": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "op": "remove",
+    "reference": {
+      "id": "cdf2f3c6-89e3-5df1-f7de-7179460bd6b4"
+    }
+  },
+  {
+    "op": "addInto",
+    "reference": {
+      "external_id": "tax-term-11"
+    },
+    "before": {
+      "external_id": "tax-term-24"
+    },
+    "value": {
+      "name": "Coffee Sippers",
+      "terms": []
+    }
+  }
+]'
+# EndDocSection
