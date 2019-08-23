@@ -1,0 +1,11 @@
+# DocSection: recommendation_api_post_track_visit
+curl --request POST \
+  --url https://kc-recommender-api-beta.kenticocloud.com/api/track/visit?visitId=visitor01&contentItemId=item_codename_0 \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: application/json'
+  --data '
+{
+  "ip": "127.0.0.1",
+  "sourceApp" : "web"
+}'
+# EndDocSection

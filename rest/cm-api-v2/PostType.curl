@@ -1,0 +1,32 @@
+# DocSection: cm_api_v2_post_type
+curl --request POST \
+  --url https://manage.kenticocloud.com/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/types
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: application/json' \
+  --data '
+{
+  "name": "Hosted video",
+  "external_id": "Content-Type-123",
+  "elements": [
+    {
+      "name": "Video ID",
+      "guidelines": "",
+      "type": "text",
+    },
+    {
+      "mode": "single",
+      "options": [
+        {
+          "name": "YouTube"
+        },
+        {
+          "name": "Vimeo"
+        }
+      ],
+      "name": "Video host",
+      "guidelines": "",
+      "type": "multiple_choice",
+    }
+  ]
+}'
+# EndDocSection

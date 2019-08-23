@@ -40,18 +40,24 @@ public class Data
 
 public class Item
 {
+    [JsonProperty("id")]
+    public string Id { get; set; }
+
+    [JsonProperty("codename")]
+    public string Codename { get; set; }
+    
     [JsonProperty("language")]
     public string Language { get; set; }
 
     [JsonProperty("type")]
     public string Type { get; set; }
-
-    [JsonProperty("codename")]
-    public string Codename { get; set; }
 }
 
 public class Taxonomy
 {
+    [JsonProperty("id")]
+    public string Id { get; set; }
+
     [JsonProperty("codename")]
     public string Codename { get; set; }
 }

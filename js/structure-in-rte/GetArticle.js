@@ -4,7 +4,7 @@ var deliveryClient = new DeliveryClient({
     typeResolvers: typeResolvers
 });
 
-deliveryClient.item('the_origin_of_coffee')    
+deliveryClient.item('coffee_beverages_explained')    
     .getObservable()
     .subscribe(response => {
         console.log(response);

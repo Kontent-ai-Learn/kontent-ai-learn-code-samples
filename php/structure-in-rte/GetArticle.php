@@ -1,7 +1,7 @@
 // DocSection: structure_in_rte_retrieve_article
 <?php
-// Retrieves the 'The Origin of Coffee' article
-$item = $client->getItem('the_origin_of_coffee');
+// Retrieves the 'Coffee Beverages Explained' article
+$item = $client->getItem('coffee_beverages_explained');
 
 // Retrieves text from the 'body' Rich text element
 $description = $item->body;

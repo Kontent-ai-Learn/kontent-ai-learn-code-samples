@@ -1,0 +1,21 @@
+# DocSection: cm_api_v2_put_item
+# The 'type' property in the request body is only required when creating a new content item
+curl --request PUT \
+  --url https://manage.kenticocloud.com/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/items/external-id/59713 \
+# --url https://manage.kenticocloud.com/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/items/f4b3fc05-e988-4dae-9ac1-a94aba566474 \
+# --url https://manage.kenticocloud.com/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/items/codename/on_roasts  \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: application/json' \
+  --data '
+{
+  "name": "On Roasts",
+  "type": {
+    "codename": "article"
+  },
+  "sitemap_locations": [
+    {
+      "codename": "articles"
+    }
+  ]
+}'
+# EndDocSection

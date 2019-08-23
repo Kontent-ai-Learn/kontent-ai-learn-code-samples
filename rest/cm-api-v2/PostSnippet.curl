@@ -1,0 +1,25 @@
+# DocSection: cm_api_v2_post_snippet
+curl --request POST \
+  --url https://manage.kenticocloud.com/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/snippets \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: application/json' \
+  --data '
+{  
+  "name":"metadata",
+  "external_id":"snippet-item-123",
+  "elements":[
+    {  
+      "name":"Meta title",
+      "guidelines":"Length: 30–60 characters",
+      "type":"text",
+      "external_id":"meta_title"
+    },
+    {  
+      "name":"Meta description",
+      "guidelines":"Length: 70-150 characters",
+      "type":"text",
+      "external_id":"meta_description"
+    }
+  ]
+}'
+# EndDocSection

@@ -11,5 +11,5 @@ $client = new DeliveryClient('975bf280-fd91-488c-994c-2f04416e5ee3');
 
 $items = $client->getItems((new QueryParams())
             ->equals('system.type', 'article')
-            ->elements(array("title", "url_pattern"));
+            ->elements(array("title", "url_pattern")));
 // EndDocSection

@@ -5,6 +5,6 @@ class ArticleModel
 {
     public $publishUntil = null;
   
-    ...
+    // ...
 }
 // EndDocSection
