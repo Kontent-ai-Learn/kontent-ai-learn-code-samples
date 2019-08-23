@@ -1,4 +1,4 @@
-// DocSection: cm_api_v2_validate_project
+// DocSection: cm_api_v2_post_validate
 // Using ES6 syntax
 import { ContentManagementClient } from 'kentico-cloud-content-management';
 

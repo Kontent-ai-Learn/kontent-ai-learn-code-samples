@@ -1,4 +1,4 @@
-// DocSection: cm_api_v2_validate_project
+// DocSection: cm_api_v2_post_validate
 using KenticoCloud.ContentManagement;
 using KenticoCloud.ContentManagement.Models.ProjectReport;
 
