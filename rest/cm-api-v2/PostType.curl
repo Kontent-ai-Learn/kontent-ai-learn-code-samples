@@ -5,27 +5,39 @@ curl --request POST \
   --header 'Content-type: application/json' \
   --data '
 {
-  "name": "Hosted video",
-  "external_id": "Content-Type-123",
-  "elements": [
+  "external_id": "article",
+  "name": "Article",
+  "content_groups": [
     {
-      "name": "Video ID",
-      "guidelines": "",
-      "type": "text",
+      "name": "Article copy",
+      "external_id": "article-copy"
     },
     {
-      "mode": "single",
-      "options": [
-        {
-          "name": "YouTube"
-        },
-        {
-          "name": "Vimeo"
-        }
-      ],
-      "name": "Video host",
-      "guidelines": "",
-      "type": "multiple_choice",
+      "name": "Author",
+      "external_id": "author"
+    }
+  ],
+  "elements": [
+    {
+      "name": "Article title",
+      "type": "text",
+      "content_group": {
+        "external_id": "article-copy"
+      }
+    },
+    {
+      "name": "Article body",
+      "type": "rich_text",
+      "content_group": {
+        "external_id": "article-copy"
+      }
+    },
+    {
+      "name": "Author bio",
+      "type": "rich_text",
+      "content_group": {
+        "external_id": "author"
+      }
     }
   ]
 }'

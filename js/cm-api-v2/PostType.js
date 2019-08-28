@@ -10,28 +10,40 @@ const client = new ContentManagementClient({
 client.addContentType()
   .withData(
     {
-      name: "Hosted video",
-      external_id: "Content-Type-123",
-      elements: [
+      name: "Article",
+      external_id: "article",
+      content_groups: [
         {
-          name: "Video ID",
-          guidelines: "",
-          type: ElementModels.ElementType.text,
+          name: "Article copy",
+          external_id: "article-copy",
         },
         {
-          mode: ElementModels.ElementMode.single,
-          options: [
-            {
-              name: "YouTube"
-            },
-            {
-              name: "Vimeo"
-            }
-          ],
-          name: "Video host",
-          guidelines: "",
-          type: ElementModels.ElementType.multipleChoice,
+          name: "Author",
+          external_id: "author",
         }
+      ],
+      elements: [
+        {
+          name: "Article title",
+          type: ElementModels.ElementType.text,
+          content_group: {
+            external_id: "article-copy"
+          },
+        },
+        {
+          name: "Article body",
+          type: ElementModels.ElementType.richText,
+          content_group: {
+            external_id: "article-copy"
+          },
+        },
+        {
+          name: "Author bio",
+          type: ElementModels.ElementType.richText,
+          content_group: {
+            external_id: "author",
+          },
+        },
       ]
     }
   )
