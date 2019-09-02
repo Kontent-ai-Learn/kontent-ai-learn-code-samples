@@ -11,7 +11,7 @@ class Article extends KenticoCloud.ContentItem {
 const deliveryClient = new KenticoCloud.DeliveryClient({
     projectId: '14372844-0a5d-434a-8423-605b8a631623',
     typeResolvers: [
-      new KenticoCloud.TypeResolver('article', () => new Article)
+      new KenticoCloud.TypeResolver('article', (rawData) => new Article)
     ]
 });
 
@@ -21,6 +21,6 @@ const now = d.toISOString();
 deliveryClient.items()
     .type('article')
     .greaterThanFilter('elements.publish_until', now)
-    .getObservable()
+    .toObservable()
     .subscribe(response => console.log(response));
 // EndDocSection

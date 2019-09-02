@@ -5,13 +5,13 @@ class Tweet extends ContentItem {
     constructor() {
         super({
             richTextResolver: (tweet) => {
-                return `<blockquote class="twitter-tweet" data-lang="en" data-theme="`+tweet.theme.value[0].codename+`"><a href="`+tweet.tweet_link.text+`"></a></blockquote>`;
+                return `<blockquote class='twitter-tweet' data-lang='en' data-theme='`+tweet.theme.value[0].codename+`'><a href='`+tweet.tweet_link.value+`'></a></blockquote>`;
             }
         })
     }
 }         
 
 var typeResolvers = [
-    new TypeResolver('tweet', () => new Tweet())
+    new TypeResolver('tweet', (rawData) => new Tweet())
 ];
 // EndDocSection

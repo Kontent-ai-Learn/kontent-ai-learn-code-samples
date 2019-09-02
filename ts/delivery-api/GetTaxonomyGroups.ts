@@ -8,6 +8,6 @@ const deliveryClient = new DeliveryClient({
 
 deliveryClient.taxonomies()
     .limitParameter(3)
-    .getObservable()
+    .toObservable()
     .subscribe(response => console.log(response.taxonomies));
 // EndDocSection

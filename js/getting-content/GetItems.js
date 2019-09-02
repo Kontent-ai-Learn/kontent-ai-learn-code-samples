@@ -6,6 +6,6 @@ const deliveryClient = new KenticoCloud.DeliveryClient({
 });
 
 deliveryClient.items()
-    .getObservable()
+    .toObservable()
     .subscribe(response => console.log(response));
 // EndDocSection

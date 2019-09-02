@@ -2,8 +2,8 @@
 export class Article extends KenticoCloud.ContentItem {
     constructor(){
          super({
-             propertyResolver: ((fieldName) => {
-                 if (fieldName === 'publish_until'){
+             propertyResolver: ((elementName) => {
+                 if (elementName === 'publish_until'){
                      return 'publishUntil';
                  }
                

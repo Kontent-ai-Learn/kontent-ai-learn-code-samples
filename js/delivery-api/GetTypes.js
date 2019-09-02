@@ -8,6 +8,6 @@ const deliveryClient = new KenticoCloud.DeliveryClient({
 
 deliveryClient.types()
     .limitParameter(3)
-    .getObservable()
+    .toObservable()
     .subscribe(response => console.log(response.types));
 // EndDocSection

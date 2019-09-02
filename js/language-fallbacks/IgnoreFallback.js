@@ -8,6 +8,6 @@ const deliveryClient = new KenticoCloud.DeliveryClient({
 deliveryClient.items()
     .languageParameter('es-ES')
     .equalsFilter('system.language', 'es-ES')
-    .getObservable()
+    .toObservable()
     .subscribe(response => console.log(response.items));
 // EndDocSection

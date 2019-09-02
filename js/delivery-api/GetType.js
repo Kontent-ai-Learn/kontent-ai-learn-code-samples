@@ -7,6 +7,6 @@ const deliveryClient = new KenticoCloud.DeliveryClient({
 });
 
 deliveryClient.type('coffee')
-    .getObservable()
+    .toObservable()
     .subscribe(response => console.log(response.type));
 // EndDocSection

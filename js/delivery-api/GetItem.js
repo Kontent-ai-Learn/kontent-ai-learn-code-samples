@@ -12,12 +12,12 @@ class Article extends KenticoCloud.ContentItem {
 const deliveryClient = new KenticoCloud.DeliveryClient({
     projectId: '975bf280-fd91-488c-994c-2f04416e5ee3',
     typeResolvers: [
-        new KenticoCloud.TypeResolver('article', () => new Article())
+        new KenticoCloud.TypeResolver('article', (rawData) => new Article())
     ]
 });
 
 deliveryClient.item('on_roasts')
     .elementsParameter(['title', 'summary', 'post_date', 'teaser_image', 'related_articles'])
-    .getObservable()
+    .toObservable()
     .subscribe(response => console.log(response.item));
 // EndDocSection

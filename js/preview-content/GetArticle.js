@@ -10,14 +10,16 @@ class Article extends KenticoCloud.ContentItem {
 
 const deliveryClient = new KenticoCloud.DeliveryClient({
     projectId: '<YOUR_PROJECT_ID>',
-    enablePreviewMode: true,
-    previewApiKey: "<YOUR_PREVIEW_API_KEY>",
+    previewApiKey: '<YOUR_PREVIEW_API_KEY>',
+    globalQueryConfig:  {
+        usePreviewMode: true, // uses preview mode by default
+    },
     typeResolvers: [
-        new KenticoCloud.TypeResolver('article', () => new Article)
+        new KenticoCloud.TypeResolver('article', (rawData) => new Article)
     ]
 });
 
 deliveryClient.item('on_roasts')
-    .getObservable()
+    .toObservable()
     .subscribe(response => console.log(response));
 // EndDocSection

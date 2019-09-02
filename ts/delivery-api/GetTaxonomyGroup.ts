@@ -7,6 +7,6 @@ const deliveryClient = new DeliveryClient({
 });
 
 deliveryClient.taxonomy('personas')
-    .getObservable()
+    .toObservable()
     .subscribe(response => console.log(response.taxonomy));
 // EndDocSection

@@ -10,15 +10,19 @@ class Article extends KenticoCloud.ContentItem {
 
 const deliveryClient = new KenticoCloud.DeliveryClient({
     projectId: '975bf280-fd91-488c-994c-2f04416e5ee3',
-    enableSecuredMode: true,
-    securedApiKey: "<YOUR_API_KEY>",
+    // globalQueryConfig sets default values for each config
+    // which can be overriden by individual queries
+    globalQueryConfig:  {
+        useSecuredMode: true, // enables secured mode by default
+    },
+    secureApiKey: '<YOUR_API_KEY>',
     typeResolvers: [
-        new KenticoCloud.TypeResolver('article', () => new Article)
+        new KenticoCloud.TypeResolver('article', (rawData) => new Article)
     ]
 });
 
 deliveryClient.item('on_roasts')
-    .getObservable()
+    .toObservable()
     .subscribe(response => console.log(response));
 
 // EndDocSection
