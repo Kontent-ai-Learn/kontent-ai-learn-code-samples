@@ -14,7 +14,7 @@ const deliveryClient = new DeliveryClient({
     projectId: '<YOUR_PROJECT_ID>',
     previewApiKey: '<YOUR_PREVIEW_API_KEY>',
     globalQueryConfig:  {
-        usePreviewMode: true, // uses preview mode by default
+        usePreviewMode: true, // Queries the Delivery Preview API.
     },
     typeResolvers: [
         new TypeResolver('article', (rawData) => new Article)
