@@ -8,6 +8,6 @@ const deliveryClient = new DeliveryClient({
 deliveryClient.items<ContentItem>()
     .languageParameter('es-ES')
     .equalsFilter('system.language', 'es-ES')
-    .getObservable()
+    .toObservable()
     .subscribe(response => console.log(response.items));
 // EndDocSection

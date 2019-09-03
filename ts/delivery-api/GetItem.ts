@@ -1,25 +1,25 @@
 // DocSection: delivery_api_get_item
 // Tip: Find more about JS/TS SDKs at https://developer.kenticocloud.com/docs/javascript
-import { ContentItem, DeliveryClient, Fields, TypeResolver } from 'kentico-cloud-delivery';
+import { ContentItem, DeliveryClient, Elements, TypeResolver } from 'kentico-cloud-delivery';
 
 // Create strongly typed models according to https://developer.kenticocloud.com/docs/strongly-typed-models
 export class Article extends ContentItem {
-    public title: Fields.TextField;
-    public summary: Fields.TextField;
-    public post_date: Fields.DateTimeField;
-    public teaser_image: Fields.AssetsField;
+    public title: Elements.TextElement;
+    public summary: Elements.TextElement;
+    public post_date: Elements.DateTimeElement;
+    public teaser_image: Elements.AssetsElement;
     public related_articles: Article[];
 }
 
 const deliveryClient = new DeliveryClient({
     projectId: '975bf280-fd91-488c-994c-2f04416e5ee3',
     typeResolvers: [
-      new TypeResolver('article', () => new Article)
+      new TypeResolver('article', (rawData) => new Article)
     ]
 });
 
 deliveryClient.item<Article>('on_roasts')
     .elementsParameter(['title', 'summary', 'post_date', 'teaser_image', 'related_articles'])
-    .getObservable()
+    .toObservable()
     .subscribe(response => console.log(response.item));
 // EndDocSection

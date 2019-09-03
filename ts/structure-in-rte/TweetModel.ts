@@ -1,22 +1,22 @@
 // DocSection: structure_in_rte_tweet_model
-import { ContentItem, Fields } from 'kentico-cloud-delivery';
+import { ContentItem, Elements } from 'kentico-cloud-delivery';
 
 // Generate strongly typed models at https://github.com/Kentico/kentico-cloud-js/tree/master/packages/model-generator
 
 export class Tweet extends ContentItem {
-    public tweetLink: Fields.TextField;
-    public theme: Fields.MultipleChoiceField;
-    public displayOptions: Fields.MultipleChoiceField;
+    public tweetLink: Elements.TextElement;
+    public theme: Elements.MultipleChoiceElement;
+    public displayOptions: Elements.MultipleChoiceElement;
     constructor() {
         super({
-            propertyResolver: (fieldName: string) => {
-                if (fieldName === 'tweet_link') {
+            propertyResolver: (elementName: string) => {
+                if (elementName === 'tweet_link') {
                     return 'tweetLink';
                 }
-                if (fieldName === 'display_options') {
+                if (elementName === 'display_options') {
                     return 'displayOptions';
                 }
-                return fieldName;
+                return elementName;
             }
         });
     }

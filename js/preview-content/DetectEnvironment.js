@@ -6,8 +6,10 @@ const isPreview = ...;
 
 const deliveryClient = new KenticoCloud.DeliveryClient({
     projectId: '<YOUR_PROJECT_ID',
-    enablePreviewMode: isPreview,
-    previewApiKey: "<YOUR_PREVIEW_API_KEY>",
+    previewApiKey: '<YOUR_PREVIEW_API_KEY>',
+    globalQueryConfig:  {
+        usePreviewMode: isPreview, // Queries the Delivery Preview API.
+    },
     typeResolvers: []
 });
 // EndDocSection

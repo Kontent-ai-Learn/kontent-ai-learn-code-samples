@@ -6,6 +6,6 @@ const deliveryClient = new DeliveryClient({
 });
 
 deliveryClient.items<ContentItem>()
-    .getObservable()
+    .toObservable()
     .subscribe(response => console.log(response));
 // EndDocSection

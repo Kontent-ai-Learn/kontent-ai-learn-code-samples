@@ -11,7 +11,7 @@ class Home extends KenticoCloud.ContentItem {
 const deliveryClient = new KenticoCloud.DeliveryClient({
     projectId: '975bf280-fd91-488c-994c-2f04416e5ee3',
     typeResolvers: [
-        new KenticoCloud.TypeResolver('home', () => new Home)
+        new KenticoCloud.TypeResolver('home', (rawData) => new Home)
     ]
 });
 
@@ -20,6 +20,6 @@ deliveryClient.items('home')
   .languageParameter('es-ES')
   .depthParameter(0)
   .equalsFilter('elements.url_pattern', 'inicio')
-  .getObservable()
+  .toObservable()
   .subscribe(response => console.log(response));
 // EndDocSection

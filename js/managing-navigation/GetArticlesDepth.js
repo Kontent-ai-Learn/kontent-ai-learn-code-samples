@@ -11,12 +11,12 @@ class NavigationItem extends KenticoCloud.ContentItem {
 const deliveryClient = new KenticoCloud.DeliveryClient({
     projectId: '24246f25-946d-4ab4-b170-fadef22fe7b2',
     typeResolvers: [
-        new KenticoCloud.TypeResolver('navigation_item', () => new NavigationItem)
+        new KenticoCloud.TypeResolver('navigation_item', (rawData) => new NavigationItem)
     ]
 });
 
 deliveryClient.item('root_navigation_item')
     .depthParameter(5)
-    .getObservable()
+    .toObservable()
     .subscribe(response => console.log(response.item));
 // EndDocSection

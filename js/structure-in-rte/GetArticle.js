@@ -5,9 +5,9 @@ var deliveryClient = new DeliveryClient({
 });
 
 deliveryClient.item('coffee_beverages_explained')    
-    .getObservable()
+    .toObservable()
     .subscribe(response => {
         console.log(response);
-        document.getElementById("mainContent").innerHTML = response.item.body.getHtml();
+        document.getElementById('mainContent').innerHTML = response.item.body.resolveHtml();
 });
 // EndDocSection

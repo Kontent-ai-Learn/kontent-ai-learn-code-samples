@@ -16,12 +16,12 @@ class Author extends KenticoCloud.ContentItem {
 const deliveryClient = new KenticoCloud.DeliveryClient({
     projectId: 'e6d2946e-0e24-003f-a397-9d2d458c6d6e',
     typeResolvers: [
-        new KenticoCloud.TypeResolver('author', () => new Author())
+        new KenticoCloud.TypeResolver('author', (rawData) => new Author())
     ]
 });
 
 deliveryClient.item('the_origin_of_coffee')
     .depthParameter(1)
-    .getObservable()
+    .toObservable()
     .subscribe(response => console.log(response.item));
 // EndDocSection
