@@ -10,9 +10,6 @@ curl --request PATCH \
     {
       "op": "replace",
       "property_name": "fallback_language",
-      "reference": {
-        "codename": "de-DE"
-      },
       "value": {
     	  "codename": "en-US"
       }
@@ -20,9 +17,6 @@ curl --request PATCH \
     {
       "op": "replace",
       "property_name": "name",
-      "reference": {
-        "codename": "de-DE"
-      },
       "value": "German"
     }
   ]'

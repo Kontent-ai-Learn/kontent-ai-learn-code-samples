@@ -1,0 +1,9 @@
+// DocSection: name
+
+// EndDocSection
+
+For Curl and Ruby:
+
+# DocSection: name
+
+# EndDocSection

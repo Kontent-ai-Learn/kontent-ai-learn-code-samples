@@ -9,9 +9,6 @@ curl --request PATCH \
 [
   {
     "op": "replace",
-    "reference": {
-      "codename": "coffee_expert"
-    },
     "property_name": "name",
     "value": "Coffee Experts"
   },
@@ -45,9 +42,6 @@ curl --request PATCH \
   },
   {
     "op": "addInto",
-    "reference": {
-      "external_id": "tax-term-11"
-    },
     "before": {
       "external_id": "tax-term-24"
     },
