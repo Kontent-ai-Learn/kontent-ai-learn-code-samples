@@ -11,7 +11,6 @@ IDeliveryClient client = DeliveryClientBuilder
     .Build();
 
 // Generate strongly typed models via https://github.com/Kentico/cloud-generators-net
-DeliveryItemResponse<object> response = await client.GetItemAsync<object>("on_roasts");
-
-var items = response.Items;
+DeliveryItemResponse response = await client.GetItemAsync("on_roasts");
+ContentItem item = response.Item;
 // EndDocSection

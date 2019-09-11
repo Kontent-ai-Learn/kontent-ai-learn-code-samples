@@ -12,5 +12,5 @@ DeliveryTypeListingResponse response = await client.GetTypesAsync(
     new LimitParameter(3)
     );
 
-var types = response.Types;
+IReadOnlyList<ContentType> types = response.Types;
 // EndDocSection
