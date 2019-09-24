@@ -1,5 +1,5 @@
 // DocSection: getting_localized_content_url_slug
-using KenticoCloud.Delivery;
+using Kentico.Kontent.Delivery;
 
 // Initializes a content delivery client
 IDeliveryClient client = DeliveryClientBuilder

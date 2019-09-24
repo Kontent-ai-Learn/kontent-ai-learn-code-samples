@@ -1,5 +1,5 @@
 // DocSection: managing_navigation_articles_slugs
-using KenticoCloud.Delivery;
+using Kentico.Kontent.Delivery;
 
 // Initializes a content delivery client
 IDeliveryClient client = DeliveryClientBuilder

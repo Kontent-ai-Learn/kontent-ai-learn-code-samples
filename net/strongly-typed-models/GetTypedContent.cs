@@ -1,6 +1,6 @@
 // DocSection: strongly_typed_models_retrieve
-using KenticoCloud.Delivery;
-using KenticoCloudModels;
+using Kentico.Kontent.Delivery;
+using KenticoKontentModels;
 
 // Initializes a content delivery client
 IDeliveryClient client = DeliveryClientBuilder

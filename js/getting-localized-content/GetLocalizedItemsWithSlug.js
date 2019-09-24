@@ -1,17 +1,17 @@
 // DocSection: getting_localized_content_url_slug
-const KenticoCloud = require('@kentico/kontent-delivery');
+const KontentDelivery = require('@kentico/kontent-delivery');
 
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
-class Home extends KenticoCloud.ContentItem {
+class Home extends KontentDelivery.ContentItem {
     constructor() {
         super();
     }
 }
 
-const deliveryClient = new KenticoCloud.DeliveryClient({
+const deliveryClient = new KontentDelivery.DeliveryClient({
     projectId: '975bf280-fd91-488c-994c-2f04416e5ee3',
     typeResolvers: [
-        new KenticoCloud.TypeResolver('home', (rawData) => new Home)
+        new KontentDelivery.TypeResolver('home', (rawData) => new Home)
     ]
 });
 

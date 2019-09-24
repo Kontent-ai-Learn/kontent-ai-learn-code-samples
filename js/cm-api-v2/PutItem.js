@@ -1,6 +1,6 @@
 // DocSection: cm_api_v2_put_item
 // Using ES6 syntax
-import { ContentManagementClient } from 'kentico-cloud-content-management';
+import { ContentManagementClient } from '@kentico/kontent-management';
 
 const client = new ContentManagementClient({
   projectId: '<YOUR_PROJECT_ID>',

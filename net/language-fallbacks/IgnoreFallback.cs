@@ -1,5 +1,5 @@
 // DocSection: language_fallbacks_ignore
-using KenticoCloud.Delivery;
+using Kentico.Kontent.Delivery;
 
 // Initializes a content delivery client
 IDeliveryClient client = DeliveryClientBuilder

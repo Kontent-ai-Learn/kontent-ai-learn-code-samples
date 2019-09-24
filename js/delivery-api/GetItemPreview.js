@@ -1,22 +1,22 @@
 // DocSection: delivery_api_get_item_preview
 // Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
-const KenticoCloud = require('@kentico/kontent-delivery');
+const KontentDelivery = require('@kentico/kontent-delivery');
 
-// Create strongly typed models according to https://docs.kenticocloud.com/tutorials/develop-apps/get-content/using-strongly-typed-models
-class Article extends KenticoCloud.ContentItem {
+// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
+class Article extends KontentDelivery.ContentItem {
     constructor() {
         super();
     }
 }
 
-const deliveryClient = new KenticoCloud.DeliveryClient({
+const deliveryClient = new KontentDelivery.DeliveryClient({
     projectId: '975bf280-fd91-488c-994c-2f04416e5ee3',
     previewApiKey: '<YOUR_PREVIEW_API_KEY>',
     globalQueryConfig:  {
         usePreviewMode: true, // Queries the Delivery Preview API.
     },
     typeResolvers: [
-        new KenticoCloud.TypeResolver('article', (rawData) => new Article)
+        new KontentDelivery.TypeResolver('article', (rawData) => new Article)
     ]
 });
 

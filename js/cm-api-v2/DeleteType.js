@@ -1,5 +1,5 @@
 // DocSection: cm_api_v2_delete_type
-import { ContentManagementClient } from 'kentico-cloud-content-management';
+import { ContentManagementClient } from '@kentico/kontent-management';
 
 const client = new ContentManagementClient({
   projectId: '<YOUR_PROJECT_ID>',

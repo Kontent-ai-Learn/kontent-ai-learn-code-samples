@@ -1,5 +1,5 @@
 // DocSection: preview_content_get_article
-using KenticoCloud.Delivery;
+using Kentico.Kontent.Delivery;
 
 // Initializes a content delivery client for previewing content
 IDeliveryClient client = DeliveryClientBuilder

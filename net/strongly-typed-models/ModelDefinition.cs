@@ -7,9 +7,9 @@
 
 using System;
 using System.Collections.Generic;
-using KenticoCloud.Delivery;
+using Kentico.Kontent.Delivery;
 
-namespace KenticoCloudModels
+namespace KenticoKontentModels
 {
     public partial class Homepage
     {

@@ -1,5 +1,5 @@
 // DocSection: getting_articles_with_taxonomy_term
-using KenticoCloud.Delivery;
+using Kentico.Kontent.Delivery;
 
 // Initializes a content delivery client
 IDeliveryClient client = DeliveryClientBuilder

@@ -1,5 +1,5 @@
 // DocSection: schedule_unpublishing_add_filter
-using KenticoCloud.Delivery;
+using Kentico.Kontent.Delivery;
 
 // Initializes a content delivery client
 IDeliveryClient client = DeliveryClientBuilder

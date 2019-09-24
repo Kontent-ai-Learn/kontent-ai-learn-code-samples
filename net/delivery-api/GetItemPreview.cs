@@ -1,6 +1,6 @@
 // DocSection: delivery_api_get_item_preview
 // Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
-using KenticoCloud.Delivery;
+using Kentico.Kontent.Delivery;
 
 // Initializes a delivery client for previewing content
 IDeliveryClient client = DeliveryClientBuilder

@@ -5,8 +5,8 @@
 require __DIR__ . '/vendor/autoload.php';
 
 use \Datetime;
-use KenticoCloud\Delivery\DeliveryClient;
-use KenticoCloud\Delivery\QueryParams;
+use Kentico\Kontent\Delivery\DeliveryClient;
+use Kentico\Kontent\Delivery\QueryParams;
 
 $client = new DeliveryClient('14372844-0a5d-434a-8423-605b8a631623');
 

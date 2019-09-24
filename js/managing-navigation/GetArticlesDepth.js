@@ -1,17 +1,17 @@
 // DocSection: managing_navigation_articles_depth
-const KenticoCloud = require('@kentico/kontent-delivery');
+const KontentDelivery = require('@kentico/kontent-delivery');
 
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
-class NavigationItem extends KenticoCloud.ContentItem {
+class NavigationItem extends KontentDelivery.ContentItem {
     constructor() {
         super();
     }
 }
 
-const deliveryClient = new KenticoCloud.DeliveryClient({
+const deliveryClient = new KontentDelivery.DeliveryClient({
     projectId: '24246f25-946d-4ab4-b170-fadef22fe7b2',
     typeResolvers: [
-        new KenticoCloud.TypeResolver('navigation_item', (rawData) => new NavigationItem)
+        new KontentDelivery.TypeResolver('navigation_item', (rawData) => new NavigationItem)
     ]
 });
 

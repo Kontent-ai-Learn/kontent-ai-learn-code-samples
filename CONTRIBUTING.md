@@ -15,7 +15,7 @@ Sorry to hear that. Just log a new [GitHub issue](../../issues) and someone will
 <img align="right" width="100" height="100" src="https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.svg">
 
 To get help with coding and structuring your projects, use [StackOverflow](https://stackoverflow.com/) to ask questions with one of the following tags:
-- [`kentico-cloud`](https://stackoverflow.com/questions/tagged/kentico-cloud)
+- [`kentico-kontent`](https://stackoverflow.com/questions/tagged/kentico-kontent)
 - [`kentico`](https://stackoverflow.com/questions/tagged/kentico)
 
 Our team members and the community monitor these channels on a regular basis.
@@ -40,7 +40,7 @@ You might also read these two blogs posts on contributing code: [Open Source Con
 
 
 ### Example - process of contribution
-Unlike the majority of our OS repositories which use [feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow), in [Kentico Cloud Documentation repositories](https://github.com/Kentico?utf8=%E2%9C%93&q=kentico-cloud-docs), we prefer [gitflow workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
+Unlike the majority of our OS repositories which use [feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow), in [Kentico Kontent Documentation repositories](https://github.com/Kentico?utf8=%E2%9C%93&q=kentico-cloud-docs), we prefer [gitflow workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
 
 To start with coding, fork the repository you want to contribute to, create a new branch, and start coding. Once the functionality is [done](#Definition-of-Done), you can submit a [pull request](https://help.github.com/articles/about-pull-requests/).
 

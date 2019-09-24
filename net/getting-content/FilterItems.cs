@@ -1,5 +1,5 @@
 // DocSection: getting_content_filter_items
-using KenticoCloud.Delivery;
+using Kentico.Kontent.Delivery;
 
 // Initializes a content delivery client
 IDeliveryClient client = DeliveryClientBuilder

@@ -1,5 +1,5 @@
 // DocSection: using_webhooks_get_latest_content
-using KenticoCloud.Delivery;
+using Kentico.Kontent.Delivery;
 
 // Initializes a client that retrieves the latest version of published content
 IDeliveryClient client = DeliveryClientBuilder

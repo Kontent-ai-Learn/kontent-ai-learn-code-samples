@@ -1,5 +1,5 @@
 // DocSection: latest_articles_get_5articles_orderfilt
-using KenticoCloud.Delivery;
+using Kentico.Kontent.Delivery;
 
 // Initializes a content delivery client
 IDeliveryClient client = DeliveryClientBuilder

@@ -1,5 +1,5 @@
 // DocSection: preview_content_detect_environment
-using KenticoCloud.Delivery;
+using Kentico.Kontent.Delivery;
 
 // TODO: Determine whether the app is running in a preview environment
 bool isPreview = ...;

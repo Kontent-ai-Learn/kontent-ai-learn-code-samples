@@ -1,5 +1,5 @@
 // DocSection: securing_public_access_get_article
-using KenticoCloud.Delivery;
+using Kentico.Kontent.Delivery;
 
 // Initializes a secured content delivery client
 IDeliveryClient client = DeliveryClientBuilder

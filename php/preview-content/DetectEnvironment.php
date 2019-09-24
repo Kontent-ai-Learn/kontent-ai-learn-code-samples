@@ -4,7 +4,7 @@
 // Defined by Composer to include required libraries
 require __DIR__ . '/vendor/autoload.php';
 
-use KenticoCloud\Delivery\DeliveryClient;
+use Kentico\Kontent\Delivery\DeliveryClient;
 
 // TODO: Determine whether the app is running in a preview environment
 $isPreview = ...;

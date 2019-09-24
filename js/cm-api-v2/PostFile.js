@@ -1,7 +1,7 @@
 // DocSection: cm_api_v2_post_file
 // Using ES6 syntax
-// Note that this approach works when using Node.js. See a worked example using the browser: https://github.com/Enngage/kentico-cloud-content-management-js-demo
-import { ContentManagementClient } from 'kentico-cloud-content-management';
+// Note that this approach works when using Node.js. See a worked example using the browser: https://github.com/Enngage/@kentico/kontent-management-js-demo
+import { ContentManagementClient } from '@kentico/kontent-management';
 import { readFileSync } from 'fs';
 
 const client = new ContentManagementClient({

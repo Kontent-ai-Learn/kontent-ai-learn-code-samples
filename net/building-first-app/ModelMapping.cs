@@ -1,5 +1,5 @@
 // DocSection: building_first_net_app_model_mapping
-using KenticoCloud.Delivery;
+using Kentico.Kontent.Delivery;
 
 // Initializes a content delivery client
 IDeliveryClient client = DeliveryClientBuilder
