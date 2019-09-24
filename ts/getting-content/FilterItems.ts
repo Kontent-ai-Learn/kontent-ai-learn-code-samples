@@ -1,5 +1,5 @@
 // DocSection: getting_content_filter_items
-import { ContentItem, DeliveryClient, Elements, TypeResolver } from 'kentico-cloud-delivery';
+import { ContentItem, DeliveryClient, Elements, TypeResolver } from '@kentico/kontent-delivery';
 
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 export class Article extends ContentItem {

@@ -1,5 +1,5 @@
 // DocSection: schedule_unpublishing_add_filter
-import { ContentItem, DeliveryClient, Elements, TypeResolver } from 'kentico-cloud-delivery';
+import { ContentItem, DeliveryClient, Elements, TypeResolver } from '@kentico/kontent-delivery';
 import * as _ from 'underscore';
 
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models

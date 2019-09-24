@@ -1,5 +1,5 @@
 // DocSection: preview_content_detect_environment
-const KenticoCloud = require('kentico-cloud-delivery');
+const KenticoCloud = require('@kentico/kontent-delivery');
 
 // TODO: Determine whether the app is running in a preview environment
 const isPreview = ...;

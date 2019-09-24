@@ -1,5 +1,5 @@
 // DocSection: managing_navigation_articles_depth
-import { DeliveryClient, TypeResolver, ContentItem, Elements } from 'kentico-cloud-delivery';
+import { DeliveryClient, TypeResolver, ContentItem, Elements } from '@kentico/kontent-delivery';
 
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 export class NavigationItem extends ContentItem {

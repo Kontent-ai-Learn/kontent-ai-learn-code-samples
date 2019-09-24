@@ -1,5 +1,5 @@
 // DocSection: securing_public_access_get_article
-const KenticoCloud = require('kentico-cloud-delivery');
+const KenticoCloud = require('@kentico/kontent-delivery');
 
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 class Article extends KenticoCloud.ContentItem {

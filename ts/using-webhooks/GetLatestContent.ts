@@ -1,5 +1,5 @@
 // DocSection: using_webhooks_get_latest_content
-import { ContentItem, DeliveryClient, Elements, TypeResolver } from 'kentico-cloud-delivery';
+import { ContentItem, DeliveryClient, Elements, TypeResolver } from '@kentico/kontent-delivery';
 
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 export class Article extends ContentItem {

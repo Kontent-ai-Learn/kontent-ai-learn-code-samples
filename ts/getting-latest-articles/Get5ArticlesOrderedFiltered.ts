@@ -1,5 +1,5 @@
 // DocSection: latest_articles_get_5articles_orderfilt
-import { ContentItem, DeliveryClient, Elements, SortOrder, TypeResolver,  } from 'kentico-cloud-delivery';
+import { ContentItem, DeliveryClient, Elements, SortOrder, TypeResolver,  } from '@kentico/kontent-delivery';
 
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 export class Article extends ContentItem {

@@ -1,5 +1,5 @@
 // DocSection: preview_content_detect_environment
-import { DeliveryClient } from 'kentico-cloud-delivery';
+import { DeliveryClient } from '@kentico/kontent-delivery';
 
 // TODO: Determine whether the app is running in a preview environment
 const isPreview = ...;

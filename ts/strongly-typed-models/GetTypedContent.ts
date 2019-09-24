@@ -1,5 +1,5 @@
 // DocSection: strongly_typed_models_retrieve
-import { ContentItem, DeliveryClient, Elements, SortOrder, TypeResolver } from 'kentico-cloud-delivery';
+import { ContentItem, DeliveryClient, Elements, SortOrder, TypeResolver } from '@kentico/kontent-delivery';
 
 import { Homepage } from './models/homepage';
 

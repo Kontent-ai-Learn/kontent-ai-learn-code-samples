@@ -1,5 +1,5 @@
 // DocSection: getting_localized_content_url_slug
-import { ContentItem, DeliveryClient, Elements, TypeResolver } from 'kentico-cloud-delivery';
+import { ContentItem, DeliveryClient, Elements, TypeResolver } from '@kentico/kontent-delivery';
 
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 import { Article } from './models/article';

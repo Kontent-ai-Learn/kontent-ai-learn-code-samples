@@ -1,6 +1,6 @@
 // DocSection: delivery_api_get_item
 // Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
-const KenticoCloud = require('kentico-cloud-delivery');
+const KenticoCloud = require('@kentico/kontent-delivery');
 
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 class Article extends KenticoCloud.ContentItem {

@@ -1,5 +1,5 @@
 // DocSection: managing_navigation_articles_depth
-const KenticoCloud = require('kentico-cloud-delivery');
+const KenticoCloud = require('@kentico/kontent-delivery');
 
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 class NavigationItem extends KenticoCloud.ContentItem {

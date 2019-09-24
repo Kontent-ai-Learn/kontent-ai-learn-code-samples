@@ -1,5 +1,5 @@
 // DocSection: getting_localized_content_url_slug
-const KenticoCloud = require('kentico-cloud-delivery');
+const KenticoCloud = require('@kentico/kontent-delivery');
 
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 class Home extends KenticoCloud.ContentItem {

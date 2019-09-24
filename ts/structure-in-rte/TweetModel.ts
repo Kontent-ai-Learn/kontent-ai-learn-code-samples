@@ -1,5 +1,5 @@
 // DocSection: structure_in_rte_tweet_model
-import { ContentItem, Elements } from 'kentico-cloud-delivery';
+import { ContentItem, Elements } from '@kentico/kontent-delivery';
 
 // Generate strongly typed models at https://github.com/Kentico/kentico-cloud-js/tree/master/packages/model-generator
 
