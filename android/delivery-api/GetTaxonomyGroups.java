@@ -1,5 +1,5 @@
 // DocSection: delivery_api_get_taxonomy_groups
-// Tip: Find more about Java/JavaRx SDKs at https://developer.kenticocloud.com/docs/javaandroid
+// Tip: Find more about Java/JavaRx SDKs at https://docs.kontent.ai/javaandroid
 import com.kenticocloud.delivery_core.*;
 import com.kenticocloud.delivery_rx.*;
 

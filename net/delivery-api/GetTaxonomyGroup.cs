@@ -1,5 +1,5 @@
 // DocSection: delivery_api_get_taxonomy_group
-// Tip: Find more about .NET SDKs at https://developer.kenticocloud.com/docs/net
+// Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
 using KenticoCloud.Delivery;
 
 // Initializes a content delivery client

@@ -1,7 +1,7 @@
 // DocSection: securing_public_access_get_article
 import { ContentItem, DeliveryClient, Elements, TypeResolver } from 'kentico-cloud-delivery';
 
-// Create strongly typed models according to https://developer.kenticocloud.com/docs/strongly-typed-models
+// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 export class Article extends ContentItem {
 	public title: Elements.TextElement;
 	public summary: Elements.TextElement;

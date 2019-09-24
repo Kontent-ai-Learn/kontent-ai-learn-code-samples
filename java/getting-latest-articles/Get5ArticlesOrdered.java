@@ -9,6 +9,6 @@ List<NameValuePair> params = DeliveryParameterBuilder.params()
     .page(null, 5)
     .build();
 
-// Create strongly typed models according to https://developer.kenticocloud.com/docs/strongly-typed-models
+// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 List<ArticleItem> items = client.getItems(ArticleItem.class, params);
 // EndDocSection

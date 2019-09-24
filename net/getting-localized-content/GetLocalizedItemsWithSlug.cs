@@ -7,7 +7,7 @@ IDeliveryClient client = DeliveryClientBuilder
       .Build();
 
 // Gets the Home content item in Spanish based on the item's URL slug value
-// Create strongly typed models according to https://developer.kenticocloud.com/docs/strongly-typed-models
+// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 DeliveryItemListingResponse<Home> response = await client.GetItemsAsync<Home>(
     new LanguageParameter("es-ES"),
     new EqualsFilter("system.type", "home"),

@@ -1,7 +1,7 @@
 // DocSection: linked_content_get_article_with_author
 const KenticoCloud = require('kentico-cloud-delivery');
 
-// Create strongly typed models according to https://developer.kenticocloud.com/docs/strongly-typed-models
+// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 class SimpleArticle extends KenticoCloud.ContentItem {
     constructor() {
         super();

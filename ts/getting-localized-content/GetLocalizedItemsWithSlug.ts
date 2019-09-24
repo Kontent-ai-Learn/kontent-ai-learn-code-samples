@@ -1,7 +1,7 @@
 // DocSection: getting_localized_content_url_slug
 import { ContentItem, DeliveryClient, Elements, TypeResolver } from 'kentico-cloud-delivery';
 
-// Create strongly typed models according to https://developer.kenticocloud.com/docs/strongly-typed-models
+// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 import { Article } from './models/article';
 export class Home extends ContentItem {
     public url_pattern: Elements.UrlSlugElement;

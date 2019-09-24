@@ -1,5 +1,5 @@
 // DocSection: delivery_api_get_items
-// Tip: Find more about .NET SDKs at https://developer.kenticocloud.com/docs/net
+// Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
 using KenticoCloud.Delivery;
 
 // Initializes a content delivery client
@@ -8,7 +8,7 @@ IDeliveryClient client = DeliveryClientBuilder
       .Build();
 
 // Gets specific elements of 3 articles ordered by the "Post date" element
-// Create strongly typed models according to https://developer.kenticocloud.com/docs/strongly-typed-models
+// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 DeliveryItemListingResponse<Article> response = await client.GetItemsAsync<Article>(
     new EqualsFilter("system.type", "article"),
     new ElementsParameter("title", "summary", "post_date"),

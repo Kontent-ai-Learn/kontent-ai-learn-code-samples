@@ -1,5 +1,5 @@
 // DocSection: delivery_api_get_element
-// Tip: Find more about JS/TS SDKs at https://developer.kenticocloud.com/docs/javascript
+// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 const KenticoCloud = require('kentico-cloud-delivery');
 
 const deliveryClient = new KenticoCloud.DeliveryClient({

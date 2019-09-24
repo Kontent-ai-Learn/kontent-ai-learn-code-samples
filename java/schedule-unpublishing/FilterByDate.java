@@ -13,6 +13,6 @@ List<NameValuePair> params = DeliveryParameterBuilder.params()
     .filterGreaterThan("elements.publish_until", now)
     .build();
 
-// Create strongly typed models according to https://developer.kenticocloud.com/docs/strongly-typed-models
+// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 List<ArticleItem> items = client.getItems(ArticleItem.class, params);
 // EndDocSection

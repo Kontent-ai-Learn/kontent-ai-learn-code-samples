@@ -9,6 +9,6 @@ List<NameValuePair> params = DeliveryParameterBuilder.params()
     .filterEquals("elements.url_pattern", "inicio")
     .build();
 
-// Create strongly typed models according to https://developer.kenticocloud.com/docs/strongly-typed-models
+// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 List<HomeItem> items = client.getItems(HomeItem.class, params);
 // EndDocSection

@@ -7,7 +7,7 @@ IDeliveryClient client = DeliveryClientBuilder
       .Build();
 
 // Gets a specific article and its linked items
-// Create strongly typed models according to https://developer.kenticocloud.com/docs/strongly-typed-models
+// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 DeliveryItemResponse<SimpleArticle> response = await client.GetItemAsync<SimpleArticle>("the_origin_of_coffee",
     new DepthParameter(1)
     );

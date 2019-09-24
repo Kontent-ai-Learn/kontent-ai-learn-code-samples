@@ -1,5 +1,5 @@
 // DocSection: delivery_api_get_taxonomy_groups
-// Tip: Find more about JS/TS SDKs at https://developer.kenticocloud.com/docs/javascript
+// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 import { DeliveryClient } from 'kentico-cloud-delivery';
 
 const deliveryClient = new DeliveryClient({

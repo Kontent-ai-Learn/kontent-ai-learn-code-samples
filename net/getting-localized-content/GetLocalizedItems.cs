@@ -7,7 +7,7 @@ IDeliveryClient client = DeliveryClientBuilder
       .Build();
 
 // Gets an article in Spanish
-// Create strongly typed models according to https://developer.kenticocloud.com/docs/strongly-typed-models
+// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 DeliveryItemResponse<Article> response = await client.GetItemAsync<Article>("on_roasts",
     new LanguageParameter("es-ES")
 );

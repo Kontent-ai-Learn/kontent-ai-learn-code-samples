@@ -10,7 +10,7 @@ IDeliveryClient client = DeliveryClientBuilder
     .Build();
 
 // Gets a specific content item
-// Create strongly typed models according to https://developer.kenticocloud.com/docs/strongly-typed-models
+// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 DeliveryItemResponse<object> response = await client.GetItemAsync<object>("on_roasts");
 
 var items = response.Items;

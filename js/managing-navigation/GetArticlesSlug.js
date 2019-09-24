@@ -1,7 +1,7 @@
 // DocSection: managing_navigation_articles_slugs
 const KenticoCloud = require('kentico-cloud-delivery');
 
-// Create strongly typed models according to https://developer.kenticocloud.com/docs/strongly-typed-models
+// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 class Article extends KenticoCloud.ContentItem {
     constructor() {
         super();

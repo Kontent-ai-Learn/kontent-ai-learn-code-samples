@@ -7,7 +7,7 @@ IDeliveryClient client = DeliveryClientBuilder
       .Build();
 
 // Gets all articles
-// Create strongly typed models according to https://developer.kenticocloud.com/docs/strongly-typed-models
+// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 var response = await client.GetItemsAsync<Article>(
     new EqualsFilter("system.type", "article")
 );

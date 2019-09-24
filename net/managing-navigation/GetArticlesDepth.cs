@@ -7,7 +7,7 @@ IDeliveryClient client = DeliveryClientBuilder
       .Build();
 
 // Gets navigation items and their linked items
-// Create strongly typed models according to https://developer.kenticocloud.com/docs/strongly-typed-models
+// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 DeliveryItemResponse<NavigationItem> response =  await client.GetItemAsync<NavigationItem>("root_navigation_item",
     new DepthParameter(5)
     );

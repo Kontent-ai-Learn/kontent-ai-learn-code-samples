@@ -2,7 +2,7 @@
 const KenticoCloud = require('kentico-cloud-delivery);
 const _ = require('underscore');
 
-// Create strongly typed models according to https://developer.kenticocloud.com/docs/strongly-typed-models
+// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 class Article extends KenticoCloud.ContentItem {
     constructor() {
         super();

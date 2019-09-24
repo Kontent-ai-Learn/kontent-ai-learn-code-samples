@@ -1,5 +1,5 @@
 // DocSection: linked_content_get_article_with_author
-// Create strongly typed models according to https://developer.kenticocloud.com/docs/strongly-typed-models
+// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 
 import KenticoCloud
 

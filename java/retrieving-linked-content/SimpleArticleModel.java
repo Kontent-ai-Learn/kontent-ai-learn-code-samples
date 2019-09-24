@@ -1,5 +1,5 @@
 // DocSection: linked_content_simple_article_model
-// Create strongly typed models according to https://developer.kenticocloud.com/docs/strongly-typed-models
+// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 
 import com.kenticocloud.delivery.ContentItemMapping;
 import com.kenticocloud.delivery.ElementMapping;

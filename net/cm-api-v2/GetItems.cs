@@ -1,5 +1,5 @@
 // DocSection: cm_api_v2_get_items
-// Tip: Find more about .NET SDKs at https://developer.kenticocloud.com/docs/net
+// Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
 using KenticoCloud.ContentManagement;
 
 ContentManagementOptions options = new ContentManagementOptions

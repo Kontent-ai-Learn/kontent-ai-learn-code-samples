@@ -1,5 +1,5 @@
 // DocSection: delivery_api_get_item_preview
-// Tip: Find more about JS/TS SDKs at https://developer.kenticocloud.com/docs/javascript
+// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 import { ContentItem, DeliveryClient, Elements, TypeResolver } from 'kentico-cloud-delivery';
 
 // Create strongly typed models according to https://docs.kenticocloud.com/tutorials/develop-apps/get-content/using-strongly-typed-models

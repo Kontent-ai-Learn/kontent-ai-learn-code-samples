@@ -1,5 +1,5 @@
 // DocSection: delivery_api_get_item
-// Tip: Find more about .NET SDKs at https://developer.kenticocloud.com/docs/net
+// Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
 using KenticoCloud.Delivery;
 
 // Initializes a content delivery client
@@ -8,7 +8,7 @@ IDeliveryClient client = DeliveryClientBuilder
       .Build();
 
 // Gets specific elements of an article
-// Create strongly typed models according to https://developer.kenticocloud.com/docs/strongly-typed-models
+// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 DeliveryItemResponse<Article> response = await client.GetItemAsync<Article>("on_roasts",
     new ElementsParameter("title", "summary", "post_date", "teaser_image", "related_articles")
     );
