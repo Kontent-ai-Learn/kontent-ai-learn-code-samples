@@ -9,7 +9,7 @@ IDeliveryClient client = DeliveryClientBuilder
 // Gets articles tagged with the barista persona
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 DeliveryItemListingResponse<Article> response = await client.GetItemsAsync<Article>(
-    new EqualsFilter("system.type", "article")
+    new EqualsFilter("system.type", "article"),
     new ContainsFilter("elements.personas", "barista")
 );
 

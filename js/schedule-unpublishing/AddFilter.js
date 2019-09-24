@@ -1,5 +1,5 @@
 // DocSection: schedule_unpublishing_add_filter
-const KenticoCloud = require('@kentico/kontent-delivery);
+const KenticoCloud = require('@kentico/kontent-delivery');
 const _ = require('underscore');
 
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
