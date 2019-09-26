@@ -8,9 +8,9 @@ fetchArticle(slug) {
     .equalsFilter('elements.url_pattern', slug)
     .depthParameter(1)
     .queryConfig({
-      linkResolver: resolveContentLink,
+      urlSlugResolver: resolveContentLink,
     })
-    .getObservable()
+    .toObservable()
     .subscribe((response) => {
       console.log(response);
       this.setState({

@@ -13,7 +13,7 @@ class ArticleListing extends Component {
     client.items()
       .type('article')
       .elementsParameter(['url_pattern', 'title'])
-      .getObservable()
+      .toObservable()
       // unsubscribe when unsubscribeSubject fires
       .pipe(takeUntil(unsubscribeSubject))
       .subscribe(response => {
