@@ -5,40 +5,44 @@ curl --request POST \
   --header 'Content-type: application/json' \
   --data '
 {
-  "external_id": "article",
-  "name": "Article",
-  "content_groups": [
-    {
-      "name": "Article copy",
-      "external_id": "article-copy"
-    },
-    {
-      "name": "Author",
-      "external_id": "author"
-    }
-  ],
-  "elements": [
-    {
-      "name": "Article title",
-      "type": "text",
-      "content_group": {
-        "external_id": "article-copy"
-      }
-    },
-    {
-      "name": "Article body",
-      "type": "rich_text",
-      "content_group": {
-        "external_id": "article-copy"
-      }
-    },
-    {
-      "name": "Author bio",
-      "type": "rich_text",
-      "content_group": {
-        "external_id": "author"
-      }
-    }
-  ]
+ "external_id": "article",
+ "name": "Article",
+ "codename": "my_article",
+ "content_groups": [
+   {
+     "name": "Article copy",
+     "external_id": "article-copy"
+   },
+   {
+     "name": "Author",
+     "external_id": "author"
+   }
+ ],
+ "elements": [
+   {
+     "name": "Article title",
+     "codename": "title",
+     "type": "text",
+     "content_group": {
+       "external_id": "article-copy"
+     }
+   },
+   {
+     "name": "Article body",
+     "codename": "body",
+     "type": "rich_text",
+     "content_group": {
+       "external_id": "article-copy"
+     }
+   },
+   {
+     "name": "Author bio",
+     "codename": "bio",
+     "type": "rich_text",
+     "content_group": {
+       "external_id": "author"
+     }
+   }
+ ]
 }'
 # EndDocSection

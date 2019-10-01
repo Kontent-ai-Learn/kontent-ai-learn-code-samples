@@ -19,7 +19,7 @@ class ArticleView extends Component {
     client.items()
       .equalsFilter('elements.url_pattern', slug)
       .depthParameter(1)
-      .getObservable()
+      .toObservable()
       .subscribe((response) => {
         console.log(response);
         this.setState({
@@ -45,7 +45,7 @@ class ArticleView extends Component {
           <Link to="/">Home</Link>
           <h1>{title}</h1>
           <div className="article_body"
-            dangerouslySetInnerHTML={{ __html: bodyCopy.getHtml() }} />
+            dangerouslySetInnerHTML={{ __html: bodyCopy.resolveHtml() }} />
         </div>
       );
     } else {

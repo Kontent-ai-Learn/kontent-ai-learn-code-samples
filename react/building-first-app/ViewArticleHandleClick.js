@@ -4,7 +4,7 @@ handleClick(event, richTextElement) {
       event.preventDefault();
   
       const id = event.target.getAttribute('data-item-id');
-      const link = richTextElement.links.find(link => link.itemId === id);
+      const link = richTextElement.links.find(link => link.linkId === id);
       const newPath = resolveContentLink(link);
       if (newPath) {
         this.props.history.push(newPath);

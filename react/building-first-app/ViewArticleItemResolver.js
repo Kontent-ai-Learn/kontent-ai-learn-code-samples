@@ -1,6 +1,6 @@
-// DocSection: first_react_app_viewarticlelinkresolver
+// DocSection: first_react_app_viewarticleitemresolver
 //...
-import { resolveContentLink } from './linkResolver';
+import { resolveItemInRichText } from './itemResolver';
 //...
 
 fetchArticle(slug) {
@@ -8,7 +8,7 @@ fetchArticle(slug) {
     .equalsFilter('elements.url_pattern', slug)
     .depthParameter(1)
     .queryConfig({
-      urlSlugResolver: resolveContentLink,
+      richTextResolver: resolveItemInRichText,
     })
     .toObservable()
     .subscribe((response) => {

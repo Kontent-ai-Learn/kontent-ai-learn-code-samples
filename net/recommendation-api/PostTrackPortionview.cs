@@ -1,5 +1,5 @@
 // DocSection: recommendation_api_post_track_portionview
-using KenticoCloud.Recommender;
+using Kentico.Kontent.Recommender;
 
 RecommendationClient recommendationClient = new RecommendationClient("<YOUR_API_KEY>", timeout_seconds);
 
