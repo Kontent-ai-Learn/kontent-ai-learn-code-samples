@@ -1,4 +1,4 @@
-// DocSection: cm_api_v2_put_asset
+// DocSection: cm_api_v1_put_asset
 using KenticoCloud.ContentManagement;
 
 ContentManagementOptions options = new ContentManagementOptions
@@ -13,8 +13,8 @@ ContentManagementClient client = new ContentManagementClient(options);
 AssetIdentifier identifier = AssetIdentifier.ByExternalId("which-brewing-fits-you");
 // AssetIdentifier identifier = AssetIdentifier.ById(Guid.Parse("fcbb12e6-66a3-4672-85d9-d502d16b8d9c"));
 
-// Used when updating an existing asset
-AssetUpdateModel updateModel = new AssetUpdateModel
+// Used when creating a new asset or updating an existing one
+AssetUpdateModel model = new AssetUpdateModel
 {
 
     Title = "Coffee Brewing Techniques",
@@ -26,22 +26,12 @@ AssetUpdateModel updateModel = new AssetUpdateModel
     }
 };
 
-// Used when creating a new asset or updating an existing one
-AssetUpsertModel upsertModel = new AssetUpsertModel
-{
-    // 'fileReference' is only required when creating a new asset
-    // To create a file reference, see the "Upload a binary file" endpoint
-    FileReference = fileReference,
+CancellationTokenSource source = new CancellationTokenSource();
+byte[] content = await System.IO.File.ReadAllBytesAsync("./which-brewing-fits-you-1080px.jpg", source.Token);
+string fileName = "which-brewing-fits-you-1080px.jpg";
+string contentType = "image/jpeg";
+string externalId = "which-brewing-fits-you";
 
-    Title = "Coffee Brewing Techniques",
-  
-    Descriptions = new List<AssetDescription>
-    {
-        new AssetDescription { Description = "Coffee Brewing Techniques", Language = LanguageIdentifier.ByCodename("en-US") },
-        new AssetDescription { Description = "Técnicas para hacer café", Language = LanguageIdentifier.ByCodename("es-ES") }
-    }
-};
-
-AssetModel updatedAssetResponse = await client.UpdateAssetAsync(identifier, updateModel);
-AssetModel createdAssetResponse = await client.UpsertAssetByExternalIdAsync(identifier, upsertModel);
+AssetModel updatedAssetResponse = await client.UpdateAssetAsync(identifier, model);
+AssetModel createdAssetResponse = await client.UpsertAssetByExternalIdAsync(externalId, new FileContentSource(content, fileName, contentType), model);
 // EndDocSection

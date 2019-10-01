@@ -1,0 +1,6 @@
+# DocSection: cm_api_v1_get_assets
+curl --request GET \
+  --url https://manage.kenticocloud.com/v1/projects/975bf280-fd91-488c-994c-2f04416e5ee3/assets \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: application/json'
+# EndDocSection
