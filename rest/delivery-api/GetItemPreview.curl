@@ -1,5 +1,5 @@
 # DocSection: delivery_api_get_item_preview
 curl --request GET \
-  --url https://preview-deliver.kenticocloud.com/975bf280-fd91-488c-994c-2f04416e5ee3/items/on_roasts \
+  --url https://preview-deliver.kontent.ai/975bf280-fd91-488c-994c-2f04416e5ee3/items/on_roasts \
   --header 'authorization: Bearer <YOUR_PREVIEW_API_KEY>'
 # EndDocSection

@@ -1,6 +1,6 @@
 # DocSection: cm_api_v2_get_taxonomy_groups
 curl --request GET \
-  --url https://manage.kenticocloud.com/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/taxonomies \
+  --url https://manage.kontent.ai/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/taxonomies \
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
   --header 'Content-type: application/json'
 # EndDocSection
