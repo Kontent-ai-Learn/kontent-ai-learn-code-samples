@@ -1,4 +1,5 @@
 // DocSection: importing_assets_use_asset_rich_text
+// Using CM API v1
 // Upsert a language variant which references the asset using external ID
 ArticleModel stronglyTypedElements = new ArticleModel
 {
