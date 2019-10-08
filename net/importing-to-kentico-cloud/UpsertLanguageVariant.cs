@@ -13,17 +13,16 @@ ContentManagementClient client = new ContentManagementClient(options);
 // Elements to update
 CafeContentTypeModel stronglyTypedElements = new CafeContentTypeModel
 {
-    Title = "En Asados",
     Street = "Nove Sady 25",
     City = "Brno",
     Country = "Czech Republic",
     State = "Jihomoravsky kraj",
     ZipCode = "60200",
-    Phone = "+420 444 444 444",
-    Email = "brnocafe@kentico.com"
+    Phone = "+420 555 555 555",
+    Email = "brnocafe@kontent.ai"
 };
 
-ContentItemIdentifier itemIdentifier = ContentItemIdentifier.ByExternalId("ext-cafe-brno-59713");
+ContentItemIdentifier itemIdentifier = ContentItemIdentifier.ByExternalId("ext-cafe-brno");
 
 LanguageIdentifier languageIdentifier = LanguageIdentifier.ByCodename("en-US");
 

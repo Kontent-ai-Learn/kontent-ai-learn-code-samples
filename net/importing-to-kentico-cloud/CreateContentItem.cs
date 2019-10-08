@@ -18,7 +18,7 @@ ContentItemCreateModel item = new ContentItemCreateModel
       SitemapNodeIdentifier.ByCodename("cafes"),
       SitemapNodeIdentifier.ByCodename("europe")
     },
-    ExternalId = "ext-cafe-brno-59713";
+    ExternalId = "ext-cafe-brno";
 };
 
 ContentItemModel responseItem = await client.CreateContentItemAsync(item);

@@ -1,18 +1,53 @@
 # DocSection: importing_upsert_variant
 curl --request PUT \
-  --url https://manage.kenticocloud.com/v1/projects/14372844-0a5d-434a-8423-605b8a631623/items/external-id/ext-cafe-brno-59713/variants/codename/en-US \
+  --url https://manage.kenticocloud.com/v2/projects/14372844-0a5d-434a-8423-605b8a631623/items/external-id/ext-cafe-brno/variants/codename/en-US \
   --header 'authorization: Bearer <YOUR_API_KEY>' \
   --header 'content-type: application/json' \
   --data '
   {
-  "elements": {
-    "street":"Nove Sady 25",
-    "city":"Brno",
-    "country":"Czech Republic",
-    "state":"Jihomoravsky kraj",
-    "zip_code":"60200",
-    "phone":"+420 444 444 444",
-    "email":"brnocafe@kentico.com"
-  }
-}'
+    "elements": [
+      {
+        "element": {
+          codename: "street"
+        },
+        "value": "Nove Sady 25"
+      },
+      {
+        "element": {
+          codename: "city"
+        },
+        "value": "Brno"
+      },
+      {
+        "element": {
+          codename: "country"
+        },
+        "value": "Czech Republic"
+      },
+      {
+        "element": {
+          codename: "state"
+        },
+        "value": "Jihomoravsky kraj"
+      },
+      {
+        "element": {
+          codename: "zip_code"
+        },
+        "value": "60200"
+      },
+      {
+        "element": {
+          codename: "phone"
+        },
+        "value": "+420 555 555 555"
+      },
+      {
+        "element": {
+          codename: "email"
+        },
+        "value": "brnocafe@kontent.ai"
+      }
+    ]
+  }'
 # EndDocSection
