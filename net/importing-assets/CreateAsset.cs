@@ -1,4 +1,5 @@
 // DocSection: importing_assets_create_asset
+// Using CM API v1
 AssetDescription englishDescription = new AssetDescription
 {
     Description = "Cafe in Brno",

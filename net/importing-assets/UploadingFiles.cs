@@ -1,4 +1,5 @@
 // DocSection: importing_assets_upload_file
+// Using CM API v1
 using KenticoCloud.ContentManagement;
 
 ContentManagementOptions options = new ContentManagementOptions

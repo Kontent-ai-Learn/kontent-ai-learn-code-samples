@@ -1,4 +1,5 @@
 // DocSection: import_linked_upsert_variant
+// Using CM API v1
 using KenticoCloud.ContentManagement;
 
 ContentManagementOptions options = new ContentManagementOptions
