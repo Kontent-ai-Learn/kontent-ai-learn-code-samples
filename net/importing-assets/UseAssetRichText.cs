@@ -1,12 +1,11 @@
 // DocSection: importing_assets_use_asset_rich_text
 // Using CM API v1
-// Upsert a language variant which references the asset using external ID
 ArticleModel stronglyTypedElements = new ArticleModel
 {
-    BodyCopy = @"<p>...</p> <figure data-asset-external-id=\"Ext-Asset-Xyz\"></figure>"
+    BodyCopy = @"<p>...</p> <figure data-asset-external-id=\"brno-cafe-image\"></figure>"
 };
 
-ContentItemIdentifier itemIdentifier = ContentItemIdentifier.ByCodename("new_cafes_joining_our_network_");
+ContentItemIdentifier itemIdentifier = ContentItemIdentifier.ByExternalId("new-cafes");
 LanguageIdentifier languageIdentifier = LanguageIdentifier.ByCodename("en-US");
 ContentItemVariantIdentifier identifier = new ContentItemVariantIdentifier(itemIdentifier, languageIdentifier);
 

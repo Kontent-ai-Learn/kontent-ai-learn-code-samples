@@ -23,7 +23,7 @@ AssetUpsertModel asset = new AssetUpsertModel
     Title = title
 };
 
-string assetExternalId = "Ext-Asset-Xyz";
+string assetExternalId = "brno-cafe-image";
 
 // Upserts an asset by external ID
 AssetModel response = await client.UpsertAssetByExternalIdAsync(externalId, asset);

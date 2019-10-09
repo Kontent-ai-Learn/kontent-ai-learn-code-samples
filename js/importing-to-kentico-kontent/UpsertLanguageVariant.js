@@ -1,4 +1,5 @@
 // DocSection: importing_upsert_variant
+// Using ES6 syntax
 import { ContentManagementClient } from 'kentico-cloud-content-management';
 
 const client = new ContentManagementClient({

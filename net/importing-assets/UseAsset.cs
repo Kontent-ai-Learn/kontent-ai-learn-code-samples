@@ -3,10 +3,10 @@
 // Upsert a language variant which references the asset using external ID
 CafeModel stronglyTypedElements = new CafeModel
 {
-    Picture = AssetIdentifier.ByExternalId("Ext-Asset-Xyz"),
+    Picture = AssetIdentifier.ByExternalId("brno-cafe-image"),
 };
 
-ContentItemIdentifier itemIdentifier = ContentItemIdentifier.ByExternalId("ext-cafe-brno-59713");
+ContentItemIdentifier itemIdentifier = ContentItemIdentifier.ByExternalId("ext-cafe-brno");
 LanguageIdentifier languageIdentifier = LanguageIdentifier.ByCodename("en-US");
 ContentItemVariantIdentifier identifier = new ContentItemVariantIdentifier(itemIdentifier, languageIdentifier);
 
