@@ -1,6 +1,6 @@
 # DocSection: import_linked_upsert_variant
 curl --request PUT \
-  --url https://manage.kenticocloud.com/v1/projects/14372844-0a5d-434a-8423-605b8a631623/items/external-id/123/variants/codename/en-US \
+  --url https://manage.kenticocloud.com/v2/projects/<YOUR_PROJECT_ID>/items/external-id/123/variants/codename/en-US \
   --header 'authorization: Bearer <YOUR_API_KEY>' \
   --header 'content-type: application/json' \
   --data '
