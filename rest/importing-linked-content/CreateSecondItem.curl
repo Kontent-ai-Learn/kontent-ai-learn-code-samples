@@ -8,11 +8,6 @@ curl --request PUT \
   "name":"Donate with us",
   "type":{  
     "codename":"article"
-  },
-  "sitemap_locations":[  
-    {  
-      "codename":"articles"
-    }
-  ]
+  }
 }'
 # EndDocSection
