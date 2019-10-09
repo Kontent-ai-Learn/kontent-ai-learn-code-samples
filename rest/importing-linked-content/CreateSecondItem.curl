@@ -1,6 +1,6 @@
 # DocSection: import_linked_create_sec_item
 curl --request PUT \
-  --url https://manage.kenticocloud.com/v2/projects/<YOUR_PROJECT_ID>/items/external-id/456 \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/items/external-id/456 \
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
   --header 'Content-type: application/json' \
   --data '

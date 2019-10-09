@@ -1,6 +1,6 @@
 # DocSection: import_linked_validate_content
 curl --request POST \
-  --url https://manage.kenticocloud.com/v2/projects/<YOUR_PROJECT_ID>/validate \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/validate \
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
   --header 'Content-Length: 0' \
   --header 'Content-Type: application/json' \

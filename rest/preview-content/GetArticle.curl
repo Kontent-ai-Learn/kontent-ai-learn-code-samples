@@ -1,5 +1,5 @@
 # DocSection: preview_content_get_article
 curl --request GET \
-  --url https://preview-deliver.kenticocloud.com/<YOUR_PROJECT_ID>/items/on_roasts \
+  --url https://preview-deliver.kontent.ai/<YOUR_PROJECT_ID>/items/on_roasts \
   --header 'authorization: Bearer <YOUR_PREVIEW_API_KEY>'
 # EndDocSection
