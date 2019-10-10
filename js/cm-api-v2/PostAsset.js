@@ -1,8 +1,8 @@
 // DocSection: cm_api_v2_post_asset
 // Using ES6 syntax
-import { ContentManagementClient } from '@kentico/kontent-management';
+import { ManagementClient } from '@kentico/kontent-management';
 
-const client = new ContentManagementClient({
+const client = new ManagementClient({
   projectId: '<YOUR_PROJECT_ID>',
   apiKey: '<YOUR_API_KEY>'
 });
