@@ -2,7 +2,7 @@
 // Using ES6 syntax
 import { ContentManagementClient, ElementModels } from '@kentico/kontent-management';
 
-const client = new ContentManagementClient({
+const client = new ManagementClient({
   projectId: '<YOUR_PROJECT_ID>',
   apiKey: '<YOUR_API_KEY>'
 });

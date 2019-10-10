@@ -7,7 +7,7 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-client.listLanguageVariants()
+client.listLanguageVariantsOfItem()
   .byItemId('f4b3fc05-e988-4dae-9ac1-a94aba566474')
   // .byItemCodename('on_roasts')
   // .byItemExternalId('59713')

@@ -2,7 +2,7 @@
 // Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 import { ContentItem, DeliveryClient, Elements, TypeResolver } from '@kentico/kontent-delivery';
 
-// Create strongly typed models according to https://docs.kenticocloud.com/tutorials/develop-apps/get-content/using-strongly-typed-models
+// Create strongly typed models according to https://docs.kontent.ai/tutorials/develop-apps/get-content/using-strongly-typed-models
 export class Article extends ContentItem {
     public title: Elements.TextElement;
     public summary: Elements.TextElement;

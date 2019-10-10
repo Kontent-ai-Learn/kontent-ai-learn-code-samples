@@ -1,8 +1,8 @@
 // DocSection: importing_assets_create_asset
 // Using ES6 syntax
-import { ContentManagementClient } from 'kentico-cloud-content-management';
+import { ManagementClient } from '@kentico/kontent-management';
 
-const client = new ContentManagementClient({
+const client = new ManagementClient({
   projectId: '<YOUR_PROJECT_ID>',
   apiKey: '<YOUR_API_KEY>'
 });
