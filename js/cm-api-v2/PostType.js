@@ -11,6 +11,7 @@ client.addContentType()
   .withData(
     {
       name: "Article",
+      codename: "my_article",
       external_id: "article",
       content_groups: [
         {
@@ -25,6 +26,7 @@ client.addContentType()
       elements: [
         {
           name: "Article title",
+          codename: "title",
           type: ElementModels.ElementType.text,
           content_group: {
             external_id: "article-copy"
@@ -32,6 +34,7 @@ client.addContentType()
         },
         {
           name: "Article body",
+          codename: "body",
           type: ElementModels.ElementType.richText,
           content_group: {
             external_id: "article-copy"
@@ -39,6 +42,7 @@ client.addContentType()
         },
         {
           name: "Author bio",
+          codename: "bio",
           type: ElementModels.ElementType.richText,
           content_group: {
             external_id: "author",
