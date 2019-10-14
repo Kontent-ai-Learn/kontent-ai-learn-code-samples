@@ -5,7 +5,7 @@ using KenticoCloud.ContentManagement;
 ContentManagementOptions options = new ContentManagementOptions
 {
     ApiKey = "<YOUR_API_KEY>",
-    ProjectId = "14372844-0a5d-434a-8423-605b8a631623"
+    ProjectId = "<YOUR_PROJECT_ID>"
 };
 
 ContentManagementClient client = new ContentManagementClient(options);
@@ -18,7 +18,7 @@ ContentItemCreateModel item = new ContentItemCreateModel
       SitemapNodeIdentifier.ByCodename("cafes"),
       SitemapNodeIdentifier.ByCodename("europe")
     },
-    ExternalId = "ext-cafe-brno-59713";
+    ExternalId = "ext-cafe-brno";
 };
 
 ContentItemModel responseItem = await client.CreateContentItemAsync(item);

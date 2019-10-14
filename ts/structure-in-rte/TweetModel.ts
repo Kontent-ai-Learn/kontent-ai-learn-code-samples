@@ -1,7 +1,7 @@
 // DocSection: structure_in_rte_tweet_model
 import { ContentItem, Elements } from '@kentico/kontent-delivery';
 
-// Generate strongly typed models at https://github.com/Kentico/kentico-cloud-js/tree/master/packages/model-generator
+// Generate strongly typed models at https://github.com/Kentico/kontent-model-generator-js
 
 export class Tweet extends ContentItem {
     public tweetLink: Elements.TextElement;

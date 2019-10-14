@@ -4,7 +4,7 @@
 import { ContentManagementClient } from '@kentico/kontent-management';
 import { readFileSync } from 'fs';
 
-const client = new ContentManagementClient({
+const client = new ManagementClient({
   projectId: '<YOUR_PROJECT_ID>',
   apiKey: '<YOUR_API_KEY>'
 });
