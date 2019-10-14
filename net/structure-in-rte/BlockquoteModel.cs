@@ -1,5 +1,5 @@
 // DocSection: structure_in_rte_blockquote_model
-// Generate strongly typed models at https://github.com/Kentico/cloud-generators-net
+// Generate strongly typed models at https://github.com/Kentico/kontent-generators-net
 
 using System;
 using System.Collections.Generic;

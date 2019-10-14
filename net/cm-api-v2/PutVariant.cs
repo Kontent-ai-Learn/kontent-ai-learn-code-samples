@@ -9,7 +9,7 @@ ContentManagementOptions options = new ContentManagementOptions
 
 ContentManagementClient client = new ContentManagementClient(options);
 
-// Create a strongly typed model according to https://docs.kenticocloud.com/tutorials/develop-apps/get-content/using-strongly-typed-models?tech=dotnet
+// Create a strongly typed model according to https://docs.kontent.ai/tutorials/develop-apps/get-content/using-strongly-typed-models?tech=dotnet
 MyContentTypeModel stronglyTypedElements = new MyContentTypeModel
 {
     Title = "En Asados",
