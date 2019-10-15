@@ -14,5 +14,5 @@ DeliveryItemListingResponse<Article> response = await client.GetItemsAsync<Artic
     new OrderParameter("system.last_modified", SortOrder.Descending)
 );
 
-var items = response.Items;
+IReadOnlyList<ContentItem> items = response.Items;
 // EndDocSection

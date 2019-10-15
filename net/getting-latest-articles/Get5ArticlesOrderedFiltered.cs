@@ -15,5 +15,5 @@ DeliveryItemListingResponse<Article> response = await client.GetItemsAsync<Artic
     new ElementsParameter("title", "teaser_image")
 );
 
-var items = response.Items;
+IReadOnlyList<ContentItem> items = response.Items;
 // EndDocSection

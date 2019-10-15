@@ -14,5 +14,5 @@ DeliveryItemListingResponse<Article> response = await client.GetItemsAsync<Artic
     new LimitParameter(5)
 );
 
-var items = response.Items;
+IReadOnlyList<ContentItem> items = response.Items;
 // EndDocSection

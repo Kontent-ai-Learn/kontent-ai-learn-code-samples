@@ -13,5 +13,5 @@ DeliveryItemListingResponse<Article> response = await client.GetItemsAsync<Artic
     new ContainsFilter("elements.personas", "barista")
 );
 
-var items = response.Items;
+IReadOnlyList<ContentItem> items = response.Items;
 // EndDocSection

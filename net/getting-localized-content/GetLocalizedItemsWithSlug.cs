@@ -14,5 +14,5 @@ DeliveryItemListingResponse<Home> response = await client.GetItemsAsync<Home>(
     new EqualsFilter("elements.url_pattern", "inicio")
     );
 
-var items = response.Items;
+IReadOnlyList<ContentItem> items = response.Items;
 // EndDocSection

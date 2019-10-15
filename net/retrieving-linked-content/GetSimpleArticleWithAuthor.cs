@@ -12,5 +12,5 @@ DeliveryItemResponse<SimpleArticle> response = await client.GetItemAsync<SimpleA
     new DepthParameter(1)
     );
 
-var item = response.Item;
+ContentItem item = response.Item;
 // EndDocSection

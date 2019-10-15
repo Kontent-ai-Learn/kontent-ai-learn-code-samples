@@ -12,5 +12,5 @@ DeliveryItemResponse<NavigationItem> response =  await client.GetItemAsync<Navig
     new DepthParameter(5)
     );
 
-var item = response.Item;
+ContentItem item = response.Item;
 // EndDocSection
