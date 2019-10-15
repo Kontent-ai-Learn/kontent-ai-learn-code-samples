@@ -1,6 +1,6 @@
 // DocSection: delivery_api_get_items_feed
 // Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
-using KenticoCloud.Delivery;
+using Kentico.Kontent.Delivery;
 
 // Initializes a content delivery client
 IDeliveryClient client = DeliveryClientBuilder
