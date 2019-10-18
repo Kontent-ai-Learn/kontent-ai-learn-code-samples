@@ -9,44 +9,31 @@ curl --request PATCH \
 [
   {
     "op": "replace",
-    "reference": {
-      "codename": "my_multiple_choice_element"
-    },
-    "property_name": "mode",
-    "value": "multiple"
+    "path": "/name",
+    "value": "A new type name"
   },
   {
     "op": "replace",
-    "reference": {
-      "codename": "my_text_element"
-    },
-    "property_name": "guidelines",
-    "value": "Here you can tell users what to fill in the element."
+    "path": "/elements/codename:my_text_element/guidelines",
+    "value": "Here you can tell users how to fill in the element."
   },
   {
     "op": "addInto",
-    "reference": {
-      "codename": "my_content_type"
-    },
-    "property_name": "elements",
+    "path": "/elements",
     "value": {
       "name": "My title",
       "type": "text",
-      "guidelines": "Title of the article in plaintext.",
+      "guidelines": "Title of the article in plain text.",
       "external_id": "my-title-id"
     }
   },
   {
     "op": "remove",
-    "reference": {
-      "codename": "my_number_element"
-    }
+    "path": "/elements/id:0b2015d0-16ae-414a-85f9-7e1a4b3a3eae"
   },
   {
     "op": "remove",
-    "reference": {
-      "codename": "my_multiple_choice_option"
-    }
+    "path": "/elements/external_id:my_multiple_choice/options/codename:my_option"
   }
 ]'
 # EndDocSection

@@ -9,18 +9,17 @@ curl --request PATCH \
 [
   {
     "op": "replace",
-    "reference": {
-      "codename": "my_meta_description"
-    },
-    "property_name": "guidelines",
-    "value": "Length: 70-150 characters"
+    "path": "/name",
+    "value": "A new snippet name"
+  },
+  {
+    "op": "replace",
+    "path": "/elements/codename:my_meta_description/guidelines",
+    "value": "Length: 70-150 characters."
   },
   {
     "op": "addInto",
-    "reference": {
-      "external-id": "my-metadata-snippet-id"
-    },
-    "property_name": "elements",
+    "path": "/elements",
     "value": {
       "name": "My meta title",
       "type": "text",
@@ -30,15 +29,11 @@ curl --request PATCH \
   },
   {
     "op": "remove",
-    "reference": {
-      "codename": "my_number_element"
-    }
+    "path": "/elements/id:0b2015d0-16ae-414a-85f9-7e1a4b3a3eae"
   },
   {
     "op": "remove",
-    "reference": {
-      "codename": "my_multiple_choice_option"
-    }
+    "path": "/elements/external_id:my_multiple_choice/options/codename:my_option"
   }
 ]'
 # EndDocSection
