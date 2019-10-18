@@ -33,7 +33,7 @@ curl --request PATCH \
   },
   {
     "op": "remove",
-    "path": "/elements/external_id:my_multiple_choice/options/codename:my_option"
+    "path": "/elements/external_id:my-multiple-choice-id/options/codename:my_option"
   }
 ]'
 # EndDocSection
