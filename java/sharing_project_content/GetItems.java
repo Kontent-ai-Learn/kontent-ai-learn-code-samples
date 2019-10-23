@@ -1,5 +1,5 @@
 // DocSection: sharing_project_content_get_items
-import com.github.kentico:kontent-delivery:3.0.0;
+import com.github.kentico.kontent.delivery;
 
 // Initializes the content delivery clients
 DeliveryClient client1 = new DeliveryClient("975bf280-fd91-488c-994c-2f04416e5ee3");
