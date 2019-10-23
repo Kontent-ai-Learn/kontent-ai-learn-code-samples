@@ -2,20 +2,14 @@
 using Kentico.Kontent.Delivery;
 
 // Initializes the first content delivery client
-protected static IDeliveryClient client1 = DeliveryClientBuilder
-    .WithOptions(builder => builder
-            .WithProjectId("368d5707-fb05-0146-fc0a-f85c5d1a264e")
-            .UseProductionApi
-            .Build())
-    .Build();
+IDeliveryClient client1 = DeliveryClientBuilder
+        .WithProjectId("368d5707-fb05-0146-fc0a-f85c5d1a264e")
+        .Build();
 
 // Initializes the second content delivery client
-protected static IDeliveryClient client2 = DeliveryClientBuilder
-    .WithOptions(builder => builder
-            .WithProjectId("975bf280-fd91-488c-994c-2f04416e5ee3")
-            .UseProductionApi
-            .Build())
-    .Build();
+IDeliveryClient client2 = DeliveryClientBuilder
+        .WithProjectId("975bf280-fd91-488c-994c-2f04416e5ee3")
+        .Build();
 
 // Gets content items from both projects
 // Note: Using the <object> generic parameter produces strongly typed objects, based on "system.type"
