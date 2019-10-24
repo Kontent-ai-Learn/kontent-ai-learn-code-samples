@@ -1,5 +1,5 @@
 // DocSection: strongly_typed_models_retrieve
-import com.kenticocloud.delivery.DeliveryClient;
+import com.github.kentico.kontent.delivery.DeliveryClient;
 import java.io.IOException;
 import java.lang.System;
 

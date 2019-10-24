@@ -1,5 +1,5 @@
 // DocSection: managing_navigation_articles_depth
-import com.kenticocloud.delivery;
+import com.github.kentico.kontent.delivery;
 
 DeliveryClient client = new DeliveryClient("24246f25-946d-4ab4-b170-fadef22fe7b2");
 

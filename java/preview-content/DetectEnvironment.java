@@ -1,5 +1,5 @@
 // DocSection: preview_content_detect_environment
-import com.kenticocloud.delivery;
+import com.github.kentico.kontent.delivery;
 
 // TODO: Determine whether the app is running in a preview environment
 boolean isPreview = ...;

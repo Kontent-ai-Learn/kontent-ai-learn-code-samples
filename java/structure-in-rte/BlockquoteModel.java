@@ -1,10 +1,10 @@
 // DocSection: structure_in_rte_blockquote_model
 // Generate strongly typed models at https://github.com/Kentico/cloud-generators-java
 
-import com.kenticocloud.delivery.ContentItemMapping;
-import com.kenticocloud.delivery.ElementMapping;
-import com.kenticocloud.delivery.Option;
-import com.kenticocloud.delivery.System;
+import com.github.kentico.kontent.delivery.ContentItemMapping;
+import com.github.kentico.kontent.delivery.ElementMapping;
+import com.github.kentico.kontent.delivery.Option;
+import com.github.kentico.kontent.delivery.System;
 import java.lang.String;
 import java.util.List;
 

@@ -11,7 +11,7 @@ kenticoModel {
 }
 
 dependencies {
-    compile('com.kenticocloud:delivery-sdk-java:1.0.3')
+    compile('com.github.kentico:kontent-delivery:3.0.0')
 }
 
 // Runs generateModels task
