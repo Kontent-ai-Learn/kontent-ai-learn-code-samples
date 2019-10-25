@@ -1,8 +1,8 @@
 // DocSection: strongly_typed_models_definition
-import com.kenticocloud.delivery.Asset;
-import com.kenticocloud.delivery.ContentItemMapping;
-import com.kenticocloud.delivery.ElementMapping;
-import com.kenticocloud.delivery.System;
+import com.github.kentico.kontent.delivery.Asset;
+import com.github.kentico.kontent.delivery.ContentItemMapping;
+import com.github.kentico.kontent.delivery.ElementMapping;
+import com.github.kentico.kontent.delivery.System;
 import java.lang.String;
 import java.util.List;
 

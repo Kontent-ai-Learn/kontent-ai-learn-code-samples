@@ -1,5 +1,5 @@
 // DocSection: preview_content_get_article
-import com.kenticocloud.delivery;
+import com.github.kentico.kontent.delivery;
 
 DeliveryClient client = new DeliveryClient("<YOUR_PROJECT_ID>", "<YOUR_PREVIEW_API_KEY>");
 

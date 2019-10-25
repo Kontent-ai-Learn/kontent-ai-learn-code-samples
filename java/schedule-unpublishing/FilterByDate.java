@@ -1,5 +1,5 @@
 // DocSection: schedule_unpublishing_filter_by_date
-import com.kenticocloud.delivery;
+import com.github.kentico.kontent.delivery;
 
 DeliveryClient client = new DeliveryClient("14372844-0a5d-434a-8423-605b8a631623");
 
