@@ -11,6 +11,7 @@ const deliveryClient2 = new DeliveryClient({
 
 const allContentItems: ContentItem[] = [];
 
+// Note: Using the <ContentItem> parameter produces strongly typed objects
 deliveryClient1.items<ContentItem>()
     .toObservable()
     .subscribe(response => {
