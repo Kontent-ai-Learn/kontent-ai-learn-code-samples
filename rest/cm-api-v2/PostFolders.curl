@@ -1,0 +1,22 @@
+# DocSection: cm_api_v2_post_folders
+curl --request POST \
+  --url https://manage.kontent.ai/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/folders \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: application/json' \
+  --data '
+{
+  "folders": [
+    {
+      "name": "Top level folder",
+      "external_id": "top-folder",
+      "folders": [
+        {
+          "name": "Second level folder",
+          "external_id": "second-folder",
+          "folders": []
+        }
+      ]
+    }
+  ]
+}'
+# EndDocSection
