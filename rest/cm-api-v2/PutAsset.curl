@@ -12,6 +12,9 @@ curl --request PUT \
     "type": "internal"
   },
   "title": "Coffee Brewing Techniques",
+  "folder": {
+    "external_id": "another-folder"
+  },
   "descriptions": [
     {
       "language": {
