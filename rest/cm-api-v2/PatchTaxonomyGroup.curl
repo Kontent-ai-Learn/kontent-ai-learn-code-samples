@@ -10,12 +10,12 @@ curl --request PATCH \
   {
     "op": "replace",
     "property_name": "name",
-    "value": "Coffee Experts"
+    "value": "Buyer Personas"
   },
   {
     "op": "replace",
     "property_name": "codename",
-    "value": "experts"
+    "value": "personas"
   },
   {
     "op": "replace",
