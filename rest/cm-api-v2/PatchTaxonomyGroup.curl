@@ -14,20 +14,28 @@ curl --request PATCH \
   },
   {
     "op": "replace",
+    "property_name": "codename",
+    "value": "experts"
+  },
+  {
+    "op": "replace",
     "reference": {
-      "codename": "coffee_enthusiast"
+      "codename": "enthusiast"
     },
     "property_name": "terms",
     "value": [
       {
         "name": "Coffee Lovers",
         "terms": []
+        "codename": "lovers"
       },
       {
         "name": "Coffee Bloggers",
+        "codename": "bloggers",
         "terms": [
           {
             "name": "Coffee Connoisseurs",
+            "codename": "connoisseurs",
             "terms": []
           }
         ]
@@ -47,6 +55,7 @@ curl --request PATCH \
     },
     "value": {
       "name": "Coffee Sippers",
+      "codename": "sippers",
       "terms": []
     }
   }
