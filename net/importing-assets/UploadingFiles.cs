@@ -1,4 +1,5 @@
 // DocSection: importing_assets_upload_file
+// Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
 // Using CM API v1
 using KenticoCloud.ContentManagement;
 

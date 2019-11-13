@@ -1,4 +1,5 @@
 // DocSection: sharing_project_content_get_items
+// Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
 using Kentico.Kontent.Delivery;
 
 // Initializes the first content delivery client

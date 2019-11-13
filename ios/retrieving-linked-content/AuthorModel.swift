@@ -1,5 +1,6 @@
 // DocSection: linked_content_author_model
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
+// Tip: Find more about Swift SDK at https://docs.kontent.ai/ios
 
 import ObjectMapper
 import KenticoCloud

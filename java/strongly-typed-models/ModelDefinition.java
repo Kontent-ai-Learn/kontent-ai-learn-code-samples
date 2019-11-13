@@ -1,4 +1,5 @@
 // DocSection: strongly_typed_models_definition
+// Tip: Find more about Java/JavaRx SDKs at https://docs.kontent.ai/java
 import com.github.kentico.kontent.delivery.Asset;
 import com.github.kentico.kontent.delivery.ContentItemMapping;
 import com.github.kentico.kontent.delivery.ElementMapping;

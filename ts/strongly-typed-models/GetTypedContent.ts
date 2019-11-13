@@ -1,4 +1,5 @@
 // DocSection: strongly_typed_models_retrieve
+// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 import { ContentItem, DeliveryClient, Elements, SortOrder, TypeResolver } from '@kentico/kontent-delivery';
 
 import { Homepage } from './models/homepage';

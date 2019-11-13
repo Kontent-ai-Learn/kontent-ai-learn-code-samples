@@ -1,4 +1,5 @@
 // DocSection: building_first_net_app_model_mapping
+// Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
 using Kentico.Kontent.Delivery;
 
 // Initializes a content delivery client

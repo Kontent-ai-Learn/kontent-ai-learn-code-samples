@@ -1,4 +1,5 @@
 // DocSection: strongly_typed_models_retrieve
+// Tip: Find more about Java/JavaRx SDKs at https://docs.kontent.ai/java
 import com.github.kentico.kontent.delivery.DeliveryClient;
 import java.io.IOException;
 import java.lang.System;

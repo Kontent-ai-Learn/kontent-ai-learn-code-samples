@@ -1,4 +1,5 @@
 // DocSection: sharing_project_content_get_items
+// Tip: Find more about Java/JavaRx SDKs at https://docs.kontent.ai/java
 import com.github.kentico.kontent.delivery;
 
 // Initializes the content delivery clients
