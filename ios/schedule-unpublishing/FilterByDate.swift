@@ -1,4 +1,5 @@
 // DocSection: schedule_unpublishing_filter_by_date
+// Tip: Find more about Swift SDK at https://docs.kontent.ai/ios
 import KenticoCloud
 
 let client = DeliveryClient.init(projectId: "14372844-0a5d-434a-8423-605b8a631623")

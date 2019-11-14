@@ -1,4 +1,5 @@
 // DocSection: structure_in_rte_tweet_model
+// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 import { ContentItem, Elements } from '@kentico/kontent-delivery';
 
 // Generate strongly typed models at https://github.com/Kentico/kontent-model-generator-js

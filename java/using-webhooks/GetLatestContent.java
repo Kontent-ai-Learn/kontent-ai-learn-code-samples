@@ -1,4 +1,5 @@
 // DocSection: using_webhooks_get_latest_content
+// Tip: Find more about Java/JavaRx SDKs at https://docs.kontent.ai/java
 import com.github.kentico.kontent.delivery;
 
 DeliveryOptions deliveryOptions = new DeliveryOptions();

@@ -1,4 +1,5 @@
 // DocSection: securing_public_access_get_article
+// Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
 using Kentico.Kontent.Delivery;
 
 // Initializes a secured content delivery client

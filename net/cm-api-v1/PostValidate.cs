@@ -1,4 +1,5 @@
 // DocSection: cm_api_v1_post_validate
+// Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
 using KenticoCloud.ContentManagement;
 using KenticoCloud.ContentManagement.Models.ProjectReport;
 

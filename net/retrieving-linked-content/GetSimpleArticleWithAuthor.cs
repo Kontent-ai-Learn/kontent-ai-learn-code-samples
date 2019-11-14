@@ -1,4 +1,5 @@
 // DocSection: linked_content_get_article_with_author
+// Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
 using Kentico.Kontent.Delivery;
 
 // Initializes a content delivery client

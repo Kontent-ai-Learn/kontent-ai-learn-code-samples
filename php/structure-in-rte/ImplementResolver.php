@@ -1,5 +1,6 @@
 // DocSection: structure_in_rte_implement_resolver
 <?php
+// Tip: Find more about PHP SDKs at https://docs.kontent.ai/php
 
 class CustomLinkedItemsResolver implements InlineLinkedItemsResolverInterface
 {

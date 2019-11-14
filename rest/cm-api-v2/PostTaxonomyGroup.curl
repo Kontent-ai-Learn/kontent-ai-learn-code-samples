@@ -7,10 +7,12 @@ curl --request POST \
   {
   "name": "Personas",
   "external_id": "Tax-Group-123",
+  "codename": "people",
   "terms": [
     {
       "name": "Coffee expert",
       "external_id": "Tax-term-456",
+      "codename": "expert",
       "terms": [
         {
           "name": "Barista",
@@ -27,15 +29,18 @@ curl --request POST \
     {
       "name": "Coffee enthusiast",
       "external_id": "Tax-term-112",
+      "codename": "enthusiast",
       "terms": [
         {
           "name": "Coffee lover",
           "external_id": "Tax-term-131",
+          "codename": "lover",
           "terms": []
         },
         {
           "name": "Coffee blogger",
           "external_id": "Tax-term-145",
+          "codename": "blogger",
           "terms": []
         }
       ]

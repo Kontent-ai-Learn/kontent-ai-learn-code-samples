@@ -1,4 +1,5 @@
 // DocSection: securing_public_access_get_article
+// Tip: Find more about Java/JavaRx SDKs at https://docs.kontent.ai/java
 import com.github.kentico.kontent.delivery;
 
 DeliveryOptions options = new DeliveryOptions();

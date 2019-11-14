@@ -1,4 +1,5 @@
 // DocSection: preview_content_detect_environment
+// Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
 using Kentico.Kontent.Delivery;
 
 // TODO: Determine whether the app is running in a preview environment

@@ -1,4 +1,5 @@
 // DocSection: cm_api_v2_delete_type
+// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 import { ManagementClient } from '@kentico/kontent-management';
 
 const client = new ManagementClient({

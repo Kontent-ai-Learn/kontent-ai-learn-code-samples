@@ -1,4 +1,5 @@
 // DocSection: getting_localized_content_url_slug
+// Tip: Find more about Java/JavaRx SDKs at https://docs.kontent.ai/javaandroid
 import com.kenticocloud.delivery_core.*;
 import com.kenticocloud.delivery_rx.*;
 

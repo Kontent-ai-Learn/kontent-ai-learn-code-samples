@@ -1,4 +1,5 @@
 // DocSection: importing_create_type
+// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 // Using ES6 syntax
 import { ManagementClient, ElementModels } from '@kentico/kontent-management';
 

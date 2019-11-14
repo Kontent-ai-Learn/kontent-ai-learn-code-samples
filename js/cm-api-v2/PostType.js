@@ -1,4 +1,5 @@
 // DocSection: cm_api_v2_post_type
+// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 // Using ES6 syntax
 import { ContentManagementClient, ElementModels } from '@kentico/kontent-management';
 

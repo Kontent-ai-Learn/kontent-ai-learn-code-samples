@@ -1,4 +1,5 @@
 # DocSection: preview_content_detect_environment
+# Tip: Find more about Ruby SDKs at https://docs.kontent.ai/ruby
 require 'delivery-sdk-ruby'
 
 is_preview = false # Determine whether the app is running in a preview environment

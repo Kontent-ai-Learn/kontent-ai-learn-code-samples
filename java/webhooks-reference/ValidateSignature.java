@@ -1,4 +1,5 @@
 // DocSection: webhooks_validate_signature
+// Tip: Find more about Java/JavaRx SDKs at https://docs.kontent.ai/java
 import javax.crypto;
 import javax.crypto.spec;
 import javax.xml.bind;

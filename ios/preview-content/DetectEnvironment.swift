@@ -1,4 +1,5 @@
 // DocSection: preview_content_detect_environment
+// Tip: Find more about Swift SDK at https://docs.kontent.ai/ios
 import KenticoCloud
 
 // TODO: Determine whether the app is running in a preview environment

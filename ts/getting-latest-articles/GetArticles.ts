@@ -1,4 +1,5 @@
 // DocSection: latest_articles_get_articles
+// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 import { ContentItem, DeliveryClient, Elements, TypeResolver } from '@kentico/kontent-delivery';
 
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models

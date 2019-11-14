@@ -1,4 +1,5 @@
 // DocSection: getting_articles_with_taxonomy_term
+// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 const KontentDelivery = require('@kentico/kontent-delivery');
 
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models

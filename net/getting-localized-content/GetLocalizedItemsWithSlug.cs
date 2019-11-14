@@ -1,4 +1,5 @@
 // DocSection: getting_localized_content_url_slug
+// Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
 using Kentico.Kontent.Delivery;
 
 // Initializes a content delivery client

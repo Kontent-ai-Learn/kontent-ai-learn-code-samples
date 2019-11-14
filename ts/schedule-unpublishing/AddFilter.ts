@@ -1,4 +1,5 @@
 // DocSection: schedule_unpublishing_add_filter
+// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 import { ContentItem, DeliveryClient, Elements, TypeResolver } from '@kentico/kontent-delivery';
 import * as _ from 'underscore';
 

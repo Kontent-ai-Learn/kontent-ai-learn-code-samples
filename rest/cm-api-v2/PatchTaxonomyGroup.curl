@@ -10,24 +10,32 @@ curl --request PATCH \
   {
     "op": "replace",
     "property_name": "name",
-    "value": "Coffee Experts"
+    "value": "Buyer personas"
+  },
+  {
+    "op": "replace",
+    "property_name": "codename",
+    "value": "personas"
   },
   {
     "op": "replace",
     "reference": {
-      "codename": "coffee_enthusiast"
+      "codename": "enthusiast"
     },
     "property_name": "terms",
     "value": [
       {
-        "name": "Coffee Lovers",
-        "terms": []
+        "name": "Coffee lover",
+        "terms": [],
+        "codename": "lover"
       },
       {
-        "name": "Coffee Bloggers",
+        "name": "Coffee blogger",
+        "codename": "blogger",
         "terms": [
           {
-            "name": "Coffee Connoisseurs",
+            "name": "Coffee connoisseur",
+            "codename": "connoisseur",
             "terms": []
           }
         ]
@@ -37,16 +45,20 @@ curl --request PATCH \
   {
     "op": "remove",
     "reference": {
-      "id": "cdf2f3c6-89e3-5df1-f7de-7179460bd6b4"
+      "id": "9b897d7b-ded7-5de1-aee1-1e90e43db747"
     }
   },
   {
     "op": "addInto",
+    "reference": {
+      "external_id": "Tax-term-456"
+    },
     "before": {
-      "external_id": "tax-term-24"
+      "external_id": "Tax-term-789"
     },
     "value": {
-      "name": "Coffee Sippers",
+      "name": "Coffee roaster",
+      "codename": "roaster",
       "terms": []
     }
   }
