@@ -1,0 +1,18 @@
+# DocSection: import_rich_create_simple_type
+curl --request POST \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/types \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: application/json' \
+  --data '
+{
+ "external_id": "simple-rich-text",
+ "name": "Simple Rich Text",
+ "elements": [
+   {
+     "name": "Rich Text",
+     "external_id": "rich-text",
+     "type": "rich_text"
+   }
+ ]
+}'
+# EndDocSection
