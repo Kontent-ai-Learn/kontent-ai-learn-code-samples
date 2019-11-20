@@ -1,4 +1,7 @@
 // DocSection: cm_api_v1_put_variant
+// Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
+using KenticoCloud.ContentManagement;
+
 ContentManagementOptions options = new ContentManagementOptions
 {
     ApiKey = "<YOUR_API_KEY>",

@@ -1,4 +1,5 @@
 // DocSection: preview_content_detect_environment
+// Tip: Find more about Java/JavaRx SDKs at https://docs.kontent.ai/java
 import com.github.kentico.kontent.delivery;
 
 // TODO: Determine whether the app is running in a preview environment

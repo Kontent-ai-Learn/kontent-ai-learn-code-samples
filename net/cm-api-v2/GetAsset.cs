@@ -1,4 +1,5 @@
 // DocSection: cm_api_v2_get_asset
+// Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
 using KenticoCloud.ContentManagement;
 
 ContentManagementOptions options = new ContentManagementOptions

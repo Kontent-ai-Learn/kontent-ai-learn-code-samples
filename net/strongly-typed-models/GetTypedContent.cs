@@ -1,4 +1,5 @@
 // DocSection: strongly_typed_models_retrieve
+// Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
 using Kentico.Kontent.Delivery;
 using KenticoKontentModels;
 

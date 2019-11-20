@@ -1,4 +1,5 @@
 // DocSection: using_webhooks_notification_model
+// Tip: Find more about Java/JavaRx SDKs at https://docs.kontent.ai/javaandroid
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class KenticoCloudWebhookModel {

@@ -1,4 +1,5 @@
 // DocSection: import_linked_validate_content
+// Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
 // Using CM API v1
 using KenticoCloud.ContentManagement;
 using KenticoCloud.ContentManagement.Models.ProjectReport;

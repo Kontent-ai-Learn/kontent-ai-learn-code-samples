@@ -1,4 +1,5 @@
 // DocSection: managing_navigation_articles_depth
+// Tip: Find more about Java/JavaRx SDKs at https://docs.kontent.ai/java
 import com.github.kentico.kontent.delivery;
 
 DeliveryClient client = new DeliveryClient("24246f25-946d-4ab4-b170-fadef22fe7b2");

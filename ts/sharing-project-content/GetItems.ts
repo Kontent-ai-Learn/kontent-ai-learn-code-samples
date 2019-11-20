@@ -1,4 +1,5 @@
 // DocSection: sharing_project_content_get_items
+// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 import { ContentItem, DeliveryClient } from "@kentico/kontent-delivery";
 
 const deliveryClient1 = new DeliveryClient({

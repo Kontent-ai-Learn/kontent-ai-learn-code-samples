@@ -1,4 +1,5 @@
 // DocSection: webhooks_validate_signature
+// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 const crypto = require('crypto');
 
 const isValidSignature = (req, secret) => {

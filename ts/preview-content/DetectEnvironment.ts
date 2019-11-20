@@ -1,4 +1,5 @@
 // DocSection: preview_content_detect_environment
+// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 import { DeliveryClient } from '@kentico/kontent-delivery';
 
 // TODO: Determine whether the app is running in a preview environment

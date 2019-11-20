@@ -1,5 +1,6 @@
 // DocSection: securing_public_access_get_article
 <?php
+// Tip: Find more about PHP SDKs at https://docs.kontent.ai/php
 
 // Defined by Composer to include required libraries
 require __DIR__ . '/vendor/autoload.php';

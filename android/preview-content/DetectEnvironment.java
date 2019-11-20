@@ -1,4 +1,5 @@
 // DocSection: preview_content_detect_environment
+// Tip: Find more about Java/JavaRx SDKs at https://docs.kontent.ai/javaandroid
 import com.kenticocloud.delivery_core.*;
 import com.kenticocloud.delivery_rx.*;
 

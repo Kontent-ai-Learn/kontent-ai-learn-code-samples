@@ -1,4 +1,5 @@
 // DocSection: managing_navigation_articles_depth
+// Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
 using Kentico.Kontent.Delivery;
 
 // Initializes a content delivery client

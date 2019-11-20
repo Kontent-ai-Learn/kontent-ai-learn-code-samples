@@ -1,4 +1,5 @@
 // DocSection: latest_articles_get_all
+// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 import { ContentItem, DeliveryClient } from '@kentico/kontent-delivery';
 
 const deliveryClient = new DeliveryClient({

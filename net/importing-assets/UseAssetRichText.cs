@@ -1,4 +1,5 @@
 // DocSection: importing_assets_use_asset_rich_text
+// Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
 // Using CM API v1
 ArticleModel stronglyTypedElements = new ArticleModel
 {
