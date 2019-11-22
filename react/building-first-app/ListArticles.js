@@ -40,7 +40,7 @@ class ArticleListing extends Component {
             return (
               <li key={article.url_pattern.value}>
                 <Link to={`/post/${article.url_pattern.value}`}>
-                  {article.title.text}
+                  {article.title.value}
                 </Link>
               </li>
             )
