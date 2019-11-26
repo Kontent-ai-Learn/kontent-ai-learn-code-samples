@@ -6,6 +6,7 @@ curl --request POST \
   --data '
 {
   "name": "On Roasts",
+  "codename": "on_roasts",
   "type": {
     "codename": "article"
   },
