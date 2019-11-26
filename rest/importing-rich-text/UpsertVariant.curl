@@ -1,6 +1,6 @@
 # DocSection: import_rich_upsert_variant
 curl --request PUT \
-  --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/items/external-id/simple-example/00000000-0000-0000-0000-000000000000 \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/items/external-id/simple-example/variants/00000000-0000-0000-0000-000000000000 \
   --header 'authorization: Bearer <YOUR_API_KEY>' \
   --header 'content-type: application/json' \
   --data '
@@ -29,7 +29,7 @@ curl --request PUT \
                 "external_id": "button-link"
               },
               "value": "https://kontent.ai"
-            },
+            }
           ]
         }
       ]
