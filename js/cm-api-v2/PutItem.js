@@ -16,7 +16,6 @@ client.updateContentItem()
 .withData(
   {
     name: 'On Roasts',
-    codename: 'my_article_on_roasts',
     sitemap_locations: [
       {
         codename: 'articles'
@@ -40,7 +39,6 @@ client.upsertContentItem()
   .withData(
     {
       name: 'On Roasts',
-      codename: 'my_article_on_roasts',
       // 'type' is only required when creating a new content item
       type: 'article',
       sitemap_locations: [
