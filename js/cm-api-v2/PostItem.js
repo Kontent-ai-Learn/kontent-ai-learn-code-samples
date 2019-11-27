@@ -12,6 +12,7 @@ client.addContentItem()
   .withData(
     {
       name: 'On Roasts',
+      codename: 'my_article_on_roasts',
       type: {
         codename: 'article'
       },
