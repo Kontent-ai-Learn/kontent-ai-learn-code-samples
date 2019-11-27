@@ -1,15 +1,15 @@
 // DocSection: cm_api_v1_post_validate
 // Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
-using KenticoCloud.ContentManagement;
-using KenticoCloud.ContentManagement.Models.ProjectReport;
+using Kentico.Kontent.Management;
+using Kentico.Kontent.Management.Models.ProjectReport;
 
-ContentManagementOptions options = new ContentManagementOptions
+ManagementOptions options = new ManagementOptions
 {
     ApiKey = "<YOUR_API_KEY>",
     ProjectId = "<YOUR_PROJECT_ID>"
 };
 
-ContentManagementClient client = new ContentManagementClient(options);
+ManagementClient client = new ManagementClient(options);
 
 // Checks your project and stores the validation report in the response
 ProjectReportModel response = await client.ValidateProjectAsync();
