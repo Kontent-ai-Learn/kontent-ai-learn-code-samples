@@ -9,7 +9,7 @@ curl --request PUT \
   --data '
 {
   "name": "On Roasts",
-  "codename": "on_roasts",
+  "codename": "my_article_on_roasts",
   "type": {
     "codename": "article"
   },
