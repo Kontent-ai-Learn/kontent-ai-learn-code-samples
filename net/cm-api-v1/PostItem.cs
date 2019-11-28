@@ -1,14 +1,14 @@
 // DocSection: cm_api_v1_post_item
 // Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
-using KenticoCloud.ContentManagement;
+using Kentico.Kontent.Management;
 
-ContentManagementOptions options = new ContentManagementOptions
+ManagementOptions options = new ManagementOptions
 {
     ApiKey = "<YOUR_API_KEY>",
     ProjectId = "<YOUR_PROJECT_ID>"
 };
 
-ContentManagementClient client = new ContentManagementClient(options);
+ManagementClient client = new ManagementClient(options);
 
 ContentItemCreateModel item = new ContentItemCreateModel
 {

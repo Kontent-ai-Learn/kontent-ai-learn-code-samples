@@ -1,14 +1,14 @@
 // DocSection: cm_api_v1_put_asset
 // Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
-using KenticoCloud.ContentManagement;
+using Kentico.Kontent.Management;
 
-ContentManagementOptions options = new ContentManagementOptions
+ManagementOptions options = new ManagementOptions
 {
     ApiKey = "<YOUR_API_KEY>",
     ProjectId = "<YOUR_PROJECT_ID>"
 };
 
-ContentManagementClient client = new ContentManagementClient(options);
+ManagementClient client = new ManagementClient(options);
 
 // Note: When creating a new asset, use external ID as an identifier. When updating an asset, you can use internal ID or external ID
 AssetIdentifier identifier = AssetIdentifier.ByExternalId("which-brewing-fits-you");
