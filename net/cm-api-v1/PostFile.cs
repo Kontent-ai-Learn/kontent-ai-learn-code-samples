@@ -1,14 +1,14 @@
 // DocSection: cm_api_v1_post_file
 // Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
-using Kentico.Kontent.Management;
+using KenticoCloud.ContentManagement;
 
-ManagementOptions options = new ManagementOptions
+ContentManagementOptions options = new ContentManagementOptions
 {
     ApiKey = "<YOUR_API_KEY>",
     ProjectId = "<YOUR_PROJECT_ID>"
 };
 
-ManagementClient client = new ManagementClient(options);
+ContentManagementClient client = new ContentManagementClient(options);
 
 string filePath = Path.Combine(AppContext.BaseDirectory, @"<YOUR_PATH>\which-brewing-fits-you-1080px.jpg");
 string contentType = "image/jpeg";

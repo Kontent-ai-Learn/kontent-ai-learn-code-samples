@@ -1,14 +1,14 @@
 // DocSection: cm_api_v2_put_variant
 // Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
-using Kentico.Kontent.Management;
+using KenticoCloud.ContentManagement;
 
-ManagementOptions options = new ManagementOptions
+ContentManagementOptions options = new ContentManagementOptions
 {
     ApiKey = "<YOUR_API_KEY>",
     ProjectId = "<YOUR_PROJECT_ID>"
 };
 
-ManagementClient client = new ManagementClient(options);
+ContentManagementClient client = new ContentManagementClient(options);
 
 // Create a strongly typed model according to https://docs.kontent.ai/tutorials/develop-apps/get-content/using-strongly-typed-models?tech=dotnet
 MyContentTypeModel stronglyTypedElements = new MyContentTypeModel

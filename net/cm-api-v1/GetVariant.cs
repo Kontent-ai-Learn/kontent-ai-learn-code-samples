@@ -1,14 +1,14 @@
 // DocSection: cm_api_v1_get_variant
 // Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
-using Kentico.Kontent.Management;
+using KenticoCloud.ContentManagement;
 
-ManagementOptions options = new ManagementOptions
+ContentManagementOptions options = new ContentManagementOptions
 {
     ApiKey = "<YOUR_API_KEY>",
     ProjectId = "<YOUR_PROJECT_ID>"
 };
 
-ManagementClient client = new ManagementClient(options);
+ContentManagementClient client = new ContentManagementClient(options);
 
 ContentItemIdentifier itemIdentifier = ContentItemIdentifier.ById(Guid.Parse("f4b3fc05-e988-4dae-9ac1-a94aba566474"));
 // ContentItemIdentifier itemIdentifier = ContentItemIdentifier.ByCodename("on_roasts");
