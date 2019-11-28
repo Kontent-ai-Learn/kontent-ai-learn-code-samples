@@ -1,14 +1,14 @@
 // DocSection: cm_api_v2_put_item
 // Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
-using KenticoCloud.ContentManagement;
+using Kentico.Kontent.Management;
 
-ContentManagementOptions options = new ContentManagementOptions
+ManagementOptions options = new ManagementOptions
 {
     ApiKey = "<YOUR_API_KEY>",
     ProjectId = "<YOUR_PROJECT_ID>"
 };
 
-ContentManagementClient client = new ContentManagementClient(options);
+ManagementClient client = new ManagementClient(options);
 
 // Note: When creating a new item, use external ID as an identifier. When updating a content item, use any of the 3 identifiers below.
 ContentItemIdentifier identifier = ContentItemIdentifier.ByExternalId("59713");

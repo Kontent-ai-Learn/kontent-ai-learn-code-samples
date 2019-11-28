@@ -1,15 +1,15 @@
 // DocSection: importing_assets_upload_file
 // Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
 // Using CM API v1
-using KenticoCloud.ContentManagement;
+using Kentico.Kontent.Management;
 
-ContentManagementOptions options = new ContentManagementOptions
+ManagementOptions options = new ManagementOptions
 {
     ApiKey = "Bearer <YOUR_API_KEY>",
     ProjectId = "<YOUR_PROJECT_ID>"
 };
 
-ContentManagementClient client = new ContentManagementClient(options);
+ManagementClient client = new ManagementClient(options);
 
 string filePath = Path.Combine(AppContext.BaseDirectory, @"<YOUR_PATH>\brno-cafe-1080px.jpg");
 string contentType = "image/jpg";

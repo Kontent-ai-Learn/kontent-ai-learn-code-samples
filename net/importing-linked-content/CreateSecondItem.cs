@@ -1,14 +1,14 @@
 // DocSection: import_linked_create_sec_item
 // Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
 // Using CM API v1
-using KenticoCloud.ContentManagement;
+using Kentico.Kontent.Management;
 
-ContentManagementOptions options = new ContentManagementOptions
+ManagementOptions options = new ManagementOptions
 {
     ApiKey = "<YOUR_API_KEY>",
     ProjectId = "<YOUR_PROJECT_ID>"
 };
-ContentManagementClient client = new ContentManagementClient(options);
+ManagementClient client = new ManagementClient(options);
 
 string externalId = "456";
 ContentItemUpsertModel item = new ContentItemUpsertModel()
