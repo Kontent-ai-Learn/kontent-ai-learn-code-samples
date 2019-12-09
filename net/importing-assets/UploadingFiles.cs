@@ -11,7 +11,7 @@ ManagementOptions options = new ManagementOptions
 
 ManagementClient client = new ManagementClient(options);
 
-string filePath = Path.Combine(AppContext.BaseDirectory, @"<YOUR_PATH>\brno-cafe-1080px.jpg");
+string filePath = Path.Combine(AppContext.BaseDirectory, @".\<YOUR_PATH>\brno-cafe-1080px.jpg");
 string contentType = "image/jpg";
 
 // Binary file reference to be used when adding a new asset

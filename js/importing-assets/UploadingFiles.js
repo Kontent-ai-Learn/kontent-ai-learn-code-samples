@@ -9,7 +9,7 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-const data = readFileSync('brno-cafe-1080px.jpg');
+const data = readFileSync('./<YOUR_PATH>/brno-cafe-1080px.jpg');
 
 client.uploadBinaryFile()
   .withData({
