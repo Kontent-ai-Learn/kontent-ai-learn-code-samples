@@ -18,7 +18,7 @@ string title = "Brno Cafe";
 // Defines the asset to upsert
 AssetUpsertModel asset = new AssetUpsertModel
 {
-    // Note: For the definiiton of fileResult, see 'Uploading binary files'
+    // Note: For the definition of fileResult, see 'Uploading binary files'
     FileReference = fileResult,
     Descriptions = descriptions,
     Title = title
