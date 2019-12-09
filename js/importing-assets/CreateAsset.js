@@ -8,6 +8,7 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
+// Uses the file reference object obtained in step 1
 client.upsertAsset()
   .withData(
     {
