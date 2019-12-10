@@ -14,7 +14,7 @@ curl --request PATCH \
   },
   {
     "op": "replace",
-    "path": "/elements/codename:my_meta_description/guidelines",
+    "path": "/elements/codename:my_metadata__my_meta_description/guidelines",
     "value": "Length: 70-150 characters."
   },
   {
