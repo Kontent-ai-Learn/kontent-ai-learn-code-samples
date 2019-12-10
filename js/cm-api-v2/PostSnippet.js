@@ -12,16 +12,19 @@ client.addContentTypeSnippet()
   .withData(
     {
       name: "metadata",
+      codename: "my_metadata",
       external_id: "snippet-item-123",
       elements: [
         {
           name: "Meta title",
+          codename: "my_metadata__meta_title",
           guidelines: "Length: 30–60 characters",
           type: ElementModels.ElementType.text,
           external_id: "meta_title"
         },
         {
           name: "Meta description",
+          codename: "my_metadata__meta_description",
           guidelines: "Length: 70-150 characters",
           type: ElementModels.ElementType.text,
           external_id: "meta_title"
