@@ -3,7 +3,7 @@
 // Tip: Find more about Swift SDK at https://docs.kontent.ai/ios
 
 import ObjectMapper
-import KenticoCloud
+import KenticoKontentDelivery
 
 class SimpleArticle: Mappable {
     var title: TextElement?

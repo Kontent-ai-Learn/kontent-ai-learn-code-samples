@@ -1,6 +1,6 @@
 // DocSection: managing_navigation_articles_depth
 // Tip: Find more about Swift SDK at https://docs.kontent.ai/ios
-import KenticoCloud
+import KenticoKontentDelivery
 
 let client = DeliveryClient.init(projectId: "24246f25-946d-4ab4-b170-fadef22fe7b2")
 
