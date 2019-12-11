@@ -1,7 +1,7 @@
 // DocSection: managing_navigation_articles_slugs
 // Tip: Find more about Java/JavaRx SDKs at https://docs.kontent.ai/javaandroid
 import com.github.kentico.kontent_delivery_core.*;
-import com.github.kentico.kontent_delivery_rx..*;
+import com.github.kentico.kontent_delivery_rx.*;
 
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
