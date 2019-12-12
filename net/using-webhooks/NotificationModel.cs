@@ -3,7 +3,7 @@
 using System;
 using Newtonsoft.Json;
 
-public class KenticoCloudWebhookModel
+public class KenticoKontentWebhookModel
 {
     [JsonProperty("message")]
     public Message Message { get; set; }
