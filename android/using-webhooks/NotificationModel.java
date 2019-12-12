@@ -2,7 +2,7 @@
 // Tip: Find more about Java/JavaRx SDKs at https://docs.kontent.ai/javaandroid
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class KenticoCloudWebhookModel {
+public class KenticoKontentWebhookModel {
     @JsonProperty("message")
     Message message;
 
