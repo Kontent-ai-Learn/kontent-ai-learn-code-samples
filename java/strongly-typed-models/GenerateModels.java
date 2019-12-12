@@ -1,5 +1,5 @@
 // DocSection: strongly_typed_models_generators
-// For instructions on using the Java model generator, visit https://github.com/Kentico/cloud-generators-java
+// For instructions on using the Java model generator, visit https://github.com/Kentico/kontent-generators-java
 
 // Configures Gradle plugin
 apply plugin: 'java'

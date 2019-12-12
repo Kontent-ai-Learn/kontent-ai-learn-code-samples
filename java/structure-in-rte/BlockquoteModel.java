@@ -1,5 +1,5 @@
 // DocSection: structure_in_rte_blockquote_model
-// Generate strongly typed models at https://github.com/Kentico/cloud-generators-java
+// Generate strongly typed models at https://github.com/Kentico/kontent-generators-java
 // Tip: Find more about Java/JavaRx SDKs at https://docs.kontent.ai/java
 
 import com.github.kentico.kontent.delivery.ContentItemMapping;
