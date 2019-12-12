@@ -6,7 +6,7 @@ let client = DeliveryClient.init(projectId: "14372844-0a5d-434a-8423-605b8a63162
 
 let articlesQueryParameters = QueryBuilder.params().type("article")
 
-// More about strongly-typed models https://github.com/Kentico/cloud-sdk-swift#using-strongly-typed-models
+// More about strongly-typed models https://github.com/Kentico/kontent-delivery-sdk-swift#using-strongly-typed-models
 client.getItems(modelType: Article.self,  queryParameters: articleQueryParameters) { (isSuccess, itemsResponse, error) in
     if isSuccess {
         if let articles = itemsResponse?.items {

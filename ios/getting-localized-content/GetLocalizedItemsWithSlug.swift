@@ -6,7 +6,7 @@ let client = DeliveryClient.init(projectId:"975bf280-fd91-488c-994c-2f04416e5ee3
  
 let customQuery = "items?language=es-ES&system.type=home&elements.url_pattern=inicio"
 
-// More about strongly-typed models https://github.com/Kentico/cloud-sdk-swift#using-strongly-typed-models
+// More about strongly-typed models https://github.com/Kentico/kontent-delivery-sdk-swift#using-strongly-typed-models
 client.getItems(modelType: Home.self, customQuery: customQuery) { (isSuccess, itemsResponse, error) in
       if isSuccess {
            if let items = itemsResponse?.items {

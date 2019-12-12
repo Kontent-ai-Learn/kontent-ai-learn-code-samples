@@ -6,7 +6,7 @@ let client = DeliveryClient.init(projectId: "975bf280-fd91-488c-994c-2f04416e5ee
 
 let customQuery = "items?system.type=article&order=elements.post_date[desc]&limit=5&elements=title,teaser_image"
 
-// More about strongly-typed models https://github.com/Kentico/cloud-sdk-swift#using-strongly-typed-models
+// More about strongly-typed models https://github.com/Kentico/kontent-delivery-sdk-swift#using-strongly-typed-models
 client.getItems(modelType: Article.self, customQuery: customQuery) { (isSuccess, itemsResponse, error) in
     if isSuccess {
         if let articles = itemsResponse?.items {

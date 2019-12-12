@@ -11,7 +11,7 @@ let now = dateformatter.string(from: Date())
 
 let customQuery = "items?system.type=article&elements.publish_until[gt]=\(now)"
 
-// More about strongly-typed models https://github.com/Kentico/cloud-sdk-swift#using-strongly-typed-models
+// More about strongly-typed models https://github.com/Kentico/kontent-delivery-sdk-swift#using-strongly-typed-models
 client.getItems(modelType: Article.self, customQuery: customQuery) { (isSuccess, itemsResponse, error) in
     if isSuccess {
         if let articles = itemsResponse?.items {
