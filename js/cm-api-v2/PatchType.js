@@ -41,6 +41,10 @@ client.modifyContentType()
       {
         op: "remove",
         path: "/elements/external_id:my-multiple-choice-id/options/codename:my_option"
+      },
+      {
+       op: "remove",
+       path: "/elements/id:e94fab1f-c2c1-4f4a-b36c-3f7a0808d2b8/allowed_blocks/text"
       }
     ]
   )
