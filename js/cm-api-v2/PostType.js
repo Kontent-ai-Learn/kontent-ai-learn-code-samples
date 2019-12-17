@@ -44,11 +44,11 @@ client.addContentType()
         {
          name: "Author bio",
          codename: "bio",
+         type: ElementModels.ElementType.richText,
          allowed_blocks: [
      	     "images",
      	     "text"
      	     ],
-         type: "rich_text",
          content_group: {
          external_id: "author"
      },
