@@ -11,9 +11,7 @@ export class Author extends ContentItem {
 
 export class SimpleArticle extends ContentItem {
     public title: Elements.TextElement;
-    public summary: Elements.TextElement;
-    public post_date: Elements.DateTimeElement;
-    public teaser_image: Elements.AssetsElement;
+    public body: Elements.RichTextElement;
     public author: Elements.LinkedItemsElement<Author>;
 
     constructor(){
