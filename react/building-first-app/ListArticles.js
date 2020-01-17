@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import { DeliveryClient } from '@kentico/kontent-delivery';
 
-const client = new DeliveryClient({ projectId: 'a0a9d198-e604-007a-50c9-fecbb46046d1' });
+const client = new DeliveryClient({ projectId: '975bf280-fd91-488c-994c-2f04416e5ee3' });
 
 class ArticleListing extends Component {
   constructor(props) {
