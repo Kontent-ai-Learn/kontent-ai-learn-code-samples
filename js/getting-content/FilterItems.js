@@ -10,7 +10,7 @@ class Article extends KontentDelivery.ContentItem {
 }
 
 const deliveryClient = new KontentDelivery.DeliveryClient({
-    projectId: '975bf280-fd91-488c-994c-2f04416e5ee3',
+    projectId: '8d20758c-d74c-4f59-ae04-ee928c0816b',
     typeResolvers: [
         new KontentDelivery.TypeResolver('article', (rawData) => new Article())
     ]
