@@ -2,10 +2,10 @@
 // Tip: Find more about Swift SDK at https://docs.kontent.ai/ios
 import KenticoKontentDelivery
 
-let client = DeliveryClient.init(projectId: "975bf280-fd91-488c-994c-2f04416e5ee3")
+let client = DeliveryClient.init(projectId: "8d20758c-d74c-4f59-ae04-ee928c0816b")
 
 // More about strongly-typed models https://github.com/Kentico/kontent-delivery-sdk-swift#using-strongly-typed-models
-client.getItem(modelType: Article.self, itemName: "on_roasts", language: "es-ES") { (isSuccess, itemResponse, error) in
+client.getItem(modelType: Article.self, itemName: "about_us", language: "es-ES") { (isSuccess, itemResponse, error) in
     if isSuccess {
         if let article = itemResponse?.item {
             // Use your item here

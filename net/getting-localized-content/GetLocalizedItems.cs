@@ -4,12 +4,12 @@ using Kentico.Kontent.Delivery;
 
 // Initializes a content delivery client
 IDeliveryClient client = DeliveryClientBuilder
-      .WithProjectId("975bf280-fd91-488c-994c-2f04416e5ee3")
+      .WithProjectId("8d20758c-d74c-4f59-ae04-ee928c0816b")
       .Build();
 
 // Gets an article in Spanish
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
-DeliveryItemResponse<Article> response = await client.GetItemAsync<Article>("on_roasts",
+DeliveryItemResponse<Article> response = await client.GetItemAsync<Article>("about_us",
     new LanguageParameter("es-ES")
 );
 

@@ -11,44 +11,44 @@ import io.reactivex.functions.Function;
 List<TypeResolver<?>> typeResolvers = new ArrayList<>();
 
 // Registers the type resolver for articles
-typeResolvers.add(new TypeResolver<>(Home.TYPE, new Function<Void, Home>() {
+typeResolvers.add(new TypeResolver<>(Article.TYPE, new Function<Void, Article>() {
     @Override
-    public Home apply(Void input) {
-        return new Home();
+    public Article apply(Void input) {
+        return new Article();
     }
 }));
 
 // Prepares the DeliveryService configuration object
-String projectId = "975bf280-fd91-488c-994c-2f04416e5ee3";
+String projectId = "8d20758c-d74c-4f59-ae04-ee928c0816b";
 IDeliveryConfig config = DeliveryConfig.newConfig(projectId)
     .withTypeResolvers(typeResolvers);
 
 // Initializes a DeliveryService for Java projects
 IDeliveryService deliveryService = new DeliveryService(config);
 
-// Gets the Spanish variant of a Home content item that has "inicio" in its "URL pattern" element using a simple request
-List<Home> home = deliveryService.<Home>items()
+// Gets the Spanish variant of an "About us" content item that has "acerda-de-nosotros" in its "URL pattern" element using a simple request
+List<Article> article = deliveryService.<Article>items()
     .languageParameter("es-ES")
-    .equalsFilter("system.type", "home")
-    .equalsFilter("elements.url_pattern", "inicio")
+    .equalsFilter("system.type", "article")
+    .equalsFilter("elements.url_pattern", "acerda-de-nosotros")
     .get()
     .getItems();
 
-// Gets the Spanish variant of a Home content item that has "inicio" in its "URL pattern" element using RxJava2
-deliveryService.<Home>items()
+// Gets the Spanish variant of an "About us" content item that has "acerda-de-nosotros" in its "URL pattern" element using RxJava2
+deliveryService.<Article>items()
     .languageParameter("es-ES")
-    .equalsFilter("system.type", "home")
-    .equalsFilter("elements.url_pattern", "inicio")
+    .equalsFilter("system.type", "article")
+    .equalsFilter("elements.url_pattern", "acerda-de-nosotros")
     .getObservable()
-    .subscribe(new Observer<DeliveryItemListingResponse<Home>>() {
+    .subscribe(new Observer<DeliveryItemListingResponse<Article>>() {
         @Override
         public void onSubscribe(Disposable d) {
         }
 
         @Override
-        public void onNext(DeliveryItemResponse<Home> response) {
+        public void onNext(DeliveryItemResponse<Article> response) {
             // Gets the content items
-            Home item = response.getItem();
+            Article item = response.getItem();
         }
 
         @Override

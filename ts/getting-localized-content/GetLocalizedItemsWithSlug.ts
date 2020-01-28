@@ -4,24 +4,24 @@ import { ContentItem, DeliveryClient, Elements, TypeResolver } from '@kentico/ko
 
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 import { Article } from './models/article';
-export class Home extends ContentItem {
+export class Article extends ContentItem {
     public url_pattern: Elements.UrlSlugElement;
     public contact: Elements.TextElement;
     public articles: Article[];
 }
 
 const deliveryClient = new DeliveryClient({
-    projectId: '975bf280-fd91-488c-994c-2f04416e5ee3',
+    projectId: '8d20758c-d74c-4f59-ae04-ee928c0816b',
     typeResolvers: [
-        new TypeResolver('home', (rawData) => new Home)
+        new TypeResolver('article', (rawData) => new Article)
     ]
 });
 
-deliveryClient.items<Home>()
-    .type('home')  
+deliveryClient.items<Article>()
+    .type('article')  
     .languageParameter('es-ES')
     .depthParameter(0)
-    .equalsFilter('elements.url_pattern', 'inicio')
+    .equalsFilter('elements.url_pattern', 'acerda-de-nosotros')
     .toObservable()
     .subscribe(response => console.log(response));
 // EndDocSection

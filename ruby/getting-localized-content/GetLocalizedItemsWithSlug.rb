@@ -2,10 +2,10 @@
 # Tip: Find more about Ruby SDKs at https://docs.kontent.ai/ruby
 require 'delivery-sdk-ruby'
 
-delivery_client = Kentico::Kontent::Delivery::DeliveryClient.new project_id: '975bf280-fd91-488c-994c-2f04416e5ee3'
+delivery_client = Kentico::Kontent::Delivery::DeliveryClient.new project_id: '8d20758c-d74c-4f59-ae04-ee928c0816b'
 delivery_client.items([
-                        'system.type'.eq('home'),
-                        'elements.url_pattern'.eq('inicio')
+                        'system.type'.eq('article'),
+                        'elements.url_pattern'.eq('acerda-de-nosotros')
                       ])
                .language('es-ES')
                .execute do |response|

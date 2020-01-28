@@ -8,8 +8,8 @@ require __DIR__ . '/vendor/autoload.php';
 use Kentico\Kontent\Delivery\DeliveryClient;
 use Kentico\Kontent\Delivery\QueryParams;
 
-$client = new DeliveryClient('975bf280-fd91-488c-994c-2f04416e5ee3');
+$client = new DeliveryClient('8d20758c-d74c-4f59-ae04-ee928c0816b');
 
-$items = client->getItem('on_roasts', (new QueryParams())
+$items = client->getItem('about_us', (new QueryParams())
             ->language('es-ES'));
 // EndDocSection

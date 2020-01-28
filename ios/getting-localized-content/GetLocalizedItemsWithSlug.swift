@@ -2,12 +2,12 @@
 // Tip: Find more about Swift SDK at https://docs.kontent.ai/ios
 import KenticoKontentDelivery
  
-let client = DeliveryClient.init(projectId:"975bf280-fd91-488c-994c-2f04416e5ee3")
+let client = DeliveryClient.init(projectId:"8d20758c-d74c-4f59-ae04-ee928c0816b")
  
-let customQuery = "items?language=es-ES&system.type=home&elements.url_pattern=inicio"
+let customQuery = "items?language=es-ES&system.type=article&elements.url_pattern=acerda-de-nosotros"
 
 // More about strongly-typed models https://github.com/Kentico/kontent-delivery-sdk-swift#using-strongly-typed-models
-client.getItems(modelType: Home.self, customQuery: customQuery) { (isSuccess, itemsResponse, error) in
+client.getItems(modelType: Article.self, customQuery: customQuery) { (isSuccess, itemsResponse, error) in
       if isSuccess {
            if let items = itemsResponse?.items {
                // Use your items here

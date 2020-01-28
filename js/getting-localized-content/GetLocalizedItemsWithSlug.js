@@ -3,24 +3,24 @@
 const KontentDelivery = require('@kentico/kontent-delivery');
 
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
-class Home extends KontentDelivery.ContentItem {
+class Article extends KontentDelivery.ContentItem {
     constructor() {
         super();
     }
 }
 
 const deliveryClient = new KontentDelivery.DeliveryClient({
-    projectId: '975bf280-fd91-488c-994c-2f04416e5ee3',
+    projectId: '8d20758c-d74c-4f59-ae04-ee928c0816b',
     typeResolvers: [
-        new KontentDelivery.TypeResolver('home', (rawData) => new Home)
+        new KontentDelivery.TypeResolver('article', (rawData) => new Article)
     ]
 });
 
-deliveryClient.items('home')
-  .type('home')  
+deliveryClient.items('article')
+  .type('article')  
   .languageParameter('es-ES')
   .depthParameter(0)
-  .equalsFilter('elements.url_pattern', 'inicio')
+  .equalsFilter('elements.url_pattern', 'acerda-de-nosotros')
   .toObservable()
   .subscribe(response => console.log(response));
 // EndDocSection
