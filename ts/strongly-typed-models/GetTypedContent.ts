@@ -15,7 +15,7 @@ const deliveryClient = new DeliveryClient({
 var homepage: Homepage;
 
 // Gets a content item from Kentico Kontent by its codename and maps it to its strongly typed model
-deliveryClient.item<Homepage>('hello_headless_world')
+deliveryClient.item<Homepage>('hello_caas_world')
   .toObservable()
   .subscribe(response => {
     homepage = response.item;
