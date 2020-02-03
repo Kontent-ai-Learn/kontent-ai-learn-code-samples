@@ -4,7 +4,7 @@ using Kentico.Kontent.Delivery;
 
 // Initializes the first content delivery client
 IDeliveryClient client1 = DeliveryClientBuilder
-        .WithProjectId("368d5707-fb05-0146-fc0a-f85c5d1a264e")
+        .WithProjectId("8d20758c-d74c-4f59-ae04-ee928c0816b7")
         .Build();
 
 // Initializes the second content delivery client

@@ -7,7 +7,7 @@ const deliveryClient1 = new KontentDelivery.DeliveryClient({
 });
 
 const deliveryClient2 = new KontentDelivery.DeliveryClient({
-    projectId: "368d5707-fb05-0146-fc0a-f85c5d1a264e"
+    projectId: "8d20758c-d74c-4f59-ae04-ee928c0816b7"
 });
 
 const allContentItems: ContentItem[] = [];

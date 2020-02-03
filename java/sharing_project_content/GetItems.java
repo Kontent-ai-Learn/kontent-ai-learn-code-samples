@@ -4,7 +4,7 @@ import com.github.kentico.kontent.delivery;
 
 // Initializes the content delivery clients
 DeliveryClient client1 = new DeliveryClient("975bf280-fd91-488c-994c-2f04416e5ee3");
-DeliveryClient client2 = new DeliveryClient("368d5707-fb05-0146-fc0a-f85c5d1a264e");
+DeliveryClient client2 = new DeliveryClient("8d20758c-d74c-4f59-ae04-ee928c0816b7");
 
 List<NameValuePair> params = DeliveryParameterBuilder.params()
     .build();
