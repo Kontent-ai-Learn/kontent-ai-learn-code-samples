@@ -2,7 +2,7 @@
 // Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 import { ContentItem, Elements, TypeResolver } from '@kentico/kontent-delivery';
 
-deliveryClient.item<Article>('coffee_beverages_explained')
+deliveryClient.item<Article>('my_article')
   .toObservable()
   .subscribe(response => {
     console.log(response.item.body.resolveHtml());

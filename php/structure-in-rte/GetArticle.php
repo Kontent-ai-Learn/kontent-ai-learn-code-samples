@@ -2,8 +2,8 @@
 <?php
 // Tip: Find more about PHP SDKs at https://docs.kontent.ai/php
 
-// Retrieves the 'Coffee Beverages Explained' article
-$item = $client->getItem('coffee_beverages_explained');
+// Retrieves a content item named 'My article'
+$item = $client->getItem('my_article');
 
 // Retrieves text from the 'body' Rich text element
 $description = $item->body;

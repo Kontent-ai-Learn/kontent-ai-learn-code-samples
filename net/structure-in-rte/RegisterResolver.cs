@@ -7,7 +7,7 @@ using Kentico.Kontent.Delivery.InlineContentItems;
 ...
 
 IDeliveryClient client = DeliveryClientBuilder
-    .WithProjectId("8d20758c-d74c-4f59-ae04-ee928c0816b7")
+    .WithProjectId("<YOUR_PROJECT_ID>")
     // Registers an inline content item resolver for Tweets
     .WithInlineContentItemsResolver(new TweetResolver())
     // Registers strongly typed models
