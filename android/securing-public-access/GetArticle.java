@@ -8,18 +8,18 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 
 // Prepares the DeliveryService configuration object
-String projectId = "975bf280-fd91-488c-994c-2f04416e5ee3";
+String projectId = "<YOUR_PROJECT_ID>";
 String secureApiKey = "<YOUR_API_KEY>";
 IDeliveryConfig config = DeliveryConfig.newConfig(projectId)
     .withSecuredApiKey(secureApiKey);
 
 // Gets the latest version of a content item using a simple request
-ContentItem item = deliveryService.<ContentItem>item("on_roasts")
+ContentItem item = deliveryService.<ContentItem>item("my_article")
     .get()
     .getItem();
 
 // Gets the latest version of a content item using RxJava2
-deliveryService.<ContentItem>item("on_roasts")
+deliveryService.<ContentItem>item("my_article")
     .getObservable()
     .subscribe(new Observer<DeliveryItemResponse<ContentItem>>() {
         @Override

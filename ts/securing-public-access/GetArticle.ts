@@ -12,7 +12,7 @@ export class Article extends ContentItem {
 }
 
 const deliveryClient = new DeliveryClient({
-	projectId: '975bf280-fd91-488c-994c-2f04416e5ee3',
+	projectId: '<YOUR_PROJECT_ID>',
 	globalQueryConfig: {
 		useSecuredMode: true // Queries the Delivery API using secure access.
 	},
@@ -21,7 +21,7 @@ const deliveryClient = new DeliveryClient({
 });
 
 deliveryClient
-	.item<Article>('on_roasts')
+	.item<Article>('my_article')
 	.toObservable()
 	.subscribe(response => console.log(response));
 // EndDocSection
