@@ -2,7 +2,7 @@
 # Tip: Find more about Ruby SDKs at https://docs.kontent.ai/ruby
 require 'delivery-sdk-ruby'
 
-delivery_client = Kentico::Kontent::Delivery::DeliveryClient.new project_id: 'e6d2946e-0e24-003f-a397-9d2d458c6d6e'
+delivery_client = Kentico::Kontent::Delivery::DeliveryClient.new project_id: '8d20758c-d74c-4f59-ae04-ee928c0816b7'
 delivery_client.item('the_origin_of_coffee')
                .depth(1)
                .execute do |response|

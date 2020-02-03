@@ -4,7 +4,7 @@
 
 import KenticoKontentDelivery
 
-let client = DeliveryClient.init(projectId: "e6d2946e-0e24-003f-a397-9d2d458c6d6e")
+let client = DeliveryClient.init(projectId: "8d20758c-d74c-4f59-ae04-ee928c0816b7")
 
 client.getItem(modelType: SimpleArticle.self, itemName: "the_origin_of_coffee") { (isSuccess, deliveryItem, error) in
      if isSuccess {        
