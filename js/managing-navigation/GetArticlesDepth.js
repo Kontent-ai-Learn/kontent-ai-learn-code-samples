@@ -10,7 +10,7 @@ class NavigationItem extends KontentDelivery.ContentItem {
 }
 
 const deliveryClient = new KontentDelivery.DeliveryClient({
-    projectId: '24246f25-946d-4ab4-b170-fadef22fe7b2',
+    projectId: '8d20758c-d74c-4f59-ae04-ee928c0816b7',
     typeResolvers: [
         new KontentDelivery.TypeResolver('navigation_item', (rawData) => new NavigationItem)
     ]

@@ -10,7 +10,7 @@ export class NavigationItem extends ContentItem {
 }
   
 const deliveryClient = new DeliveryClient({
-    projectId: '24246f25-946d-4ab4-b170-fadef22fe7b2',
+    projectId: '8d20758c-d74c-4f59-ae04-ee928c0816b7',
     typeResolvers: [
         new TypeResolver('navigation_item', (rawData) => new NavigationItem)
     ]

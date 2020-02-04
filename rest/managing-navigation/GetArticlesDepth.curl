@@ -1,5 +1,5 @@
 # DocSection: managing_navigation_articles_depth
 curl --request GET \
-  --url 'https://deliver.kontent.ai/24246f25-946d-4ab4-b170-fadef22fe7b2/items/root_navigation_item?depth=5' \
+  --url 'https://deliver.kontent.ai/8d20758c-d74c-4f59-ae04-ee928c0816b7/items/root_navigation_item?depth=5' \
   --header 'content-type: application/json'
 # EndDocSection

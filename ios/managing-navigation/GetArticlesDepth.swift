@@ -2,7 +2,7 @@
 // Tip: Find more about Swift SDK at https://docs.kontent.ai/ios
 import KenticoKontentDelivery
 
-let client = DeliveryClient.init(projectId: "24246f25-946d-4ab4-b170-fadef22fe7b2")
+let client = DeliveryClient.init(projectId: "8d20758c-d74c-4f59-ae04-ee928c0816b7")
 
 let customQuery = "items/root_navigation_item?depth=5"
 
