@@ -19,7 +19,7 @@ typeResolvers.add(new TypeResolver<>(Article.TYPE, new Function<Void, Article>()
 }));
 
 // Prepares the DeliveryService configuration object
-String projectId = "975bf280-fd91-488c-994c-2f04416e5ee3";
+String projectId = "<YOUR_PROJECT_ID>";
 IDeliveryConfig config = DeliveryConfig.newConfig(projectId)
                 .withDefaultQueryConfig(new QueryConfig(true, false))
                 .withTypeResolvers(typeResolvers);
@@ -28,12 +28,12 @@ IDeliveryConfig config = DeliveryConfig.newConfig(projectId)
 IDeliveryService deliveryService = new DeliveryService(config);
 
 // Gets specific elements of an article using a simple request
-Article article = deliveryService.<Article>item("on_roasts")
+Article article = deliveryService.<Article>item("my_article")
     .get()
     .getItem();
 
 // Gets specific elements of an article using RxJava2
-deliveryService.<Article>item("on_roasts")
+deliveryService.<Article>item("my_article")
     .getObservable()
     .subscribe(new Observer<DeliveryItemResponse<Article>>() {
         @Override

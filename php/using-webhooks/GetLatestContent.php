@@ -9,5 +9,5 @@ use Kentico\Kontent\Delivery\DeliveryClient;
 
 $client = new DeliveryClient("<YOUR_PROJECT_ID>", null, true);
 
-$item = client->getItem('on_roasts');
+$item = client->getItem('my_article');
 // EndDocSection
