@@ -1,7 +1,7 @@
 // DocSection: schedule_unpublishing_filter_by_date
 // Initializes a content delivery client
 IDeliveryClient client = DeliveryClientBuilder
-      .WithProjectId("14372844-0a5d-434a-8423-605b8a631623")
+      .WithProjectId("8d20758c-d74c-4f59-ae04-ee928c0816b7")
       .Build();
 
 var now = System.DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ssZ");

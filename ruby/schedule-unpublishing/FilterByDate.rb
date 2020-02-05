@@ -2,7 +2,7 @@
 # Tip: Find more about Ruby SDKs at https://docs.kontent.ai/ruby
 require 'delivery-sdk-ruby'
 
-delivery_client = Kentico::Kontent::Delivery::DeliveryClient.new project_id: '14372844-0a5d-434a-8423-605b8a631623'
+delivery_client = Kentico::Kontent::Delivery::DeliveryClient.new project_id: '8d20758c-d74c-4f59-ae04-ee928c0816b7'
 now = DateTime.now.strftime '%Y-%M-%dT%H:%M:%SZ'
 delivery_client.items([
                         'system.type'.eq('article'),

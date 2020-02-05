@@ -13,7 +13,7 @@ export class Article extends ContentItem {
 }
 
 const deliveryClient = new DeliveryClient({
-    projectId: '14372844-0a5d-434a-8423-605b8a631623',
+    projectId: '8d20758c-d74c-4f59-ae04-ee928c0816b7',
     typeResolvers: [
       new TypeResolver('article', (rawData) => new Article)
     ]

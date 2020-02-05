@@ -9,7 +9,7 @@ use \Datetime;
 use Kentico\Kontent\Delivery\DeliveryClient;
 use Kentico\Kontent\Delivery\QueryParams;
 
-$client = new DeliveryClient('14372844-0a5d-434a-8423-605b8a631623');
+$client = new DeliveryClient('8d20758c-d74c-4f59-ae04-ee928c0816b7');
 
 $items = $client->getItems((new QueryParams())
             ->equals('system.type', 'article'));

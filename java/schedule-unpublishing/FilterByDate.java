@@ -2,7 +2,7 @@
 // Tip: Find more about Java/JavaRx SDKs at https://docs.kontent.ai/java
 import com.github.kentico.kontent.delivery;
 
-DeliveryClient client = new DeliveryClient("14372844-0a5d-434a-8423-605b8a631623");
+DeliveryClient client = new DeliveryClient("8d20758c-d74c-4f59-ae04-ee928c0816b7");
 
 TimeZone tz = TimeZone.getTimeZone("UTC");
 DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm'Z'");
