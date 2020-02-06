@@ -4,7 +4,7 @@ using Kentico.Kontent.Delivery;
 
 // Initializes a content delivery client
 IDeliveryClient client = DeliveryClientBuilder
-      .WithProjectId("975bf280-fd91-488c-994c-2f04416e5ee3")
+      .WithProjectId("<YOUR_PROJECT_ID>")
       .Build();
 
 // Gets 3 content types

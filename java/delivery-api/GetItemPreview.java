@@ -2,7 +2,7 @@
 // Tip: Find more about Java/JavaRx SDKs at https://docs.kontent.ai/javaandroid
 import com.github.kentico.kontent.delivery;
 
-DeliveryClient client = new DeliveryClient("975bf280-fd91-488c-994c-2f04416e5ee3", "<YOUR_PREVIEW_API_KEY>");
+DeliveryClient client = new DeliveryClient("<YOUR_PROJECT_ID>", "<YOUR_PREVIEW_API_KEY>");
 
 ContentItem item = client.getItem("on_roasts").item;
 // EndDocSection
