@@ -8,6 +8,6 @@ IDeliveryClient client = DeliveryClientBuilder
       .Build();
 
 // Gets the model of specific element within a specific content type
-DeliveryElementResponse response = await client.GetContentElementAsync("coffee", "processing");
+DeliveryElementResponse response = await client.GetContentElementAsync("article", "title");
 ContentElement element = response.Element;
 // EndDocSection

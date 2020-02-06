@@ -6,7 +6,7 @@ const deliveryClient = new KontentDelivery.DeliveryClient({
     projectId: '<YOUR_PROJECT_ID>'
 });
 
-deliveryClient.element('coffee', 'processing')
+deliveryClient.element('article', 'title')
     .toObservable()
     .subscribe(response => console.log(response));
 // EndDocSection

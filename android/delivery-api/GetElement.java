@@ -14,13 +14,13 @@ IDeliveryConfig config = DeliveryConfig.newConfig(projectId);
 // Initializes a DeliveryService for Java projects
 IDeliveryService deliveryService = new DeliveryService(config);
 
-// Gets the "Processing" content element from the "Coffee" type using a simple request
-ContentTypeElement element = deliveryService.contenTypeElement("coffee", "processing")
+// Gets the "title" content element from the "article" type using a simple request
+ContentTypeElement element = deliveryService.contenTypeElement("article", "title")
     .get()
     .getElement();
 
-// Gets the "Processing" content element from the "Coffee" type using RxJava2
-deliveryService.contenTypeElement("coffee", "processing")
+// Gets the "title" content element from the "article" type using RxJava2
+deliveryService.contenTypeElement("article", "title")
     .getObservable()
     .subscribe(new Observer<DeliveryContentTypeElementResponse>() {
         @Override

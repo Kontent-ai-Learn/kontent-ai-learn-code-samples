@@ -15,12 +15,12 @@ IDeliveryConfig config = DeliveryConfig.newConfig(projectId);
 IDeliveryService deliveryService = new DeliveryService(config);
 
 // Gets a content type using a simple request
-ContentType type = deliveryService.type("coffee")
+ContentType type = deliveryService.type("article")
     .get()
     .getType();
 
 // Gets a content type using RxJava2
-deliveryService.type("coffee")
+deliveryService.type("article")
     .getObservable()
     .subscribe(new Observer<DeliveryTypeResponse>() {
         @Override

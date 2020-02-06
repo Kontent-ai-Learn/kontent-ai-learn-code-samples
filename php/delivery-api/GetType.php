@@ -9,5 +9,5 @@ use Kentico\Kontent\Delivery\DeliveryClient;
 
 $client = new DeliveryClient('<YOUR_PROJECT_ID>');
 
-$type = $client->getType('coffee');
+$type = $client->getType('article');
 // EndDocSection

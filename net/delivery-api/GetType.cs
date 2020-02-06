@@ -8,6 +8,6 @@ IDeliveryClient client = DeliveryClientBuilder
       .Build();
 
 // Gets a specific content type
-DeliveryTypeResponse response = await client.GetTypeAsync("coffee");
+DeliveryTypeResponse response = await client.GetTypeAsync("article");
 ContentType type = response.Type;
 // EndDocSection

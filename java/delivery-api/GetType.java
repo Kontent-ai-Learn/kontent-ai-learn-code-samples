@@ -4,5 +4,5 @@ import com.github.kentico.kontent.delivery;
 
 DeliveryClient client = new DeliveryClient("<YOUR_PROJECT_ID>");
 
-ContentType type = client.getType("coffee");
+ContentType type = client.getType("article");
 // EndDocSection

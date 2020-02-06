@@ -4,7 +4,7 @@ import KenticoKontentDelivery
  
 let client = DeliveryClient.init(projectId: "<YOUR_PROJECT_ID>")
  
-client.getContentType(name: "coffee", completionHandler: { (isSuccess, contentType, error) in
+client.getContentType(name: "article", completionHandler: { (isSuccess, contentType, error) in
     if !isSuccess {
         fail( "Response is not successful. Error: \(String(describing: error))" )
     }
