@@ -1,7 +1,7 @@
 # DocSection: cm_api_v2_get_components_of_type
 curl --request GET \
-  --url https://manage.kontent.ai/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/types/6434e475-5a29-4866-9fd1-6d1ca873f5be/components \
-# --url https://manage.kontent.ai/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/types/codename/article/components \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/types/6434e475-5a29-4866-9fd1-6d1ca873f5be/components \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/types/codename/article/components \
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
   --header 'Content-type: application/json'
 # EndDocSection

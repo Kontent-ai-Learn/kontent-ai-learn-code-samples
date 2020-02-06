@@ -1,8 +1,8 @@
 # DocSection: cm_api_v2_patch_type
 curl --request PATCH \
-  --url https://manage.kontent.ai/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/types/0be13600-e57c-577d-8108-c8d860330985 \
-# --url https://manage.kontent.ai/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/types/codename/my_article \
-# --url https://manage.kontent.ai/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/types/external_id/my-article-id \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/types/0be13600-e57c-577d-8108-c8d860330985 \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/types/codename/my_article \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/types/external_id/my-article-id \
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
   --header 'Content-type: application/json'
   --data '

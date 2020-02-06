@@ -1,7 +1,7 @@
 # DocSection: cm_api_v2_get_variants_of_type
 curl --request GET \
-  --url https://manage.kontent.ai/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/types/b7aa4a53-d9b1-48cf-b7a6-ed0b182c4b89/variants \
-# --url https://manage.kontent.ai/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/types/codename/article/variants \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/types/b7aa4a53-d9b1-48cf-b7a6-ed0b182c4b89/variants \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/types/codename/article/variants \
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
   --header 'Content-type: application/json'
 # EndDocSection

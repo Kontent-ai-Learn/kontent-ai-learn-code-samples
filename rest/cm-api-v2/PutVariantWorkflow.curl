@@ -1,11 +1,11 @@
 # DocSection: cm_api_v2_put_variant_workflow
 curl --request PUT \
-  --url https://manage.kontent.ai/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/items/f4b3fc05-e988-4dae-9ac1-a94aba566474/variants/d1f95fde-af02-b3b5-bd9e-f232311ccab8/workflow/024DB524-A7F4-46B6-8315-A43A0366C397 \
-# --url https://manage.kontent.ai/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/items/f4b3fc05-e988-4dae-9ac1-a94aba566474/variants/codename/es-ES/workflow/024DB524-A7F4-46B6-8315-A43A0366C397 \
-# --url https://manage.kontent.ai/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/items/codename/on_roasts/variants/d1f95fde-af02-b3b5-bd9e-f232311ccab8/workflow/024DB524-A7F4-46B6-8315-A43A0366C397 \
-# --url https://manage.kontent.ai/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/items/codename/on_roasts/variants/codename/es-ES/workflow/024DB524-A7F4-46B6-8315-A43A0366C397 \
-# --url https://manage.kontent.ai/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/items/external-id/59713/variants/d1f95fde-af02-b3b5-bd9e-f232311ccab8/workflow/024DB524-A7F4-46B6-8315-A43A0366C397 \
-# --url https://manage.kontent.ai/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/items/external-id/59713/variants/codename/es-ES/workflow/024DB524-A7F4-46B6-8315-A43A0366C397 \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/items/f4b3fc05-e988-4dae-9ac1-a94aba566474/variants/d1f95fde-af02-b3b5-bd9e-f232311ccab8/workflow/024DB524-A7F4-46B6-8315-A43A0366C397 \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/items/f4b3fc05-e988-4dae-9ac1-a94aba566474/variants/codename/es-ES/workflow/024DB524-A7F4-46B6-8315-A43A0366C397 \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/items/codename/on_roasts/variants/d1f95fde-af02-b3b5-bd9e-f232311ccab8/workflow/024DB524-A7F4-46B6-8315-A43A0366C397 \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/items/codename/on_roasts/variants/codename/es-ES/workflow/024DB524-A7F4-46B6-8315-A43A0366C397 \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/items/external-id/59713/variants/d1f95fde-af02-b3b5-bd9e-f232311ccab8/workflow/024DB524-A7F4-46B6-8315-A43A0366C397 \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/items/external-id/59713/variants/codename/es-ES/workflow/024DB524-A7F4-46B6-8315-A43A0366C397 \
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
   --header 'Content-type: application/json'
 # EndDocSection

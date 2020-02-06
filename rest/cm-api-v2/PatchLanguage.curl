@@ -1,8 +1,8 @@
 # DocSection: cm_api_v2_patch_language
 curl --request PATCH \
-  --url https://manage.kontent.ai/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/languages/2ea66788-d3b8-5ff5-b37e-258502e4fd5d \
-# --url https://manage.kontent.ai/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/languages/codename/de-DE/ \
-# --url https://manage.kontent.ai/v2/projects/975bf280-fd91-488c-994c-2f04416e5ee3/languages/external-id/standard-german \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/languages/2ea66788-d3b8-5ff5-b37e-258502e4fd5d \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/languages/codename/de-DE/ \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/languages/external-id/standard-german \
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
   --header 'Content-type: application/json'
   --data '
