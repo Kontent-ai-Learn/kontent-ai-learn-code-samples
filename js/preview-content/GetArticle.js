@@ -20,7 +20,7 @@ const deliveryClient = new KontentDelivery.DeliveryClient({
     ]
 });
 
-deliveryClient.item('on_roasts')
+deliveryClient.item('my_article')
     .toObservable()
     .subscribe(response => console.log(response));
 // EndDocSection

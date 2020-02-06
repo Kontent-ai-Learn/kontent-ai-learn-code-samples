@@ -22,7 +22,7 @@ const deliveryClient = new DeliveryClient({
     ]
 });
 
-deliveryClient.item<Article>('on_roasts')
+deliveryClient.item<Article>('my_article')
     .toObservable()
     .subscribe(response => console.log(response));
 // EndDocSection

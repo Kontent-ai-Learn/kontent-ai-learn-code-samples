@@ -4,5 +4,5 @@ import com.github.kentico.kontent.delivery;
 
 DeliveryClient client = new DeliveryClient("<YOUR_PROJECT_ID>", "<YOUR_PREVIEW_API_KEY>");
 
-ContentItem item = client.getItem("on_roasts").item;
+ContentItem item = client.getItem("my_article").item;
 // EndDocSection
