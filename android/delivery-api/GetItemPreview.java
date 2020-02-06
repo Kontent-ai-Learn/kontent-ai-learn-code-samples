@@ -30,12 +30,12 @@ IDeliveryConfig config = DeliveryConfig.newConfig(projectId)
 IDeliveryService deliveryService = new DeliveryService(config);
 
 // Gets the latest version of an article using a simple request
-Article article = deliveryService.<Article>item("on_roasts")
+Article article = deliveryService.<Article>item("my_article")
     .get()
     .getItem();
 
 // Gets the latest version of an article using RxJava2
-deliveryService.<Article>item("on_roasts")
+deliveryService.<Article>item("my_article")
     .getObservable()
     .subscribe(new Observer<DeliveryItemResponse<Article>>() {
         @Override

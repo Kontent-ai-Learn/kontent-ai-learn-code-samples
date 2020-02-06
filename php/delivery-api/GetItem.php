@@ -9,6 +9,6 @@ use Kentico\Kontent\Delivery\DeliveryClient;
 
 $client = new DeliveryClient('<YOUR_PROJECT_ID>');
 
-$item = $client->getItem('on_roasts', (new QueryParams())
+$item = $client->getItem('my_article', (new QueryParams())
             ->elements(array('title', 'summary', 'post_date','teaser_image', 'related_articles')));
 // EndDocSection

@@ -27,13 +27,13 @@ IDeliveryConfig config = DeliveryConfig.newConfig(projectId)
 IDeliveryService deliveryService = new DeliveryService(config);
 
 // Gets specific elements of an article using a simple request
-Article article = deliveryService.<Article>item("on_roasts")
+Article article = deliveryService.<Article>item("my_article")
     .elementsParameter(Arrays.asList("title", "summary", "post_date", "teaser_image", "related_articles"))
     .get()
     .getItem();
 
 // Gets specific elements of an article using RxJava2
-deliveryService.<Article>item("on_roasts")
+deliveryService.<Article>item("my_article")
     .elementsParameter(Arrays.asList("title", "summary", "post_date", "teaser_image", "related_articles"))
     .getObservable()
     .subscribe(new Observer<DeliveryItemResponse<Article>>() {

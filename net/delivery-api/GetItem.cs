@@ -9,7 +9,7 @@ IDeliveryClient client = DeliveryClientBuilder
 
 // Gets specific elements of an article
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
-DeliveryItemResponse<Article> response = await client.GetItemAsync<Article>("on_roasts",
+DeliveryItemResponse<Article> response = await client.GetItemAsync<Article>("my_article",
     new ElementsParameter("title", "summary", "post_date", "teaser_image", "related_articles")
     );
 

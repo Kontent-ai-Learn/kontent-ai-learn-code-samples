@@ -16,7 +16,7 @@ const deliveryClient = new KontentDelivery.DeliveryClient({
     ]
 });
 
-deliveryClient.item('on_roasts')
+deliveryClient.item('my_article')
     .elementsParameter(['title', 'summary', 'post_date', 'teaser_image', 'related_articles'])
     .toObservable()
     .subscribe(response => console.log(response.item));

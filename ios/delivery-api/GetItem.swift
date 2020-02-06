@@ -4,7 +4,7 @@ import KenticoKontentDelivery
 
 let client = DeliveryClient.init(projectId: "<YOUR_PROJECT_ID>")
 
-let customQuery = "items/on_roasts?elements=title,summary,post_date,teaser_image,related_articles"
+let customQuery = "items/my_article?elements=title,summary,post_date,teaser_image,related_articles"
 client.getItem(modelType: Article.self, customQuery: customQuery) { (isSuccess, deliveryItem, error) in
      if isSuccess {
         if let article = deliveryItem.item {
