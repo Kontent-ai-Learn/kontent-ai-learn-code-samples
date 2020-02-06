@@ -1,6 +1,6 @@
 # DocSection: cm_api_v1_put_asset
 curl --request PUT \
-  --url https://manage.kontent.ai/v1/projects/975bf280-fd91-488c-994c-2f04416e5ee3/assets/external-id/which-brewing-fits-you \
+  --url https://manage.kontent.ai/v1/projects/<YOUR_PROJECT_ID>/assets/external-id/which-brewing-fits-you \
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
   --header 'Content-type: application/json'
   --data '
