@@ -11,7 +11,7 @@ ManagementOptions options = new ManagementOptions
 ManagementClient client = new ManagementClient(options);
 
 ContentItemIdentifier identifier = ContentItemIdentifier.ById(Guid.Parse("f4b3fc05-e988-4dae-9ac1-a94aba566474"));
-// ContentItemIdentifier identifier = ContentItemIdentifier.ByCodename("on_roasts");
+// ContentItemIdentifier identifier = ContentItemIdentifier.ByCodename("my_article");
 // ContentItemIdentifier identifier = ContentItemIdentifier.ByExternalId("59713");
 
 await client.DeleteContentItemAsync(identifier);

@@ -10,7 +10,7 @@ const client = new ManagementClient({
 
 client.listLanguageVariantsOfItem()
   .byItemId('f4b3fc05-e988-4dae-9ac1-a94aba566474')
-  // .byItemCodename('on_roasts')
+  // .byItemCodename('my_article')
   // .byItemExternalId('59713')
   .toObservable()
   .subscribe((response) => {
