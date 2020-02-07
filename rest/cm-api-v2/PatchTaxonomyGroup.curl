@@ -10,32 +10,26 @@ curl --request PATCH \
   {
     "op": "replace",
     "property_name": "name",
-    "value": "Buyer personas"
+    "value": "Categories"
   },
   {
     "op": "replace",
     "property_name": "codename",
-    "value": "personas"
+    "value": "category"
   },
   {
     "op": "replace",
     "reference": {
-      "codename": "enthusiast"
+      "codename": "first_term"
     },
     "property_name": "terms",
     "value": [
       {
-        "name": "Coffee lover",
-        "terms": [],
-        "codename": "lover"
-      },
-      {
-        "name": "Coffee blogger",
-        "codename": "blogger",
+        "name": "Second-level taxonomy term",
+        "codename": "second_term",
         "terms": [
           {
-            "name": "Coffee connoisseur",
-            "codename": "connoisseur",
+            "name": "Third-level taxonomy term",
             "terms": []
           }
         ]
@@ -45,20 +39,17 @@ curl --request PATCH \
   {
     "op": "remove",
     "reference": {
-      "id": "9b897d7b-ded7-5de1-aee1-1e90e43db747"
+      "external_id": "unused-taxonomy-term"
     }
   },
   {
     "op": "addInto",
     "reference": {
-      "external_id": "Tax-term-456"
-    },
-    "before": {
-      "external_id": "Tax-term-789"
+      "codename": "second_term"
     },
     "value": {
-      "name": "Coffee roaster",
-      "codename": "roaster",
+      "name": "New taxonomy term",
+      "external_id": "my-new-term",
       "terms": []
     }
   }
