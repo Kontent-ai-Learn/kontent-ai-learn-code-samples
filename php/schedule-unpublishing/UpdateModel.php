@@ -4,7 +4,7 @@
 
 class ArticleModel
 {
-    public $publishUntil = null;
+    public $ExpireAt = null;
   
     // ...
 }

@@ -1,5 +1,5 @@
 // DocSection: schedule_unpublishing_update_model
-public const string PublishUntilCodename = "publish_until";
+public const string ExpireAtCodename = "publish_until";
 
-public DateTime? PublishUntil { get; set; }
+public DateTime? ExpireAt { get; set; }
 // EndDocSection

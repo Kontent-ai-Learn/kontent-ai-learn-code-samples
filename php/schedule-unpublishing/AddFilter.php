@@ -17,6 +17,6 @@ $items = $client->getItems((new QueryParams())
 $publishedArticles = array_filter($items->items, function($item){
     $now = new DateTime();
     return
-        ($item->publishUntil > $now || is_null($item->publishUntil));
+        ($item->ExpireAt > $now || is_null($item->ExpireAt));
     });
 // EndDocSection

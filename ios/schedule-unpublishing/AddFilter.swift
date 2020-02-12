@@ -15,7 +15,7 @@ client.getItems(modelType: Article.self,  queryParameters: articleQueryParameter
 
             // Filters out the articles with no value in Publish until elements
             var publishedArticles = articles.filter {
-                (($0.publishUntil?.value)! > now)
+                (($0.ExpireAt?.value)! > now)
             }
         }
     } else {

@@ -17,7 +17,7 @@ var today = System.DateTime.Today;
 
 // Filters the articles, keeping those that should be public
 var itemsToDisplay = response.Items.Where((item) =>
-		(item.PublishUntil > today || item.PublishUntil == null));
+		(item.ExpireAt > today || item.ExpireAt == null));
 
 return View(itemsToDisplay);
 // EndDocSection

@@ -26,6 +26,6 @@ deliveryClient.items<Article>()
     .type('article')
     .toObservable()
     .subscribe(response => console.log(_.filter(response.items, function (i) { 
-        return ((i.PublishUntil > now || i.PublishUntil === undefined || i.PublishUntil === null))
+        return ((i.ExpireAt > now || i.ExpireAt === undefined || i.ExpireAt === null))
     })));
 // EndDocSection

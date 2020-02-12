@@ -13,6 +13,6 @@ List<ArticleItem> items = client.getItems(ArticleItem.class, params);
 
 List<ArticleItem> publishedItems = items.stream()
     .filter(item ->
-            (item.getPublishUntil() > today || item.getPublishUntil() == null))
+            (item.getExpireAt() > today || item.getExpireAt() == null))
     .collect(Collectors.toList());
 // EndDocSection

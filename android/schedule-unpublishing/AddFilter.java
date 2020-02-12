@@ -38,7 +38,7 @@ List<Article> publishedItems = new ArrayList<>();
 
 for (Article article : articles) {
     if (
-        article.getPublishUntil() == null || article.getPublishUntil().after(now)) {
+        article.getExpireAt() == null || article.getExpireAt().after(now)) {
         publishedItems.add(article);
     }
 }
@@ -63,7 +63,7 @@ deliveryService.<Article>items()
 
               	// Filters the articles, keeping those that should be public
                 for (Article article : articles) {
-                    if (article.getPublishUntil() == null || article.getPublishUntil().after(now)) {
+                    if (article.getExpireAt() == null || article.getExpireAt().after(now)) {
                         publishedItems.add(article);
                     }
                 }

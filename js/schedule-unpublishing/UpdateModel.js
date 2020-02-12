@@ -4,7 +4,7 @@ export class Article extends KontentDelivery.ContentItem {
          super({
              propertyResolver: ((elementName) => {
                  if (elementName === 'publish_until'){
-                     return 'publishUntil';
+                     return 'ExpireAt';
                  }
                
                  ...
