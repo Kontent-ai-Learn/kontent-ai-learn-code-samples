@@ -1,5 +1,5 @@
 // DocSection: schedule_unpublishing_update_model
-@ElementMapping("publish_until")
+@ElementMapping("expire_at")
 ZonedDateTime ExpireAt;
 
 public ZonedDateTime getExpireAt() {

@@ -5,7 +5,7 @@ var ExpireAt: DateTimeElement?
 
 public required init?(map: Map){
     let mapper = MapElement.init(map: map)
-    ExpireAt = mapper.map(elementName: "publish_until", elementType: DateTimeElement.self)
+    ExpireAt = mapper.map(elementName: "expire_at", elementType: DateTimeElement.self)
     
     ...
 }

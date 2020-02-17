@@ -3,7 +3,7 @@ export class Article extends KontentDelivery.ContentItem {
     constructor(){
          super({
              propertyResolver: ((elementName) => {
-                 if (elementName === 'publish_until'){
+                 if (elementName === 'expire_at'){
                      return 'ExpireAt';
                  }
                

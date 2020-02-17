@@ -21,7 +21,7 @@ const now = d.toISOString();
 
 deliveryClient.items()
     .type('article')
-    .greaterThanFilter('elements.publish_until', now)
+    .greaterThanFilter('elements.expire_at', now)
     .toObservable()
     .subscribe(response => console.log(response));
 // EndDocSection

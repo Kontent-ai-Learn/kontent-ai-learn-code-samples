@@ -31,14 +31,14 @@ IDeliveryService deliveryService = new DeliveryService(config);
 // Gets the articles that should be public using a simple request
 List<Article> articles = deliveryService.<Article>items()
     .equalsFilter("system.type", "article")
-    .greaterThanFilter("elements.publish_until", now)
+    .greaterThanFilter("elements.expire_at", now)
     .get()
     .getItems();
 
 // Gets the articles that should be public using RxJava2
 deliveryService.<Article>items()
     .equalsFilter("system.type", "article")
-    .greaterThanFilter("elements.publish_until", now)
+    .greaterThanFilter("elements.expire_at", now)
     .getObservable()
     .subscribe(new Observer<DeliveryItemListingResponse<Article>>() {
         @Override

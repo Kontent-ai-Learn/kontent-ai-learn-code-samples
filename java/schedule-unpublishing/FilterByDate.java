@@ -11,7 +11,7 @@ String now = df.format(new Date());
 
 List<NameValuePair> params = DeliveryParameterBuilder.params()
     .filterEquals("system.type", "article")
-    .filterGreaterThan("elements.publish_until", now)
+    .filterGreaterThan("elements.expire_at", now)
     .build();
 
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models

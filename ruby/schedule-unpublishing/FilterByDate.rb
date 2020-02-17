@@ -6,7 +6,7 @@ delivery_client = Kentico::Kontent::Delivery::DeliveryClient.new project_id: '8d
 now = DateTime.now.strftime '%Y-%M-%dT%H:%M:%SZ'
 delivery_client.items([
                         'system.type'.eq('article'),
-                        'elements.publish_until'.gt(now)
+                        'elements.expire_at'.gt(now)
                       ])
                .execute do |response|
                  items = response.items

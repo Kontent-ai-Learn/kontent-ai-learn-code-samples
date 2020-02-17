@@ -15,5 +15,5 @@ $now = date_format(new DateTime(),'Y-m-d\TH:i:s\Z');
 
 $items = $client->getItems((new QueryParams())
     ->equals('system.type', 'article')
-    ->greaterThan('elements.publish_until', $now));
+    ->greaterThan('elements.expire_at', $now));
 // EndDocSection

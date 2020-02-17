@@ -10,7 +10,7 @@ var now = System.DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ssZ");
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 DeliveryItemListingResponse<Article> response = await client.GetItemsAsync<Article>(
   new EqualsFilter("system.type", "article"),
-  new GreaterThanFilter("elements.publish_until", now)
+  new GreaterThanFilter("elements.expire_at", now)
 );
 
 return View(response.Items);

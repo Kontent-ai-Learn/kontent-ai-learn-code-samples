@@ -6,6 +6,6 @@ delivery_client = Kentico::Kontent::Delivery::DeliveryClient.new project_id: '8d
 delivery_client.items('system.type'.eq('article'))
                .execute do |response|
                  now = DateTime.now.strftime '%Y-%M-%dT%H:%M:%SZ'
-                 items_to_display = response.items.select { |i| i.publish_until > now || i.publish_until.nil? }
+                 items_to_display = response.items.select { |i| i.expire_at > now || i.expire_at.nil? }
                end
 # EndDocSection

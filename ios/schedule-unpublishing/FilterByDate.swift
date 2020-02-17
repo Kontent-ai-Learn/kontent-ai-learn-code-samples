@@ -9,7 +9,7 @@ let dateformatter = DateFormatter()
 dateformatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
 let now = dateformatter.string(from: Date())
 
-let customQuery = "items?system.type=article&elements.publish_until[gt]=\(now)"
+let customQuery = "items?system.type=article&elements.expire_at[gt]=\(now)"
 
 // More about strongly-typed models https://github.com/Kentico/kontent-delivery-sdk-swift#using-strongly-typed-models
 client.getItems(modelType: Article.self, customQuery: customQuery) { (isSuccess, itemsResponse, error) in
