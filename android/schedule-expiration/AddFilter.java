@@ -13,10 +13,10 @@ Date now = new Date();
 List<TypeResolver<?>> typeResolvers = new ArrayList<>();
 
 // Registers the type resolvers
-typeResolvers.add(new TypeResolver<>(Article.TYPE, new Function<Void, Article>() {
+typeResolvers.add(new TypeResolver<>(LandingPage.TYPE, new Function<Void, LandingPage>() {
     @Override
-    public Article apply(Void input) {
-        return new Article();
+    public LandingPage apply(Void input) {
+        return new LandingPage();
     }
 }));
 
@@ -28,43 +28,43 @@ IDeliveryConfig config = DeliveryConfig.newConfig(projectId)
 // Initializes a DeliveryService for Java projects
 IDeliveryService deliveryService = new DeliveryService(config);
 
-// Gets all articles using a simple request
-List<Article> articles = deliveryService.<Article>items()
-        .equalsFilter("system.type", "article")
+// Gets all landing pages using a simple request
+List<LandingPage> landingPages = deliveryService.<LandingPage>items()
+        .equalsFilter("system.type", "landing_page")
         .get()
         .getItems();
 
-List<Article> publishedItems = new ArrayList<>();
+List<LandingPage> publishedItems = new ArrayList<>();
 
-for (Article article : articles) {
+for (LandingPage page : landingPages) {
     if (
-        article.getExpireAt() == null || article.getExpireAt().after(now)) {
-        publishedItems.add(article);
+        page.getExpireAt() == null || page.getExpireAt().after(now)) {
+        publishedItems.add(page);
     }
 }
 
-// Gets all articles using RxJava2
-deliveryService.<Article>items()
-        .equalsFilter("system.type", "article")
+// Gets all landing pages using RxJava2
+deliveryService.<LandingPage>items()
+        .equalsFilter("system.type", "landing_page")
         .getObservable()
-        .subscribe(new Observer<DeliveryItemListingResponse<Article>>() {
+        .subscribe(new Observer<DeliveryItemListingResponse<LandingPage>>() {
             @Override
             public void onSubscribe(Disposable d) {
             }
 
             @Override
-            public void onNext(DeliveryItemListingResponse<Article> response) {
+            public void onNext(DeliveryItemListingResponse<LandingPage> response) {
                 Date now = new Date();
 
-                // Gets the retrieved articles
-                List<Article> articles = response.getItems();
+                // Gets the retrieved landing pages
+                List<LandingPage> landingPages = response.getItems();
 
-                List<Article> publishedItems = new ArrayList<>();
+                List<LandingPage> publishedItems = new ArrayList<>();
 
-              	// Filters the articles, keeping those that should be public
-                for (Article article : articles) {
-                    if (article.getExpireAt() == null || article.getExpireAt().after(now)) {
-                        publishedItems.add(article);
+              	// Filters the landing pages, keeping those that should be public
+                for (LandingPage page : landingPages) {
+                    if (page.getExpireAt() == null || page.getExpireAt().after(now)) {
+                        publishedItems.add(page);
                     }
                 }
             }

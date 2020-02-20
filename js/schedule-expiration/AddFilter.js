@@ -4,7 +4,7 @@ const KontentDelivery = require('@kentico/kontent-delivery');
 const _ = require('underscore');
 
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
-class Article extends KontentDelivery.ContentItem {
+class LandingPage extends KontentDelivery.ContentItem {
     constructor() {
         super();
     }
@@ -13,7 +13,7 @@ class Article extends KontentDelivery.ContentItem {
 const deliveryClient = new KontentDelivery.DeliveryClient({
     projectId: '8d20758c-d74c-4f59-ae04-ee928c0816b7',
     typeResolvers: [
-      new KontentDelivery.TypeResolver('article', (rawData) => new Article)
+      new KontentDelivery.TypeResolver('landing_page', (rawData) => new LandingPage)
     ]
 });
 
@@ -21,7 +21,7 @@ const d = new Date();
 const now = d.toISOString();
 
 deliveryClient.items()
-    .type('article')
+    .type('landing_page')
     .toObservable()
     .subscribe(response => console.log(_.filter(response.items, function (i) { 
         return ((i.ExpireAt > now || i.ExpireAt === undefined || i.ExpireAt === null))

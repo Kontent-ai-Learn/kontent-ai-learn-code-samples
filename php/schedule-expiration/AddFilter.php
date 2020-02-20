@@ -12,9 +12,9 @@ use Kentico\Kontent\Delivery\QueryParams;
 $client = new DeliveryClient('8d20758c-d74c-4f59-ae04-ee928c0816b7');
 
 $items = $client->getItems((new QueryParams())
-            ->equals('system.type', 'article'));
+            ->equals('system.type', 'landing_page'));
  
-$publishedArticles = array_filter($items->items, function($item){
+$publishedItems = array_filter($items->items, function($item){
     $now = new DateTime();
     return
         ($item->ExpireAt > $now || is_null($item->ExpireAt));

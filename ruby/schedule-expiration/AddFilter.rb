@@ -3,7 +3,7 @@
 require 'delivery-sdk-ruby'
 
 delivery_client = Kentico::Kontent::Delivery::DeliveryClient.new project_id: '8d20758c-d74c-4f59-ae04-ee928c0816b7'
-delivery_client.items('system.type'.eq('article'))
+delivery_client.items('system.type'.eq('landing_page'))
                .execute do |response|
                  now = DateTime.now.strftime '%Y-%M-%dT%H:%M:%SZ'
                  items_to_display = response.items.select { |i| i.expire_at > now || i.expire_at.nil? }

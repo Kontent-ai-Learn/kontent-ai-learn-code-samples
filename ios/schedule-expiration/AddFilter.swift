@@ -4,17 +4,17 @@ import KenticoKontentDelivery
 
 let client = DeliveryClient.init(projectId: "8d20758c-d74c-4f59-ae04-ee928c0816b7")
 
-let articlesQueryParameters = QueryBuilder.params().type("article")
+let landingPageQueryParameters = QueryBuilder.params().type("landing_page")
 
 // More about strongly-typed models https://github.com/Kentico/kontent-delivery-sdk-swift#using-strongly-typed-models
-client.getItems(modelType: Article.self,  queryParameters: articleQueryParameters) { (isSuccess, itemsResponse, error) in
+client.getItems(modelType: LandingPage.self,  queryParameters: landingPageQueryParameters) { (isSuccess, itemsResponse, error) in
     if isSuccess {
-        if let articles = itemsResponse?.items {
+        if let landingPages = itemsResponse?.items {
 
             let now = Date()
 
-            // Filters out the articles with no value in Publish until elements
-            var publishedArticles = articles.filter {
+            // Filters out the landing pages with no value in Expire at elements
+            var publishedItems = landingPages.filter {
                 (($0.ExpireAt?.value)! > now)
             }
         }

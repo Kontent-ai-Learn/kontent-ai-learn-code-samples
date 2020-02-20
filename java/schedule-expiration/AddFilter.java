@@ -5,13 +5,13 @@ import com.github.kentico.kontent.delivery;
 DeliveryClient client = new DeliveryClient("8d20758c-d74c-4f59-ae04-ee928c0816b7");
 
 List<NameValuePair> params = DeliveryParameterBuilder.params()
-    .filterEquals("system.type", "article")
+    .filterEquals("system.type", "landing_page")
     .build();
 
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
-List<ArticleItem> items = client.getItems(ArticleItem.class, params);
+List<LandingPageItem> items = client.getItems(LandingPageItem.class, params);
 
-List<ArticleItem> publishedItems = items.stream()
+List<LandingPageItem> publishedItems = items.stream()
     .filter(item ->
             (item.getExpireAt() > today || item.getExpireAt() == null))
     .collect(Collectors.toList());
