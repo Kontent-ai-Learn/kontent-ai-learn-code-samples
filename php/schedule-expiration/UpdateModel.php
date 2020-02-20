@@ -2,7 +2,7 @@
 <?php
 // Tip: Find more about PHP SDKs at https://docs.kontent.ai/php
 
-class ArticleModel
+class LandingPageModel
 {
     public $ExpireAt = null;
   

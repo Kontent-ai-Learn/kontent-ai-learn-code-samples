@@ -1,5 +1,5 @@
 // DocSection: schedule_unpublishing_update_model
-export class Article extends KontentDelivery.ContentItem {
+export class LandingPage extends KontentDelivery.ContentItem {
     constructor(){
          super({
              propertyResolver: ((elementName) => {
