@@ -1,4 +1,4 @@
-// DocSection: schedule_unpublishing_update_model
+// DocSection: schedule_expiration_update_model
 var ExpireAt: DateTimeElement?
 
 ...

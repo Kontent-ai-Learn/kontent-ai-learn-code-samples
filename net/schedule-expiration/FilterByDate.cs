@@ -1,4 +1,4 @@
-// DocSection: schedule_unpublishing_filter_by_date
+// DocSection: schedule_expiration_filter_by_date
 // Initializes a content delivery client
 IDeliveryClient client = DeliveryClientBuilder
       .WithProjectId("8d20758c-d74c-4f59-ae04-ee928c0816b7")

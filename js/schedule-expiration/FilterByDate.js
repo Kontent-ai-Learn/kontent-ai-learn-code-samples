@@ -1,4 +1,4 @@
-// DocSection: schedule_unpublishing_filter_by_date
+// DocSection: schedule_expiration_filter_by_date
 // Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 const KontentDelivery = require('@kentico/kontent-delivery');
 

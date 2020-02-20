@@ -1,4 +1,4 @@
-// DocSection: schedule_unpublishing_add_filter
+// DocSection: schedule_expiration_add_filter
 // Tip: Find more about Java/JavaRx SDKs at https://docs.kontent.ai/javaandroid
 import com.github.kentico.kontent_delivery_core.*;
 import com.github.kentico.kontent_delivery_rx.*;

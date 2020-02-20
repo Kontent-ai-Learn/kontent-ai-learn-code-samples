@@ -1,4 +1,4 @@
-// DocSection: schedule_unpublishing_add_filter
+// DocSection: schedule_expiration_add_filter
 // Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
 using Kentico.Kontent.Delivery;
 

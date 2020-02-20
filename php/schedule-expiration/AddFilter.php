@@ -1,4 +1,4 @@
-// DocSection: schedule_unpublishing_add_filter
+// DocSection: schedule_expiration_add_filter
 <?php
 // Tip: Find more about PHP SDKs at https://docs.kontent.ai/php
 

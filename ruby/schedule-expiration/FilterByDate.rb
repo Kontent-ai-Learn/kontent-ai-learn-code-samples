@@ -1,4 +1,4 @@
-# DocSection: schedule_unpublishing_filter_by_date
+# DocSection: schedule_expiration_filter_by_date
 # Tip: Find more about Ruby SDKs at https://docs.kontent.ai/ruby
 require 'delivery-sdk-ruby'
 

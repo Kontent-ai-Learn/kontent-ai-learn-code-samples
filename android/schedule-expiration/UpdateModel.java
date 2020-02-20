@@ -1,4 +1,4 @@
-// DocSection: schedule_unpublishing_update_model
+// DocSection: schedule_expiration_update_model
 public final class LandingPage extends ContentItem {
 
   public static final String TYPE = "landing_page";
