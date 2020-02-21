@@ -6,7 +6,7 @@ using Kentico.Kontent.Delivery;
 IDeliveryClient client = DeliveryClientBuilder
     .WithOptions(builder => builder
         .WithProjectId("<YOUR_PROJECT_ID>")
-        .UseSecuredProductionApi("<YOUR_API_KEY>")
+        .UseProductionApi("<YOUR_API_KEY>")
         .Build())
     .Build();
 
