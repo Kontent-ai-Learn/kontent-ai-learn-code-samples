@@ -1,5 +1,5 @@
 # DocSection: getting_content_get_items
 curl --request GET \
-  --url 'https://deliver.kontent.ai/8d20758c-d74c-4f59-ae04-ee928c0816b/items'
+  --url 'https://deliver.kontent.ai/8d20758c-d74c-4f59-ae04-ee928c0816b7/items'
   --header 'content-type: application/json'
 # EndDocSection
