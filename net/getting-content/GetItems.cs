@@ -4,7 +4,7 @@ using Kentico.Kontent.Delivery;
 
 // Initializes a content delivery client
 IDeliveryClient client = DeliveryClientBuilder
-      .WithProjectId("8d20758c-d74c-4f59-ae04-ee928c0816b")
+      .WithProjectId("8d20758c-d74c-4f59-ae04-ee928c0816b7")
       .Build();
 
 // Gets all content items

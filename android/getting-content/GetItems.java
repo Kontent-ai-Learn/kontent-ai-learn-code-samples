@@ -8,7 +8,7 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 
 // Prepares the DeliveryService configuration object
-String projectId = "8d20758c-d74c-4f59-ae04-ee928c0816b";
+String projectId = "8d20758c-d74c-4f59-ae04-ee928c0816b7";
 IDeliveryConfig config = DeliveryConfig.newConfig(projectId);
 
 // Initializes a DeliveryService for Java projects

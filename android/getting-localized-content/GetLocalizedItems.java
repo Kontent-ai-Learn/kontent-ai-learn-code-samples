@@ -19,7 +19,7 @@ typeResolvers.add(new TypeResolver<>(Article.TYPE, new Function<Void, Article>()
 }));
 
 // Prepares the DeliveryService configuration object
-String projectId = "8d20758c-d74c-4f59-ae04-ee928c0816b";
+String projectId = "8d20758c-d74c-4f59-ae04-ee928c0816b7";
 IDeliveryConfig config = DeliveryConfig.newConfig(projectId)
     .withTypeResolvers(typeResolvers);
 

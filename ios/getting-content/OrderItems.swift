@@ -2,7 +2,7 @@
 // Tip: Find more about Swift SDK at https://docs.kontent.ai/ios
 import KenticoKontentDelivery
 
-let client = DeliveryClient.init(projectId: "8d20758c-d74c-4f59-ae04-ee928c0816b")
+let client = DeliveryClient.init(projectId: "8d20758c-d74c-4f59-ae04-ee928c0816b7")
 
 let customQuery = "items?system.type=article&limit=3&order=system.last_modified[desc]"
 
