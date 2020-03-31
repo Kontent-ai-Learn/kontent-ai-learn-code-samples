@@ -2,21 +2,41 @@
 // Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
 using Kentico.Kontent.Delivery;
 
-// Initializes the first content delivery client
-IDeliveryClient client1 = DeliveryClientBuilder
-        .WithProjectId("8d20758c-d74c-4f59-ae04-ee928c0816b7")
-        .Build();
+public class Startup
+{
+    public IConfigurationRoot Configuration { get; }
 
-// Initializes the second content delivery client
-IDeliveryClient client2 = DeliveryClientBuilder
-        .WithProjectId("975bf280-fd91-488c-994c-2f04416e5ee3")
-        .Build();
+    public Startup(IConfiguration configuration)
+    {
+        Configuration = configuration;
+    }
 
-// Gets content items from both projects
-// Note: Using the <object> generic parameter produces strongly typed objects, based on "system.type"
-DeliveryItemListingResponse<object> client1Response = await client1.GetItemsAsync<object>();
-DeliveryItemListingResponse<object> client2Response = await client2.GetItemsAsync<object>();
+    public void ConfigureServices(IServiceCollection services)
+    {
+        // Registers named clients based on the DeliveryOptions objects defined in appsettings.json
+		// See https://docs.kontent.ai/net-register-multiple-clients for details
+        services.AddDeliveryClient("first_project", Configuration, "DeliveryOptionsForFirstProject");
+        services.AddDeliveryClient("second_project", Configuration, "DeliveryOptionsForSecondProject");
+    }
+}
 
-// Concatenate the results
-IReadOnlyList<ContentItem> items = client1Response.Items.Concat(client2Response.Items).ToArray();
+public class YourController : Controller
+{
+    private IDeliveryClient client1;
+    private IDeliveryClient client2;
+
+    public YourController(IDeliveryClientFactory deliveryClientFactory)
+    {
+        client1 = deliveryClientFactory.Get("first_project");
+        client2 = deliveryClientFactory.Get("second_project");
+
+        // Gets content items from both projects
+        // Using the generic <object> produces strongly typed objects based on "system.type"
+        var response1 = await client1.GetItemsAsync<object>();
+        var response2 = await client2.GetItemsAsync<object>();
+
+        // Merges the responses
+        IReadOnlyList<ContentItem> items = response1.Items.Concat(response2.Items).ToArray();
+    }
+}
 // EndDocSection
