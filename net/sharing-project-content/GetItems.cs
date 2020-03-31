@@ -27,6 +27,7 @@ public class YourController : Controller
 
     public YourController(IDeliveryClientFactory deliveryClientFactory)
     {
+		// Creates instances of Delivery clients based on their names
         client1 = deliveryClientFactory.Get("first_project");
         client2 = deliveryClientFactory.Get("second_project");
 
