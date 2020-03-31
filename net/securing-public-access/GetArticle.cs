@@ -2,7 +2,8 @@
 // Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
 using Kentico.Kontent.Delivery;
 
-// Initializes a secured content delivery client
+// Creates an instance of the delivery client
+// ProTip: Use DI for this in your apps https://docs.kontent.ai/net-register-client
 IDeliveryClient client = DeliveryClientBuilder
     .WithOptions(builder => builder
         .WithProjectId("<YOUR_PROJECT_ID>")
@@ -11,8 +12,8 @@ IDeliveryClient client = DeliveryClientBuilder
     .Build();
 
 // Gets a specific content item
-// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
-DeliveryItemResponse response = await client.GetItemAsync("my_article");
+// Create strongly typed models according to https://docs.kontent.ai/net-strong-types
+DeliveryItemResponse<Article> response = await client.GetItemAsync<Article>("my_article");
 
-IReadOnlyList<ContentItem> items = response.Items;
+Article item = response.Item;
 // EndDocSection

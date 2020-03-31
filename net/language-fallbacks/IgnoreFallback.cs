@@ -15,5 +15,5 @@ client.GetItemsAsync<object>(
     new EqualsParameter("system.language", "es-ES")
     );
 
-IReadOnlyList<ContentItem> items = response.Items;
+IReadOnlyList<object> items = response.Items;
 // EndDocSection

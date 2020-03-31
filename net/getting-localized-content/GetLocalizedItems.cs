@@ -9,10 +9,10 @@ IDeliveryClient client = DeliveryClientBuilder
       .Build();
 
 // Gets an article in Spanish
-// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
+// Create strongly typed models according to https://docs.kontent.ai/net-strong-types
 DeliveryItemResponse<Article> response = await client.GetItemAsync<Article>("about_us",
     new LanguageParameter("es-ES")
 );
 
-ContentItem item = response.Item;
+Article item = response.Item;
 // EndDocSection

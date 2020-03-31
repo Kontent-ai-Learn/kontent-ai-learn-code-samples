@@ -8,7 +8,7 @@ IDeliveryClient client = DeliveryClientBuilder
 var now = System.DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ssZ");
 
 // Gets articles that should be public
-// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
+// Create strongly typed models according to https://docs.kontent.ai/net-strong-types
 DeliveryItemListingResponse<Article> response = await client.GetItemsAsync<Article>(
   new EqualsFilter("system.type", "article"),
   new GreaterThanFilter("elements.expire_at", now)

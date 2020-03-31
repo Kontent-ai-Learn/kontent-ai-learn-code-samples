@@ -9,7 +9,7 @@ IDeliveryClient client = DeliveryClientBuilder
       .Build();
 
 // Gets all landing pages
-// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
+// Create strongly typed models according to https://docs.kontent.ai/net-strong-types
 var response = await client.GetItemsAsync<LandingPage>(
     new EqualsFilter("system.type", "landing_page")
 );

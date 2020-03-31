@@ -9,7 +9,7 @@ IDeliveryClient client = DeliveryClientBuilder
       .Build();
 
 // Gets specific elements of 5 articles sorted by post date
-// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
+// Create strongly typed models according to https://docs.kontent.ai/net-strong-types
 DeliveryItemListingResponse<Article> response = await client.GetItemsAsync<Article>(
     new EqualsFilter("system.type", "article"),
     new OrderParameter("elements.post_date", SortOrder.Descending),
@@ -17,5 +17,5 @@ DeliveryItemListingResponse<Article> response = await client.GetItemsAsync<Artic
     new ElementsParameter("title", "teaser_image")
 );
 
-IReadOnlyList<ContentItem> items = response.Items;
+IReadOnlyList<Article> items = response.Items;
 // EndDocSection

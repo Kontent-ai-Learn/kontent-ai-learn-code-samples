@@ -9,10 +9,10 @@ IDeliveryClient client = DeliveryClientBuilder
       .Build();
 
 // Gets all articles
-// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
+// Create strongly typed models according to https://docs.kontent.ai/net-strong-types
 DeliveryItemListingResponse<Article> response = await client.GetItemsAsync<Article>(
     new EqualsFilter("system.type", "article")
 );
 
-IReadOnlyList<ContentItem> items = response.Items;
+IReadOnlyList<Article> items = response.Items;
 // EndDocSection
