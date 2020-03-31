@@ -14,7 +14,7 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         // Registers named clients based on the DeliveryOptions objects defined in appsettings.json
-		// See https://docs.kontent.ai/net-register-multiple-clients for details
+        // See https://docs.kontent.ai/net-register-multiple-clients for details
         services.AddDeliveryClient("first_project", Configuration, "DeliveryOptionsForFirstProject");
         services.AddDeliveryClient("second_project", Configuration, "DeliveryOptionsForSecondProject");
     }
@@ -27,7 +27,7 @@ public class YourController : Controller
 
     public YourController(IDeliveryClientFactory deliveryClientFactory)
     {
-		// Creates instances of Delivery clients based on their names
+        // Creates instances of Delivery clients based on their names
         client1 = deliveryClientFactory.Get("first_project");
         client2 = deliveryClientFactory.Get("second_project");
 
