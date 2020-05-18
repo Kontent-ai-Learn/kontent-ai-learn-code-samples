@@ -1,13 +1,9 @@
 // DocSection: webhooks_validate_signature
 // Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
-const crypto = require('crypto');
+const signatureHelper = require('@kentico/kontent-webhook-helper');
 
+// Note: Use raw body data from the request, for example, by using body-parser
 const isValidSignature = (req, secret) => {
-  const givenSignature = req.headers['x-kc-signature'];
-  const computedSignature = crypto.createHmac('sha256', secret)
-  	// Note: Use raw body data from the request, for example, by using body-parser
-    .update(req.body)
-    .digest();
-  return crypto.timingSafeEqual(Buffer.from(givenSignature, 'base64'), computedSignature);
-}
+    return signatureHelper(req.body, secret, req.headers['x-kc-signature']);
+};
 // EndDocSection
