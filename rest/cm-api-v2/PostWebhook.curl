@@ -26,6 +26,23 @@ curl --request POST \
                 ]
             }
         ],
+        "preview_delivery_api_content_changes": [
+            {
+                "type": "content_item_variant",
+                "operations": [
+                    "archive",  
+                    "upsert" 
+                ]
+            },
+            {
+                "type": "taxonomy",
+                "operations": [
+                    "archive",
+                    "restore",
+                    "upsert" 
+                ]
+            }
+        ],
         "workflow_step_changes": [
             {
                 "type": "content_item_variant",
