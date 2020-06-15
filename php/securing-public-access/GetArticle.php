@@ -7,7 +7,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 use Kentico\Kontent\Delivery\DeliveryClient;
 
-$client = new DeliveryClient('<YOUR_PROJECT_ID>', '<YOUR_API_KEY>');
+$client = new DeliveryClient('<YOUR_PROJECT_ID>', null, '<YOUR_API_KEY>');
 
 $item = $client->getItem('my_article');
 // EndDocSection
