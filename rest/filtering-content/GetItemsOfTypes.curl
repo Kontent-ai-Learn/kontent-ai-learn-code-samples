@@ -1,0 +1,6 @@
+// DocSection: filtering_get_items_of_types
+// Gets items of following content types
+curl --request GET \
+  --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?system.type[in]=product,article,news' \
+  --header 'content-type: application/json'
+// EndDocSection
