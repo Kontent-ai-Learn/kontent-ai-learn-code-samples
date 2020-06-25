@@ -1,4 +1,4 @@
-// DocSection: filtering_get_items_of_type
+// DocSection: filtering_get_items_of_types
 // Gets items of following content types
 let customQuery = "items?system.type[in]=product,article,news"
 
