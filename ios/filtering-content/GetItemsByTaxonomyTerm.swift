@@ -1,4 +1,4 @@
-// DocSection: filtering_get_items_by_string_element_value
+// DocSection: filtering_get_items_by_taxonomy_term
 // Get articles tagged with specific tag
 let customQuery = "items?elements.tags[contains]=kentico"
 
