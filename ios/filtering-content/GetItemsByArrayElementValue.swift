@@ -1,4 +1,4 @@
-// DocSection: filtering_get_item_by_id
+// DocSection: filtering_get_items_by_array_element_value
 // Get items where multiple choice has a specific value
 let customQuery = "items?elements.multiple_choice[contains]=value"
 
