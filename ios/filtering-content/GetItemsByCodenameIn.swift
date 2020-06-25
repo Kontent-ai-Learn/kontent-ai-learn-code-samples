@@ -13,3 +13,4 @@ client.getItems(modelType: Article.self, customQuery: customQuery) { (isSuccess,
         }
     }
 }
+// EndDocSection
