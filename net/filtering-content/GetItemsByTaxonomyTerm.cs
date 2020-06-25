@@ -5,7 +5,7 @@ DeliveryItemListingResponse<object> response = await _deliveryClient.GetItemsAsy
 );
 
 DeliveryItemListingResponse<object> response = await _deliveryClient.GetItemsAsync<object>(
-  ///Get articles tagged with any of the below tags
+  //Get articles tagged with any of the below tags
   new AnyFilter("elements.tags", "sport", "soccer")
 );
 
