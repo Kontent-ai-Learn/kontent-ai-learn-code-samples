@@ -1,4 +1,4 @@
-// DocSection: filtering_get_item_by_id
+// DocSection: filtering_get_items_its_linked_item
 // Gets items whose linked item has codename as one of specified values
 let customQuery = "items?elements.authors[any]=john_snow,johnny_bravo"
 
