@@ -1,4 +1,4 @@
-// DocSection: filtering_get_items_by_string_element_value
+// DocSection: filtering_get_items_by_url_slug
 // Gets items whose URL Slug is as follows - this is same as filtering by text element value
 let customQuery = "items?elements.url_slug=article-title"
 
