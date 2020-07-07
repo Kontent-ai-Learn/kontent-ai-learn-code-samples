@@ -1,0 +1,16 @@
+# DocSection: filtering_get_items_by_taxonomy_term
+# Get articles tagged with specific tag
+curl --request GET \
+  --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?elements.tags[contains]=kentico' \
+  --header 'content-type: application/json'
+  
+# Gets articles tagged with any of the below tags
+curl --request GET \
+  --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?elements.tags[any]=sport,soccer' \
+  --header 'content-type: application/json'
+  
+# Gets articles tagged with all of the below tags
+curl --request GET \
+  --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?elements.tags[all]=mvc,kontent,headless' \
+  --header 'content-type: application/json'
+# EndDocSection

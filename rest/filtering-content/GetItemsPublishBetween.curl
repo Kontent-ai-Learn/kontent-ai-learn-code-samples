@@ -1,0 +1,6 @@
+# DocSection: filtering_get_published_between
+# Gets items whose publish date is at least 2020-05-10, 00:00:00 but no greater than 2020-05-20, 00:00:00
+curl --request GET \
+  --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?elements.publish_date[range]=2020-05-10,2020-05-20' \
+  --header 'content-type: application/json'
+# EndDocSection

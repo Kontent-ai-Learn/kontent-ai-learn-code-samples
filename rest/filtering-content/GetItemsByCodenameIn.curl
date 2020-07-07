@@ -1,0 +1,6 @@
+# DocSection: filtering_get_items_by_codename_in
+# Gets items whose codename is one of the following
+curl --request GET \
+  --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?system.codename[in]=welcome_to_mvc,top_10_websites,kontent_best_practices' \
+  --header 'content-type: application/json'
+# EndDocSection

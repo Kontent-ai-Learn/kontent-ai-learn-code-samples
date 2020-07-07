@@ -1,0 +1,11 @@
+# DocSection: filtering_get_items_by_array_element_value
+# Get items where multiple choice has a specific value
+curl --request GET \
+  --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?elements.multiple_choice[contains]=value' \
+  --header 'content-type: application/json'
+  
+# Get items where multiple choice has any of the below values
+curl --request GET \
+  --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?elements.multiple_choice[any]=value1,value2' \
+  --header 'content-type: application/json'
+# EndDocSection

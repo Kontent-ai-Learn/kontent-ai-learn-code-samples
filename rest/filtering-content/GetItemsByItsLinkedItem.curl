@@ -1,0 +1,11 @@
+# DocSection: filtering_get_items_its_linked_item
+# Gets items whose linked item has codename as one of specified values
+curl --request GET \
+  --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?elements.authors[any]=john_snow,johnny_bravo' \
+  --header 'content-type: application/json'
+  
+# Gets items whose linked item has codename of certain value
+curl --request GET \
+  --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?elements.authors[contains]=joe_down' \
+  --header 'content-type: application/json'
+# EndDocSection
