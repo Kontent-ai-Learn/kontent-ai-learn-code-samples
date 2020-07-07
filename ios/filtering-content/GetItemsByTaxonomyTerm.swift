@@ -14,7 +14,7 @@ client.getItems(modelType: Article.self, customQuery: customQuery) { (isSuccess,
     }
 }
 
-//Get articles tagged with any of the below tags
+// Gets articles tagged with any of the below tags
 let customQuery = "items?elements.tags[any]=sport,soccer"
 
 client.getItems(modelType: Article.self, customQuery: customQuery) { (isSuccess, itemsResponse, error) in
@@ -29,7 +29,7 @@ client.getItems(modelType: Article.self, customQuery: customQuery) { (isSuccess,
     }
 }
 
-//Get articles tagged with all of the below tags
+// Gets articles tagged with all of the below tags
 let customQuery = "items?elements.tags[all]=mvc,kontent,headless"
 
 client.getItems(modelType: Article.self, customQuery: customQuery) { (isSuccess, itemsResponse, error) in

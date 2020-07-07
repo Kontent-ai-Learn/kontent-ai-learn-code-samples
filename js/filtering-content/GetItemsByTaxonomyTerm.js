@@ -4,10 +4,10 @@ deliveryClient.items()
   .containsFilter("elements.tags", ["kentico"])
 
 deliveryClient.items()
-  ///Get articles tagged with any of the below tags
+  /// Gets articles tagged with any of the below tags
   .anyFilter("elements.tags", ["football"], ["soccer"])
 
 deliveryClient.items()
-  //Get articles tagged with all of the below tags
+  // Gets articles tagged with all of the below tags
   .allFilter("elements.tags", ["mvc"], ["kontent"], ["headless"])
 // EndDocSection
