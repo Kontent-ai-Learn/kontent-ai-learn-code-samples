@@ -5,7 +5,7 @@ delivery_client.items([
 ])
 
 delivery_client.items([
-  # Get items where multiple choice has any of the below values
+  # Get items where multiple choice has any of the below values 
   'elements.multiple_choice'.any('value1', 'value2')
 ])
 # EndDocSection
