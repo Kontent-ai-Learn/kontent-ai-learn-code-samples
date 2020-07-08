@@ -1,4 +1,4 @@
-# DocSection: filtering_get_items_its_linked_item
+# DocSection: filtering_get_item_by_id
 delivery_client.items([
   # Gets items whose linked item has codename as one of specified values
   'elements.author'.any('john_snow', 'johnny_bravo')
