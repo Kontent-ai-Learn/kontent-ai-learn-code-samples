@@ -4,7 +4,6 @@ require 'delivery-sdk-ruby'
 
 delivery_client = Kentico::Kontent::Delivery::DeliveryClient.new project_id: '<YOUR_PROJECT_ID>'
 delivery_client.item('my_article')
-               .elements(%w[title summary post_date teaser_image related_articles])
                .execute do |response|
                  item = response.item
                end
