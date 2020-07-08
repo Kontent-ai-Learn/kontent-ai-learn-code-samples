@@ -12,8 +12,6 @@ IDeliveryClient client = DeliveryClientBuilder
 // Create strongly typed models according to https://docs.kontent.ai/net-strong-types
 DeliveryItemsFeed<Article> feed = client.GetItemsFeed<Article>(
     new EqualsFilter("system.type", "article"),
-    new ElementsParameter("title", "summary", "post_date"),
-    new OrderParameter("elements.post_date", SortOrder.Descending)
     );
 
 while (feed.HasMoreResults)

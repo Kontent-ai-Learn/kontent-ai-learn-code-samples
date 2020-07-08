@@ -29,16 +29,14 @@ IDeliveryService deliveryService = new DeliveryService(config);
 // Gets specific elements of 3 articles ordered by the "Post date" element using a simple request
 List<Article> articles = deliveryService.<Article>items()
     .equalsFilter("system.type", "article")
-    .elementsParameter(Arrays.asList("title", "summary", "post_date"))
-    .orderParameter("elements.post_date", OrderType.Desc)
+    .limitParameter(3)
     .get()
     .getItems();
 
 // Gets specific elements of 3 articles ordered by the "Post date" element using RxJava2
 deliveryService.<Article>items()
     .equalsFilter("system.type", "article")
-    .elementsParameter(Arrays.asList("title", "summary", "post_date"))
-    .orderParameter("elements.post_date", OrderType.Desc)
+    .limitParameter(3)
     .getObservable()
     .subscribe(new Observer<DeliveryItemListingResponse<Article>>() {
         @Override

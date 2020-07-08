@@ -12,8 +12,7 @@ IDeliveryClient client = DeliveryClientBuilder
 // ProTip: Use https://docs.kontent.ai/net-strong-types
 DeliveryItemListingResponse<Article> response = await client.GetItemsAsync<Article>(
     new EqualsFilter("system.type", "article"),
-    new ElementsParameter("title", "summary", "post_date"),
-    new OrderParameter("elements.post_date", SortOrder.Descending)
+    new LimitParameter(3)
     );
 
 IReadOnlyList<Article> items = response.Items;

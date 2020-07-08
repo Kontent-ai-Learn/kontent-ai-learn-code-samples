@@ -20,8 +20,7 @@ const deliveryClient = new DeliveryClient({
 
 deliveryClient.items<Article>()
     .type('article')
-    .elementsParameter(['title', 'summary', 'post_date'])
-    .orderParameter('elements.post_date', SortOrder.desc)
+    .limitParameter(3)
     .toObservable()
     .subscribe(response => console.log(response));
 // EndDocSection

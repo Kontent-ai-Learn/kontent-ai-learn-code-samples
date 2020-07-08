@@ -18,8 +18,6 @@ const client = new KontentDelivery.DeliveryClient({
 
 client.itemsFeedAll()
   .type('article')
-  .elementsParameter(['title', 'summary', 'post_date'])
-  .orderByDescending('elements.post_date')
   .toObservable()
   .subscribe((response) => {
     console.log(response);

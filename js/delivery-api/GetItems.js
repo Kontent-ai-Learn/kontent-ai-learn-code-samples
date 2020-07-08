@@ -17,9 +17,7 @@ const deliveryClient = new KontentDelivery.DeliveryClient({
 });
 
 deliveryClient.items()
-    .type('article')
-    .elementsParameter(['title', 'summary', 'post_date'])
-    .orderParameter('elements.post_date', KontentDelivery.SortOrder.desc)
+    .limitParameter(3)
     .toObservable()
     .subscribe(response => console.log(response));
 // EndDocSection
