@@ -11,7 +11,5 @@ use Kentico\Kontent\Delivery\QueryParams;
 $client = new DeliveryClient('<YOUR_PROJECT_ID>');
 
 $items = $client->getItems((new QueryParams())
-            ->equals('system.type', 'article')
-            ->elements(array('title', 'summary', 'post_date'))
-            ->orderDesc('elements.post_date'));
+            ->limit(3));
 // EndDocSection
