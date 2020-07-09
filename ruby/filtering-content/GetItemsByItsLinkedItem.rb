@@ -5,7 +5,7 @@ delivery_client.items([
 ])
 
 delivery_client.items([
-  # Gets items whose linked item has codename of certain value 
+  # Gets items whose linked item has codename of certain value
   'elements.author'.contains('joe_down')
 ])
 # EndDocSection
