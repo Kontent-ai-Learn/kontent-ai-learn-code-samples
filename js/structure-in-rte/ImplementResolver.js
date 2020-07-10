@@ -1,6 +1,5 @@
 // DocSection: structure_in_rte_implement_resolver
-// This is a global resolver for all tweets. You can also define a resolver for a given query: https://github.com/Kentico/kontent-delivery-sdk-js/blob/master/DOCS.md#locally-per-query
-
+// This is a global resolver for all tweets. You can also define a resolver for a given query: https://docs.kontent.ai/js-resolve-query
 class Tweet extends ContentItem {
     constructor() {
         super({
@@ -9,7 +8,7 @@ class Tweet extends ContentItem {
             }
         })
     }
-}         
+}
 
 var typeResolvers = [
     new TypeResolver('tweet', (rawData) => new Tweet())
