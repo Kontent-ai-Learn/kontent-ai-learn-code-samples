@@ -2,14 +2,13 @@
 // Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
 using Kentico.Kontent.Delivery;
 
-// Creates an instance of the delivery client
-// ProTip: Use DI for this in your apps https://docs.kontent.ai/net-register-client
+// Creates an instance of the delivery client; see https://docs.kontent.ai/net-register-client
 IDeliveryClient client = DeliveryClientBuilder
       .WithProjectId("<YOUR_PROJECT_ID>")
       .Build();
 
-// Gets feed for specific elements of articles ordered by the "Post date" element
-// Create strongly typed models according to https://docs.kontent.ai/net-strong-types
+// Gets feed of all articles in the project 
+// Tip: Create strongly typed models according to https://docs.kontent.ai/net-strong-types
 DeliveryItemsFeed<Article> feed = client.GetItemsFeed<Article>(
     new EqualsFilter("system.type", "article"),
     );
