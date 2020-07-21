@@ -1,5 +1,5 @@
 // DocSection: filtering_get_items_of_types
-$items = $client->getItems((new QueryParams())
-  // Gets items of following content types
+$items = $deliveryClient->getItems((new QueryParams())
+  // Gets items based on the types Product, Article, and News
   ->in("system.type", "product", "article", "news")
 // EndDocSection

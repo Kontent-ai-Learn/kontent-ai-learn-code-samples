@@ -2,5 +2,7 @@
 deliveryClient.items<ContentItem>()
   // Gets items based on the type Product
   .equalsFilter("system.type", "product")
-  // Does the same as using .type('product')
+  // Same as using .type('product')
+  .toObservable()
+  .subscribe(response => console.log(response));
 // EndDocSection
