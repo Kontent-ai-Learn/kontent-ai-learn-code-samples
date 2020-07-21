@@ -3,11 +3,11 @@
 const KontentDelivery = require('@kentico/kontent-delivery');
 
 const deliveryClient = new KontentDelivery.DeliveryClient({
-    projectId: '<YOUR_PROJECT_ID>'
+  projectId: '<YOUR_PROJECT_ID>'
 });
 
 deliveryClient.types()
-    .limitParameter(3)
-    .toObservable()
-    .subscribe(response => console.log(response.types));
+  .limitParameter(3)
+  .toObservable()
+  .subscribe(response => console.log(response.types));
 // EndDocSection

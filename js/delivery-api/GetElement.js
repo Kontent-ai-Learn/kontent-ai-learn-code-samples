@@ -3,10 +3,10 @@
 const KontentDelivery = require('@kentico/kontent-delivery');
 
 const deliveryClient = new KontentDelivery.DeliveryClient({
-    projectId: '<YOUR_PROJECT_ID>'
+  projectId: '<YOUR_PROJECT_ID>'
 });
 
 deliveryClient.element('article', 'title')
-    .toObservable()
-    .subscribe(response => console.log(response));
+  .toObservable()
+  .subscribe(response => console.log(response));
 // EndDocSection

@@ -4,6 +4,6 @@ const signatureHelper = require('@kentico/kontent-webhook-helper');
 
 // Note: Use raw body data from the request, for example, by using body-parser
 const isValidSignature = (req, secret) => {
-    return signatureHelper(req.body, secret, req.headers['x-kc-signature']);
+  return signatureHelper(req.body, secret, req.headers['x-kc-signature']);
 };
 // EndDocSection
