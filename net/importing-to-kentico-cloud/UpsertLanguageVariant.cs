@@ -5,7 +5,7 @@ using Kentico.Kontent.Management;
 
 ManagementOptions options = new ManagementOptions
 {
-    ApiKey = "<YOUR_API_KEY>",
+    ApiKey = "<YOUR_MANAGEMENT_API_KEY>",
     ProjectId = "<YOUR_PROJECT_ID>"
 };
 

@@ -1,7 +1,7 @@
 # DocSection: importing_create_item
 curl --request PUT \
   --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/items/external-id/ext-cafe-brno \
-  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Authorization: Bearer <YOUR_MANAGEMENT_API_KEY>' \
   --header 'Content-type: application/json' \
   --data '
 {
