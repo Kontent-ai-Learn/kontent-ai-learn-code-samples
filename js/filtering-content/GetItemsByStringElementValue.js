@@ -1,5 +1,7 @@
 // DocSection: filtering_get_items_by_string_element_value
 deliveryClient.items()
-  // Gets items whose Article title element equals "Get started with MVC"
-  .equalsFilter('elements.article_title', 'Get started with MVC')
+  // Gets items whose Title element value equals to "Hello World"
+  .equalsFilter('elements.title', 'Hello World')
+  .toObservable()
+  .subscribe(response => console.log(response));
 // EndDocSection
