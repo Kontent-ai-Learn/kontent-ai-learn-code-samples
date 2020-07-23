@@ -6,4 +6,4 @@ deliveryClient.items<ContentItem>()
   .rangeFilter("system.last_modified", "2020-05-05T10:30:00", "2020-05-07T07:00:00")
   .toObservable()
   .subscribe(response => console.log(response));
-// EndDocSection
+// EndDocSection 
