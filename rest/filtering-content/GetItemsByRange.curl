@@ -1,6 +1,9 @@
 # DocSection: filtering_get_items_by_range
-# Gets items whose publish date is at least 2020-05-10, 00:00:00 but no greater than 2020-05-20, 00:00:00
+# system.last_modified value is stored with ms precision
+# Date&Time element value is stored with minute precision
+
+# Gets items modified between April 5, 2020 10:30 UTC and April 7, 2020, 7:00 UTC
 curl --request GET \
-  --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?elements.publish_date[range]=2020-05-10,2020-05-20' \
+  --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?system.last_modified[range]=2020-05-05T10:30:00,2020-05-07T07:00:00' \
   --header 'content-type: application/json'
 # EndDocSection
