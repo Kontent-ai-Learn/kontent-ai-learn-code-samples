@@ -1,21 +1,13 @@
-# DocSection: filtering_get_published_from_to
-delivery_client.items([
-  # Gets items whose publish date is at least 2020-05-10, 00:00:00
-  'elements.publish_date'.greaterThan('2020-05-10')
-])
+# DocSection: filtering_datetime_lte_gte
+# system.last_modified value is stored with ms precision such as 2020-07-20T09:18:17.4857463Z
+# Date&Time element value is stored with minute precision such as 2020-04-29T00:00:00Z
 
-delivery_client.items([
-  # Gets items whose publish date is at least 2020-05-10, 00:00:00
-  'elements.publish_date'.greaterThanOrEqual('2020-05-10')
-])
-
-delivery_client.items([
-  # Gets items whose publish date is at most 2020-05-19, 23:59:00
-  'elements.publish_date'.lessThan('2020-05-20')
-])
-
-delivery_client.items([
-  # Gets items whose publish date is at most 2020-05-19, 23:59:00
-  'elements.publish_date'.lessThanOrEqual('2020-05-20')
-])
+# Gets items modified after April 9 2020, 9 am UTC+0
+delivery_client.items('system.last_modified'.greaterThan('2020-05-09T09:00:00.000000Z'))
+# Gets items released at or after April 9 2020, 7 am UTC+0
+delivery_client.items('elements.release_date'.greaterThanOrEqual('2020-05-09T07:00:00Z'))
+# Gets items modified before April 5 2020 UTC+0; Last match would be at 2020-05-04T23:59:59
+delivery_client.items('system.last_modified'.lessThan('2020-05-05'))
+# Gets items released at or before April 5 2020 10:30 am UTC+0
+delivery_client.items('elements.release_date'.lessThanOrEqual('2020-05-05T10:30:00Z'))
 # EndDocSection
