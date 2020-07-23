@@ -1,6 +1,6 @@
 // DocSection: filtering_get_items_by_datetime
-// system.last_modified value is stored with ms precision such as 2020-07-20T09:18:17.4857463Z
-// Date&Time element value is stored with minute precision such as 2020-04-29T00:00:00Z
+// system.last_modified value is stored with ms precision
+// Date&Time element value is stored with minute precision
 deliveryClient.items()
   // Gets items modified after April 9 2020, 9 am UTC+0
   .greaterThanFilter("system.last_modified", "2020-05-09T09:00:00.000000Z")
