@@ -3,7 +3,7 @@
 // Using Management API v1
 using Kentico.Kontent.Management;
 
-ManagementOptions options = new ManagementOptions
+ManagementOptions options = new ManagementOptions()
 {
     ApiKey = "<YOUR_MANAGEMENT_API_KEY>",
     ProjectId = "<YOUR_PROJECT_ID>"
@@ -11,16 +11,11 @@ ManagementOptions options = new ManagementOptions
 
 ManagementClient client = new ManagementClient(options);
 
-ContentItemCreateModel item = new ContentItemCreateModel
+ContentItemUpsertModel item = new ContentItemUpsertModel()
 {
     Name = "Brno",
-    Type = ContentTypeIdentifier.ByCodename("cafe"),
-    SitemapLocations = new[] { 
-      SitemapNodeIdentifier.ByCodename("cafes"),
-      SitemapNodeIdentifier.ByCodename("europe")
-    },
-    ExternalId = "ext-cafe-brno";
+    Type = ContentTypeIdentifier.ByCodename("cafe")
 };
 
-ContentItemModel responseItem = await client.CreateContentItemAsync(item);
+ContentItemModel responseItem = await client.UpsertContentItemByExternalIdAsync("ext-cafe-brno", item);
 // EndDocSection
