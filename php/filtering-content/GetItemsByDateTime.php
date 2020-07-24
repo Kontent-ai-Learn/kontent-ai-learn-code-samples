@@ -18,5 +18,5 @@ $items3 = $client->getItems((new QueryParams())
 $items4 = $client->getItems((new QueryParams())
     // Gets items released at or before April 5 2020 10:30 am UTC+0
     ->lessThanOrEqual("elements.release_date", "2020-05-05T10:30:00Z")
-// EndDocSection
+// EndDocSection 
 ?>

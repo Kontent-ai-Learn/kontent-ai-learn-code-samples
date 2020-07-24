@@ -25,4 +25,4 @@ deliveryClient.items<ContentItem>()
   .lessThanOrEqualFilter("elements.release_date", "2020-05-05T10:30:00Z")
   .toObservable()
   .subscribe(response => console.log(response));
-// EndDocSection
+// EndDocSection 

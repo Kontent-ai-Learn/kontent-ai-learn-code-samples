@@ -25,4 +25,4 @@ List<ContentItem> items4 = deliveryService.<ContentItem>items()
     .lessThanOrEqualFilter("elements.release_date", "2020-05-05T10:30:00Z")
     .get()
     .getItems();
-// EndDocSection
+// EndDocSection 

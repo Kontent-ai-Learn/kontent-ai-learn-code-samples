@@ -6,4 +6,4 @@ List<ContentItem> items = deliveryService.<ContentItem>items()
     .rangeFilter("system.last_modified", "2020-05-05T10:30:00", "2020-05-07T07:00:00")
     .get()
     .getItems();
-// EndDocSection
+// EndDocSection 
