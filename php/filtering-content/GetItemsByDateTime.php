@@ -1,6 +1,6 @@
 <?
 // DocSection: filtering_get_items_by_datetime
-// system.last_modified value is stored with ms precision
+// Note: system.last_modified value is stored with ms precision
 // Date&Time element value is stored with minute precision
 $items1 = $client->getItems((new QueryParams())
     // Gets items modified after April 9 2020, 9 am UTC+0
