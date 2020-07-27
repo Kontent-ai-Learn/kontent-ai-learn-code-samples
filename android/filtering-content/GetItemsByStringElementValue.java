@@ -4,4 +4,4 @@ List<ContentItem> items = deliveryService.<ContentItem>items()
     .filterEquals("elements.title", "Hello World")
     .get()
     .getItems();
-// EndDocSection 
+// EndDocSection

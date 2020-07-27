@@ -4,4 +4,4 @@ deliveryClient.items<ContentItem>()
   .equalsFilter("elements.title", "Hello World")
   .toObservable()
   .subscribe(response => console.log(response));
-// EndDocSection
+// EndDocSection 
