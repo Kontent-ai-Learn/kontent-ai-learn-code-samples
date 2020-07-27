@@ -1,4 +1,4 @@
-// DocSection: filtering_get_items_by_string_element_value
+// DocSection: filtering_get_items_by_string
 // Filters items whose Title element value equals to "Hello World" 
 let customQuery = "items?elements.title=Hello World"
 
