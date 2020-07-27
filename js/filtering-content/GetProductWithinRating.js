@@ -1,5 +1,7 @@
 // DocSection: filtering_get_product_within_rating
+// Gets items whose rating is at least 6.5 and at most 9
 deliveryClient.items()
-  // Gets products whose rating is at least 7 but no greater than 9
-  .rangeFilter("elements.product_rating", "7", "9")
+  .rangeFilter("elements.product_rating", "6.5", "9")
+  .toObservable()
+  .subscribe(response => console.log(response));
 // EndDocSection
