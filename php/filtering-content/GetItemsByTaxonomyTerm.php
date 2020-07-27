@@ -1,13 +1,16 @@
+<?
 // DocSection: filtering_get_items_by_taxonomy_term
+// Note: Filters work with codenames of the tags.
+// Gets items tagged with a single tag
 $items = $client->getItems((new QueryParams())
-  // Get articles tagged with specific tag
-  ->contains("elements.tags", ["kentico"])
+  ->contains("elements.tags", ["kontent"])
 
+// Gets items tagged with multiple tags
 $items = $client->getItems((new QueryParams())
-  /// Gets articles tagged with any of the below tags
-  ->any("elements.tags", ["sport"], ["soccer"])
+  ->all("elements.tags", ["kontent"], ["headless"])
 
+// Gets items tagged with at least one of multiple tags
 $items = $client->getItems((new QueryParams())
-  // Gets articles tagged with all of the below tags
-  ->all("elements.tags", ["mvc"], ["kontent"], ["headless"])
+  ->any("elements.tags", ["football"], ["soccer"])
 // EndDocSection
+?>

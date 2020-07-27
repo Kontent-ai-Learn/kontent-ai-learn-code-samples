@@ -1,13 +1,20 @@
 // DocSection: filtering_get_items_by_taxonomy_term
-List<object> items = deliveryService.<object>items()
-  // Get articles tagged with specific tag
-  .containsFilter("elements.tags", Arrays.asList("kentico"))
+// Note: Filters work with codenames of the tags.
+// Gest items tagged with a single tag
+List<ContentItem> items = deliveryService.<ContentItem>items()
+    .containsFilter("elements.tags", Arrays.asList("kentico"))
+    .get()
+    .getItems();
 
+// Gets items tagged with multiple tags
 List<object> items = deliveryService.<object>items()
-  /// Gets articles tagged with any of the below tags
-  .anyFilter("elements.tags", Arrays.asList("sport", "soccer"))
+    .allFilter("elements.tags", Arrays.asList("kontent", "headless"))
+    .get()
+    .getItems();
 
+// Gets items tagged with at least one of multiple tags
 List<object> items = deliveryService.<object>items()
-  // Gets articles tagged with all of the below tags
-  .allFilter("elements.tags", Arrays.asList("mvc", "kontent", "headless"))
+    .anyFilter("elements.tags", Arrays.asList("football", "soccer"))
+    .get()
+    .getItems();
 // EndDocSection

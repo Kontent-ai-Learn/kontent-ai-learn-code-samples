@@ -1,13 +1,20 @@
 // DocSection: filtering_get_items_by_taxonomy_term
+// Note: Filters work with codenames of the tags.
+// Gets items tagged with a specific tag
 deliveryClient.items<ContentItem>()
-  // Get articles tagged with specific tag
-  .containsFilter("elements.tags", ["kentico"])
+  .containsFilter("elements.tags", ["kontent"])
+  .toObservable()
+  .subscribe(response => console.log(response));
 
+// Gets items tagged with a specific list of tags
 deliveryClient.items<ContentItem>()
-  /// Gets articles tagged with any of the below tags
-  .anyFilter("elements.tags", ["football"], ["soccer"])
+  .allFilter("elements.tags", ["kontent", "headless"])
+  .toObservable()
+  .subscribe(response => console.log(response));
 
+// Gets items tagged with at least one tag from the list
 deliveryClient.items<ContentItem>()
-  // Gets articles tagged with all of the below tags
-  .allFilter("elements.tags", ["mvc"], ["kontent"], ["headless"])
+  .anyFilter("elements.tags", ["football", "soccer"])
+  .toObservable()
+  .subscribe(response => console.log(response));
 // EndDocSection
