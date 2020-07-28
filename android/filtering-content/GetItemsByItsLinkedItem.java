@@ -1,9 +1,13 @@
 // DocSection: filtering_get_items_by_linked_item
-List<object> items = deliveryService.<object>items()
-  // Gets items whose linked item has codename as one of specified values
-  .anyFilter(“elements.authors”, Arrays.asList(“john_snow”, "johnny_bravo"))
+// Gets items attributed to Jane. Matched items may also contain other authors.
+List<ContentItem> items = deliveryService.<ContentItem>items()
+    .containsFilter("elements.author", Arrays.asList("jane_doe"))
+    .get()
+    .getItems();
 
-List<object> items = deliveryService.<object>items()
-  // Gets items whose linked item has codename of certain value
-  .containsFilter(“elements.authors”, Arrays.asList(“joe_down”))
+// Gets items attributed to at least Jane, John, or both. Matched items may also contain other authors.
+List<ContentItem> items = deliveryService.<ContentItem>items()
+    .anyFilter("elements.author", Arrays.asList("jane_doe", "john_wick"))
+    .get()
+    .getItems();
 // EndDocSection

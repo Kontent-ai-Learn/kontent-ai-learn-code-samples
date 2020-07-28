@@ -1,9 +1,15 @@
 // DocSection: filtering_get_items_by_linked_item
-List<NameValuePair> params = DeliveryParameterBuilder.params()
-  // Gets items whose linked item has codename as one of specified values
-  .filterAny(“elements.authors”, [“john_snow”], ["johnny_bravo"])
+// Gets items attributed to Jane. Matched items may also contain other authors.
+List<NameValuePair> params1 = DeliveryParameterBuilder.params()
+    .filterContains("elements.author", ["jane_doe"])
+    .build();
 
-List<NameValuePair> params = DeliveryParameterBuilder.params()
-  // Gets items whose linked item has codename of certain value
-  .filterContains(“elements.authors”, [“joe_down”])
+ContentItemsListingResponse listingResponse1 = deliveryClient.getItems(params1);
+
+// Gets items attributed to at least Jane, John, or both. Matched items may also contain other authors.
+List<NameValuePair> params2 = DeliveryParameterBuilder.params()
+    .filterAny("elements.authors", ["jane_doe"], ["john_wick"])
+    .build();
+
+ContentItemsListingResponse listingResponse2 = deliveryClient.getItems(params2);
 // EndDocSection
