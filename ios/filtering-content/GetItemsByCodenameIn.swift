@@ -1,6 +1,6 @@
 // DocSection: filtering_get_items_by_codename_in
-// Gets items whose codename is one of the following
-let customQuery = "items?system.codename[in]=welcome_to_mvc,top_10_websites,kontent_best_practices"
+// Gets three items by their codenames. The codenames are unique per project.
+let customQuery = "items?system.codename[in]=delivery_api,get_content,hello_world"
 
 client.getItems(modelType: Article.self, customQuery: customQuery) { (isSuccess, itemsResponse, error) in
     if isSuccess {

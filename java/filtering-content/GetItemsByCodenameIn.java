@@ -1,5 +1,8 @@
 // DocSection: filtering_get_items_by_codename_in
+// Gets three items by their codenames. The codenames are unique per project.
 List<NameValuePair> params = DeliveryParameterBuilder.params()
-  // Gets items whose codename is one of the following
-  .filterIn("system.codename", "welcome_to_mvc", "top_10_websites", "kontent_best_practices")
+    .filterIn("system.codename", "delivery_api", "get_content", "hello_world")
+    .build()
+
+ContentItemsListingResponse listingResponse = deliveryClient.getItems(params);
 // EndDocSection

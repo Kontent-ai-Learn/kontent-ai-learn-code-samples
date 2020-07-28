@@ -1,5 +1,7 @@
 // DocSection: filtering_get_items_by_codename_in
-List<object> items = deliveryService.<object>items()
-  // Gets items whose codename is one of the following
-  .inFilter("system.codename", "welcome_to_mvc", "top_10_websites", "kontent_best_practices")
+// Gets three items by their codenames. The codenames are unique per project.
+List<ContentItem> items = deliveryService.<ContentItem>items()
+    .inFilter("system.codename", Arrays.asList("delivery_api", "get_content", "hello_world"))
+    .get()
+    .getItems();
 // EndDocSection
