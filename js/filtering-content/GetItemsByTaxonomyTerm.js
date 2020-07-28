@@ -6,13 +6,13 @@ deliveryClient.items()
   .toObservable()
   .subscribe(response => console.log(response));
 
-  // Gets items tagged with a specific list of tags
+// Gets items tagged with a specific list of tags
 deliveryClient.items()
   .allFilter('elements.tags', ['kontent', 'headless'])
   .toObservable()
   .subscribe(response => console.log(response));
 
-  // Gets items tagged with at least one tag from the list
+// Gets items tagged with at least one tag from the list
 deliveryClient.items()
   .anyFilter('elements.tags', ['football', 'soccer'])
   .toObservable()

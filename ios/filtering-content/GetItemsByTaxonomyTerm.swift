@@ -1,5 +1,6 @@
 // DocSection: filtering_get_items_by_taxonomy_term
-// Get items tagged with a single tag
+// Note: Filters work with codenames of the tags.
+// Gets items tagged with a single tag
 let customQuery = "items?elements.tags[contains]=kontent"
 // Gets items tagged with multiple tags
 // let customQuery = "items?elements.tags[all]=kontent,headless"

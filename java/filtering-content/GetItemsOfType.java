@@ -1,6 +1,6 @@
 // DocSection: filtering_get_items_of_type
+// Gets items based on the type Product
 List<NameValuePair> params = DeliveryParameterBuilder.params()
-  // Gets items based on the type Product
   .filterEquals("system.type", "product")
   .build();
 
