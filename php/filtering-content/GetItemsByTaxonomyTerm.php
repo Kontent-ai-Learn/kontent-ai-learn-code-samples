@@ -1,4 +1,4 @@
-<?
+<?php
 // DocSection: filtering_get_items_by_taxonomy_term
 // Note: Filters work with codenames of the tags.
 // Gets items tagged with a single tag

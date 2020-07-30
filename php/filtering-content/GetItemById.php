@@ -1,4 +1,4 @@
-<?
+<?php
 // DocSection: filtering_get_item_by_id
 // Gets an item by its internal ID
 $items = $client->getItems((new QueryParams())

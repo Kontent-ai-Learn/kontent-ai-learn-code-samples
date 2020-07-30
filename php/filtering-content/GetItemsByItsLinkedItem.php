@@ -1,4 +1,4 @@
-<?
+<?php
 // DocSection: filtering_get_items_by_linked_item
 // Gets items attributed to Jane. Matched items may also reference other authors.
 $items = $client->getItems((new QueryParams())

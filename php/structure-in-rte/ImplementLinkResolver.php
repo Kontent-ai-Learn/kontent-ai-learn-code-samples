@@ -1,7 +1,6 @@
-// DocSection: structure_in_rte_implement_link_resolver
 <?php
+// DocSection: structure_in_rte_implement_link_resolver
 // Tip: Find more about PHP SDKs at https://docs.kontent.ai/php
-
 class CustomContentLinkUrlResolver implements ContentLinkUrlResolverInterface
 {
     public function resolveLinkUrl($link)
@@ -21,3 +20,4 @@ class CustomContentLinkUrlResolver implements ContentLinkUrlResolverInterface
     }    
 }
 // EndDocSection
+?>

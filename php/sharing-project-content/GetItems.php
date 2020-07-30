@@ -1,7 +1,6 @@
-// DocSection: sharing_project_content_get_items
 <?php
+// DocSection: sharing_project_content_get_items
 // Tip: Find more about PHP SDKs at https://docs.kontent.ai/php
-
 // Defined by Composer to include required libraries
 require __DIR__ . '/vendor/autoload.php';
 
@@ -17,3 +16,4 @@ $items2 = $client2->getItems();
 
 $items = array_merge($items1, $items2);
 // EndDocSection
+?>
