@@ -9,7 +9,7 @@ const client = new ManagementClient({
 });
 
 client.modifyContentTypeSnippet()
-  .byTypeId('269202ad-1d9d-47\fd-b3e8-bdb05b3e3cf0')
+  .byTypeId('269202ad-1d9d-47fd-b3e8-bdb05b3e3cf0')
   //.byTypeCodename('hosted_video')
   //.byTypeExternalId('snippet-type-123')
   .withData(
