@@ -1,11 +1,7 @@
-# DocSection: filtering_get_items_its_linked_item
-delivery_client.items([
-  # Gets items whose linked item has codename as one of specified values
-  'elements.author'.any('john_snow', 'johnny_bravo')
-])
+# DocSection: filtering_get_items_by_linked_item
+# Gets items attributed to Jane. Matched items may also reference other authors.
+delivery_client.items('elements.author'.contains('jane_doe'))
 
-delivery_client.items([
-  # Gets items whose linked item has codename of certain value
-  'elements.author'.contains('joe_down')
-])
+# Gets items attributed to at least Jane, John, or both. Matched items may also reference other authors.
+delivery_client.items('elements.author'.any('jane_doe', 'john_wick'))
 # EndDocSection

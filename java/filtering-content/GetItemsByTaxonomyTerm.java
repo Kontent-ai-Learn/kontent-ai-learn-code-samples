@@ -1,13 +1,20 @@
 // DocSection: filtering_get_items_by_taxonomy_term
-List<NameValuePair> params = DeliveryParameterBuilder.params()
-  // Get articles tagged with specific tag
-  .filterContains("elements.tags", ["kentico"])
+// Note: Filters work with codenames of the tags.
+// Gest items tagged with a single tag
+List<NameValuePair> params1 = DeliveryParameterBuilder.params()
+    .filterContains("elements.tags", "kontent")
+    .build();
+ContentItemsListingResponse listingResponse1 = deliveryClient.getItems(params1);
 
-List<NameValuePair> params = DeliveryParameterBuilder.params()
-  /// Gets articles tagged with any of the below tags
-  .filterAny("elements.tags", ["sport"], ["soccer"])
+// Gets items tagged with multiple tags
+List<NameValuePair> params2 = DeliveryParameterBuilder.params()
+    .filterAll("elements.tags", "kontent", "headless")
+    .build();
+ContentItemsListingResponse listingResponse2 = deliveryClient.getItems(params2);
 
-List<NameValuePair> params = DeliveryParameterBuilder.params()
-  // Gets articles tagged with all of the below tags
-  .filterAll("elements.tags", ["mvc"], ["kontent"], ["headless"])
+// Gets items tagged with at least one of multiple tags
+List<NameValuePair> params3 = DeliveryParameterBuilder.params()
+    .filterAny("elements.tags", "football", "soccer")
+    .build();
+ContentItemsListingResponse listingResponse3 = deliveryClient.getItems(params3);
 // EndDocSection

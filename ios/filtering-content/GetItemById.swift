@@ -1,5 +1,5 @@
 // DocSection: filtering_get_item_by_id
-// Gets item by its ID
+// Gets an item by its internal ID
 let customQuery = "items?system.id=2f7288a1-cfc8-47be-9bf1-b1d312f7da18"
 
 client.getItems(modelType: Article.self, customQuery: customQuery) { (isSuccess, itemsResponse, error) in

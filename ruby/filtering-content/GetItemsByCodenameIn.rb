@@ -1,6 +1,4 @@
 # DocSection: filtering_get_items_by_codename_in
-delivery_client.items([
-  # Gets items whose codename is one of the following
-  'system.codename'.in('welcome_to_mvc', 'top_10_websites', 'kontent_best_practices')
-])
+# Gets three items by their codenames. The codenames are unique per project.
+delivery_client.items('system.codename'.in('delivery_api', 'get_content', 'hello_world'))
 # EndDocSection

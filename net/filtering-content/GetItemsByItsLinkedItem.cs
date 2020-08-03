@@ -1,11 +1,11 @@
-// DocSection: filtering_get_items_its_linked_item
-DeliveryItemListingResponse<object> response = await _deliveryClient.GetItemsAsync<object>(
-  // Gets items whose linked item has codename as one of specified values
-  new AnyFilter(“elements.authors”, “john_snow”, "johnny_bravo")
+// DocSection: filtering_get_items_by_linked_item
+// Gets items attributed to Jane. Matched items may also reference other authors.
+DeliveryItemListingResponse<object> response = await deliveryClient.GetItemsAsync<object>(
+  new ContainsFilter("elements.author", "jane_doe")
 );
 
-DeliveryItemListingResponse<object> response = await _deliveryClient.GetItemsAsync<object>(
-  // Gets items whose linked item has codename of certain value
-  new ContainsFilter(“elements.authors”, “joe_down”)
+// Gets items attributed to at least Jane, John, or both. Matched items may also reference other authors.
+DeliveryItemListingResponse<object> response = await deliveryClient.GetItemsAsync<object>(
+  new AnyFilter("elements.author", "jane_doe", "john_wick")
 );
 // EndDocSection

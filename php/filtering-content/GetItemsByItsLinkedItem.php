@@ -1,9 +1,11 @@
-// DocSection: filtering_get_items_its_linked_item
+<?php
+// DocSection: filtering_get_items_by_linked_item
+// Gets items attributed to Jane. Matched items may also reference other authors.
 $items = $client->getItems((new QueryParams())
-  // Gets items whose linked item has codename as one of specified values
-  ->any(“elements.authors”, ["john_snow"], ["johnny_bravo"])
+  ->contains('elements.author', ['jane_doe']));
 
+// Gets items attributed to at least Jane, John, or both. Matched items may also reference other authors.
 $items = $client->getItems((new QueryParams())
-  // Gets items whose linked item has codename of certain value
-  ->contains(“elements.authors”, ["joe_down"])
+  ->any('elements.author', ['jane_doe'], ['john_wick']));
 // EndDocSection
+?>

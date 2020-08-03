@@ -1,7 +1,6 @@
-// DocSection: schedule_expiration_add_filter
 <?php
+// DocSection: schedule_expiration_add_filter
 // Tip: Find more about PHP SDKs at https://docs.kontent.ai/php
-
 // Defined by Composer to include required libraries
 require __DIR__ . '/vendor/autoload.php';
 
@@ -20,3 +19,4 @@ $publishedItems = array_filter($items->items, function($item){
         ($item->ExpireAt > $now || is_null($item->ExpireAt));
     });
 // EndDocSection
+?>

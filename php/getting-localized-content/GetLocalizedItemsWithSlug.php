@@ -1,7 +1,6 @@
-// DocSection: getting_localized_content_url_slug
 <?php
+// DocSection: getting_localized_content_url_slug
 // Tip: Find more about PHP SDKs at https://docs.kontent.ai/php
-
 // Defined by Composer to include required libraries
 require __DIR__ . '/vendor/autoload.php';
 
@@ -15,3 +14,4 @@ $items = $client->getItems((new QueryParams())
             ->equals('system.type', 'article')
             ->equals('elements.url_pattern', 'acerda-de-nosotros'));
 // EndDocSection
+?>

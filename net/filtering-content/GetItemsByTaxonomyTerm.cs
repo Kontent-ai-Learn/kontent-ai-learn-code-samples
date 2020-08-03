@@ -1,16 +1,17 @@
 // DocSection: filtering_get_items_by_taxonomy_term
-DeliveryItemListingResponse<object> response = await _deliveryClient.GetItemsAsync<object>(
-  // Get articles tagged with specific tag
-  new ContainsFilter("elements.tags", "kentico")
+// Note: Filters work with codenames of the tags.
+// Gets items tagged with a specific tag
+DeliveryItemListingResponse<object> response = await deliveryClient.GetItemsAsync<object>(
+  new ContainsFilter("elements.tags", "kontent")
 );
 
-DeliveryItemListingResponse<object> response = await _deliveryClient.GetItemsAsync<object>(
-  // Gets articles tagged with any of the below tags
-  new AnyFilter("elements.tags", "sport", "soccer")
+// Gets items tagged with a specific list of tags
+DeliveryItemListingResponse<object> response = await deliveryClient.GetItemsAsync<object>(
+  new AllFilter("elements.tags", "kontent", "headless")
 );
 
-DeliveryItemListingResponse<object> response = await _deliveryClient.GetItemsAsync<object>(
-  // Gets articles tagged with all of the below tags
-  new AllFilter("elements.tags", "mvc", "kontent", "headless")
+// Gets items tagged with at least one tag from the list
+DeliveryItemListingResponse<object> response = await deliveryClient.GetItemsAsync<object>(
+  new AnyFilter("elements.tags", "football", "soccer")
 );
 // EndDocSection

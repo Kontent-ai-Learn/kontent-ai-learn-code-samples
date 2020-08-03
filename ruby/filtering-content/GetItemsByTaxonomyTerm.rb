@@ -1,16 +1,11 @@
 # DocSection: filtering_get_items_by_taxonomy_term
-delivery_client.items([
-  # Get articles tagged with specific tag
-  'elements.tags'.contains('kentico')
-])
+# Note: Filters work with codenames of the tags.
+# Gets itmes tagged with a single tag
+delivery_client.items('elements.tags'.contains('kontent'))
 
-delivery_client.items([
-  # Gets articles tagged with any of the below tags
-  'elements.tags'.any('sport', 'soccer')
-])
+# Gets items tagged with multiple tags
+delivery_client.items('elements.tags'.any('football', 'soccer'))
 
-delivery_client.items([
-  # Gets articles tagged with all of the below tags
-  'elements.tags'.contains('mvc', 'kontent', 'headless')
-])
+# Gets items tagged with at least one of multiple tags
+delivery_client.items('elements.tags'.contains('mvc', 'kontent', 'headless'))
 # EndDocSection

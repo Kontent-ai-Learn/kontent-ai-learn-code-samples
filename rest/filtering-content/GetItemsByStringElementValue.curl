@@ -1,6 +1,6 @@
-# DocSection: filtering_get_items_by_string_element_value
+# DocSection: filtering_get_items_by_string
+# Gets items whose Title element value equals to "Hello World"
 curl --request GET \
-  // Gets items whose Title element value equals to "Hello World"
   --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?elements.title=Hello World' \
   --header 'content-type: application/json'
 # EndDocSection

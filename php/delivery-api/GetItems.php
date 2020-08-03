@@ -1,7 +1,6 @@
-// DocSection: delivery_api_get_items
 <?php
+// DocSection: delivery_api_get_items
 // Tip: Find more about PHP SDKs at https://docs.kontent.ai/php
-
 // Defined by Composer to include required libraries
 require __DIR__ . '/vendor/autoload.php';
 
@@ -13,3 +12,4 @@ $client = new DeliveryClient('<YOUR_PROJECT_ID>');
 $items = $client->getItems((new QueryParams())
             ->limit(3));
 // EndDocSection
+?>
