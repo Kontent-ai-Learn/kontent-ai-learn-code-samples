@@ -1,12 +1,12 @@
 // DocSection: filtering_get_items_by_taxonomy_term
 // Note: Filters work with codenames of the tags.
-// Gest items tagged with a single tag
+// Gets items tagged with one specific tag
 List<ContentItem> items = deliveryService.<ContentItem>items()
     .containsFilter("elements.tags", Arrays.asList("kentico"))
     .get()
     .getItems();
 
-// Gets items tagged with multiple tags
+// Gets items tagged with a list of specific tags
 List<object> items = deliveryService.<object>items()
     .allFilter("elements.tags", Arrays.asList("kontent", "headless"))
     .get()

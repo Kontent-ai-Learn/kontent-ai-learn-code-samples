@@ -1,11 +1,11 @@
 # DocSection: filtering_get_items_by_taxonomy_term
 # Note: Filters work with codenames of the tags.
-# Gets items tagged with a single tag
+# Gets items tagged with one specific tag
 curl --request GET \
   --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?elements.tags[contains]=kontent' \
   --header 'content-type: application/json'
   
-# Gets items tagged with multiple tags
+# Gets items tagged with a list of specific tags
 curl --request GET \
   --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?elements.tags[all]=kontent,headless' \
   --header 'content-type: application/json'
