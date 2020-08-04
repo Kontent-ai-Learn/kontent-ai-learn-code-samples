@@ -42,17 +42,17 @@ client.addContentType()
           },
         },
         {
-         name: "Author bio",
-         codename: "bio",
-         type: ElementModels.ElementType.richText,
-         allowed_blocks: [
-     	     "images",
-     	     "text"
-     	     ],
-         content_group: {
-         external_id: "author"
-     },
-        },
+          name: "Author bio",
+          codename: "bio",
+          type: ElementModels.ElementType.richText,
+          allowed_blocks: [
+     	      "images",
+     	      "text"
+          ],
+          content_group: {
+            external_id: "author"
+          }
+        }
       ]
     }
   )
@@ -60,7 +60,7 @@ client.addContentType()
   .subscribe((response) => {
     console.log(response);
   },
-    (error) => {
-      console.log(error);
-    });
+  (error) => {
+    console.log(error);
+  });
 // EndDocSection

@@ -11,12 +11,12 @@ const client = new ManagementClient({
 client.deleteTaxonomy()
   .byTaxonomyId("dbff8416-c4c7-45d2-b497-a4a71a5cbe30")
   // .byTaxonomyCodename("personas_222")
-  //.byTaxonomyExternalId("Tax-Group-124")
+  // .byTaxonomyExternalId("Tax-Group-124")
   .toObservable()
   .subscribe((response) => {
     console.log(response);
   },
-    (error) => {
-      console.log(error);
-    });
+  (error) => {
+    console.log(error);
+  });
 // EndDocSection

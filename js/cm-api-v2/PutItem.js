@@ -10,24 +10,24 @@ const client = new ManagementClient({
 
 // Used when updating an existing item
 client.updateContentItem()
-.byItemId('f4b3fc05-e988-4dae-9ac1-a94aba566474')
-// .byItemCodename('my_article')
-// .byItemExternalId('59713')
-.withData(
-  {
-    name: 'On Roasts',
-    codename: 'my_article_my_article',
-    sitemap_locations: [
-      {
-        codename: 'articles'
-      }
-    ]
-  }
-)
-.toObservable()
-.subscribe((response) => {
-  console.log(response);
-},
+  .byItemId('f4b3fc05-e988-4dae-9ac1-a94aba566474')
+  // .byItemCodename('my_article')
+  // .byItemExternalId('59713')
+  .withData(
+    {
+      name: 'On Roasts',
+      codename: 'my_article_my_article',
+      sitemap_locations: [
+        {
+          codename: 'articles'
+        }
+      ]
+    }
+  )
+  .toObservable()
+  .subscribe((response) => {
+    console.log(response);
+  },
   (error) => {
     console.log(error);
   });
@@ -54,7 +54,7 @@ client.upsertContentItem()
   .subscribe((response) => {
     console.log(response);
   },
-    (error) => {
-      console.log(error);
-    });
+  (error) => {
+    console.log(error);
+  });
 // EndDocSection

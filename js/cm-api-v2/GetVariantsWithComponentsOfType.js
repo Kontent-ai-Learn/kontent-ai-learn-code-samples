@@ -10,7 +10,7 @@ const client = new ManagementClient({
 
 client.listLanguageVariantsOfContentTypeWithComponents()
   .byTypeID('6434e475-5a29-4866-9fd1-6d1ca873f5be')
-  //.byTypeCodename('article')
+  // .byTypeCodename('article')
   .toObservable()
   .subscribe((response) => {
     console.log(response);

@@ -34,9 +34,9 @@ client.updateAsset()
   .subscribe((response) => {
     console.log(response);
   },
-    (error) => {
-      console.log(error);
-    });
+  (error) => {
+    console.log(error);
+  });
 
 
 // Used when creating a new asset or updating an existing one
@@ -71,7 +71,7 @@ client.upsertAsset()
   .subscribe((response) => {
     console.log(response);
   },
-    (error) => {
-      console.log(error);
-    });
+  (error) => {
+    console.log(error);
+  });
 // EndDocSection

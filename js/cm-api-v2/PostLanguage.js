@@ -24,7 +24,7 @@ client.addLanguage()
   .subscribe((response) => {
     console.log(response);
   },
-    (error) => {
-      console.log(error);
-    });
+  (error) => {
+    console.log(error);
+  });
 // EndDocSection
