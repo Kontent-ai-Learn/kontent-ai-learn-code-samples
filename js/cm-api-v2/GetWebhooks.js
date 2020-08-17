@@ -1,4 +1,4 @@
-// DocSection: cm_api_v2_get_workflow_steps
+// DocSection: cm_api_v2_get_webhooks
 // Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 // Using ES6 syntax
 import { ManagementClient } from '@kentico/kontent-management';
@@ -8,7 +8,7 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-client.listWorkflowSteps()
+client.listWebhooks()
   .toObservable()
   .subscribe((response) => {
     console.log(response);

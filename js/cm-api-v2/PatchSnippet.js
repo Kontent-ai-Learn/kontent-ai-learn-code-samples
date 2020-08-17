@@ -10,8 +10,8 @@ const client = new ManagementClient({
 
 client.modifyContentTypeSnippet()
   .byTypeId('269202ad-1d9d-47fd-b3e8-bdb05b3e3cf0')
-  //.byTypeCodename('hosted_video')
-  //.byTypeExternalId('snippet-type-123')
+  // .byTypeCodename('hosted_video')
+  // .byTypeExternalId('snippet-type-123')
   .withData(
     [
       {
@@ -46,9 +46,9 @@ client.modifyContentTypeSnippet()
   )
   .toObservable()
   .subscribe((response) => {
-    // work with response
+    console.log(response);
   },
   (error) => {
-    // handle error
+    console.log(error);
   });
 // EndDocSection

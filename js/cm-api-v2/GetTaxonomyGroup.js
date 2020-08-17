@@ -10,8 +10,8 @@ const client = new ManagementClient({
 
 client.getTaxonomy()
   .byTaxonomyCodename("categories")
-  //.byTaxonomyID("bef9dd62-a3b8-4146-83e4-33be707899b4")
-  //.byTaxonomyExternalID("my-little-taxopony")
+  // .byTaxonomyID("bef9dd62-a3b8-4146-83e4-33be707899b4")
+  // .byTaxonomyExternalID("my-little-taxopony")
   .toObservable()
   .subscribe((response) => {
     console.log(response);
