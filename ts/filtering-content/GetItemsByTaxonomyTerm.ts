@@ -1,12 +1,12 @@
 // DocSection: filtering_get_items_by_taxonomy_term
 // Note: Filters work with codenames of the tags.
-// Gets items tagged with a specific tag
+// Gets items tagged with one specific tag
 deliveryClient.items<ContentItem>()
   .containsFilter('elements.tags', ['kontent'])
   .toObservable()
   .subscribe(response => console.log(response));
 
-// Gets items tagged with a specific list of tags
+// Gets items tagged with a list of specific tags
 deliveryClient.items<ContentItem>()
   .allFilter('elements.tags', ['kontent', 'headless'])
   .toObservable()

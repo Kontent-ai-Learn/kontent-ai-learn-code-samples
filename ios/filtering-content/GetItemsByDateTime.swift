@@ -1,6 +1,5 @@
 // DocSection: filtering_get_items_by_datetime
-// Note: system.last_modified value is stored with ms precision
-// Date&Time element value is stored with minute precision
+// Note: Date & time element values are provided by users and stored with minute precision. The system.last_modified value reflects Last content change to an item and is stored with ms precision.
 
 // Filters items modified after April 9 2020, 9 am UTC+0
 let customQuery = "items?system.last_modified[gt]=2020-05-09T09:00:00.000000Z"
