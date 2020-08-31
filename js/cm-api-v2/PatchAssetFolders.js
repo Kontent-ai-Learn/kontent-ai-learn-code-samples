@@ -44,4 +44,4 @@ client.modifyAssetFolders()
     (error) => {
       console.log(error)
     });
-//EndDocSection
+// EndDocSection
