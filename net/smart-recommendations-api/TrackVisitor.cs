@@ -1,20 +1,9 @@
-// DocSection: rapi_v2_recommend_by_visitor_context
+// DocSection: rapi_v2_track_visitor
 using Kentico.Kontent.Recommendations;
 using Kentico.Kontent.Recommendations.Models;
 
 // Creates an instance of the recommendation client
 var recommendationClient = new RecommendationClient(accessToken: "<YOUR_RECOMMENDATION_API_KEY>", timeoutSeconds: 5);
-
-// Defines last 30 days in milliseconds
-var lastMonth = TimeSpan.FromDays(30).Milliseconds;
-
-// Uses filtering and boosting for more specific recommendations
-var recommendationSettings = new RecommendationSettings {
-    // Queries items with value 'developer' in element 'persona'
-    Filter = "\"persona=developer\" in 'properties'",
-    // Boosts items updated in last 30 days (twice as likely to recommend)
-    Booster = $"if 'lastupdated' >= now() - {lastMonth} then 2 else 1"
-};
 
 var visitor = new VisitorDetails {
     // Provide IP if you enabled Geolocation
