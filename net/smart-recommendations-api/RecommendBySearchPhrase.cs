@@ -5,7 +5,7 @@ using Kentico.Kontent.Recommendations.Models;
 // Creates an instance of the recommendation client
 var recommendationClient = new RecommendationClient(accessToken: "<YOUR_RECOMMENDATION_API_KEY>", timeoutSeconds: 5);
 
-// Creates a new recommendation request
+// Creates a new search request
 var searchRequest = new SearchRequest
 {
     VisitId = "visitorId123",

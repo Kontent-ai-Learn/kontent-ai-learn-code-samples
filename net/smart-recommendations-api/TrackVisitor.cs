@@ -1,6 +1,5 @@
 // DocSection: rapi_v2_track_visitor
 using Kentico.Kontent.Recommendations;
-using Kentico.Kontent.Recommendations.Models;
 
 // Creates an instance of the recommendation client
 var recommendationClient = new RecommendationClient(accessToken: "<YOUR_RECOMMENDATION_API_KEY>", timeoutSeconds: 5);
@@ -8,7 +7,7 @@ var recommendationClient = new RecommendationClient(accessToken: "<YOUR_RECOMMEN
 var visitor = new VisitorDetails {
     // Provide IP if you enabled Geolocation
     Ip = "192.166.12.4",
-    Referer = "google.com",
+    Referer = "https://www.google.com/search?hl=en&q=kentico%20kontent",
     // Provide Location if you disabled Geolocation
     Location = new LocationDetails {
         City = "Brno",
@@ -17,16 +16,6 @@ var visitor = new VisitorDetails {
     }
 };
 
-// Creates a new recommendation request
-var recommendationRequest = new RecommendationRequest {
-    VisitId = "visitorId123",
-    CurrentItemCodename = "example_blogpost",
-    ResponseLimit = 3,
-    RequestedTypeCodename = "blog_post",
-    RecommendationSettings = recommendationSettings,
-    Visitor = visitor
-};
-
-// Returns the requested number of recommended content items (their codenames)
-RecommendedContentItem[] recommendedArticles = await recommendationClient.GetRecommendationsAsync(recommendationRequest);
+// Creates a visitor profile in Smart Recommendations
+await recommendationClient.CreateVisitorAsync("clientId", visitor);
 // EndDocSection

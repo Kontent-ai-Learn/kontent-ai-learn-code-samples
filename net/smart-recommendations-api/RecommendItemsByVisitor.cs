@@ -9,19 +9,23 @@ var recommendationClient = new RecommendationClient(accessToken: "<YOUR_RECOMMEN
 var lastMonth = TimeSpan.FromDays(30).Milliseconds;
 
 // Uses filtering and boosting for more specific recommendations
-var recommendationSettings = new RecommendationSettings {
+var recommendationSettings = new RecommendationSettings
+{
     // Queries items with value 'developer' in element 'persona'
     Filter = "\"persona=developer\" in 'properties'",
     // Boosts items updated in last 30 days (twice as likely to recommend)
-    Booster = $"if 'lastupdated' >= now() - {lastMonth} then 2 else 1"
+    Booster = $"if 'lastupdated' >= now() - {lastMonth} then 2 else 1",
+    Scenario = "popular"
 };
 
-var visitor = new VisitorDetails {
+var visitor = new VisitorDetails
+{
     // Provide IP if you enabled Geolocation
     Ip = "192.166.12.4",
     Referer = "google.com",
     // Provide Location if you disabled Geolocation
-    Location = new LocationDetails {
+    Location = new LocationDetails
+    {
         City = "Brno",
         Country = "Czech Republic",
         Timezone = "CET"
@@ -29,7 +33,8 @@ var visitor = new VisitorDetails {
 };
 
 // Creates a new recommendation request
-var recommendationRequest = new RecommendationRequest {
+var recommendationRequest = new RecommendationRequest
+{
     VisitId = "visitorId123",
     CurrentItemCodename = "example_blogpost",
     ResponseLimit = 3,
