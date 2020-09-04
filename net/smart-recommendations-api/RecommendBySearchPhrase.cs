@@ -3,7 +3,7 @@ using Kentico.Kontent.Recommendations;
 using Kentico.Kontent.Recommendations.Models;
 
 // Creates an instance of the recommendation client
-var recommendationClient = new RecommendationClient(accessToken: "<RECOMMENDATION_API_KEY>", timeoutSeconds: 5);
+var recommendationClient = new RecommendationClient(accessToken: "<YOUR_RECOMMENDATION_API_KEY>", timeoutSeconds: 5);
 
 //Creates a new recommendation request
 var searchRequest = new SearchRequest {

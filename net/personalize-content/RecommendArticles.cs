@@ -1,9 +1,10 @@
 // DocSection: personalize_content_get_three_articles
 // Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
 using Kentico.Kontent.Recommendations;
+using Kentico.Kontent.Recommendations.Models;
 
 // Creates an instance of the recommendation client
-var recommendationClient = new RecommendationClient(accessToken: "<RECOMMENDATION_API_KEY>", timeoutSeconds: 5);
+var recommendationClient = new RecommendationClient(accessToken: "<YOUR_RECOMMENDATION_API_KEY>", timeoutSeconds: 5);
 
 // Creates a new recommendation request
 var recommendationRequest = new RecommendationRequest {

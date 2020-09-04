@@ -1,0 +1,11 @@
+# DocSection: rapi_v2_track_conversion
+curl --request POST \
+  --url https://recommend.kontent.ai/api/v2/track/conversion \
+  --header 'Authorization: Bearer <YOUR_SMART_RECOMMENDATIONS_API_KEY>' \
+  --header 'Content-type: application/json'
+  --data '
+{
+  "ip": "127.0.0.1",
+  "sourceApp" : "web"
+}'
+# EndDocSection
