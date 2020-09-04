@@ -1,18 +1,18 @@
-// DocSection: rapi_v2_recommend_by_visitor_context
+// DocSection: personalize_content_get_three_articles
+// Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
 using Kentico.Kontent.Recommendations;
-using Kentico.Kontent.Recommendations.Models;
 
 // Creates an instance of the recommendation client
 var recommendationClient = new RecommendationClient(accessToken: "<RECOMMENDATION_API_KEY>", timeoutSeconds: 5);
 
 // Creates a new recommendation request
 var recommendationRequest = new RecommendationRequest {
-        VisitId = "visitorId123",
-        CurrentItemCodename = "example_blogpost",
-        ResponseLimit = 3,
-        RequestedTypeCodename = "blog_post"
+        VisitId = "visitorJohn", // Visitor identified as John
+        CurrentItemCodename = "caas", // Visitor is reading CaaS
+        ResponseLimit = 3, // You want three recommendations
+        RequestedTypeCodename = "article" // You want articles
 };
 
-// Returns the requested number of recommended content items (their codenames)
+// Gets the recommendations (codenames of the recommended items)
 RecommendedContentItem[] recommendedArticles = await recommendationClient.GetRecommendationsAsync(recommendationRequest);
 // EndDocSection
