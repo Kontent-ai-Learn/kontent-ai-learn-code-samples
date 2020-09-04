@@ -1,4 +1,5 @@
 // DocSection: personalize_content_get_three_articles
+// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 import { RecommendationClient } from '@kentico/kontent-recommendations';
 
 const client = new RecommendationClient({

@@ -1,4 +1,5 @@
 // DocSection: personalize_content_cookie_helper
+// Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
 using Kentico.Kontent.Recommendations;
 using Kentico.Kontent.Recommendations.CookieHelper;
 
