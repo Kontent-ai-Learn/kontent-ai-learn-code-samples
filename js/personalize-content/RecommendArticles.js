@@ -4,7 +4,7 @@ import { RecommendationClient } from '@kentico/kontent-recommendations';
 
 const client = new RecommendationClient({
   projectId: '<YOUR_PROJECT_ID>',
-  apiKey: '<YOUR_RECOMMENDATION_API_KEY>'
+  apiKey: '<YOUR_SMART_RECOMMENDATION_API_KEY>'
 });
 
 await client.recommendItems()

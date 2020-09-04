@@ -1,4 +1,4 @@
-// DocSection: rapi_v2_track_visit
+// DocSection: rapi_v2_track_conversion
 // Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 import { RecommendationClient } from '@kentico/kontent-recommendations';
 
@@ -8,8 +8,8 @@ const client = new RecommendationClient({
   apiKey: '<YOUR_SMART_RECOMMENDATION_API_KEY>'
 });
 
-// Track a visit (a view by a specific visitor) for a content item
-await client.trackVisit()
+// Tracks a conversion for a specific visitor and content item
+await client.trackConversion()
     .withData({
         visitId: 'visitorId123',
         currentItemCodename: 'example_blog_post'

@@ -1,4 +1,4 @@
-// DocSection: rapi_v2_track_visit
+// DocSection: rapi_v2_track_portion
 // Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 import { RecommendationClient } from '@kentico/kontent-recommendations';
 
@@ -8,10 +8,11 @@ const client = new RecommendationClient({
   apiKey: '<YOUR_SMART_RECOMMENDATION_API_KEY>'
 });
 
-// Track a visit (a view by a specific visitor) for a content item
-await client.trackVisit()
-    .withData({
-        visitId: 'visitorId123',
-        currentItemCodename: 'example_blog_post'
-    }).toPromise();
+// Tracks a partial view (10% in this case) of a content item
+await client.trackPortion()
+  .withData({
+    visitId: 'visitorId123',
+    currentItemCodename: 'example_blog_post',
+    portionPercentage: 10
+  }).toPromise();
 // EndDocSection
