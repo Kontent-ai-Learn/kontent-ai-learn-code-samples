@@ -5,7 +5,9 @@ curl --request POST \
   --header 'Content-type: application/json'
   --data '
 {
-  "ip": "127.0.0.1",
-  "sourceApp" : "web"
+  "visitId": "visitorId123",
+  "query": "collaboration",
+  "resultCount": 3,
+  "requestedTypeCodename": "blog_post"
 }'
 # EndDocSection

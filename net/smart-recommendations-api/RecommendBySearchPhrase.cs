@@ -10,7 +10,7 @@ var searchRequest = new SearchRequest
 {
     VisitId = "visitorId123",
     Query = "collaboration",
-    ResultCount = 10,
+    ResultCount = 3,
     RequestedTypeCodename = "blog_post",
 };
 
