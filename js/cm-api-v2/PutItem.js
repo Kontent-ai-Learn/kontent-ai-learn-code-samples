@@ -28,9 +28,9 @@ client.updateContentItem()
   .subscribe((response) => {
     console.log(response);
   },
-  (error) => {
-    console.log(error);
-  });
+    (error) => {
+      console.log(error);
+    });
 
 // Used when creating a new item or updating an existing one
 client.upsertContentItem()
@@ -54,7 +54,7 @@ client.upsertContentItem()
   .subscribe((response) => {
     console.log(response);
   },
-  (error) => {
-    console.log(error);
-  });
+    (error) => {
+      console.log(error);
+    });
 // EndDocSection

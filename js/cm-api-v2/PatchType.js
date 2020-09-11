@@ -12,7 +12,7 @@ client.modifyContentType()
   .byTypeId("0be13600-e57c-577d-8108-c8d860330985")
   // .byTypeCodename("my_article")
   // .byTypeExternalId("my-article-id")
-  .withData (
+  .withData(
     [
       {
         op: "replace",
@@ -52,7 +52,7 @@ client.modifyContentType()
   .subscribe((response) => {
     console.log(response);
   },
-  (error) => {
-    console.log(error);
-  });
+    (error) => {
+      console.log(error);
+    });
 // EndDocSection

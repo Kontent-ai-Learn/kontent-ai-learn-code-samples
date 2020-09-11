@@ -55,19 +55,19 @@ client.modifyTaxonomy()
           codename: "second_term"
         },
         value:
-          {
-            name: "New taxonomy term",
-            external_id: "my-new-term",
-            terms: []
-          }
+        {
+          name: "New taxonomy term",
+          external_id: "my-new-term",
+          terms: []
+        }
       }
     ]
-    )
+  )
   .toObservable()
   .subscribe((response) => {
     console.log(response);
   },
-  (error) => {
-    console.log(error);
-  });
+    (error) => {
+      console.log(error);
+    });
 // EndDocSection
