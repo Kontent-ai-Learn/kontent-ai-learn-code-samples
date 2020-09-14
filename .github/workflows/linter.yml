@@ -38,13 +38,13 @@ jobs:
       # Checkout the code base #
       ##########################
       - name: Checkout Code
-        uses: actions/checkout:latest
+        uses: actions/checkout@latest
 
       ################################
       # Run Linter against code base #
       ################################
       - name: Lint code samples
-        uses: github/super-linter:latest
+        uses: github/super-linter@latest
         env:
           VALIDATE_ALL_CODEBASE: true
           VALIDATE_SHELL_SHFMT: false # Ignore .sh files
