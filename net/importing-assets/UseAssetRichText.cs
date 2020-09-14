@@ -3,7 +3,7 @@
 // Using Management API v1
 ArticleModel stronglyTypedElements = new ArticleModel
 {
-    BodyCopy = @"<p>...</p> <figure data-asset-external-id=\"brno-cafe-image\"></figure>"
+    BodyCopy = "<p>...</p><figure data-asset-external-id=\"brno-cafe-image\"></figure>"
 };
 
 ContentItemIdentifier itemIdentifier = ContentItemIdentifier.ByExternalId("new-cafes");
