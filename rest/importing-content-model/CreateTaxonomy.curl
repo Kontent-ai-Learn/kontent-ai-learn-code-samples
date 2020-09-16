@@ -1,0 +1,55 @@
+// DocSection: importing_create_taxonomy
+curl --request POST \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/taxonomies \
+  --header 'Authorization: Bearer <YOUR_MANAGEMENT_API_KEY>' \
+  --header 'Content-type: application/json' \
+  --data '
+  {
+  "name": "Blogpost topic",
+  "codename": "blog_topic",
+  "terms": [
+    {
+      "name": "Sport",
+      "codename": "sport",
+      "terms": [
+        {
+          "name": "Soccer",
+          "external_id": "soccer",
+          "terms": []
+        },
+        {
+          "name": "Ice hockey",
+          "external_id": "hockey",
+          "terms": []
+        },
+        {
+          "name": "Rugby",
+          "external_id": "rugby",
+          "terms": []
+        }
+      ]
+    },
+    {
+      "name": "Technology stack",
+          "codename": "tech",
+          "terms": [
+            {
+              "name": "JavaScript",
+              "codename": "js",
+              "terms": []
+            },
+            {
+              "name": "C#",
+              "codename": "c",
+              "terms": []
+            },
+            {
+             "name": "MVC", 
+             "codename": "mvc",
+             "terms": []
+            }
+          ]
+    }
+  ]
+}'
+// EndDocSection
