@@ -34,17 +34,17 @@ client.addTaxonomy()
           ]
         },
         {
-          name: "Technology stack",
-          codename: "tech",
+          name: 'Technology stack',
+          codename: 'tech',
           terms: [
             {
-              name: "JavaScript",
-              codename: "js",
+              name: 'JavaScript',
+              codename: 'js',
               terms: []
             },
             {
-              name: "C#",
-              codename: "c",
+              name: 'C#',
+              codename: 'c',
               terms: []
             },
             {
