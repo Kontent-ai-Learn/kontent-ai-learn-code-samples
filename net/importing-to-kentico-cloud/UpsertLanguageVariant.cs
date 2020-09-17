@@ -3,16 +3,16 @@
 // Using Management API v1
 using Kentico.Kontent.Management;
 
-ManagementOptions options = new ManagementOptions
+ManagementOptions options = new ManagementOptions()
 {
-    ApiKey = "<YOUR_API_KEY>",
+    ApiKey = "<YOUR_MANAGEMENT_API_KEY>",
     ProjectId = "<YOUR_PROJECT_ID>"
 };
 
 ManagementClient client = new ManagementClient(options);
 
 // Elements to update
-CafeContentTypeModel stronglyTypedElements = new CafeContentTypeModel
+CafeContentTypeModel stronglyTypedElements = new CafeContentTypeModel()
 {
     Street = "Nove Sady 25",
     City = "Brno",

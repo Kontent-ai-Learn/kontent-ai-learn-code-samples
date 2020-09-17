@@ -1,7 +1,6 @@
-// DocSection: language_fallbacks_ignore
 <?php
+// DocSection: language_fallbacks_ignore
 // Tip: Find more about PHP SDKs at https://docs.kontent.ai/php
-
 // Defined by Composer to include required libraries
 require __DIR__ . '/vendor/autoload.php';
 
@@ -13,3 +12,4 @@ $items = $client->getItems((new QueryParams())
             ->language('es-ES')
             ->equals('system.language', 'es-ES'));
 // EndDocSection
+?>

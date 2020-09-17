@@ -1,5 +1,0 @@
-# DocSection: latest_articles_get_all
-curl --request GET \
-  --url 'https://deliver.kontent.ai/975bf280-fd91-488c-994c-2f04416e5ee3/items'
-  --header 'content-type: application/json'
-# EndDocSection

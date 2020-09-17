@@ -1,5 +1,8 @@
 // DocSection: filtering_get_product_within_rating
+// Gets items whose rating is at least 6.5 and at most 9
 List<NameValuePair> params = DeliveryParameterBuilder.params()
-  // Gets products whose rating is at least 7 but no greater than 9
-  .filterRange("elements.product_rating", "7", "9")
- // EndDocSection
+    .filterRange("elements.product_rating", "7.5", "9")
+    .build();
+
+ContentItemsListingResponse listingResponse = client.getItems();
+// EndDocSection

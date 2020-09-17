@@ -10,9 +10,9 @@ const client = new ManagementClient({
 
 client.modifyContentType()
   .byTypeId("0be13600-e57c-577d-8108-c8d860330985")
-  //.byTypeCodename("my_article")
-  //.byTypeExternalId("my-article-id")
-  .withData (
+  // .byTypeCodename("my_article")
+  // .byTypeExternalId("my-article-id")
+  .withData(
     [
       {
         op: "replace",
@@ -43,8 +43,8 @@ client.modifyContentType()
         path: "/elements/external_id:my-multiple-choice-id/options/codename:my_option"
       },
       {
-       op: "remove",
-       path: "/elements/id:e94fab1f-c2c1-4f4a-b36c-3f7a0808d2b8/allowed_blocks/text"
+        op: "remove",
+        path: "/elements/id:e94fab1f-c2c1-4f4a-b36c-3f7a0808d2b8/allowed_blocks/text"
       }
     ]
   )

@@ -1,6 +1,6 @@
 // DocSection: structure_in_rte_retrieve_article
 var deliveryClient = new DeliveryClient({
-    projectId: '<YOUR_PROJECT_ID>', 
+    projectId: '<YOUR_PROJECT_ID>',
     typeResolvers: typeResolvers
 });
 

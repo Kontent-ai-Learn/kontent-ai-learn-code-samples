@@ -3,7 +3,6 @@
 import { ContentItem, Elements } from '@kentico/kontent-delivery';
 
 // Generate strongly typed models at https://github.com/Kentico/kontent-model-generator-js
-
 export class Tweet extends ContentItem {
     public tweetLink: Elements.TextElement;
     public theme: Elements.MultipleChoiceElement;

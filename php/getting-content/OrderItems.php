@@ -1,7 +1,6 @@
-// DocSection: getting_content_order_items
 <?php
+// DocSection: getting_content_order_items
 // Tip: Find more about PHP SDKs at https://docs.kontent.ai/php
-
 // Defined by Composer to include required libraries
 require __DIR__ . '/vendor/autoload.php';
 
@@ -15,3 +14,4 @@ $items = $client->getItems((new QueryParams())
             ->limit(3)
             ->orderDesc('system.last_modified'));
 // EndDocSection
+?>

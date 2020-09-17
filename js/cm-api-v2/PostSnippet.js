@@ -9,29 +9,30 @@ const client = new ManagementClient({
 });
 
 client.addContentTypeSnippet()
-  .withData(
-    {
+  .withData(builder => {
+    return {
       name: "metadata",
       codename: "my_metadata",
       external_id: "snippet-item-123",
       elements: [
-        {
+        builder.textElement({
           name: "Meta title",
           codename: "my_metadata__meta_title",
           guidelines: "Length: 30–60 characters",
           type: ElementModels.ElementType.text,
           external_id: "meta_title"
-        },
-        {
+        }),
+        builder.textElement({
           name: "Meta description",
           codename: "my_metadata__meta_description",
           guidelines: "Length: 70-150 characters",
           type: ElementModels.ElementType.text,
           external_id: "meta_title"
-        }
+        })
       ]
-    }
-  )
+    };
+  })
+
   .toObservable()
   .subscribe((response) => {
     console.log(response);
