@@ -1,6 +1,6 @@
 // DocSection: filtering_get_items_by_url_slug
-// Gets items whose URL Slug is as follows - this is same as filtering by text element value
-let customQuery = "items?elements.url_slug=article-title"
+// Gets items whose URL slug equals to sample-url-slug
+let customQuery = "items?elements.url_slug=sample-url-slug"
 
 client.getItems(modelType: Article.self, customQuery: customQuery) { (isSuccess, itemsResponse, error) in
     if isSuccess {

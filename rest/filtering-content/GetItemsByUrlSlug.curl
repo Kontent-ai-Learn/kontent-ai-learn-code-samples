@@ -1,6 +1,6 @@
 # DocSection: filtering_get_items_by_url_slug
-# Gets items whose URL Slug is as follows - this is same as filtering by text element value
+# Gets items whose URL slug equals to sample-url-slug
 curl --request GET \
-  --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?elements.url_slug=article-title' \
+  --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?elements.url_slug=sample-url-slug' \
   --header 'content-type: application/json'
 # EndDocSection

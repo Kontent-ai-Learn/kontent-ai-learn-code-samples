@@ -16,6 +16,7 @@ const client = new KontentDelivery.DeliveryClient({
   ]
 });
 
+// Gets feed of all articles in the project
 client.itemsFeedAll()
   .type('article')
   .toObservable()

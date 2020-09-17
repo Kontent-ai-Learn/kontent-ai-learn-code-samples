@@ -1,5 +1,7 @@
 // DocSection: filtering_get_items_by_codename_in
+// Gets three items by their codenames. The codenames are unique per project.
 deliveryClient.items<ContentItem>()
-  // Gets items whose codename is one of the following
-  .inFilter("system.codename", "welcome_to_mvc", "top_10_websites", "kontent_best_practices")
+  .inFilter('system.codename', ['delivery_api', 'get_content', 'hello_world'])
+  .toObservable()
+  .subscribe(response => console.log(response));
 // EndDocSection

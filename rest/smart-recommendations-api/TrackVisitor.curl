@@ -1,0 +1,22 @@
+# DocSection: rapi_v2_track_visitor
+curl --request POST \
+  --url https://recommend.kontent.ai/api/v2/track/visitor \
+  --header 'Authorization: Bearer <YOUR_SMART_RECOMMENDATIONS_API_KEY>' \
+  --header 'Content-type: application/json'
+  --data '
+{
+  "visitId": "visitorId123",
+  "visitor": {
+    "ip": "192.166.12.4",
+    "referer": "https://www.google.com/search?hl=en&q=kentico%20kontent",
+    "location": {
+      "city": "Brno",
+      "country": "Czech Republic",
+      "timezone": "CET"
+    },
+    "custom": {
+      "persona": "developer"
+    }
+  }
+}'
+# EndDocSection

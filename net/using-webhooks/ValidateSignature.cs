@@ -4,6 +4,7 @@ using System;
 using System.Security.Cryptography;
 using System.Text;
 
+// Example of generating the hash to verify the notification
 private static string GenerateHash(string message, string secret)
 {
     secret = secret ?? "";

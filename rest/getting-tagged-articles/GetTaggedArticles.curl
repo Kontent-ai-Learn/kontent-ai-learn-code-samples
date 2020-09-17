@@ -1,5 +1,0 @@
-# DocSection: getting_articles_with_taxonomy_term
-curl --request GET \
-  --url 'https://deliver.kontent.ai/975bf280-fd91-488c-994c-2f04416e5ee3/items?system.type=article&elements.personas[contains]=barista'
-  --header 'content-type: application/json'
-# EndDocSection

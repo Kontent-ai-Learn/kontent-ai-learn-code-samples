@@ -1,24 +1,17 @@
 // DocSection: delivery_api_get_item
 // Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
-import { ContentItem, DeliveryClient, Elements, TypeResolver } from '@kentico/kontent-delivery';
-
-// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
-export class Article extends ContentItem {
-    public title: Elements.TextElement;
-    public summary: Elements.TextElement;
-    public post_date: Elements.DateTimeElement;
-    public teaser_image: Elements.AssetsElement;
-    public related_articles: Article[];
-}
+import { DeliveryClient, TypeResolver } from '@kentico/kontent-delivery';
+import { Article } from './models/Article';
 
 const deliveryClient = new DeliveryClient({
-    projectId: '<YOUR_PROJECT_ID>',
-    typeResolvers: [
-      new TypeResolver('article', (rawData) => new Article)
-    ]
+  projectId: '<YOUR_PROJECT_ID>',
+  typeResolvers: [
+    // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
+    new TypeResolver('article', (rawData) => new Article)
+  ]
 });
 
 deliveryClient.item<Article>('my_article')
-    .toObservable()
-    .subscribe(response => console.log(response.item));
+  .toObservable()
+  .subscribe(response => console.log(response.item));
 // EndDocSection

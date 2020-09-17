@@ -10,27 +10,27 @@ const client = new ManagementClient({
 
 // Used when updating an existing item
 client.updateContentItem()
-.byItemId('f4b3fc05-e988-4dae-9ac1-a94aba566474')
-// .byItemCodename('my_article')
-// .byItemExternalId('59713')
-.withData(
-  {
-    name: 'On Roasts',
-    codename: 'my_article_my_article',
-    sitemap_locations: [
-      {
-        codename: 'articles'
-      }
-    ]
-  }
-)
-.toObservable()
-.subscribe((response) => {
-  console.log(response);
-},
-  (error) => {
-    console.log(error);
-  });
+  .byItemId('f4b3fc05-e988-4dae-9ac1-a94aba566474')
+  // .byItemCodename('my_article')
+  // .byItemExternalId('59713')
+  .withData(
+    {
+      name: 'On Roasts',
+      codename: 'my_article_my_article',
+      sitemap_locations: [
+        {
+          codename: 'articles'
+        }
+      ]
+    }
+  )
+  .toObservable()
+  .subscribe((response) => {
+    console.log(response);
+  },
+    (error) => {
+      console.log(error);
+    });
 
 // Used when creating a new item or updating an existing one
 client.upsertContentItem()

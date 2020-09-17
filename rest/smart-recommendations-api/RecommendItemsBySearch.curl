@@ -1,0 +1,13 @@
+# DocSection: rapi_v2_recommend_by_search_phrase
+curl --request POST \
+  --url https://recommend.kontent.ai/api/v2/saerch/items \
+  --header 'Authorization: Bearer <YOUR_SMART_RECOMMENDATIONS_API_KEY>' \
+  --header 'Content-type: application/json'
+  --data '
+{
+  "visitId": "visitorId123",
+  "query": "collaboration",
+  "resultCount": 3,
+  "requestedTypeCodename": "blog_post"
+}'
+# EndDocSection

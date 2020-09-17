@@ -1,6 +1,6 @@
 // DocSection: filtering_get_items_by_codename_in
-DeliveryItemListingResponse<object> response = await _deliveryClient.GetItemsAsync<object>(
-  // Gets items whose codename is one of the following
-  new InFilter("system.codename", "welcome_to_mvc", "top_10_websites", "kontent_best_practices")
+// Gets three items by their codenames. The codenames are unique per project.
+DeliveryItemListingResponse<object> response = await deliveryClient.GetItemsAsync<object>(
+    new InFilter("system.codename", "delivery_api", "get_content", "hello_world")
 );
 // EndDocSection

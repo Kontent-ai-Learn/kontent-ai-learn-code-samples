@@ -9,8 +9,8 @@ const client = new ManagementClient({
 });
 
 client.addContentType()
-  .withData(
-    {
+  .withData(builder => {
+    return {
       name: "Article",
       codename: "my_article",
       external_id: "article",
@@ -25,37 +25,37 @@ client.addContentType()
         }
       ],
       elements: [
-        {
+        builder.textElement({
           name: "Article title",
           codename: "title",
           type: ElementModels.ElementType.text,
           content_group: {
             external_id: "article-copy"
           },
-        },
-        {
+        }),
+        builder.richtTextElement({
           name: "Article body",
           codename: "body",
           type: ElementModels.ElementType.richText,
           content_group: {
             external_id: "article-copy"
           },
-        },
-        {
-         name: "Author bio",
-         codename: "bio",
-         type: ElementModels.ElementType.richText,
-         allowed_blocks: [
-     	     "images",
-     	     "text"
-     	     ],
-         content_group: {
-         external_id: "author"
-     },
-        },
+        }),
+        builder.richtTextElement({
+          name: "Author bio",
+          codename: "bio",
+          type: ElementModels.ElementType.richText,
+          allowed_blocks: [
+            "images",
+            "text"
+          ],
+          content_group: {
+            external_id: "author"
+          }
+        })
       ]
-    }
-  )
+    };
+  })
   .toObservable()
   .subscribe((response) => {
     console.log(response);

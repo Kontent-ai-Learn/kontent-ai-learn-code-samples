@@ -1,5 +1,7 @@
 // DocSection: filtering_get_items_by_url_slug
+// Gets items whose URL slug equals to sample-url-slug
 deliveryClient.items()
-  // Gets items whose URL Slug is as follows - this is same as filtering by text element value
-  .equalsFilter("elements.url_slug", "article-title")
+  .equalsFilter('elements.url_slug', 'sample-url-slug')
+  .toObservable()
+  .subscribe(response => console.log(response));
 // EndDocSection

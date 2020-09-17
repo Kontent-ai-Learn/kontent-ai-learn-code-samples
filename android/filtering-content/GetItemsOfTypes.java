@@ -5,3 +5,4 @@ List<ContentItem> items = deliveryService.<ContentItem>items()
     .get()
     .getItems();
 // EndDocSection
+
