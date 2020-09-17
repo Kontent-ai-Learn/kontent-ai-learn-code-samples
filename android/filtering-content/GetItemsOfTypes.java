@@ -4,4 +4,4 @@ List<ContentItem> items = deliveryService.<ContentItem>items()
     .inFilter("system.type", Arrays.asList("article", "product", "news"))
     .get()
     .getItems();
-// EndDocSection
+// EndDocSectio
