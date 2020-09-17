@@ -31,24 +31,24 @@ curl --request POST \
     },
     {
       "name": "Technology stack",
-          "codename": "tech",
-          "terms": [
-            {
-              "name": "JavaScript",
-              "codename": "js",
-              "terms": []
-            },
-            {
-              "name": "C#",
-              "codename": "c",
-              "terms": []
-            },
-            {
-             "name": "MVC", 
-             "codename": "mvc",
-             "terms": []
-            }
-          ]
+        "codename": "tech",
+        "terms": [
+          {
+            "name": "JavaScript",
+            "codename": "js",
+            "terms": []
+          },
+          {
+            "name": "C#",
+            "codename": "c",
+            "terms": []
+          },
+          {
+           "name": "MVC", 
+           "codename": "mvc",
+           "terms": []
+          }
+      ]
     }
   ]
 }'
