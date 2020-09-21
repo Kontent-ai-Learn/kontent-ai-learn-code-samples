@@ -13,10 +13,8 @@ curl --request PUT \
   "type": {
     "codename": "article"
   },
-  "sitemap_locations": [
-    {
-      "codename": "articles"
-    }
-  ]
+  "collection": {
+    "codename": "default"
+  }
 }'
 # EndDocSection
