@@ -1,5 +1,5 @@
 // DocSection: using_webhooks_get_latest_content
-// Tip: Find more about Java/JavaRx SDKs at https://docs.kontent.ai/javaandroid
+// Tip: Find more about JavaRx SDK at https://docs.kontent.ai/androidandroid
 import com.github.kentico.kontent_delivery_core.*;
 import com.github.kentico.kontent_delivery_rx.*;
 
