@@ -2,5 +2,5 @@
 // Tip: Find more about Java/JavaRx SDKs at https://docs.kontent.ai/java
 SimpleArticleItem item = client.getItem("my_article", SimpleArticleItem.class);
 
-String description = item.body;
+String description = item.toCompletableFuture().get().getBodyCopy();
 // EndDocSection

@@ -1,7 +1,5 @@
 // DocSection: structure_in_rte_implement_link_resolver
 // Tip: Find more about Java/JavaRx SDKs at https://docs.kontent.ai/java
-package com.github.kentico.kontent.delivery;
-
 public class CustomContentLinkUrlResolver implements ContentLinkUrlResolver {
     
     @Override
