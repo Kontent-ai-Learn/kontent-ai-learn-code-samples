@@ -1,5 +1,5 @@
 // DocSection: strongly_typed_models_retrieve
-// Tip: Find more about Java/JavaRx SDKs at https://docs.kontent.ai/java
+// Tip: Find more about Java SDKs at https://docs.kontent.ai/java
 import kentico.kontent.delivery.*;
 import java.lang.System;
 
