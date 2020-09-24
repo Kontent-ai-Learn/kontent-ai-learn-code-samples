@@ -1,7 +1,5 @@
 // DocSection: structure_in_rte_implement_resolver
-// Tip: Find more about Java/JavaRx SDKs at https://docs.kontent.ai/java
-package com.github.kentico.kontent.delivery;
-
+// Tip: Find more about Java SDK at https://docs.kontent.ai/java
 public class TweetInlineContentItemsResolver extends InlineContentItemsResolver<Tweet> {
     @Override
     String resolve() {

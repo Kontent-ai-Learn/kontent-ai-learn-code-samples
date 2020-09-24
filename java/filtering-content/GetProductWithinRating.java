@@ -4,5 +4,5 @@ List<NameValuePair> params = DeliveryParameterBuilder.params()
     .filterRange("elements.product_rating", "7.5", "9")
     .build();
 
-ContentItemsListingResponse listingResponse = client.getItems();
+CompletionStage<ContentItemsListingResponse> listingResponse = client.getItems();
 // EndDocSection

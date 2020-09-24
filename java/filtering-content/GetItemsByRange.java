@@ -5,5 +5,5 @@ List<NameValuePair> params = DeliveryParameterBuilder.params()
     .filterRange("system.last_modified", "2020-05-05T10:30:00", "2020-05-07T07:00:00")
     .build()
 
-ContentItemsListingResponse listingResponse = deliveryClient.getItems(params);
+CompletionStage<ContentItemsListingResponse> listingResponse = deliveryClient.getItems(params);
 // EndDocSection 
