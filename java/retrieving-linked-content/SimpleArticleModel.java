@@ -1,9 +1,9 @@
 // DocSection: linked_content_simple_article_model
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 
-import com.github.kentico.kontent.delivery.ContentItemMapping;
-import com.github.kentico.kontent.delivery.ElementMapping;
-import com.github.kentico.kontent.delivery.System;
+import kentico.kontent.delivery.ContentItemMapping;
+import kentico.kontent.delivery.ElementMapping;
+import kentico.kontent.delivery.System;
 import java.lang.String;
 import java.util.List;
 
