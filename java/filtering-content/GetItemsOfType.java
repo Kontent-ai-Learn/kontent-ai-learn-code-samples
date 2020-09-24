@@ -4,5 +4,5 @@ List<NameValuePair> params = DeliveryParameterBuilder.params()
   .filterEquals("system.type", "product")
   .build();
 
-List<ProductItem> items = deliveryClient.getItems(ProductItem.class, params);
+CompletionStage<List<ProductItem>> items = deliveryClient.getItems(ProductItem.class, params);
 // EndDocSection
