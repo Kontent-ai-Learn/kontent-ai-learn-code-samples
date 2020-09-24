@@ -1,5 +1,5 @@
 // DocSection: strongly_typed_models_definition
-// Tip: Find more about Java SDKs at https://docs.kontent.ai/java
+// Tip: Find more about Java SDK at https://docs.kontent.ai/java
 import kentico.kontent.delivery.Asset;
 import kentico.kontent.delivery.ContentItemMapping;
 import kentico.kontent.delivery.ElementMapping;

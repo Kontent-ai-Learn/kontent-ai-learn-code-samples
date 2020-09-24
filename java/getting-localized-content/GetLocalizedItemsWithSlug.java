@@ -1,5 +1,5 @@
 // DocSection: getting_localized_content_url_slug
-// Tip: Find more about Java SDKs at https://docs.kontent.ai/java
+// Tip: Find more about Java SDK at https://docs.kontent.ai/java
 import kentico.kontent.delivery.*;
 
 DeliveryClient client = new DeliveryClient("8d20758c-d74c-4f59-ae04-ee928c0816b7");

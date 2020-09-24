@@ -1,5 +1,5 @@
 // DocSection: delivery_api_get_taxonomy_groups
-// Tip: Find more about Java SDKs at https://docs.kontent.ai/java
+// Tip: Find more about Java SDK at https://docs.kontent.ai/java
 import kentico.kontent.delivery.*;
 
 DeliveryClient client = new DeliveryClient("<YOUR_PROJECT_ID>");

@@ -1,5 +1,5 @@
 // DocSection: using_webhooks_get_latest_content
-// Tip: Find more about Java SDKs at https://docs.kontent.ai/java
+// Tip: Find more about Java SDK at https://docs.kontent.ai/java
 import kentico.kontent.delivery.*;
 
 DeliveryOptions deliveryOptions = new DeliveryOptions();

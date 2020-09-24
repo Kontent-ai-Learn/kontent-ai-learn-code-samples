@@ -1,5 +1,5 @@
 // DocSection: securing_public_access_get_article
-// Tip: Find more about Java SDKs at https://docs.kontent.ai/java
+// Tip: Find more about Java SDK at https://docs.kontent.ai/java
 import kentico.kontent.delivery.*;
 
 DeliveryOptions options = new DeliveryOptions();
