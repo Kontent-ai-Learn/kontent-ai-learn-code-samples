@@ -7,5 +7,5 @@ DeliveryClient client = new DeliveryClient("8d20758c-d74c-4f59-ae04-ee928c0816b7
 List<NameValuePair> params = DeliveryParameterBuilder.params()
     .build();
 
-ContentItemsListingResponse listingResponse = client.getItems();
+CompletionStage<ContentItemsListingResponse> listingResponse = client.getItems();
 // EndDocSection

@@ -11,5 +11,5 @@ List<NameValuePair> params = DeliveryParameterBuilder.params()
     .build();
 
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
-List<ArticleItem> items = client.getItems(ArticleItem.class, params);
+CompletionStage<List<ArticleItem>> items = client.getItems(ArticleItem.class, params);
 // EndDocSection
