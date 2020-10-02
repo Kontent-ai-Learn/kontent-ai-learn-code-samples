@@ -1,6 +1,6 @@
 // DocSection: getting_localized_content_url_slug
-// Tip: Find more about Java/JavaRx SDKs at https://docs.kontent.ai/java
-import com.github.kentico.kontent.delivery;
+// Tip: Find more about Java SDK at https://docs.kontent.ai/java
+import kentico.kontent.delivery.*;
 
 DeliveryClient client = new DeliveryClient("8d20758c-d74c-4f59-ae04-ee928c0816b7");
 
@@ -11,5 +11,5 @@ List<NameValuePair> params = DeliveryParameterBuilder.params()
     .build();
 
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
-List<ArticleItem> items = client.getItems(ArticleItem.class, params);
+CompletionStage<List<ArticleItem>> items = client.getItems(ArticleItem.class, params);
 // EndDocSection

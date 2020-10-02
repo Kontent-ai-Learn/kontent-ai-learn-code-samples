@@ -4,5 +4,5 @@ List<NameValuePair> params = DeliveryParameterBuilder.params()
     .filterEquals("elements.title", "Hello World")
     .build();
 
-ContentItemsListingResponse listingResponse = deliveryClient.getItems(params);
+CompletionStage<ContentItemsListingResponse> listingResponse = deliveryClient.getItems(params);
 // EndDocSection

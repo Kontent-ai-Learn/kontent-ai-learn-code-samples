@@ -1,17 +1,39 @@
 // DocSection: strongly_typed_models_generators
-// For instructions on using the Java model generator, visit https://github.com/Kentico/kontent-generators-java
+// For instructions on using the Java model generator, visit https://github.com/Kentico/kontent-java-packages/tree/master/kontent-delivery-generators#run-as-a-gradle-task
 
 // Configures Gradle plugin
-apply plugin: 'java'
+import com.squareup.javapoet.JavaFile
+import kentico.kontent.delivery.DeliveryClient
+import kentico.kontent.delivery.DeliveryOptions
+import kentico.kontent.delivery.generators.CodeGenerator
 
-kenticoModel {
-	projectId = '8d20758c-d74c-4f59-ae04-ee928c0816b7'
-	packageName = 'com.helloheadlessworld.models'
-	outputDir = file('generated-sources')
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath('com.github.kentico:kontent-delivery-generators:latest.release')
+    }
 }
 
-dependencies {
-    compile('com.kenticocloud:delivery-sdk-java:1.0.3')
+// showcase task
+task generateModels {
+    doLast {
+
+        // The most complex solution, you could configure the client as you want
+        // i.e. set preview API key
+        DeliveryOptions options = new DeliveryOptions();
+        options.setProjectId("975bf280-fd91-488c-994c-2f04416e5ee3");
+        DeliveryClient client = new DeliveryClient(options);
+
+        CodeGenerator generator = new CodeGenerator(
+            options.getProjectId(),
+            'com.kentico.kontent.test.springapp.models',
+            file('src/main/java')
+        );
+        List<JavaFile> sources = generator.generateSources(client);
+        generator.writeSources(sources);
+    }
 }
 
 // Runs generateModels task

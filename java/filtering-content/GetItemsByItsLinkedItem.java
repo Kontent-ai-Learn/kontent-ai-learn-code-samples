@@ -4,12 +4,12 @@ List<NameValuePair> params1 = DeliveryParameterBuilder.params()
     .filterContains("elements.author", "jane_doe")
     .build();
 
-ContentItemsListingResponse listingResponse1 = deliveryClient.getItems(params1);
+CompletionStage<ContentItemsListingResponse> listingResponse1 = deliveryClient.getItems(params1);
 
 // Gets items attributed to at least Jane, John, or both.
 List<NameValuePair> params2 = DeliveryParameterBuilder.params()
     .filterAny("elements.authors", "jane_doe", "john_wick")
     .build();
 
-ContentItemsListingResponse listingResponse2 = deliveryClient.getItems(params2);
+CompletionStage<ContentItemsListingResponse> listingResponse2 = deliveryClient.getItems(params2);
 // EndDocSection

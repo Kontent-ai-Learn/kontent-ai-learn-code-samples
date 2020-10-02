@@ -16,12 +16,7 @@ client.updateContentItem()
   .withData(
     {
       name: 'On Roasts',
-      codename: 'my_article_my_article',
-      sitemap_locations: [
-        {
-          codename: 'articles'
-        }
-      ]
+      codename: 'my_article_my_article'
     }
   )
   .toObservable()
@@ -42,12 +37,7 @@ client.upsertContentItem()
       name: 'On Roasts',
       codename: 'my_article_my_article',
       // 'type' is only required when creating a new content item
-      type: 'article',
-      sitemap_locations: [
-        {
-          codename: 'articles'
-        }
-      ]
+      type: 'article'
     }
   )
   .toObservable()

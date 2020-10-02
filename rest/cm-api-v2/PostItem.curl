@@ -10,6 +10,9 @@ curl --request POST \
   "type": {
     "codename": "article"
   },
+  "collection": {
+    "codename": "default"
+  },
   "external_id": "59713"
 }'
 # EndDocSection

@@ -9,11 +9,6 @@ curl --request PUT \
   "codename": "my_article_my_article",
   "type": {
     "codename": "article"
-  },
-  "sitemap_locations": [
-    {
-      "codename": "articles"
-    }
-  ]
+  }
 }'
 # EndDocSection

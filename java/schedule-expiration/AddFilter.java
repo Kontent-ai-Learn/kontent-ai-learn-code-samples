@@ -1,6 +1,6 @@
 // DocSection: schedule_expiration_add_filter
-// Tip: Find more about Java/JavaRx SDKs at https://docs.kontent.ai/java
-import com.github.kentico.kontent.delivery;
+// Tip: Find more about Java SDK at https://docs.kontent.ai/java
+import kentico.kontent.delivery.*;
 
 DeliveryClient client = new DeliveryClient("8d20758c-d74c-4f59-ae04-ee928c0816b7");
 
@@ -9,10 +9,9 @@ List<NameValuePair> params = DeliveryParameterBuilder.params()
     .build();
 
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
-List<LandingPageItem> items = client.getItems(LandingPageItem.class, params);
-
-List<LandingPageItem> publishedItems = items.stream()
-    .filter(item ->
-            (item.getExpireAt() > today || item.getExpireAt() == null))
-    .collect(Collectors.toList());
+CompletionStage<List<LandingPageItem>> items = client.getItems(LandingPageItem.class, params)
+    .thenApply(landingPageItems -> landingPageItems.stream()
+        .filter(item ->
+            (item.getExpireAt().compareTo(ZonedDateTime.now()) > 0 || item.getExpireAt() == null))
+        .collect(Collectors.toList()));
 // EndDocSection

@@ -4,5 +4,5 @@ List<NameValuePair> params = DeliveryParameterBuilder.params()
     .filterIn("system.type", "product", "article", "news")
     .build();
 
-ContentItemsListingResponse listingResponse = deliveryClient.getItems(params);
+CompletionStage<ContentItemsListingResponse> listingResponse = deliveryClient.getItems(params);
 // EndDocSection

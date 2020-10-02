@@ -16,6 +16,9 @@ client.addContentItem()
       type: {
         codename: 'article'
       },
+      collection: {
+        codename: 'default'
+      },
       external_id: '59713'
     }
   )
