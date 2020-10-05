@@ -1,5 +1,10 @@
 // DocSection: importing_create_taxonomy
 // Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
+var client = new KontentManagement.ManagementClient({
+  projectId: '<YOUR_PROJECT_ID>',
+  apiKey: '<YOUR_API_KEY>'
+});
+
 client.addTaxonomy()
   .withData(
     {
