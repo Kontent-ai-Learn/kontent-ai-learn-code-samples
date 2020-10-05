@@ -1,4 +1,4 @@
-// DocSection: importing_modify_type
+# DocSection: importing_modify_type
 curl--request PATCH\
 --url https: //manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/types/0be13600-e57c-577d-8108-c8d860330985 \
   --url https: //manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/types/codename/my_article \
@@ -25,4 +25,4 @@ curl--request PATCH\
     }
   }
 }]'
-// EndDocSection
+# EndDocSection
