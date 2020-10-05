@@ -1,4 +1,4 @@
-// DocSection: importing_create_type
+# DocSection: importing_add_type
 curl--request POST\
 --url https: //manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/types \
   --header 'Authorization: Bearer <YOUR_MANAGEMENT_API_KEY>'\
@@ -48,4 +48,4 @@ curl--request POST\
     }
   }
 ]}'
-// EndDocSection
+# EndDocSection
