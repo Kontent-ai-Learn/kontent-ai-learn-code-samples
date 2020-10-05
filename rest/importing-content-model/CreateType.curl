@@ -1,0 +1,51 @@
+// DocSection: importing_create_type
+curl--request POST\
+--url https: //manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/types \
+  --header 'Authorization: Bearer <YOUR_MANAGEMENT_API_KEY>'\
+  --header 'Content-type: application/json'\
+  --data ' {
+"name": "Blogpost",
+"codename": "blogpost",
+"content_groups": [{
+    "name": "Blog content",
+    "external_id": "blog_content"
+  },
+  {
+    "name": "Author",
+    "external_id": "author"
+  }
+],
+"elements": [{
+    "name": "Title",
+    "type": "text",
+    "content_group": {
+      "external_id": "blog_content"
+    }
+  },
+  {
+    "name": "Image",
+    "type": "asset",
+    "content_group": {
+      "external_id": "blog_content"
+    }
+  },
+  {
+    "name": "Blog content",
+    "type": "rich_text",
+    "content_group": {
+      "external_id": "blog_content"
+    }
+  },
+  {
+    "snippet": {
+      "codename": "author"
+    },
+    "type": "snippet",
+    "id": "b9f801b8-024b-461a-a8fa-bd213e46edc1",
+    "codename": "author_profile",
+    "content_group": {
+      "external_id": "author"
+    }
+  }
+]}'
+// EndDocSection
