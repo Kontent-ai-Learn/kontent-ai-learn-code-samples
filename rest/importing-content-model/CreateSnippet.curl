@@ -1,4 +1,4 @@
-// DocSection: importing_create_snippet
+# DocSection: importing_create_snippet
 curl--request POST\
 --url https: //manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/snippets \
   --header 'Authorization: Bearer <YOUR_MANAGEMENT_API_KEY>'\
@@ -17,4 +17,4 @@ curl--request POST\
     "type": "asset"
   }
 ]}'
-// EndDocSection
+# EndDocSection
