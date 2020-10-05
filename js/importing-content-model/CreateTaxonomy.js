@@ -20,11 +20,11 @@ client.addTaxonomy()
               codename: 'hockey',
               terms: []
             },
-			{
-			  name: 'Rugby',
-			  codename: 'rugby',
-			  terms: []	  
-			}
+	    {
+	      name: 'Rugby',
+	      codename: 'rugby',
+	      terms: []	  
+	    }
           ]
         },
         {
@@ -41,11 +41,11 @@ client.addTaxonomy()
               codename: "c",
               terms: []
             },
-			{
-			 name: 'MVC', 
-			 codename: 'mvc',
-			 terms: []
-			}
+	    {
+	      name: 'MVC', 
+	      codename: 'mvc',
+	      terms: []
+	    }
           ]
         }
       ]
