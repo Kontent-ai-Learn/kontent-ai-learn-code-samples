@@ -15,9 +15,9 @@ namespace KenticoKontentModels
         public const string DisplayOptionsCodename = "display_options";
 
         public string TweetLink { get; set; }
-        public IEnumerable<MultipleChoiceOption> Theme { get; set; }
-        public IEnumerable<MultipleChoiceOption> DisplayOptions { get; set; }
-        public ContentItemSystemAttributes System { get; set; }
+        public IEnumerable<IMultipleChoiceOption> Theme { get; set; }
+        public IEnumerable<IMultipleChoiceOption> DisplayOptions { get; set; }
+        public IContentItemSystemAttributes System { get; set; }
     }
 }
 // EndDocSection

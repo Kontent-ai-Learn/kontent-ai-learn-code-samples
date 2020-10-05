@@ -10,7 +10,7 @@ IDeliveryClient client = DeliveryClientBuilder
 
 // Gets all content items
 // Note: Using the <object> generic parameter produces strongly typed objects, based on "system.type"
-DeliveryItemListingResponse<object> response = await client.GetItemsAsync<object>();
+IDeliveryItemListingResponse<object> response = await client.GetItemsAsync<object>();
 
-IReadOnlyList<object> items = response.Items;
+IList<object> items = response.Items;
 // EndDocSection

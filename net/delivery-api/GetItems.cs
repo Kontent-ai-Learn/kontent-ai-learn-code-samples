@@ -10,10 +10,10 @@ IDeliveryClient client = DeliveryClientBuilder
 
 // Gets specific elements of 3 articles ordered by the "Post date" element
 // ProTip: Use https://docs.kontent.ai/net-strong-types
-DeliveryItemListingResponse<Article> response = await client.GetItemsAsync<Article>(
+IDeliveryItemListingResponse<Article> response = await client.GetItemsAsync<Article>(
     new EqualsFilter("system.type", "article"),
     new LimitParameter(3)
     );
 
-IReadOnlyList<Article> items = response.Items;
+IList<Article> items = response.Items;
 // EndDocSection

@@ -9,9 +9,9 @@ IDeliveryClient client = DeliveryClientBuilder
       .Build();
 
 // Gets 3 taxonomy groups
-DeliveryTaxonomyListingResponse response = await client.GetTaxonomiesAsync(
+IDeliveryTaxonomyListingResponse response = await client.GetTaxonomiesAsync(
     new LimitParameter(3)
     );
 
-IReadOnlyList<TaxonomyGroup> taxonomies = response.Taxonomies;
+IList<ITaxonomyGroup> taxonomies = response.Taxonomies;
 // EndDocSection

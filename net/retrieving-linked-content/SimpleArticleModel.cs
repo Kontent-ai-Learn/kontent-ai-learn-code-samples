@@ -17,7 +17,7 @@ namespace KenticoKontentModels
         public string Title { get; set; }
         public string Body { get; set; }
         public IEnumerable<object> Author { get; set; }
-        public ContentItemSystemAttributes System { get; set; }
+        public IContentItemSystemAttributes System { get; set; }
     }
 }
 // EndDocSection
