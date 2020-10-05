@@ -1,4 +1,4 @@
-// DocSection: importing_create_taxonomy
+# DocSection: importing_create_taxonomy
 curl--request POST\
 --url https: //manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/taxonomies \
   --header 'Authorization: Bearer <YOUR_MANAGEMENT_API_KEY>'\
@@ -47,4 +47,4 @@ curl--request POST\
     ]
   }
 ]}'
-// EndDocSection
+# EndDocSection
