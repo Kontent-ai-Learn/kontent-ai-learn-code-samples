@@ -1,4 +1,4 @@
-// DocSection: importing_create_type
+// DocSection: importing_add_type
 // Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 var client = new KontentManagement.ManagementClient({
   projectId: '<YOUR_PROJECT_ID>',
