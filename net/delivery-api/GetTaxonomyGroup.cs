@@ -9,6 +9,6 @@ IDeliveryClient client = DeliveryClientBuilder
       .Build();
 
 // Gets a specific taxonomy group
-DeliveryTaxonomyResponse response = await client.GetTaxonomyAsync("personas");
-TaxonomyGroup taxonomy = response.Taxonomy;
+IDeliveryTaxonomyResponse response = await client.GetTaxonomyAsync("personas");
+ITaxonomyGroup taxonomy = response.Taxonomy;
 // EndDocSection

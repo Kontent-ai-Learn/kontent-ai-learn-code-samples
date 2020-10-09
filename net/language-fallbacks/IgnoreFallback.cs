@@ -9,11 +9,11 @@ IDeliveryClient client = DeliveryClientBuilder
       .Build();
 
 // Gets the Spanish variant of all content items and ignores language fallbacks
-DeliveryItemListingResponse<object> response = await 
+IDeliveryItemListingResponse<object> response = await 
 client.GetItemsAsync<object>(
     new LanguageParameter("es-ES"),
     new EqualsParameter("system.language", "es-ES")
     );
 
-IReadOnlyList<object> items = response.Items;
+IList<object> items = response.Items;
 // EndDocSection

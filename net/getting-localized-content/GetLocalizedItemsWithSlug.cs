@@ -10,11 +10,11 @@ IDeliveryClient client = DeliveryClientBuilder
 
 // Gets the 'About us' content item in Spanish based on the item's URL slug value
 // Create strongly typed models according to https://docs.kontent.ai/net-strong-types
-DeliveryItemListingResponse<Article> response = await client.GetItemsAsync<Article>(
+IDeliveryItemListingResponse<Article> response = await client.GetItemsAsync<Article>(
     new LanguageParameter("es-ES"),
     new EqualsFilter("system.type", "article"),
     new EqualsFilter("elements.url_pattern", "acerda-de-nosotros")
     );
 
-IReadOnlyList<Article> items = response.Items;
+IList<Article> items = response.Items;
 // EndDocSection

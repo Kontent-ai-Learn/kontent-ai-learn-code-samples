@@ -9,13 +9,13 @@ IDeliveryClient client = DeliveryClientBuilder
 
 // Gets feed of all articles in the project 
 // Tip: Create strongly typed models according to https://docs.kontent.ai/net-strong-types
-DeliveryItemsFeed<Article> feed = client.GetItemsFeed<Article>(
-    new EqualsFilter("system.type", "article"),
+IDeliveryItemsFeed<Article> feed = client.GetItemsFeed<Article>(
+    new EqualsFilter("system.type", "article")
     );
 
 while (feed.HasMoreResults)
 {
-    DeliveryItemsFeedResponse<Article> response = await feed.FetchNextBatchAsync();
+    IDeliveryItemsFeedResponse<Article> response = await feed.FetchNextBatchAsync();
     foreach(Article article in response) {
         // Do something with the content item, e.g. update cache
         ProcessContentItem(article);

@@ -13,7 +13,7 @@ IDeliveryClient client = DeliveryClientBuilder
 
 // Gets a content item
 // Create strongly typed models according to https://docs.kontent.ai/net-strong-types
-DeliveryItemResponse<Article> response = await client.GetItemAsync<Article>("my_article");
+IDeliveryItemResponse<Article> response = await client.GetItemAsync<Article>("my_article");
 
 Article item = response.Item;
 // EndDocSection

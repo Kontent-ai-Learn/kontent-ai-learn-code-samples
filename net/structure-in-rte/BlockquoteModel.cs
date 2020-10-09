@@ -15,7 +15,7 @@ namespace KenticoKontentModels
 
         public IRichTextContent Quote { get; set; }
         public string Source { get; set; }
-        public ContentItemSystemAttributes System { get; set; }
+        public IContentItemSystemAttributes System { get; set; }
     }
 }
 // EndDocSection
