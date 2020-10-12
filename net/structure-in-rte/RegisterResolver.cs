@@ -4,13 +4,11 @@
 using Kentico.Kontent.Delivery;
 using Kentico.Kontent.Delivery.InlineContentItems;
 
-...
-
 IDeliveryClient client = DeliveryClientBuilder
     .WithProjectId("<YOUR_PROJECT_ID>")
-    // Registers an inline content item resolver for Tweets
+    // Registers a content item resolver for tweets
     .WithInlineContentItemsResolver(new TweetResolver())
-    // Registers strongly typed models
+    // Registers the generated strongly typed models
     .WithTypeProvider(new CustomTypeProvider())
     .Build();
 // EndDocSection
