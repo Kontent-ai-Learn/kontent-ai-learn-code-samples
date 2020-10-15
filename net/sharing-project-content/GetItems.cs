@@ -37,7 +37,7 @@ public class YourController : Controller
         var response2 = await client2.GetItemsAsync<object>();
 
         // Merges the responses
-        IReadOnlyList<object> items = response1.Items.Concat(response2.Items).ToArray();
+        IList<object> items = response1.Items.Concat(response2.Items).ToArray();
     }
 }
 // EndDocSection

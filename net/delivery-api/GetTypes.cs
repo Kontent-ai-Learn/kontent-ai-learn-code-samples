@@ -9,9 +9,9 @@ IDeliveryClient client = DeliveryClientBuilder
       .Build();
 
 // Gets 3 content types
-DeliveryTypeListingResponse response = await client.GetTypesAsync(
+IDeliveryTypeListingResponse response = await client.GetTypesAsync(
     new LimitParameter(3)
     );
 
-IReadOnlyList<ContentType> types = response.Types;
+IList<IContentType> types = response.Types;
 // EndDocSection

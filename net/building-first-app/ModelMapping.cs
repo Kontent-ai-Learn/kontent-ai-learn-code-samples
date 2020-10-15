@@ -9,7 +9,7 @@ IDeliveryClient client = DeliveryClientBuilder
       .Build();
 
 // Retrieves 3 articles ordered by their post date
-DeliveryItemListingResponse<Article> response = await client.GetItemsAsync<Article>(
+IDeliveryItemListingResponse<Article> response = await client.GetItemsAsync<Article>(
     new EqualsFilter("system.type", "article"),
     new LimitParameter(3),
     new OrderParameter("elements.post_date", SortOrder.Descending)

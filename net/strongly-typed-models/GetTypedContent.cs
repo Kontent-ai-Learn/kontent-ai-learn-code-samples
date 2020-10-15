@@ -10,7 +10,7 @@ IDeliveryClient client = DeliveryClientBuilder
       .Build();
 
 // Gets a content item by codename and maps it to the item's strongly typed model
-DeliveryItemResponse<Homepage> response = await client.GetItemAsync<Homepage>("hello_caas_world");
+IDeliveryItemResponse<Homepage> response = await client.GetItemAsync<Homepage>("hello_caas_world");
 
 var homepage = response.Item;
 // Use homepage

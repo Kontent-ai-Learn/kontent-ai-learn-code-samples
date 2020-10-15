@@ -10,7 +10,7 @@ IDeliveryClient client = DeliveryClientBuilder
 
 // Gets a specific page, its subpages, and linked items
 // Create strongly typed models according to https://docs.kontent.ai/net-strong-types
-DeliveryItemResponse<Page> response = await client.GetItemAsync<Page>("insurance_listing",
+IDeliveryItemResponse<Page> response = await client.GetItemAsync<Page>("insurance_listing",
     new DepthParameter(1)
     );
 

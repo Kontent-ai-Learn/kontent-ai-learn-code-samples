@@ -20,8 +20,8 @@ namespace KenticoKontentModels
 
         public string Headline { get; set; }
         public IRichTextContent BodyText { get; set; }
-        public IEnumerable<Asset> Picture { get; set; }
-        public ContentItemSystemAttributes System { get; set; }
+        public IEnumerable<IAsset> Picture { get; set; }
+        public IContentItemSystemAttributes System { get; set; }
     }
 }
 // EndDocSection

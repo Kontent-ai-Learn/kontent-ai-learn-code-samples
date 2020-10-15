@@ -10,7 +10,7 @@ IDeliveryClient client = DeliveryClientBuilder
 
 // Gets specific elements of all articles
 // Create strongly typed models according to https://docs.kontent.ai/net-strong-types
-DeliveryItemListingResponse<Article> response = await client.GetItemsAsync<Article>(
+IDeliveryItemListingResponse<Article> response = await client.GetItemsAsync<Article>(
     new EqualsFilter("system.type", "article"),
     new ElementsParameter("title", "url_pattern")
     );
