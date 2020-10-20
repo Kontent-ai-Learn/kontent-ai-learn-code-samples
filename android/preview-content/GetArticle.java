@@ -1,54 +1,37 @@
 // DocSection: preview_content_get_article
 // Tip: Find more about JavaRx SDK at https://docs.kontent.ai/androidandroid
-import com.github.kentico.kontent_delivery_core.*;
-import com.github.kentico.kontent_delivery_rx.*;
 
-import io.reactivex.Observer;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Function;
+// Prepares the DeliveryOptions configuration object
+DeliveryOptions options = DeliveryOptions.builder()
+    .projectId("<YOUR_PROJECT_ID>")
+    .previewApiKey("<YOUR_PREVIEW_API_KEY>")
+    .usePreviewApi(true)
+    .build();
 
-// Prepares an array to hold strongly-typed models
-List<TypeResolver<?>> typeResolvers = new ArrayList<>();
+// Initializes a DeliveryClient for Java projects
+DeliveryClient client = new DeliveryClient(options);
 
-// Registers the type resolver for articles
-typeResolvers.add(new TypeResolver<>(Article.TYPE, new Function<Void, Article>() {
-    @Override
-    public Article apply(Void input) {
-        return new Article();
-    }
-}));
-
-// Prepares the DeliveryService configuration object
-String projectId = "<YOUR_PROJECT_ID>";
-String previewApiKey = "<YOUR_PREVIEW_API_KEY>";
-IDeliveryConfig config = DeliveryConfig.newConfig(projectId)
-  	.withTypeResolvers(typeResolvers)
-    .withPreviewApiKey(previewApiKey);
-
-// Initializes a DeliveryService for Java projects
-IDeliveryService deliveryService = new DeliveryService(config);
+// Registers the model class for articles
+client.registerType(Article.class);
 
 // Gets the latest version of a content item using a simple request
-Article item = deliveryService.<Article>item("my_article")
-    .get()
-    .getItem();
+CompletionStage<Article> article = client.getItem("my_article", Article.class);
 
-// Gets the latest version of a content item using RxJava2
-deliveryService.<Article>item("my_article")
-    .getObservable()
-    .subscribe(new Observer<DeliveryItemResponse<Article>>() {
+// Gets the latest version of a content item using RxJava
+Observable.fromCompletionStage(client.getItem("my_article", Article.class))
+    .subscribe(new Observer<Article>() {
         @Override
-        public void onSubscribe(Disposable d) {
+        public void onSubscribe(@NonNull Disposable d) {
         }
 
         @Override
-        public void onNext(DeliveryItemResponse<Article> response) {
+        public void onNext(@NonNull Article item) {
             // Gets the article
-            Article item = response.getItem();
+            Article article = item;
         }
 
         @Override
-        public void onError(Throwable e) {
+        public void onError(@NonNull Throwable e) {
         }
 
         @Override
