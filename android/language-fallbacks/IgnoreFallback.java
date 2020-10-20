@@ -1,48 +1,46 @@
 // DocSection: language_fallbacks_ignore
 // Tip: Find more about JavaRx SDK at https://docs.kontent.ai/androidandroid
-import com.github.kentico.kontent_delivery_core.*;
-import com.github.kentico.kontent_delivery_rx.*;
 
-import io.reactivex.Observer;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Function;
+// Prepares the DeliveryOptions configuration object
+DeliveryOptions options = DeliveryOptions.builder()
+    .projectId("<YOUR_PROJECT_ID>")
+    .build();
 
-// Prepares the DeliveryService configuration object
-String projectId = "975bf280-fd91-488c-994c-2f04416e5ee3";
-IDeliveryConfig config = DeliveryConfig.newConfig(projectId);
+// Initializes a DeliveryClient for Java projects
+DeliveryClient client = new DeliveryClient(options);
 
-// Initializes a DeliveryService for Java projects
-IDeliveryService deliveryService = new DeliveryService(config);
+// Registers the model class for articles
+client.registerType(Article.class);
 
 // Gets the Spanish variant of all content items (while ignoring language fallbacks) using a simple request
-List<ContentItem> items = deliveryService.<ContentItem>items()
-    .languageParameter("es-ES")
-    .equalsFilter("system.language", "es-ES")
-    .get()
-    .getItems();
+CompletionStage<ContentItemsListingResponse> articles = client.getItems(DeliveryParameterBuilder.params()
+    .language("es-ES")
+    .filterEquals("system.language", "es-ES")
+    .build()
+);
 
 // Gets the Spanish variant of all content items (while ignoring language fallbacks) using RxJava2
-deliveryService.<ContentItem>items()
-    .languageParameter("es-ES")
-    .equalsFilter("system.language", "es-ES")
-    .getObservable()
-    .subscribe(new Observer<DeliveryItemListingResponse<ContentItem>>() {
-        @Override
-        public void onSubscribe(Disposable d) {
-        }
+Observable.fromCompletionStage(client.getItems(DeliveryParameterBuilder.params()
+    .language("es-ES")
+    .filterEquals("system.language", "es-ES")
+    .build()
+)).subscribe(new Observer<ContentItemsListingResponse>() {
+    @Override
+    public void onSubscribe(@NonNull Disposable d) {
+    }
 
-        @Override
-        public void onNext(DeliveryItemResponse<ContentItem> response) {
-            // Gets the content items
-            List<ConentItem> items = response.getItems();
-        }
+    @Override
+    public void onNext(@NonNull ContentItemsListingResponse items) {
+        // Gets the content items
+        List<ContentItem> article = items.getItems();
+    }
 
-        @Override
-        public void onError(Throwable e) {
-        }
+    @Override
+    public void onError(@NonNull Throwable e) {
+    }
 
-        @Override
-        public void onComplete() {
-        }
-    });
+    @Override
+    public void onComplete() {
+    }
+});
 // EndDocSection
