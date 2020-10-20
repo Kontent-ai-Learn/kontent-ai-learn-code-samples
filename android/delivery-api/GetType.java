@@ -1,40 +1,31 @@
 // DocSection: delivery_api_get_type
 // Tip: Find more about JavaRx SDK at https://docs.kontent.ai/androidandroid
-import com.github.kentico.kontent_delivery_core.*;
-import com.github.kentico.kontent_delivery_rx.*;
-
-import io.reactivex.Observer;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Function;
 
 // Prepares the DeliveryService configuration object
-String projectId = "<YOUR_PROJECT_ID>";
-IDeliveryConfig config = DeliveryConfig.newConfig(projectId);
+DeliveryOptions options = DeliveryOptions.builder()
+    .projectId("<YOUR_PROJECT_ID>")
+    .build();
 
-// Initializes a DeliveryService for Java projects
-IDeliveryService deliveryService = new DeliveryService(config);
+// Initializes a DeliveryClient for Java projects
+DeliveryClient client = new DeliveryClient(options);
 
 // Gets a content type using a simple request
-ContentType type = deliveryService.type("article")
-    .get()
-    .getType();
+CompletionStage<ContentType> type = client.getType("article");
 
 // Gets a content type using RxJava2
-deliveryService.type("article")
-    .getObservable()
-    .subscribe(new Observer<DeliveryTypeResponse>() {
+Observable.fromCompletionStage(client.getType("article"))
+    .subscribe(new Observer<ContentType>() {
         @Override
-        public void onSubscribe(Disposable d) {
+        public void onSubscribe(@NonNull Disposable d) {
         }
 
         @Override
-        public void onNext(DeliveryTypeResponse response) {
-            // Gets the type from response
-            ContentType type = response.getType();
+        public void onNext(@NonNull ContentType contentType) {
+            ContentType articleType = contentType;
         }
 
         @Override
-        public void onError(Throwable e) {
+        public void onError(@NonNull Throwable e) {
         }
 
         @Override

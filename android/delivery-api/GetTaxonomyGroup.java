@@ -1,41 +1,31 @@
 // DocSection: delivery_api_get_taxonomy_group
 // Tip: Find more about JavaRx SDK at https://docs.kontent.ai/androidandroid
-import com.github.kentico.kontent_delivery_core.*;
-import com.github.kentico.kontent_delivery_rx.*;
-
-import io.reactivex.Observer;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Function;
 
 // Prepares the DeliveryService configuration object
-String projectId = "<YOUR_PROJECT_ID>";
-IDeliveryConfig config = DeliveryConfig.newConfig(projectId);
+DeliveryOptions options = DeliveryOptions.builder()
+    .projectId("<YOUR_PROJECT_ID>")
+    .build();
 
-// Initializes a DeliveryService for Java projects
-IDeliveryService deliveryService = new DeliveryService(config);
+// Initializes a DeliveryClient for Java projects
+DeliveryClient client = new DeliveryClient(options);
 
 // Gets a taxonomy group using a simple request
-Taxonomy taxonomy = deliveryService.taxonomy("personas")
-    .get()
-    .getTaxonomy();
+CompletionStage<TaxonomyGroup> personas = client.getTaxonomyGroup("personas");
 
-// Gets a taxonomy group using RxJava2
-deliveryService.taxonomy("personas")
-    .getObservable()
-    .subscribe(new Observer<DeliveryTaxonomyResponse>() {
+// Gets a taxonomy group using RxJava
+Observable.fromCompletionStage(client.getTaxonomyGroup("personas"))
+    .subscribe(new Observer<TaxonomyGroup>() {
         @Override
-        public void onSubscribe(Disposable d) {
+        public void onSubscribe(@NonNull Disposable d) {
         }
 
         @Override
-        public void onNext(DeliveryTaxonomyResponse response) {
-            // Gets the taxonomy group
-            Taxonomy taxonomy = response.getTaxonomy();
+        public void onNext(@NonNull TaxonomyGroup taxonomyGroup) {
+            TaxonomyGroup personasTaxonomyGroup = taxonomyGroup;
         }
 
         @Override
-        public void onError(Throwable e) {
-            System.out.println(e.getMessage());
+        public void onError(@NonNull Throwable e) {
         }
 
         @Override
