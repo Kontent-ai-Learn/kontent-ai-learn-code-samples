@@ -1,80 +1,55 @@
 // DocSection: schedule_expiration_add_filter
 // Tip: Find more about JavaRx SDK at https://docs.kontent.ai/androidandroid
-import com.github.kentico.kontent_delivery_core.*;
-import com.github.kentico.kontent_delivery_rx.*;
 
-import io.reactivex.Observer;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Function;
+// Prepares the DeliveryOptions configuration object
+DeliveryOptions options = DeliveryOptions.builder()
+.projectId("8d20758c-d74c-4f59-ae04-ee928c0816b7")
+.build();
 
-Date now = new Date();
+// Initializes a DeliveryClient for Java projects
+DeliveryClient client = new DeliveryClient(options);
 
-// Prepares an array to hold strongly-typed models
-List<TypeResolver<?>> typeResolvers = new ArrayList<>();
+// Registers the model class for landing pages
+client.registerType(LandingPage.class);
 
-// Registers the type resolvers
-typeResolvers.add(new TypeResolver<>(LandingPage.TYPE, new Function<Void, LandingPage>() {
+CompletionStage<List<LandingPage>> publishedItems = client.getItems(
+                LandingPage.class,
+                DeliveryParameterBuilder.params()
+                        .filterEquals("system.type", "landing_page")
+                        .build()
+        ).thenApply(landingPageItems -> landingPageItems.stream()
+                .filter(item ->
+                        (item.getExpireAt().compareTo(ZonedDateTime.now()) > 0 || item.getExpireAt() == null))
+                .collect(Collectors.toList()));
+
+
+// Gets all landing pages using RxJava
+Observable.fromCompletionStage(client.getItems(
+    LandingPage.class,
+    DeliveryParameterBuilder.params()
+        .filterEquals("system.type", "landing_page")
+        .build()
+    ).thenApply(landingPageItems -> landingPageItems.stream()
+        .filter(item ->
+            (item.getExpireAt().compareTo(ZonedDateTime.now()) > 0 || item.getExpireAt() == null))
+        .collect(Collectors.toList()))
+).subscribe(new Observer<List<LandingPage>>() {
     @Override
-    public LandingPage apply(Void input) {
-        return new LandingPage();
+    public void onSubscribe(@NonNull Disposable d) {
     }
-}));
 
-// Prepares the DeliveryService configuration object
-String projectId = "8d20758c-d74c-4f59-ae04-ee928c0816b7";
-IDeliveryConfig config = DeliveryConfig.newConfig(projectId)
-    .withTypeResolvers(typeResolvers);
-
-// Initializes a DeliveryService for Java projects
-IDeliveryService deliveryService = new DeliveryService(config);
-
-// Gets all landing pages using a simple request
-List<LandingPage> landingPages = deliveryService.<LandingPage>items()
-        .equalsFilter("system.type", "landing_page")
-        .get()
-        .getItems();
-
-List<LandingPage> publishedItems = new ArrayList<>();
-
-for (LandingPage page : landingPages) {
-    if (
-        page.getExpireAt() == null || page.getExpireAt().after(now)) {
-        publishedItems.add(page);
+    @Override
+    public void onNext(@NonNull List<LandingPage> landingPages) {
+        // Already landing pages, that should be public
+        List<LandingPage> publishedItems = landingPages;
     }
-}
 
-// Gets all landing pages using RxJava2
-deliveryService.<LandingPage>items()
-        .equalsFilter("system.type", "landing_page")
-        .getObservable()
-        .subscribe(new Observer<DeliveryItemListingResponse<LandingPage>>() {
-            @Override
-            public void onSubscribe(Disposable d) {
-            }
+    @Override
+    public void onError(@NonNull Throwable e) {
+    }
 
-            @Override
-            public void onNext(DeliveryItemListingResponse<LandingPage> response) {
-                Date now = new Date();
-
-                // Gets the retrieved landing pages
-                List<LandingPage> landingPages = response.getItems();
-
-                List<LandingPage> publishedItems = new ArrayList<>();
-
-              	// Filters the landing pages, keeping those that should be public
-                for (LandingPage page : landingPages) {
-                    if (page.getExpireAt() == null || page.getExpireAt().after(now)) {
-                        publishedItems.add(page);
-                    }
-                }
-            }
-
-            @Override
-            public void onError(Throwable e) {
-            }
-
-            @Override
-            public void onComplete() {
-            }
-        });
+    @Override
+    public void onComplete() {
+    }
+});
 // EndDocSection

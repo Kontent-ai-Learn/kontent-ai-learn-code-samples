@@ -1,12 +1,18 @@
 // DocSection: schedule_expiration_update_model
-public final class LandingPage extends ContentItem {
+@ContentItemMapping("landing_page")
+public class LandingPage {
 
-  public static final String TYPE = "landing_page";
+  // ...
 
-  public Date getExpireAt() {
-    return ExpireAt.getValue();
+  @ElementMapping("expire_at")
+    ZonedDateTime expireAt;
+
+  // ...
+
+  public ZonedDateTime getExpireAt() {
+    return expireAt;
   }
   
-  ...
+  // ...
 }
 // EndDocSection
