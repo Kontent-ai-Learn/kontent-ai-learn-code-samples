@@ -1,54 +1,34 @@
 // DocSection: getting_content_filter_items
 // Tip: Find more about JavaRx SDK at https://docs.kontent.ai/androidandroid
-import com.github.kentico.kontent_delivery_core.*;
-import com.github.kentico.kontent_delivery_rx.*;
+// Prepares the DeliveryOptions configuration object
+DeliveryOptions options = DeliveryOptions.builder()
+    .projectId("<YOUR_PROJECT_ID>")
+    .build();
 
-import io.reactivex.Observer;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Function;
+// Initializes a DeliveryClient for Java projects
+DeliveryClient client = new DeliveryClient(options);
 
-// Prepares an array to hold strongly-typed models
-List<TypeResolver<?>> typeResolvers = new ArrayList<>();
-
-// Registers the type resolver for articles
-typeResolvers.add(new TypeResolver<>(Article.TYPE, new Function<Void, Article>() {
-    @Override
-    public Article apply(Void input) {
-        return new Article();
-    }
-}));
-
-// Prepares the DeliveryService configuration object
-String projectId = "8d20758c-d74c-4f59-ae04-ee928c0816b7";
-IDeliveryConfig config = DeliveryConfig.newConfig(projectId)
-    .withTypeResolvers(typeResolvers);
-
-// Initializes a DeliveryService for Java projects
-IDeliveryService deliveryService = new DeliveryService(config);
+// Registers the model class for articles
+client.registerType(Article.class);
 
 // Gets all articles using a simple request
-List<ContentItem> items = deliveryService.<ContentItem>items()
-    .equalsFilter("system.type", "article")
-    .get()
-    .getItems();
+CompletionStage<List<Article>> articles = client.getItems(Article.class);
 
-// Gets all articles using RxJava2
-deliveryService.<ContentItem>items()
-    .equalsFilter("system.type", "article")
-    .getObservable()
-    .subscribe(new Observer<DeliveryItemListingResponse<ContentItem>>() {
+// Gets all articles using RxJava
+Observable.fromCompletionStage(client.getItems(Article.class))
+    .subscribe(new Observer<List<Article>>() {
         @Override
-        public void onSubscribe(Disposable d) {
+        public void onSubscribe(@NonNull Disposable d) {
         }
 
         @Override
-        public void onNext(DeliveryItemListingResponse<ContentItem> response) {
+        public void onNext(@NonNull List<Article> items) {
             // Gets the articles
-            List<ContentItem> items = response.getItems();
+            List<Article> articles = items;
         }
 
         @Override
-        public void onError(Throwable e) {
+        public void onError(@NonNull Throwable e) {
         }
 
         @Override
