@@ -1,5 +1,6 @@
 // DocSection: getting_content_filter_items
 // Tip: Find more about JavaRx SDK at https://docs.kontent.ai/androidandroid
+
 // Prepares the DeliveryOptions configuration object
 DeliveryOptions options = DeliveryOptions.builder()
     .projectId("<YOUR_PROJECT_ID>")
