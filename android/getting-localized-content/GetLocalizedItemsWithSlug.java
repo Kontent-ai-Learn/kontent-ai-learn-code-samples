@@ -12,9 +12,6 @@ DeliveryClient client = new DeliveryClient(options);
 // Registers the model class for articles
 client.registerType(Article.class);
 
-// Initializes a DeliveryClient for Java projects
-DeliveryClient client = new DeliveryClient(options);
-
 // Gets the Spanish variant of an "About us" content item that has "acerda-de-nosotros" in its "URL pattern" element using a simple request
 CompletionStage<List<Article>> articles = client.getItems(
     Article.class,
