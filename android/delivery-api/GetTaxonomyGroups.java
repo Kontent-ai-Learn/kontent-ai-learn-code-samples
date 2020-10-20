@@ -19,17 +19,17 @@ CompletionStage<List<TaxonomyGroup>> taxonomies = client.getTaxonomyGroups(
 Observable.fromCompletionStage(taxonomies)
     .subscribe(new Observer<TaxonomyGroupListingResponse>() {
         @Override
-        public void onSubscribe(@NonNull Disposable d) {
+        public void onSubscribe(Disposable d) {
         }
 
         @Override
-        public void onNext(@NonNull TaxonomyGroupListingResponse response) {
+        public void onNext(TaxonomyGroupListingResponse response) {
                 // Gets the taxonomy groups
                 List<TaxonomyGroup> taxonomyGroups = response.getTaxonomies();
         }
 
         @Override
-        public void onError(@NonNull Throwable e) {
+        public void onError(Throwable e) {
         }
 
         @Override

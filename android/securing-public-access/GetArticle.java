@@ -17,17 +17,17 @@ CompletionStage<ContentItemResponse> item = client.getItem("my_article");
 Observable.fromCompletionStage(item)
 .subscribe(new Observer<ContentItemResponse>() {
     @Override
-    public void onSubscribe(@NonNull Disposable d) {
+    public void onSubscribe(Disposable d) {
     }
 
     @Override
-    public void onNext(@NonNull ContentItemResponse response) {
+    public void onNext(ContentItemResponse response) {
         // Gets the content item
         ContentItem article = response.getItem();
     }
 
     @Override
-    public void onError(@NonNull Throwable e) {
+    public void onError(Throwable e) {
     }
 
     @Override

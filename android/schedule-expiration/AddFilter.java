@@ -27,17 +27,17 @@ CompletionStage<List<LandingPage>> publishedItems = client.getItems(
 Observable.fromCompletionStage(publishedItems)
     .subscribe(new Observer<List<LandingPage>>() {
         @Override
-        public void onSubscribe(@NonNull Disposable d) {
+        public void onSubscribe(Disposable d) {
         }
 
         @Override
-        public void onNext(@NonNull List<LandingPage> landingPages) {
+        public void onNext(List<LandingPage> landingPages) {
             // Already landing pages, that should be public
             List<LandingPage> publishedItems = landingPages;
         }
 
         @Override
-        public void onError(@NonNull Throwable e) {
+        public void onError(Throwable e) {
         }
 
         @Override

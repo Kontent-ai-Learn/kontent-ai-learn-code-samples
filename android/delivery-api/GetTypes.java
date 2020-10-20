@@ -18,17 +18,17 @@ CompletionStage<ContentTypesListingResponse> types = client.getTypes(
 Observable.fromCompletionStage(types)
     .subscribe(new Observer<ContentTypesListingResponse>() {
         @Override
-        public void onSubscribe(@NonNull Disposable d) {
+        public void onSubscribe(Disposable d) {
         }
 
         @Override
-        public void onNext(@NonNull ContentTypesListingResponse response) {
+        public void onNext(ContentTypesListingResponse response) {
             // Gets content types from response
             List<ContentType> type = response.getTypes();
         }
 
         @Override
-        public void onError(@NonNull Throwable e) {
+        public void onError(Throwable e) {
         }
 
         @Override

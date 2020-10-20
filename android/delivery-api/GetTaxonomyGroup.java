@@ -16,16 +16,16 @@ CompletionStage<TaxonomyGroup> personas = client.getTaxonomyGroup("personas");
 Observable.fromCompletionStage(personas)
     .subscribe(new Observer<TaxonomyGroup>() {
         @Override
-        public void onSubscribe(@NonNull Disposable d) {
+        public void onSubscribe(Disposable d) {
         }
 
         @Override
-        public void onNext(@NonNull TaxonomyGroup taxonomyGroup) {
+        public void onNext(TaxonomyGroup taxonomyGroup) {
             TaxonomyGroup personasTaxonomyGroup = taxonomyGroup;
         }
 
         @Override
-        public void onError(@NonNull Throwable e) {
+        public void onError(Throwable e) {
         }
 
         @Override

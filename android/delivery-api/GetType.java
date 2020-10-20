@@ -16,16 +16,16 @@ CompletionStage<ContentType> type = client.getType("article");
 Observable.fromCompletionStage(type)
     .subscribe(new Observer<ContentType>() {
         @Override
-        public void onSubscribe(@NonNull Disposable d) {
+        public void onSubscribe(Disposable d) {
         }
 
         @Override
-        public void onNext(@NonNull ContentType contentType) {
+        public void onNext(ContentType contentType) {
             ContentType articleType = contentType;
         }
 
         @Override
-        public void onError(@NonNull Throwable e) {
+        public void onError(Throwable e) {
         }
 
         @Override

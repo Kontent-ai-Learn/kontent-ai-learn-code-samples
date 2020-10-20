@@ -16,17 +16,17 @@ CompletionStage<Element> element = client.getContentTypeElement("article", "titl
 Observable.fromCompletionStage(element)
     .subscribe(new Observer<Element>() {
         @Override
-        public void onSubscribe(@NonNull Disposable d) {
+        public void onSubscribe(Disposable d) {
         }
 
         @Override
-        public void onNext(@NonNull Element element) {
+        public void onNext(Element element) {
             // Gets the element
             Element titleElement = element;
         }
 
         @Override
-        public void onError(@NonNull Throwable e) {
+        public void onError(Throwable e) {
         }
 
         @Override

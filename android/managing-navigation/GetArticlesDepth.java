@@ -23,17 +23,17 @@ CompletionStage<NavigationItem> root = client.getItem(
 Observable.fromCompletionStage(root)
     .subscribe(new Observer<NavigationItem>() {
         @Override
-        public void onSubscribe(@NonNull Disposable d) {
+        public void onSubscribe(Disposable d) {
         }
 
         @Override
-        public void onNext(@NonNull NavigationItem item) {
+        public void onNext(NavigationItem item) {
             // Gets the item
             NavigationItem root = item;
         }
 
         @Override
-        public void onError(@NonNull Throwable e) {
+        public void onError(Throwable e) {
         }
 
         @Override

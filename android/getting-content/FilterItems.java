@@ -19,17 +19,17 @@ CompletionStage<List<Article>> articles = client.getItems(Article.class);
 Observable.fromCompletionStage(articles)
     .subscribe(new Observer<List<Article>>() {
         @Override
-        public void onSubscribe(@NonNull Disposable d) {
+        public void onSubscribe(Disposable d) {
         }
 
         @Override
-        public void onNext(@NonNull List<Article> items) {
+        public void onNext(List<Article> items) {
             // Gets the articles
             List<Article> articles = items;
         }
 
         @Override
-        public void onError(@NonNull Throwable e) {
+        public void onError(Throwable e) {
         }
 
         @Override
