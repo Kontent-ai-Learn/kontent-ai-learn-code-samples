@@ -14,7 +14,7 @@ List<ContentItem> items = deliveryService.<ContentItem>items()
     .get()
     .getItems();
 
-// Gets all content items using RxJava2
+// Gets all content items using RxJava
 Observable.fromCompletionStage(client.getItems())
     .subscribe(new Observer<ContentItemsListingResponse>() {
         @Override

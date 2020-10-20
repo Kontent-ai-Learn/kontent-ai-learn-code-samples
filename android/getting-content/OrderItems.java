@@ -23,7 +23,7 @@ CompletionStage<List<Article>> articles = client.getItems(
         .build()
 );
 
-// Gets the 3 latest articles ordered by their last modified time using RxJava2
+// Gets the 3 latest articles ordered by their last modified time using RxJava
 Observable.fromCompletionStage(client.getItems(
     Article.class,
     DeliveryParameterBuilder.params()
