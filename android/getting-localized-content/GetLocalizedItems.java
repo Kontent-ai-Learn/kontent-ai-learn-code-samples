@@ -16,7 +16,7 @@ client.registerType(Article.class);
 CompletionStage<Article> article = client.getItem("about_us", Article.class, DeliveryParameterBuilder.params().language("es-ES").build());
 
 // Gets the Spanish variant of an article using RxJava
-Observable.fromCompletionStage(client.getItem("about_us", Article.class, DeliveryParameterBuilder.params().language("es-ES").build()))
+Observable.fromCompletionStage(article)
     .subscribe(new Observer<Article>() {
         @Override
         public void onSubscribe(@NonNull Disposable d) {

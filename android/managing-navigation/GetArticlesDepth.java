@@ -19,29 +19,25 @@ CompletionStage<NavigationItem> root = client.getItem(
      DeliveryParameterBuilder.params().linkedItemsDepth(5).build()
 );
 
-
 // Gets navigation items and their linked items using RxJava
-Observable.fromCompletionStage(client.getItem(
-    "root_navigation_item",
-    NavigationItem.class,
-    DeliveryParameterBuilder.params().linkedItemsDepth(5).build()
-)).subscribe(new Observer<NavigationItem>() {
-    @Override
-    public void onSubscribe(@NonNull Disposable d) {
-    }
+Observable.fromCompletionStage(root)
+    .subscribe(new Observer<NavigationItem>() {
+        @Override
+        public void onSubscribe(@NonNull Disposable d) {
+        }
 
-    @Override
-    public void onNext(@NonNull NavigationItem item) {
-        // Gets the item
-        NavigationItem root = item;
-    }
+        @Override
+        public void onNext(@NonNull NavigationItem item) {
+            // Gets the item
+            NavigationItem root = item;
+        }
 
-    @Override
-    public void onError(@NonNull Throwable e) {
-    }
+        @Override
+        public void onError(@NonNull Throwable e) {
+        }
 
-    @Override
-    public void onComplete() {
-    }
-});
+        @Override
+        public void onComplete() {
+        }
+    });
 // EndDocSection

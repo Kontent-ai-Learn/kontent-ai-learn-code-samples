@@ -19,28 +19,24 @@ CompletionStage<List<Article>> articles = client.getItems(
 );
 
 // Gets specific elements of 3 articles ordered by the "Post date" element using RxJava
-Observable.fromCompletionStage(
-        client.getItems(
-                Article.class,
-                DeliveryParameterBuilder.params().page(null, 3).orderByDesc("post_date").build()
-        )
-).subscribe(new Observer<List<Article>>() {
-    @Override
-    public void onSubscribe(@NonNull Disposable d) {
-    }
+Observable.fromCompletionStage(articles)
+    .subscribe(new Observer<List<Article>>() {
+        @Override
+        public void onSubscribe(@NonNull Disposable d) {
+        }
 
-    @Override
-    public void onNext(@NonNull List<Article> items) {
-        // Gets the mapped articles
-        List<Article> articles = items;
-    }
+        @Override
+        public void onNext(@NonNull List<Article> items) {
+            // Gets the mapped articles
+            List<Article> articles = items;
+        }
 
-    @Override
-    public void onError(@NonNull Throwable e) {
-    }
+        @Override
+        public void onError(@NonNull Throwable e) {
+        }
 
-    @Override
-    public void onComplete() {
-    }
-});
+        @Override
+        public void onComplete() {
+        }
+    });
 // EndDocSection

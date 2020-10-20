@@ -24,31 +24,25 @@ CompletionStage<List<Article>> articles = client.getItems(
 );
 
 // Gets the 3 latest articles ordered by their last modified time using RxJava
-Observable.fromCompletionStage(client.getItems(
-    Article.class,
-    DeliveryParameterBuilder.params()
-        .filterEquals("system.type", "article")
-        .orderByDesc("system.lat_modified")
-        .page(null, 3)
-        .build()
-)).subscribe(new Observer<List<Article>>() {
-    @Override
-    public void onSubscribe(@NonNull Disposable d) {
-    }
+Observable.fromCompletionStage(articles)
+    .subscribe(new Observer<List<Article>>() {
+        @Override
+        public void onSubscribe(@NonNull Disposable d) {
+        }
 
-    @Override
-    public void onNext(@NonNull List<Article> items) {
-        // Gets the mapped articles
-        List<Article> articles = items;
+        @Override
+        public void onNext(@NonNull List<Article> items) {
+            // Gets the mapped articles
+            List<Article> articles = items;
 
-    }
+        }
 
-    @Override
-    public void onError(@NonNull Throwable e) {
-    }
+        @Override
+        public void onError(@NonNull Throwable e) {
+        }
 
-    @Override
-    public void onComplete() {
-    }
-});
+        @Override
+        public void onComplete() {
+        }
+    });
 // EndDocSection

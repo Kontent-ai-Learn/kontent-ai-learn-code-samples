@@ -18,7 +18,7 @@ client.registerType(Article.class);
 CompletionStage<Article> article = client.getItem("my_article", Article.class);
 
 // Gets the latest version of a content item using RxJava
-Observable.fromCompletionStage(client.getItem("my_article", Article.class))
+Observable.fromCompletionStage(article)
     .subscribe(new Observer<Article>() {
         @Override
         public void onSubscribe(@NonNull Disposable d) {

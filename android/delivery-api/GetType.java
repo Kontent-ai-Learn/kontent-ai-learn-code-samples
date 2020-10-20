@@ -13,7 +13,7 @@ DeliveryClient client = new DeliveryClient(options);
 CompletionStage<ContentType> type = client.getType("article");
 
 // Gets a content type using RxJava
-Observable.fromCompletionStage(client.getType("article"))
+Observable.fromCompletionStage(type)
     .subscribe(new Observer<ContentType>() {
         @Override
         public void onSubscribe(@NonNull Disposable d) {

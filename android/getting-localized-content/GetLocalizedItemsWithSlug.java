@@ -22,29 +22,24 @@ CompletionStage<List<Article>> articles = client.getItems(
 );
 
 // Gets the Spanish variant of an "About us" content item that has "acerda-de-nosotros" in its "URL pattern" element using RxJava
-Observable.fromCompletionStage( client.getItems(
-    Article.class,
-    DeliveryParameterBuilder.params()
-        .language("es-ES")
-        .filterEquals("elements.url_pattern", "acerca-de-nosotros")
-        .build()
-)).subscribe(new Observer<List<Article>>() {
-    @Override
-    public void onSubscribe(@NonNull Disposable d) {
-    }
+Observable.fromCompletionStage(articles)
+    .subscribe(new Observer<List<Article>>() {
+        @Override
+        public void onSubscribe(@NonNull Disposable d) {
+        }
 
-    @Override
-    public void onNext(@NonNull List<Article> articles) {
-        // Gets the content item
-        Article article = articles.get(0);
-    }
+        @Override
+        public void onNext(@NonNull List<Article> articles) {
+            // Gets the content item
+            Article article = articles.get(0);
+        }
 
-    @Override
-    public void onError(@NonNull Throwable e) {
-    }
+        @Override
+        public void onError(@NonNull Throwable e) {
+        }
 
-    @Override
-    public void onComplete() {
-    }
-});
+        @Override
+        public void onComplete() {
+        }
+    });
 // EndDocSection

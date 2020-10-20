@@ -15,27 +15,24 @@ CompletionStage<ContentTypesListingResponse> types = client.getTypes(
 );
 
 // Gets 3 content types using RxJava
-Observable.fromCompletionStage(
-    client.getTypes(
-        DeliveryParameterBuilder.params().page(null, 3).build()
-    )
-).subscribe(new Observer<ContentTypesListingResponse>() {
-    @Override
-    public void onSubscribe(@NonNull Disposable d) {
-    }
+Observable.fromCompletionStage(types)
+    .subscribe(new Observer<ContentTypesListingResponse>() {
+        @Override
+        public void onSubscribe(@NonNull Disposable d) {
+        }
 
-    @Override
-    public void onNext(@NonNull ContentTypesListingResponse response) {
-        // Gets content types from response
-        List<ContentType> type = response.getTypes();
-    }
+        @Override
+        public void onNext(@NonNull ContentTypesListingResponse response) {
+            // Gets content types from response
+            List<ContentType> type = response.getTypes();
+        }
 
-    @Override
-    public void onError(@NonNull Throwable e) {
-    }
+        @Override
+        public void onError(@NonNull Throwable e) {
+        }
 
-    @Override
-    public void onComplete() {
-    }
-});
+        @Override
+        public void onComplete() {
+        }
+    });
 // EndDocSection

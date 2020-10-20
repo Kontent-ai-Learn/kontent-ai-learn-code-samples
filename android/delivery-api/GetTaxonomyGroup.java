@@ -13,7 +13,7 @@ DeliveryClient client = new DeliveryClient(options);
 CompletionStage<TaxonomyGroup> personas = client.getTaxonomyGroup("personas");
 
 // Gets a taxonomy group using RxJava
-Observable.fromCompletionStage(client.getTaxonomyGroup("personas"))
+Observable.fromCompletionStage(personas)
     .subscribe(new Observer<TaxonomyGroup>() {
         @Override
         public void onSubscribe(@NonNull Disposable d) {

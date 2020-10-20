@@ -24,32 +24,24 @@ CompletionStage<List<LandingPage>> publishedItems = client.getItems(
 
 
 // Gets all landing pages using RxJava
-Observable.fromCompletionStage(client.getItems(
-    LandingPage.class,
-    DeliveryParameterBuilder.params()
-        .filterEquals("system.type", "landing_page")
-        .build()
-    ).thenApply(landingPageItems -> landingPageItems.stream()
-        .filter(item ->
-            (item.getExpireAt().compareTo(ZonedDateTime.now()) > 0 || item.getExpireAt() == null))
-        .collect(Collectors.toList()))
-).subscribe(new Observer<List<LandingPage>>() {
-    @Override
-    public void onSubscribe(@NonNull Disposable d) {
-    }
+Observable.fromCompletionStage(publishedItems)
+    .subscribe(new Observer<List<LandingPage>>() {
+        @Override
+        public void onSubscribe(@NonNull Disposable d) {
+        }
 
-    @Override
-    public void onNext(@NonNull List<LandingPage> landingPages) {
-        // Already landing pages, that should be public
-        List<LandingPage> publishedItems = landingPages;
-    }
+        @Override
+        public void onNext(@NonNull List<LandingPage> landingPages) {
+            // Already landing pages, that should be public
+            List<LandingPage> publishedItems = landingPages;
+        }
 
-    @Override
-    public void onError(@NonNull Throwable e) {
-    }
+        @Override
+        public void onError(@NonNull Throwable e) {
+        }
 
-    @Override
-    public void onComplete() {
-    }
-});
+        @Override
+        public void onComplete() {
+        }
+    });
 // EndDocSection

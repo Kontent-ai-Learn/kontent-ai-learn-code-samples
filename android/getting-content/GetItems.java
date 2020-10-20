@@ -10,12 +10,10 @@ DeliveryOptions options = DeliveryOptions.builder()
 DeliveryClient client = new DeliveryClient(options);
 
 // Gets all content items using a simple request
-List<ContentItem> items = deliveryService.<ContentItem>items()
-    .get()
-    .getItems();
+CompletionStage<ContentItemsListingResponse> items = client.getItems();
 
 // Gets all content items using RxJava
-Observable.fromCompletionStage(client.getItems())
+Observable.fromCompletionStage(items)
     .subscribe(new Observer<ContentItemsListingResponse>() {
         @Override
         public void onSubscribe(@NonNull Disposable d) {

@@ -13,7 +13,7 @@ DeliveryClient client = new DeliveryClient(options);
 CompletionStage<Element> element = client.getContentTypeElement("article", "title");
 
 // Gets the "title" content element from the "article" type using RxJava
-Observable.fromCompletionStage(client.getContentTypeElement("article", "title"))
+Observable.fromCompletionStage(element)
     .subscribe(new Observer<Element>() {
         @Override
         public void onSubscribe(@NonNull Disposable d) {

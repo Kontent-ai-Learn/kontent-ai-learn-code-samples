@@ -19,26 +19,24 @@ CompletionStage<List<Article>> articles = client.getItems(
 );
 
 // Gets specific elements of all articles using JavaRx
-Observable.fromCompletionStage(client.getItems(
-    Article.class,
-    DeliveryParameterBuilder.params().projection("title", "url_pattern").build()
-)).subscribe(new Observer<List<Article>>() {
-    @Override
-    public void onSubscribe(@NonNull Disposable d) {
-    }
+Observable.fromCompletionStage(articles)
+    .subscribe(new Observer<List<Article>>() {
+        @Override
+        public void onSubscribe(@NonNull Disposable d) {
+        }
 
-    @Override
-    public void onNext(@NonNull List<Article> items) {
-        // Gets the content items
-        List<Article> articles = items;
-    }
+        @Override
+        public void onNext(@NonNull List<Article> items) {
+            // Gets the content items
+            List<Article> articles = items;
+        }
 
-    @Override
-    public void onError(@NonNull Throwable e) {
-    }
+        @Override
+        public void onError(@NonNull Throwable e) {
+        }
 
-    @Override
-    public void onComplete() {
-    }
-});
+        @Override
+        public void onComplete() {
+        }
+    });
 // EndDocSection

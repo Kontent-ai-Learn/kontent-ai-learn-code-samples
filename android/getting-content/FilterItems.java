@@ -16,7 +16,7 @@ client.registerType(Article.class);
 CompletionStage<List<Article>> articles = client.getItems(Article.class);
 
 // Gets all articles using RxJava
-Observable.fromCompletionStage(client.getItems(Article.class))
+Observable.fromCompletionStage(articles)
     .subscribe(new Observer<List<Article>>() {
         @Override
         public void onSubscribe(@NonNull Disposable d) {
