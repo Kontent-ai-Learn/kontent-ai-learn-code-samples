@@ -19,7 +19,7 @@ CompletionStage<ContentItemsListingResponse> articles = client.getItems(Delivery
     .build()
 );
 
-// Gets the Spanish variant of all content items (while ignoring language fallbacks) using RxJava2
+// Gets the Spanish variant of all content items (while ignoring language fallbacks) using RxJava
 Observable.fromCompletionStage(client.getItems(DeliveryParameterBuilder.params()
     .language("es-ES")
     .filterEquals("system.language", "es-ES")
