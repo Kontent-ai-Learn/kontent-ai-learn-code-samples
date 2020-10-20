@@ -9,7 +9,7 @@ DeliveryOptions options = DeliveryOptions.builder()
 // Initializes a DeliveryClient for Java projects
 DeliveryClient client = new DeliveryClient(options);
 
-// Registers the model class for articles
+// Registers the model class for navigation items
 client.registerType(NavigationItem.class);
 
 // Gets navigation items and their linked items using a simple request
