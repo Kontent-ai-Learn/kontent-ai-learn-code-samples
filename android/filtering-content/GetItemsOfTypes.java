@@ -1,7 +1,6 @@
 // DocSection: filtering_get_items_of_types
 // Gets items based on the types Article, Product, and News
-List<ContentItem> items = deliveryService.<ContentItem>items()
-    .inFilter("system.type", Arrays.asList("article", "product", "news"))
-    .get()
-    .getItems();
+CompletionStage<ContentItemsListingResponse> items = client.getItems(
+    DeliveryParameterBuilder.params().filterIn("system.type", "article", "product", "news").build()
+);
 // EndDocSection

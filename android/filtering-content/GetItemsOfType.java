@@ -1,6 +1,8 @@
 // DocSection: filtering_get_items_of_type
 // Gets items of content type Product
-List<Product> items = deliveryService.<Product>items()
+CompletionStage<ContentItemsListingResponse> items = client.getItems(
+    DeliveryParameterBuilder.params().filterEquals("system.type", "product").build()
+);
     .equalsFilter("system.type", "product")
     .get()
     .getItems();
