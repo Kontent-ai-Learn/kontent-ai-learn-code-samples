@@ -10,6 +10,8 @@ const client = new ManagementClient({
 
 // Used when updating an existing item
 client.updateAsset()
+  .byAssetExternalId('which-brewing-fits-you')
+  // .byAssetId('fcbb12e6-66a3-4672-85d9-d502d16b8d9c')
   .withData(
     {
       title: "Coffee Brewing Techniques",
@@ -41,6 +43,8 @@ client.updateAsset()
 
 // Used when creating a new asset or updating an existing one
 client.upsertAsset()
+  .byAssetExternalId('which-brewing-fits-you')
+  // .byAssetId('fcbb12e6-66a3-4672-85d9-d502d16b8d9c')
   .withData(
     {
       // 'fileReference' is only required when creating a new asset

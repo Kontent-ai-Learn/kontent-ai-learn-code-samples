@@ -10,6 +10,7 @@ const client = new ManagementClient({
 
 // Uses the file reference object obtained in step 1
 client.upsertAsset()
+  .byAssetExternalId('brno-cafe-image')
   .withData(
     {
       fileReference: {
@@ -17,7 +18,6 @@ client.upsertAsset()
         type: 'internal'
       },
       title: "Brno Cafe",
-      assetExternalId: 'brno-cafe-image',
       descriptions: [
         {
           language: {
