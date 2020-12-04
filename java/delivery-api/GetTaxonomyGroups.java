@@ -11,4 +11,5 @@ CompletionStage<List<TaxonomyGroup>> taxonomies = client.getTaxonomyGroups(
         .page(null, 3)
         .build()
     ).thenApply(taxonomyGroupListingResponse -> taxonomyGroupListingResponse.getTaxonomies());
+// To use the code for Android projects, see http://docs.kontent.ai/javarx
 // EndDocSection

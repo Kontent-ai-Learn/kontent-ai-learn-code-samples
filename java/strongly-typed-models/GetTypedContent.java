@@ -12,4 +12,5 @@ client.registerType(Homepage.class);
 CompletionStage<Homepage> homepageResult = client.getItem("hello_caas_world", Homepage.class);
 // Use homepageResult
 // homepageResult.thenAccept(homepage -> System.out.println(homepage.getHeadline())
+// To use the code for Android projects, see http://docs.kontent.ai/javarx
 // EndDocSection

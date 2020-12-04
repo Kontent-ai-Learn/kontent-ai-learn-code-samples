@@ -20,4 +20,5 @@ CompletionStage<Article> article = client.getItem(
     "my_article",
     Article.class
 );
+// To use the code for Android projects, see http://docs.kontent.ai/javarx
 // EndDocSection

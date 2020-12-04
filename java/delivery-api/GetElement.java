@@ -7,4 +7,5 @@ DeliveryClient client = new DeliveryClient("<YOUR_PROJECT_ID>");
 
 // Gets the "title" content element from the "article" type using a simple request
 CompletionStage<Element> element = client.getContentTypeElement("article", "title");
+// To use the code for Android projects, see http://docs.kontent.ai/javarx
 // EndDocSection

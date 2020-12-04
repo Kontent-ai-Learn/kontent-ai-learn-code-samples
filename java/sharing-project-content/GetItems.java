@@ -17,4 +17,5 @@ CompletionStage<CompletionStage<ContentItem[]>> result = client1.getItems()
             return combined;
         })
     );
+// To use the code for Android projects, see http://docs.kontent.ai/javarx
 // EndDocSection
