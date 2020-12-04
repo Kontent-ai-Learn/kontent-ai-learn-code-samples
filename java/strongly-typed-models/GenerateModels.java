@@ -1,7 +1,5 @@
 // DocSection: strongly_typed_models_generators
-// For instructions on using the Java model generator, visit https://github.com/Kentico/kontent-java-packages/tree/master/kontent-delivery-generators#run-as-a-gradle-task
-
-// Configures Gradle plugin
+// Find instructions on using the Java model generator at https://github.com/Kentico/kontent-java-packages/tree/master/kontent-delivery-generators
 import com.squareup.javapoet.JavaFile
 import kentico.kontent.delivery.DeliveryClient
 import kentico.kontent.delivery.DeliveryOptions
@@ -35,7 +33,4 @@ task generateModels {
         generator.writeSources(sources);
     }
 }
-
-// Runs generateModels task
-./gradlew generateModels
 // EndDocSection

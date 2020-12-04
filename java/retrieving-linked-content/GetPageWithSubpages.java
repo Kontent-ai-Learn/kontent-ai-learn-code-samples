@@ -2,10 +2,18 @@
 // Tip: Find more about Java SDK at https://docs.kontent.ai/java
 import kentico.kontent.delivery.*;
 
-DeliveryClient client = new DeliveryClient("8d20758c-d74c-4f59-ae04-ee928c0816b7");
-
-List<NameValuePair> params = DeliveryParameterBuilder.params().linkedItemsDepth(1).build();
+// Initializes a DeliveryClient
+DeliveryClient client = new DeliveryClient("<YOUR_PROJECT_ID>");
 
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
-CompletionStage<Page> item = client.getItem("insurance_listing", Page.class, params);
+// Registers the model class for articles
+client.registerType(Page.class);
+
+CompletionStage<Page> item = client.getItem(
+	"insurance_listing",
+	Page.class,
+	DeliveryParameterBuilder.params()
+		.linkedItemsDepth(1)
+		.build()
+);
 // EndDocSection

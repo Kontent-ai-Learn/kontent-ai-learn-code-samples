@@ -1,8 +1,8 @@
 // DocSection: filtering_get_items_of_types
-// Gets items based on the types Product, Article, and News
-List<NameValuePair> params = DeliveryParameterBuilder.params()
-    .filterIn("system.type", "product", "article", "news")
-    .build();
-
-CompletionStage<ContentItemsListingResponse> listingResponse = deliveryClient.getItems(params);
+// Gets items based on the types Article, Product, and News
+CompletionStage<ContentItemsListingResponse> items = client.getItems(
+  DeliveryParameterBuilder.params()
+    .filterIn("system.type", "article", "product", "news")
+    .build()
+);
 // EndDocSection
