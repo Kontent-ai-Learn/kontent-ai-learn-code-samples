@@ -15,7 +15,7 @@ curl --request POST \
    },
    {
      "name": "Author",
-     "external_id": "author"
+     "codename": "author"
    }
  ],
  "elements": [
@@ -44,7 +44,7 @@ curl --request POST \
      	],
      "type": "rich_text",
      "content_group": {
-       "external_id": "author"
+       "codename": "author"
      }
    }
  ]

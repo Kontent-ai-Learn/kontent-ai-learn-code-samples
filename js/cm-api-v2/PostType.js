@@ -21,7 +21,7 @@ client.addContentType()
         },
         {
           name: "Author",
-          external_id: "author",
+          codename: "author",
         }
       ],
       elements: [
@@ -50,7 +50,7 @@ client.addContentType()
             "text"
           ],
           content_group: {
-            external_id: "author"
+            codename: "author"
           }
         })
       ]
