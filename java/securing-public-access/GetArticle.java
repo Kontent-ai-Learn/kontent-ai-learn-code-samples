@@ -2,15 +2,11 @@
 // Tip: Find more about Java SDK at https://docs.kontent.ai/java
 import kentico.kontent.delivery.*;
 
-// Initializes a DeliveryClient with secure access key
-DeliveryClient client = new DeliveryClient(
-	DeliveryOptions.builder()
-		.projectId("<YOUR_PROJECT_ID>")
-		.productionApiKey("<YOUR_API_KEY>")
-		.build()
-);
+DeliveryOptions options = new DeliveryOptions();
+options.setProjectId("<YOUR_PROJECT_ID>");
+options.setProductionApiKey("<YOUR_API_KEY>");
 
-// Gets the latest version of an item
+DeliveryClient client = new DeliveryClient(options);
+
 CompletionStage<ContentItemResponse> item = client.getItem("my_article");
-// To use the code for Android projects, see http://docs.kontent.ai/android
 // EndDocSection

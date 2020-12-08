@@ -1,24 +1,20 @@
 // DocSection: filtering_get_items_by_taxonomy_term
 // Note: Filters work with codenames of the tags.
 // Gets items tagged with one specific tag
-CompletionStage<ContentItemsListingResponse> items = client.getItems(
-  DeliveryParameterBuilder.params()
-    .filterContains("elements.tags", "kentico")
-    .build()
-);
+List<NameValuePair> params1 = DeliveryParameterBuilder.params()
+    .filterContains("elements.tags", "kontent")
+    .build();
+CompletionStage<ContentItemsListingResponse> listingResponse1 = deliveryClient.getItems(params1);
 
 // Gets items tagged with a list of specific tags
-CompletionStage<ContentItemsListingResponse> items = client.getItems(
-  DeliveryParameterBuilder.params()
+List<NameValuePair> params2 = DeliveryParameterBuilder.params()
     .filterAll("elements.tags", "kontent", "headless")
-    .build()
-);
+    .build();
+CompletionStage<ContentItemsListingResponse> listingResponse2 = deliveryClient.getItems(params2);
 
 // Gets items tagged with at least one of multiple tags
-CompletionStage<ContentItemsListingResponse> items = client.getItems(
-  DeliveryParameterBuilder.params()
+List<NameValuePair> params3 = DeliveryParameterBuilder.params()
     .filterAny("elements.tags", "football", "soccer")
-    .build()
-);
-// To use the code for Android projects, see http://docs.kontent.ai/android
+    .build();
+CompletionStage<ContentItemsListingResponse> listingResponse3 = deliveryClient.getItems(params3);
 // EndDocSection

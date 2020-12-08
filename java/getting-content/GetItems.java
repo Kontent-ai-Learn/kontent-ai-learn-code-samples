@@ -1,11 +1,11 @@
 // DocSection: getting_content_get_items
 // Tip: Find more about Java SDK at https://docs.kontent.ai/java
-import kentico.kontent.delivery.*;
+import com.github.kentico.kontent.delivery;
 
-// Initializes a DeliveryClient
-DeliveryClient client = new DeliveryClient("<YOUR_PROJECT_ID>");
+DeliveryClient client = new DeliveryClient("8d20758c-d74c-4f59-ae04-ee928c0816b7");
 
-// Gets all content items
+List<NameValuePair> params = DeliveryParameterBuilder.params()
+    .build();
+
 CompletionStage<ContentItemsListingResponse> listingResponse = client.getItems();
-// To use the code for Android projects, see http://docs.kontent.ai/android
 // EndDocSection

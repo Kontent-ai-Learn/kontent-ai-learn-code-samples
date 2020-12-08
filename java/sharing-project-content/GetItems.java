@@ -1,10 +1,12 @@
 // DocSection: sharing_project_content_get_items
 // Tip: Find more about Java SDK at https://docs.kontent.ai/java
 import kentico.kontent.delivery.*;
-
 // Initializes the content delivery clients
 DeliveryClient client1 = new DeliveryClient("975bf280-fd91-488c-994c-2f04416e5ee3");
 DeliveryClient client2 = new DeliveryClient("8d20758c-d74c-4f59-ae04-ee928c0816b7");
+
+List<NameValuePair> params = DeliveryParameterBuilder.params()
+    .build();
 
 // Gets content items from both projects
 CompletionStage<CompletionStage<ContentItem[]>> result = client1.getItems()
@@ -17,5 +19,4 @@ CompletionStage<CompletionStage<ContentItem[]>> result = client1.getItems()
             return combined;
         })
     );
-// To use the code for Android projects, see http://docs.kontent.ai/android
 // EndDocSection
