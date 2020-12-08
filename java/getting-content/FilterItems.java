@@ -10,8 +10,8 @@ DeliveryClient client = new DeliveryClient("<YOUR_PROJECT_ID>");
 client.registerType(Article.class);
 
 // Gets all articles
-CompletionStage<List<ArticleItem>> items = client.getItems(
-    ArticleItem.class, 
+CompletionStage<List<Article>> items = client.getItems(
+    Article.class, 
     DeliveryParameterBuilder.params()
         .filterEquals("system.type", "article")
         .build();
