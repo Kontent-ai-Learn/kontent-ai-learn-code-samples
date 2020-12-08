@@ -7,5 +7,5 @@ DeliveryClient client = new DeliveryClient("<YOUR_PROJECT_ID>");
 
 // Gets a specific taxonomy group
 CompletionStage<TaxonomyGroup> personas = client.getTaxonomyGroup("personas");
-// To use the code for Android projects, see http://docs.kontent.ai/javarx
+// To use the code for Android projects, see http://docs.kontent.ai/android
 // EndDocSection

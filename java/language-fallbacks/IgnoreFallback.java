@@ -12,5 +12,5 @@ CompletionsStage<ContentItemsListingResponse> listingResponse = client.getItems(
         .filterEquals("system.language", "es-ES")
         .build()
 );
-// To use the code for Android projects, see http://docs.kontent.ai/javarx
+// To use the code for Android projects, see http://docs.kontent.ai/android
 // EndDocSection

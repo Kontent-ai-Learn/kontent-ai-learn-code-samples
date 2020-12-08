@@ -18,5 +18,5 @@ CompletionStage<List<Article>> items = client.getItems(
         .filterEquals("elements.url_pattern", "acerda-de-nosotros")
         .build();
 );
-// To use the code for Android projects, see http://docs.kontent.ai/javarx
+// To use the code for Android projects, see http://docs.kontent.ai/android
 // EndDocSection

@@ -27,5 +27,5 @@ CompletionStage<ContentItemsListingResponse> items4 = client.getItems(
     .filterLessThanEquals("system.release_date", "2020-05-05T10:30:00Z")
     .build()
 );
-// To use the code for Android projects, see http://docs.kontent.ai/javarx
+// To use the code for Android projects, see http://docs.kontent.ai/android
 // EndDocSection 

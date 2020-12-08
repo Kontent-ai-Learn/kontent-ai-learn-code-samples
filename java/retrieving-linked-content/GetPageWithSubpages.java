@@ -16,5 +16,5 @@ CompletionStage<Page> item = client.getItem(
 		.linkedItemsDepth(1)
 		.build()
 );
-// To use the code for Android projects, see http://docs.kontent.ai/javarx
+// To use the code for Android projects, see http://docs.kontent.ai/android
 // EndDocSection

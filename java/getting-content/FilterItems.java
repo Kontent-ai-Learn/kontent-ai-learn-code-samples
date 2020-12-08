@@ -16,5 +16,5 @@ CompletionStage<List<ArticleItem>> items = client.getItems(
         .filterEquals("system.type", "article")
         .build();
 );
-// To use the code for Android projects, see http://docs.kontent.ai/javarx
+// To use the code for Android projects, see http://docs.kontent.ai/android
 // EndDocSection

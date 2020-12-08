@@ -20,5 +20,5 @@ CompletionStage<ContentItemsListingResponse> items = client.getItems(
     .filterAny("elements.tags", "football", "soccer")
     .build()
 );
-// To use the code for Android projects, see http://docs.kontent.ai/javarx
+// To use the code for Android projects, see http://docs.kontent.ai/android
 // EndDocSection

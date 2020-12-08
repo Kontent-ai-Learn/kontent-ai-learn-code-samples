@@ -3,5 +3,5 @@
 SimpleArticleItem item = client.getItem("my_article", SimpleArticleItem.class);
 
 String description = item.toCompletableFuture().get().getBodyCopy();
-// To use the code for Android projects, see http://docs.kontent.ai/javarx
+// To use the code for Android projects, see http://docs.kontent.ai/android
 // EndDocSection
