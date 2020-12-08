@@ -2,10 +2,21 @@
 // Tip: Find more about Java SDK at https://docs.kontent.ai/java
 import kentico.kontent.delivery.*;
 
-DeliveryClient client = new DeliveryClient("8d20758c-d74c-4f59-ae04-ee928c0816b7");
-
-List<NameValuePair> params = DeliveryParameterBuilder.params().language("es-ES").build();
+// Initializes a DeliveryClient
+DeliveryClient client = new DeliveryClient("<YOUR_PROJECT_ID>");
 
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
-CompletionStage<ArticleItem> item = client.getItem("about_us", ArticleItem.class, params);
+// Registers the model class for articles
+client.registerType(Article.class);
+
+// Gets the Spanish variant of an article
+CompletionStage<Article> item = client.getItem(
+	"about_us",
+	Article.class,
+	DeliveryParameterBuilder.params()
+		.language("es-ES")
+		.build()
+	
+);
+// To use the code for Android projects, see http://docs.kontent.ai/android
 // EndDocSection
