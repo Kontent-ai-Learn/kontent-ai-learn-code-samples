@@ -9,4 +9,5 @@ deliveryOptions.setWaitForLoadingNewContent(true);
 DeliveryClient client = new DeliveryClient(deliveryOptions);
 
 CompletionsStage<ContentItemResponse> item = client.getItem("my_article");
+// To use the code for Android projects, see http://docs.kontent.ai/android
 // EndDocSection
