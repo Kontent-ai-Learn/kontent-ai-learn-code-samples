@@ -4,11 +4,11 @@ This repository contains code samples used in the [Kentico Kontent Docs](https:/
 
 ## How To Contribute
 
-Feel free to open a new issue where you describe your proposed changes, or even create a new pull request from your branch with proposed changes.
+Open a new issue where you describe your proposed changes, or create a pull request from your branch with proposed changes.
 
-Your changes must be approved by the Kontent docs team before they can appear in [Kontent docs](https://docs.kontent.ai).
+Each code sample is specified by a DocSection identifier. See examples in the `DocSectionTemplate.txt` file. The DocSection identifier must be unique for each technology. 
 
-Each code sample is specified by a DocSection identifier. This identifier must be unique per tech stack. The code samples are processed and pushed to Kentico Kontent through the [Github Sync](https://github.com/KenticoDocs/kontent-docs-github-reader) service.
+If your changes are merged to the master branch, the new code is automatically processed by the [Github Sync](https://github.com/KenticoDocs/kontent-docs-github-reader) service and pushed to the Kontent Docs. The changes will not automatically appear in <https://docs.kontent.ai>. Your changes must be approved and published by the Kontent docs team before they can go live.
 
 ## Licence
 
