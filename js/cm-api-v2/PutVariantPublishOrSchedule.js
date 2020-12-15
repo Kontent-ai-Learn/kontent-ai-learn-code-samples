@@ -13,7 +13,7 @@ client.publishLanguageVariant()
   // .byItemCodename('my_article')
   // .byItemExternalId('59713')
   .byLanguageId('d1f95fde-af02-b3b5-bd9e-f232311ccab8')
-  // .byLanguageCodename('es-ES')
+  // .byLanguageCodename('es-mx')
   .withData({
     scheduled_to: '2038-01-19T04:14:08+01:00'
   })

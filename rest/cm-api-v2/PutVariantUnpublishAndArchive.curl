@@ -2,7 +2,7 @@
 curl --request PUT \
   --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/items/<CONTENT_ITEM_ID>/variants/<LANGUAGE_ID>/unpublish-and-archive \
 # --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/items/f4b3fc05-e988-4dae-9ac1-a94aba566474/variants/d1f95fde-af02-b3b5-bd9e-f232311ccab8/unpublish-and-archive \
-# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/items/codename/my-article/variants/codename/es-mx/unpublish-and-archive \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/items/codename/my_article/variants/codename/es-mx/unpublish-and-archive \
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
   --header 'Content-type: application/json' \
   --data '{

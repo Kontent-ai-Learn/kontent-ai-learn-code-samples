@@ -1,15 +1,15 @@
 # DocSection: cm_api_v2_put_variant_publish_or_schedule
 curl --request PUT \
   --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/items/f4b3fc05-e988-4dae-9ac1-a94aba566474/variants/d1f95fde-af02-b3b5-bd9e-f232311ccab8/publish \
-# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/items/f4b3fc05-e988-4dae-9ac1-a94aba566474/variants/codename/es-ES/publish \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/items/f4b3fc05-e988-4dae-9ac1-a94aba566474/variants/codename/es-mx/publish \
 # --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/items/codename/my_article/variants/d1f95fde-af02-b3b5-bd9e-f232311ccab8/publish \
-# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/items/codename/my_article/variants/codename/es-ES/publish \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/items/codename/my_article/variants/codename/es-mx/publish \
 # --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/items/external-id/59713/variants/d1f95fde-af02-b3b5-bd9e-f232311ccab8/publish \
-# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/items/external-id/59713/variants/codename/es-ES/publish \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/items/external-id/59713/variants/codename/es-mx/publish \
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
   --header 'Content-type: application/json' \
   --data '
 {
-  "scheduled_to": "2021-01-31T11:00:00+01:00"
+  "scheduled_to": "2038-01-19T04:14:08+01:00"
 }'
 # EndDocSection
