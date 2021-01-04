@@ -8,7 +8,7 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-// Used when updating an existing item
+// Updates an existing content item
 client.updateContentItem()
   .byItemId('f4b3fc05-e988-4dae-9ac1-a94aba566474')
   // .byItemCodename('my_article')
@@ -27,11 +27,9 @@ client.updateContentItem()
       console.log(error);
     });
 
-// Used when creating a new item or updating an existing one
+// Creates a new content item
 client.upsertContentItem()
   .byItemExternalId('59713')
-  // .byItemId('f4b3fc05-e988-4dae-9ac1-a94aba566474')
-  // .byItemCodename('my_article')
   .withData(
     {
       name: 'On Roasts',
