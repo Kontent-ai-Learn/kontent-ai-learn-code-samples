@@ -4,23 +4,23 @@ curl--request POST\
   --header 'Authorization: Bearer <YOUR_MANAGEMENT_API_KEY>'\
   --header 'Content-type: application/json'\
   --data ' {  
-  "name":"Metadata",
+  "name": "Metadata",
   "codename": "metadata",
-  "elements":[
+  "elements": [
     {  
-      "name":"Title",
+      "name": "Title",
       "codename": "title",
-      "type":"text"
+      "type": "text"
     },
     {  
-      "name":"Keywords",
+      "name": "Keywords",
       "codename": "keywords",
       "type":"text"
     },
     {  
-      "name":"Description",
+      "name": "Description",
       "codename": "description",
-      "type":"text"
+      "type": "text"
     }
   ]
 }
