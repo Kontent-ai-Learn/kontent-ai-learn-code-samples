@@ -11,12 +11,16 @@ client.addContentType()
       name: 'Blogpost',
       codename: 'blogpost',
       content_groups: [{
-          name: 'Blog content',
-          external_id: 'blog_content'
+          name: 'Content',
+          external_id: 'content'
         },
         {
-          name: 'Author',
-          external_id: 'author'
+          name: 'Metadata',
+          external_id: 'metadata'
+        },
+        {
+          name: 'Topic',
+          external_id: 'topic'
         }
       ],
       elements: [
@@ -24,33 +28,42 @@ client.addContentType()
           name: 'Title',
           type: 'text',
           content_group: {
-            external_id: 'blog_content'
+            external_id: 'content'
           },
         }),
         builder.assetElement({
           name: 'Image',
           type: 'asset',
           content_group: {
-            external_id: 'blog_content'
+            external_id: 'content'
           },
         }),
         builder.richTextElement({
           name: 'Blog content',
           type: 'rich_text',
           content_group: {
-            external_id: 'blog_content'
+            external_id: 'content'
           },
         }),
         builder.snippetElement({
           snippet: {
-            'codename': 'author'
+            'codename': 'metadata'
           },
           type: 'snippet',
-          id: 'b3574198-5946-515f-b406-411307c59916',
-          codename: 'author_profile',
+          codename: 'metadata',
           content_group: {
-            external_id: 'author'
+            external_id: 'metadata'
           },
+        }),
+        builder.taxonomyElement({
+          taxonomy_group: {
+            'codename': 'blog_topic'
+          },
+          type: 'taxonomy',
+          codename: 'taxonomy',
+          content_group: {
+            external_id: 'topic'
+          }
         })
       ]
     };

@@ -8,18 +8,23 @@ var client = new KontentManagement.ManagementClient({
 client.addContentTypeSnippet()
   .withData(builder => {
     return {
-      name: 'Author',
-      codename: 'author',
+      name: "Metadata",
+      codename: "metadata",
       elements: [
         builder.textElement({
-          name: 'Name',
-          codename: 'name',
+          name: "Title",
+          codename: "title",
           type: 'text'
         }),
-        builder.assetElement({
-          name: 'Profile picture',
-          codename: 'profile_picture',
-          type: 'asset'
+        builder.textElement({
+          name: "Keywords",
+          codename: "keywords",
+          type: 'text'
+        }),
+			  builder.textElement({
+          name: "Description",
+          codename: "description",
+          type: 'text'
         })
       ]
   };
