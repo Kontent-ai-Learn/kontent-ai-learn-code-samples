@@ -1,4 +1,4 @@
-// DocSection: importing_create_taxonomy
+// DocSection: import_model_create_taxonomy
 // Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 var client = new KontentManagement.ManagementClient({
   projectId: '<YOUR_PROJECT_ID>',
@@ -25,11 +25,11 @@ client.addTaxonomy()
               codename: 'hockey',
               terms: []
             },
-	    {
-	      name: 'Rugby',
-	      codename: 'rugby',
-	      terms: []	  
-	    }
+            {
+              name: 'Rugby',
+              codename: 'rugby',
+              terms: []
+            }
           ]
         },
         {
@@ -46,11 +46,11 @@ client.addTaxonomy()
               codename: "c",
               terms: []
             },
-	    {
-	      name: 'MVC', 
-	      codename: 'mvc',
-	      terms: []
-	    }
+            {
+              name: 'MVC',
+              codename: 'mvc',
+              terms: []
+            }
           ]
         }
       ]

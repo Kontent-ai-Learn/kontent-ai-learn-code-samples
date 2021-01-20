@@ -1,4 +1,4 @@
-// DocSection: importing_create_snippet
+// DocSection: import_model_create_snippet
 // Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 var client = new KontentManagement.ManagementClient({
   projectId: '<YOUR_PROJECT_ID>',
@@ -21,12 +21,12 @@ client.addContentTypeSnippet()
           codename: "keywords",
           type: 'text'
         }),
-			  builder.textElement({
+        builder.textElement({
           name: "Description",
           codename: "description",
           type: 'text'
         })
       ]
-  };
-})
+    };
+  })
 // EndDocSection

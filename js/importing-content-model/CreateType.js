@@ -1,4 +1,4 @@
-// DocSection: importing_add_type
+// DocSection: import_model_create_type
 // Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 var client = new KontentManagement.ManagementClient({
   projectId: '<YOUR_PROJECT_ID>',
@@ -11,17 +11,17 @@ client.addContentType()
       name: 'Blogpost',
       codename: 'blogpost',
       content_groups: [{
-          name: 'Content',
-          external_id: 'content'
-        },
-        {
-          name: 'Metadata',
-          external_id: 'metadata'
-        },
-        {
-          name: 'Topic',
-          external_id: 'topic'
-        }
+        name: 'Content',
+        external_id: 'content'
+      },
+      {
+        name: 'Metadata',
+        external_id: 'metadata'
+      },
+      {
+        name: 'Topic',
+        external_id: 'topic'
+      }
       ],
       elements: [
         builder.textElement({

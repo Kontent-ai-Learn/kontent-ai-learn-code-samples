@@ -1,27 +1,28 @@
-# DocSection: importing_create_snippet
+# DocSection: import_model_create_snippet
 curl--request POST\
 --url https: //manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/snippets \
   --header 'Authorization: Bearer <YOUR_MANAGEMENT_API_KEY>'\
   --header 'Content-type: application/json'\
-  --data ' {  
+  --data '
+{
   "name": "Metadata",
   "codename": "metadata",
   "elements": [
-    {  
+    {
       "name": "Title",
       "codename": "title",
       "type": "text"
     },
-    {  
+    {
       "name": "Keywords",
       "codename": "keywords",
-      "type":"text"
+      "type": "text"
     },
-    {  
+    {
       "name": "Description",
       "codename": "description",
       "type": "text"
     }
   ]
-}
+}'
 # EndDocSection
