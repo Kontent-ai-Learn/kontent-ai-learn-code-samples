@@ -13,7 +13,6 @@ client.upsertLanguageVariant()
   .byLanguageCodename('en-US')
   .withData((builder) => [
     builder.textElement({
-
       element: {
         codename: 'street'
       },
