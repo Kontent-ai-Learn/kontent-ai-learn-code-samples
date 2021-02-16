@@ -14,7 +14,7 @@ client.changeWorkflowStepOfLanguageVariant()
   // .byItemExternalId('59713')
   .byLanguageId('d1f95fde-af02-b3b5-bd9e-f232311ccab8')
   // .byLanguageCodename('es-ES')
-  .byWorkflowStepId('024DB524-A7F4-46B6-8315-A43A0366C397')
+  .byWorkflowStepId('16221cc2-bd22-4414-a513-f3e555c0fc93')
   .toObservable()
   .subscribe((response) => {
     console.log(response);
