@@ -9,7 +9,7 @@ const client = new ManagementClient({
 });
 
 client.getWebhook()
-  .byId("d53360f7-79e1-42f4-a524-1b53a417d03e")
+  .byId("5df74e27-1213-484e-b9ae-bcbe90bd5990")
   .toObservable()
   .subscribe((response) => {
     console.log(response);
