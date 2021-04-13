@@ -1,0 +1,6 @@
+# DocSection: mapi_v2_disable_webhook
+curl --request PUT \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/webhooks/d53360f7-79e1-42f4-a524-1b53a417d03e/disable \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: application/json'
+# EndDocSection
