@@ -13,7 +13,7 @@ client.registerType(Article.class);
 CompletionStage<List<Article>> articles = client.getItems(
     Article.class, 
     DeliveryParameterBuilder.params()
-        .projection("title", "url_pattern")
+        .projection("title", "url")
         .build()
 );
 // To use the code for Android projects, see http://docs.kontent.ai/android
