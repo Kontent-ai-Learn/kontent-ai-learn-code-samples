@@ -8,14 +8,8 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-client.listLanguageVariantsOfContentTypeWithComponents()
+const response = await client.listLanguageVariantsOfContentTypeWithComponents()
   .byTypeID('6434e475-5a29-4866-9fd1-6d1ca873f5be')
   // .byTypeCodename('article')
-  .toObservable()
-  .subscribe((response) => {
-    console.log(response);
-  },
-    (error) => {
-      console.log(error);
-    });
+  .toPromise();
 // EndDocSection

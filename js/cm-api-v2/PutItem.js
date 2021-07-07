@@ -9,7 +9,7 @@ const client = new ManagementClient({
 });
 
 // Updates an existing content item
-client.updateContentItem()
+const response = await client.updateContentItem()
   .byItemId('f4b3fc05-e988-4dae-9ac1-a94aba566474')
   // .byItemCodename('my_article')
   // .byItemExternalId('59713')
@@ -19,16 +19,10 @@ client.updateContentItem()
       codename: 'my_article_my_article'
     }
   )
-  .toObservable()
-  .subscribe((response) => {
-    console.log(response);
-  },
-    (error) => {
-      console.log(error);
-    });
+  .toPromise();
 
 // Creates a new content item
-client.upsertContentItem()
+const response = await client.upsertContentItem()
   .byItemExternalId('59713')
   .withData(
     {
@@ -38,11 +32,5 @@ client.upsertContentItem()
       type: 'article'
     }
   )
-  .toObservable()
-  .subscribe((response) => {
-    console.log(response);
-  },
-    (error) => {
-      console.log(error);
-    });
+  .toPromise();
 // EndDocSection

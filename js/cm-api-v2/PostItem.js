@@ -8,7 +8,7 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-client.addContentItem()
+const response = await client.addContentItem()
   .withData(
     {
       name: 'On Roasts',
@@ -22,11 +22,5 @@ client.addContentItem()
       external_id: '59713'
     }
   )
-  .toObservable()
-  .subscribe((response) => {
-    console.log(response);
-  },
-    (error) => {
-      console.log(error);
-    });
+  .toPromise();
 // EndDocSection

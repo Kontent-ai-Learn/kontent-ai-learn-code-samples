@@ -8,7 +8,7 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-client.addLanguage()
+const response = await client.addLanguage()
   .withData(
     {
       name: 'German (Germany)',
@@ -20,11 +20,5 @@ client.addLanguage()
       external_id: 'standard-german'
     }
   )
-  .toObservable()
-  .subscribe((response) => {
-    console.log(response);
-  },
-    (error) => {
-      console.log(error);
-    });
+  .toPromise();
 // EndDocSection

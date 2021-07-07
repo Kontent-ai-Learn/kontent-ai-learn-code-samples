@@ -8,7 +8,7 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-client.addWebhook()
+const response = await client.addWebhook()
   .withData(
     {
       name: "Example webhook",
@@ -75,11 +75,5 @@ client.addWebhook()
       }
     }
   )
-  .toObservable()
-  .subscribe((response) => {
-    console.log(response);
-  },
-    (error) => {
-      console.log(error);
-    });
+  .toPromise();
 // EndDocSection

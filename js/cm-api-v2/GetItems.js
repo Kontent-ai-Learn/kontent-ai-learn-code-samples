@@ -8,12 +8,6 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-client.listContentItems()
-  .toObservable()
-  .subscribe((response) => {
-    console.log(response);
-  },
-    (error) => {
-      console.log(error);
-    });
+const response = await client.listContentItems()
+  .toPromise();
 // EndDocSection

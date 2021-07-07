@@ -8,7 +8,7 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-client.modifyAssetFolders()
+const response = await client.modifyAssetFolders()
   .withData(
     [
       {

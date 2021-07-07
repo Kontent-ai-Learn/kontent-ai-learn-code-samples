@@ -8,7 +8,7 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-client.publishLanguageVariant()
+const response = await client.publishLanguageVariant()
   .byItemId('f4b3fc05-e988-4dae-9ac1-a94aba566474')
   // .byItemCodename('my_article')
   // .byItemExternalId('59713')
@@ -17,11 +17,5 @@ client.publishLanguageVariant()
   .withData({
     scheduled_to: '2038-01-19T04:14:08+01:00'
   })
-  .toObservable()
-  .subscribe((response) => {
-    console.log(response);
-  },
-    (error) => {
-      console.log(error);
-    });
+  .toPromise();
 // EndDocSection

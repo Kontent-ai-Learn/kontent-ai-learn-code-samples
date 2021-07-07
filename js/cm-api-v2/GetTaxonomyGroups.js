@@ -8,12 +8,6 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-client.listTaxonomies()
-  .toObservable()
-  .subscribe((response) => {
-    console.log(response);
-  },
-    (error) => {
-      console.log(error);
-    });
+const response = await client.listTaxonomies()
+  .toPromise();
 // EndDocSection

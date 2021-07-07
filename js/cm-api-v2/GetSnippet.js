@@ -8,15 +8,9 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-client.viewContentTypeSnippet()
+const response = await client.viewContentTypeSnippet()
   .byTypeId('269202ad-1d9d-47fd-b3e8-bdb05b3e3cf0')
   // .byTypeCodename('hosted_video')
   // .byTypeExternalId('snippet-type-123')
-  .toObservable()
-  .subscribe((response) => {
-    console.log(response);
-  },
-    (error) => {
-      console.log(error);
-    });
+  .toPromise();
 // EndDocSection

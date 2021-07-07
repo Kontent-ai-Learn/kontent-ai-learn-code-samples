@@ -8,7 +8,7 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-client.upsertLanguageVariant()
+const response = await client.upsertLanguageVariant()
   .byItemId('f4b3fc05-e988-4dae-9ac1-a94aba566474')
   // .byItemCodename('my_article')
   // .byItemExternalId('59713')
@@ -73,11 +73,5 @@ client.upsertLanguageVariant()
       value: undefined
     }),
   ])
-  .toObservable()
-  .subscribe((response) => {
-    console.log(response);
-  },
-    (error) => {
-      console.log(error);
-    });
+  .toPromise();
 // EndDocSection

@@ -8,7 +8,7 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-client.modifyContentType()
+const response = await client.modifyContentType()
   .byTypeId("0be13600-e57c-577d-8108-c8d860330985")
   // .byTypeCodename("my_article")
   // .byTypeExternalId("my-article-id")
@@ -48,11 +48,5 @@ client.modifyContentType()
       }
     ]
   )
-  .toObservable()
-  .subscribe((response) => {
-    console.log(response);
-  },
-    (error) => {
-      console.log(error);
-    });
+  .toPromise();
 // EndDocSection

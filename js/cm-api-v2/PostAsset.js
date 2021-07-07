@@ -8,7 +8,7 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-client.addAsset()
+const response = await client.addAsset()
   .withData(
     {
       // To create a file reference, see the "Upload a binary file" endpoint
@@ -34,11 +34,5 @@ client.addAsset()
       ]
     }
   )
-  .toObservable()
-  .subscribe((response) => {
-    console.log(response);
-  },
-    (error) => {
-      console.log(error);
-    });
+  .toPromise();
 // EndDocSection

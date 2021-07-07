@@ -8,7 +8,7 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-client.unpublishLanguageVariant()
+const response = await client.unpublishLanguageVariant()
   // .byItemId('f4b3fc05-e988-4dae-9ac1-a94aba566474')
   .byItemCodename('my_article')
   // .byItemExternalId('59713')

@@ -12,18 +12,12 @@ const client = new ManagementClient({
 
 const data = readFileSync('which-brewing-fits-you-1080px.jpg');
 
-client.uploadBinaryFile()
+const response = await client.uploadBinaryFile()
   .withData({
     binaryData: data,
     contentLength: data.byteLength,
     contentType: 'image/jpg',
     filename: 'which-brewing-fits-you-1080px.jpg'
   })
-  .toObservable()
-  .subscribe((response) => {
-    console.log(response);
-  },
-    (error) => {
-      console.log(error);
-    });
+  .toPromise();
 // EndDocSection

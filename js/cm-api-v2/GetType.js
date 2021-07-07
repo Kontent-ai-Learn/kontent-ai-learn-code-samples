@@ -8,14 +8,8 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-client.viewContentType()
+const response = await client.viewContentType()
   .byTypeId('269202ad-1d9d-47fd-b3e8-bdb05b3e3cf0')
   // .byTypeCodename('hosted_video')
-  .toObservable()
-  .subscribe((response) => {
-    console.log(response);
-  },
-    (error) => {
-      console.log(error);
-    });
+  .toPromise();
 // EndDocSection
