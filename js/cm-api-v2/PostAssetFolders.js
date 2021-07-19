@@ -8,7 +8,7 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-client.addAssetFolders()
+const response = await client.addAssetFolders()
   .withData(
     {
       folders: [
@@ -34,11 +34,5 @@ client.addAssetFolders()
       ]
     }
   )
-  .toObservable()
-  .subscribe((response) => {
-    console.log(response);
-  },
-    (error) => {
-      console.log(error);
-    });
+  .toPromise();
 // EndDocSection

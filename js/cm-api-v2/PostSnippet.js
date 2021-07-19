@@ -8,7 +8,7 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-client.addContentTypeSnippet()
+const response = await client.addContentTypeSnippet()
   .withData(builder => {
     return {
       name: "metadata",
@@ -33,11 +33,5 @@ client.addContentTypeSnippet()
     };
   })
 
-  .toObservable()
-  .subscribe((response) => {
-    console.log(response);
-  },
-    (error) => {
-      console.log(error);
-    });
+  .toPromise();
 // EndDocSection

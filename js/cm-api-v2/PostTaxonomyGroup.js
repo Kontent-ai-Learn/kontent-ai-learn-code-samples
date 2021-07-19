@@ -8,7 +8,7 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-client.addTaxonomy()
+const response = await client.addTaxonomy()
   .withData(
     {
       name: "Personas",
@@ -54,11 +54,5 @@ client.addTaxonomy()
       ]
     }
   )
-  .toObservable()
-  .subscribe((response) => {
-    console.log(response);
-  },
-    (error) => {
-      console.log(error);
-    });
+  .toPromise();
 // EndDocSection

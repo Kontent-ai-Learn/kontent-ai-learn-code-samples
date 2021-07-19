@@ -8,7 +8,7 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-client.modifyTaxonomy()
+const response = await client.modifyTaxonomy()
   .byTaxonomyId('0be13600-e57c-577d-8108-c8d860330985')
   // .byTaxonomyCodename('personas')
   // .byTaxonomyExternalId('Tax-Group-123')
@@ -63,11 +63,5 @@ client.modifyTaxonomy()
       }
     ]
   )
-  .toObservable()
-  .subscribe((response) => {
-    console.log(response);
-  },
-    (error) => {
-      console.log(error);
-    });
+  .toPromise();
 // EndDocSection

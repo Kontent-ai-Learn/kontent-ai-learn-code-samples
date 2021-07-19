@@ -8,15 +8,9 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-client.deleteContentTypeSnippet()
+const response = await client.deleteContentTypeSnippet()
   .byTypeId('baf884be-531f-441f-ae88-64205efdd0f6')
   // .byTypeCodename('metadata')
   // .byTypeExternalId('snippet-type-123')
-  .toObservable()
-  .subscribe((response) => {
-    console.log(response);
-  },
-    (error) => {
-      console.log(error);
-    });
+  .toPromise();
 // EndDocSection

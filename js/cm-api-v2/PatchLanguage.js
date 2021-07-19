@@ -8,7 +8,7 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-client.modifyLanguage()
+const response = await client.modifyLanguage()
   .byLanguageId('2ea66788-d3b8-5ff5-b37e-258502e4fd5d')
   // .byLanguageCodename('de-DE')
   // .byExternalId('standard-german')
@@ -28,11 +28,5 @@ client.modifyLanguage()
       }
     ]
   )
-  .toObservable()
-  .subscribe((response) => {
-    console.log(response);
-  },
-    (error) => {
-      console.log(error);
-    });
+  .toPromise();
 // EndDocSection

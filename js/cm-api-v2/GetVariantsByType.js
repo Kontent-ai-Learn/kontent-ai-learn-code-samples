@@ -8,13 +8,7 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-client.listLanguageVariantsOfContentType()
+const response = await client.listLanguageVariantsOfContentType()
   .byTypeCodename('article')
-  .toObservable()
-  .subscribe((response) => {
-    console.log(response);
-  },
-    (error) => {
-      console.log(error);
-    });
+  .toPromise();
 // EndDocSection

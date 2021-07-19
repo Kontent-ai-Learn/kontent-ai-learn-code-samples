@@ -9,7 +9,7 @@ const client = new ManagementClient({
 });
 
 // Used when updating an existing item
-client.updateAsset()
+const response = await client.updateAsset()
   .byAssetExternalId('which-brewing-fits-you')
   // .byAssetId('fcbb12e6-66a3-4672-85d9-d502d16b8d9c')
   .withData(
@@ -32,17 +32,11 @@ client.updateAsset()
       ]
     }
   )
-  .toObservable()
-  .subscribe((response) => {
-    console.log(response);
-  },
-    (error) => {
-      console.log(error);
-    });
+  .toPromise();
 
 
 // Used when creating a new asset or updating an existing one
-client.upsertAsset()
+const response = await client.upsertAsset()
   .byAssetExternalId('which-brewing-fits-you')
   // .byAssetId('fcbb12e6-66a3-4672-85d9-d502d16b8d9c')
   .withData(
@@ -71,11 +65,5 @@ client.upsertAsset()
       ]
     }
   )
-  .toObservable()
-  .subscribe((response) => {
-    console.log(response);
-  },
-    (error) => {
-      console.log(error);
-    });
+  .toPromise();
 // EndDocSection

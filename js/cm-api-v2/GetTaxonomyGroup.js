@@ -8,15 +8,9 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-client.getTaxonomy()
+const response = await client.getTaxonomy()
   .byTaxonomyCodename("categories")
   // .byTaxonomyID("bef9dd62-a3b8-4146-83e4-33be707899b4")
   // .byTaxonomyExternalID("my-little-taxopony")
-  .toObservable()
-  .subscribe((response) => {
-    console.log(response);
-  },
-    (error) => {
-      console.log(error);
-    });
+  .toPromise();
 // EndDocSection
