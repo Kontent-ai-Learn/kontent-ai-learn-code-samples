@@ -14,8 +14,10 @@ const response = await client.publishLanguageVariant()
   // .byItemExternalId('59713')
   .byLanguageId('d1f95fde-af02-b3b5-bd9e-f232311ccab8')
   // .byLanguageCodename('es-mx')
+  // To schedule publish date, use .withData({scheduled_to: 'datetime-to-publish-at'})
   .withData({
     scheduled_to: '2038-01-19T04:14:08+01:00'
   })
+  // To publish now, use .withoutData()
   .toPromise();
 // EndDocSection
