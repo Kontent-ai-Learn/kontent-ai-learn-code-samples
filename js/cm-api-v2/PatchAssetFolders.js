@@ -37,11 +37,5 @@ const response = await client.modifyAssetFolders()
       }
     ]
   )
-  .toObservable()
-  .subscribe((response) => {
-    // work with response
-  },
-    (error) => {
-      console.log(error)
-    });
+  .toPromise();
 // EndDocSection
