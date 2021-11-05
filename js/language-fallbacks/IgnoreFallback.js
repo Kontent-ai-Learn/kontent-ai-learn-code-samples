@@ -2,13 +2,12 @@
 // Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 const KontentDelivery = require('@kentico/kontent-delivery');
 
-const deliveryClient = new KontentDelivery.DeliveryClient({
+const deliveryClient = KontentDelivery.createDeliveryClient({
   projectId: '975bf280-fd91-488c-994c-2f04416e5ee3',
 });
 
-deliveryClient.items()
+const response = await deliveryClient.items()
   .languageParameter('es-ES')
   .equalsFilter('system.language', 'es-ES')
-  .toObservable()
-  .subscribe(response => console.log(response.items));
+  .toPromise();
 // EndDocSection

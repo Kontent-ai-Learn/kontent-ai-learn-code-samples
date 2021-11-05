@@ -1,29 +1,24 @@
 // DocSection: sharing_project_content_get_items
 // Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
-import { ContentItem, DeliveryClient } from "@kentico/kontent-delivery";
+import { IContentItem, createDeliveryClient } from "@kentico/kontent-delivery";
 
-const deliveryClient1 = new DeliveryClient({
+const deliveryClient1 = createDeliveryClient({
     projectId: "975bf280-fd91-488c-994c-2f04416e5ee3"
 });
 
-const deliveryClient2 = new DeliveryClient({
+const deliveryClient2 = createDeliveryClient({
     projectId: "8d20758c-d74c-4f59-ae04-ee928c0816b7"
 });
 
-const allContentItems: ContentItem[] = [];
+const allContentItems: IContentItem[] = [];
 
-// Note: Using the <ContentItem> parameter produces strongly typed objects
-deliveryClient1.items<ContentItem>()
-    .toObservable()
-    .subscribe(response => {
-        // Add items to shared array
-        allContentItems.push(...response.items);
-    });
+const response1 = await deliveryClient1.items()
+    .toPromise();
+
+allContentItems.push(response1.data.items);
    
-deliveryClient2.items<ContentItem>()
-    .toObservable()
-    .subscribe(response => {
-        // Add items to shared array
-        allContentItems.push(...response.items);
-    });
+const response2 = await deliveryClient2.items()
+    .toPromise();
+
+allContentItems.push(response2.data.items);
 // EndDocSection
