@@ -1,6 +1,7 @@
 // DocSection: importing_assets_upload_file
 // Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
-// Using Management API v1
+using Kentico.Kontent.Management;
+
 var client = new ManagementClient(new ManagementOptions
 {
     ApiKey = "<YOUR_API_KEY>",
