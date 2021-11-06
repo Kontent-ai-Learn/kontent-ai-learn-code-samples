@@ -1,15 +1,26 @@
 // DocSection: importing_assets_use_asset
 // Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
-// Using Management API v1
-// Upsert a language variant which references the asset using external ID
-CafeModel stronglyTypedElements = new CafeModel
+using Kentico.Kontent.Management;
+
+var client = new ManagementClient(new ManagementOptions
 {
-    Picture = AssetIdentifier.ByExternalId("brno-cafe-image"),
-};
+    ApiKey = "<YOUR_API_KEY>",
+    ProjectId = "<YOUR_PROJECT_ID>"
+});
+var identifier = new LanguageVariantIdentifier(Reference.ByExternalId("ext-cafe-brno"), Reference.ByCodename("en-US"));
 
-ContentItemIdentifier itemIdentifier = ContentItemIdentifier.ByExternalId("ext-cafe-brno");
-LanguageIdentifier languageIdentifier = LanguageIdentifier.ByCodename("en-US");
-ContentItemVariantIdentifier identifier = new ContentItemVariantIdentifier(itemIdentifier, languageIdentifier);
-
-ContentItemVariantModel<CafeModel> variantResponse = await client.UpsertContentItemVariantAsync<CafeModel>(identifier, stronglyTypedElements);
+var response = await client.UpsertLanguageVariantAsync(identifier, new LanguageVariantUpsertModel
+{
+    Elements = new dynamic[]
+    {
+        new AssetElement
+        {
+            Element = Reference.ByCodename("photo"),
+            Value = new[]
+            {
+                Reference.ByExternalId("brno-cafe-image")
+            }
+        }.ToDynamic()
+    }
+});
 // EndDocSection
