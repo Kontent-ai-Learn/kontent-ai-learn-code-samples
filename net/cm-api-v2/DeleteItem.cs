@@ -2,17 +2,15 @@
 // Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
 using Kentico.Kontent.Management;
 
-ManagementOptions options = new ManagementOptions
+var client = new ManagementClient(new ManagementOptions
 {
     ApiKey = "<YOUR_API_KEY>",
     ProjectId = "<YOUR_PROJECT_ID>"
-};
+});
 
-ManagementClient client = new ManagementClient(options);
-
-ContentItemIdentifier identifier = ContentItemIdentifier.ById(Guid.Parse("f4b3fc05-e988-4dae-9ac1-a94aba566474"));
-// ContentItemIdentifier identifier = ContentItemIdentifier.ByCodename("my_article");
-// ContentItemIdentifier identifier = ContentItemIdentifier.ByExternalId("59713");
+var identifier = Reference.ById(Guid.Parse("f4b3fc05-e988-4dae-9ac1-a94aba566474"));
+// var identifier = Reference.ByCodename("my_article");
+// var identifier = Reference.ByExternalId("59713");
 
 await client.DeleteContentItemAsync(identifier);
 // EndDocSection

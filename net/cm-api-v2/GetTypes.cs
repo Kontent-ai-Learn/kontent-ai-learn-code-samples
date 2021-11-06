@@ -1,4 +1,4 @@
-// DocSection: cm_api_v2_get_items
+// DocSection: cm_api_v2_get_types
 // Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
 using Kentico.Kontent.Management;
 
@@ -8,5 +8,5 @@ var client = new ManagementClient(new ManagementOptions
     ProjectId = "<YOUR_PROJECT_ID>"
 });
 
-var response = await client.ListContentItemsAsync();
+var response = await client.ListContentTypesAsync();
 // EndDocSection
