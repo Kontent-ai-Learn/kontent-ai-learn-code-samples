@@ -8,63 +8,45 @@ var client = new ManagementClient(new ManagementOptions
     ProjectId = "<YOUR_PROJECT_ID>"
 });
 
-var response = await client.CreateContentTypeAsync(new ContentTypeCreateModel
+var response = await client.UpsertLanguageVariantAsync(identifier, new LanguageVariantUpsertModel
 {
-    Codename = "cafe",
-    Name = "Cafe",
-    ExternalId = "cafe",
-    Elements = new ElementMetadataBase[]
+    Elements = new dynamic[]
     {
-        new NumberElementMetadataModel
+        new TextElement
         {
-            Name = "Price per uni",
-            Codename = "price_per_unit",
-        },
-        new GuidelinesElementMetadataModel
+            Element = Reference.ByExternalId("street"),
+            Value = "Nove Sady 25",
+        }.ToDynamic(),
+        new TextElement
         {
-            Guidelines = "<h2>Keep Guidelines where the creative process happens.</h2>\n<p>These are sample guidelines that you can place for the whole content item. It’s a place where you can include your content brief, voice and tone recommendations or the URL to a wireframe, so the author will have all the relevant instructions at hand before writing a single line.</p>\n<p>Besides overview guidelines, you can include instructions for each particular content element, as you will see below.</p>",
-            Codename = "n2f836bce_e062_b2cd_5265_f5c3be3aa6f5",
-        },
-        new TextElementMetadataModel
+            Element = Reference.ByExternalId("city"),
+            Value = "Brno",
+        }.ToDynamic(),
+        new TextElement
         {
-            Name = "Street",
-            ExternalId = "street",
-        },
-        new TextElementMetadataModel
+            Element = Reference.ByExternalId("country"),
+            Value = "Czech republic",
+        }.ToDynamic(),
+        new TextElement
         {
-            Name = "City",
-            ExternalId = "city",
-        },
-        new TextElementMetadataModel
+            Element = Reference.ByExternalId("state"),
+            Value = "Jihomoravsky kraj",
+        }.ToDynamic(),
+        new TextElement
         {
-            Name = "Country",
-            ExternalId = "country",
-        },
-        new TextElementMetadataModel
+            Element = Reference.ByExternalId("zip_code"),
+            Value = "60200",
+        }.ToDynamic(),
+        new TextElement
         {
-            Name = "State",
-            ExternalId = "state",
-        },
-        new TextElementMetadataModel
+            Element = Reference.ByExternalId("phone"),
+            Value = "+420 555 555 555",
+        }.ToDynamic(),
+        new TextElement
         {
-            Name = "ZIP code",
-            ExternalId = "zip_code",
-        },
-        new TextElementMetadataModel
-        {
-            Name = "Email",
-            ExternalId = "email",
-        },
-        new TextElementMetadataModel
-        {
-            Name = "Phone",
-            ExternalId = "phone",
-        },
-        new AssetElementMetadataModel
-        {
-            Name = "Photo",
-            Codename = "photo"
-        }
+            Element = Reference.ByExternalId("email"),
+            Value = "brnocafe@kontent.ai",
+        }.ToDynamic(),
     }
 });
 // EndDocSection
