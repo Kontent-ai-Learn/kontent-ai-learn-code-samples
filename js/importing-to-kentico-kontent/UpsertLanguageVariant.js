@@ -36,17 +36,17 @@ client.upsertLanguageVariant()
       },
       value: 'Jihomoravsky kraj'
     }),
-    builder.numberElement({
+    builder.textElement({
       element: {
         codename: 'zip_code'
       },
-      value: 60200
+      value: "60200"
     }),
-    builder.numberElement({
+    builder.textElement({
       element: {
         codename: 'phone'
       },
-      value: 420555555555
+      value: '+420555555555'
     }),
     builder.textElement({
       element: {
