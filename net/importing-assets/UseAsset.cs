@@ -11,7 +11,7 @@ var identifier = new LanguageVariantIdentifier(Reference.ByExternalId("ext-cafe-
 
 var response = await client.UpsertLanguageVariantAsync(identifier, new LanguageVariantUpsertModel
 {
-    Elements = new dynamic[]
+    Elements = ElementBuilder.GetElementsAsDynamic(new BaseElement[]
     {
         new AssetElement
         {
@@ -20,7 +20,7 @@ var response = await client.UpsertLanguageVariantAsync(identifier, new LanguageV
             {
                 Reference.ByExternalId("brno-cafe-image")
             }
-        }.ToDynamic()
-    }
+        }
+    })
 });
 // EndDocSection

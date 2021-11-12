@@ -12,7 +12,7 @@ var identifier = new LanguageVariantIdentifier(Reference.ByExternalId("123"), Re
 
 await client.UpsertLanguageVariantAsync(identifier, new LanguageVariantUpsertModel
 {
-    Elements = new dynamic[]
+    Elements = ElementBuilder.GetElementsAsDynamic(new BaseElement[]
     {
         new RichTextElement
         {
@@ -24,22 +24,22 @@ await client.UpsertLanguageVariantAsync(identifier, new LanguageVariantUpsertMod
                 {
                     Id = Guid.Parse("a2ee7bac-15ff-4dce-a244-012b9f98dd7b"),
                     Type = Reference.ByExternalId("button"),
-                    Elements = new dynamic[]
+                    Elements = ElementBuilder.GetElementsAsDynamic(new BaseElement[]
                     {
                         new TextElement
                         {
                             Element = Reference.ByExternalId("button-text"),
                             Value = "Buy me",
-                        }.ToDynamic(),
+                        },
                         new TextElement
                         {
                             Element = Reference.ByExternalId("button-link"),
                             Value = "https://kontent.a",
-                        }.ToDynamic(),
-                    }
+                        }
+                    })
                 }
             }
         }.ToDynamic(),
-    },
+    }),
 });
 // EndDocSection

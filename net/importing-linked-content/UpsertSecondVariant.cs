@@ -12,13 +12,13 @@ var identifier = new LanguageVariantIdentifier(Reference.ByExternalId("456"), Re
 
 await client.UpsertLanguageVariantAsync(identifier, new LanguageVariantUpsertModel
 {
-    Elements = new dynamic[]
+    Elements = ElementBuilder.GetElementsAsDynamic(new BaseElement[]
     {
         new TextElement
         {
             Element = Reference.ByCodename("title"),
             Value = "Donate with us"
-        }.ToDynamic(),
+        },
         new LinkedItemsElement
         {
             Element = Reference.ByCodename("related_articles"),
@@ -26,7 +26,7 @@ await client.UpsertLanguageVariantAsync(identifier, new LanguageVariantUpsertMod
             {
                 Reference.ByExternalId("123"),
             }
-        }.ToDynamic()
-    }
+        }
+    })
 });
 // EndDocSection
