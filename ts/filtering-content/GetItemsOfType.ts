@@ -1,7 +1,6 @@
 // DocSection: filtering_get_items_of_type
 // Gets items based on the type Product
-deliveryClient.items<ContentItem>()
+const response = await deliveryClient.items()
   .equalsFilter('system.type', 'product') // Same as using .type('product')
-  .toObservable()
-  .subscribe(response => console.log(response));
+  .toPromise();
 // EndDocSection
