@@ -2,11 +2,10 @@
 // Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 const KontentDelivery = require('@kentico/kontent-delivery');
 
-const deliveryClient = new KontentDelivery.DeliveryClient({
+const deliveryClient = KontentDelivery.createDeliveryClient({
   projectId: '<YOUR_PROJECT_ID>'
 });
 
-deliveryClient.type('article')
-  .toObservable()
-  .subscribe(response => console.log(response.type));
+const response = await deliveryClient.type('article')
+  .toPromise();
 // EndDocSection

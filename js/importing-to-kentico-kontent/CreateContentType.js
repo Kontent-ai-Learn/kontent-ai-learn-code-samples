@@ -8,7 +8,7 @@ const client = new ManagementClient({
   apiKey: '<YOUR_MANAGEMENT_API_KEY>'
 });
 
-client.addContentType()
+const response = await client.addContentType()
   .withData(
     {
       codename: "cafe",
@@ -68,11 +68,5 @@ client.addContentType()
       ]
     }
   )
-  .toObservable()
-  .subscribe((response) => {
-    console.log(response);
-  },
-    (error) => {
-      console.log(error);
-    });
+  .toPromise();
 // EndDocSection

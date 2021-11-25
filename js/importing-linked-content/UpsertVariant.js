@@ -8,7 +8,7 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-client.upsertLanguageVariant()
+const response = await client.upsertLanguageVariant()
   .byItemExternalId('123')
   .byLanguageCodename('en-US')
   .withElements([
@@ -29,11 +29,5 @@ client.upsertLanguageVariant()
       ]
     }
   ])
-  .toObservable()
-  .subscribe((response) => {
-    console.log(response);
-  },
-    (error) => {
-      console.log(error);
-    });
+  .toPromise();
 // EndDocSection

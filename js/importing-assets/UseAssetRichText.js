@@ -8,7 +8,7 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-client.upsertLanguageVariant()
+const response = await client.upsertLanguageVariant()
   .byItemExternalId('new-cafes')
   .byLanguageCodename('en-US')
   .withElements([
@@ -19,11 +19,5 @@ client.upsertLanguageVariant()
       value: "<p>...</p> <figure data-asset-external-id=\"brno-cafe-image\"></figure>"
     }
   ])
-  .toObservable()
-  .subscribe((response) => {
-    console.log(response);
-  },
-    (error) => {
-      console.log(error);
-    });
+  .toPromise();
 // EndDocSection
