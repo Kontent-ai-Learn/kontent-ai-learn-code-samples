@@ -9,7 +9,7 @@ const client = new ManagementClient({
 });
 
 // Uses the file reference object obtained in step 1
-const response = await client.upsertAsset()
+client.upsertAsset()
   .byAssetExternalId('brno-cafe-image')
   .withData(
     {
@@ -34,5 +34,11 @@ const response = await client.upsertAsset()
       ]
     }
   )
-  .toPromise();
+  .toObservable()
+  .subscribe((response) => {
+    console.log(response);
+  },
+    (error) => {
+      console.log(error);
+    });
 // EndDocSection

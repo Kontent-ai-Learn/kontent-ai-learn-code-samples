@@ -1,6 +1,7 @@
 // DocSection: filtering_get_items_of_types
 // Gets items based on the type Product, Article, and News
-const response = await deliveryClient.items()
+deliveryClient.items()
   .inFilter('system.type', ['product', 'article', 'news'])
-  .toPromise();
+  .toObservable()
+  .subscribe(response => console.log(response));
 // EndDocSection

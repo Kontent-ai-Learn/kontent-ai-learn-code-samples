@@ -8,7 +8,7 @@ const client = new ManagementClient({
   apiKey: '<YOUR_MANAGEMENT_API_KEY>'
 });
 
-const response = await client.upsertLanguageVariant()
+client.upsertLanguageVariant()
   .byItemExternalId('ext-cafe-brno')
   .byLanguageCodename('en-US')
   .withData((builder) => [
@@ -55,5 +55,11 @@ const response = await client.upsertLanguageVariant()
       value: 'brnocafe@kontent.ai'
     })
   ])
-  .toPromise();
+  .toObservable()
+  .subscribe((response) => {
+    console.log(response);
+  },
+    (error) => {
+      console.log(error);
+    });
 // EndDocSection

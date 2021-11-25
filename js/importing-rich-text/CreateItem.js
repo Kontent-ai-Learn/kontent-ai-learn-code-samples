@@ -8,7 +8,7 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-const response = await client.upsertContentItem()
+client.upsertContentItem()
   .byItemExternalId('simple-example')
   .withData(
     {
@@ -18,5 +18,11 @@ const response = await client.upsertContentItem()
       }
     }
   )
-  .toPromise();
+  .toObservable()
+  .subscribe((response) => {
+    console.log(response);
+  },
+    (error) => {
+      console.log(error);
+    });
 // EndDocSection

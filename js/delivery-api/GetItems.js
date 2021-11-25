@@ -2,11 +2,16 @@
 // Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 const KontentDelivery = require('@kentico/kontent-delivery');
 
-const deliveryClient = KontentDelivery.createDeliveryClient({
-  projectId: '<YOUR_PROJECT_ID>'
+const deliveryClient = new KontentDelivery.DeliveryClient({
+  projectId: '<YOUR_PROJECT_ID>',
+  typeResolvers: [
+    // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
+    new KontentDelivery.TypeResolver('article', (rawData) => new Article())
+  ]
 });
 
-const response = await deliveryClient.items()
+deliveryClient.items()
   .limitParameter(3)
-  .toPromise();
+  .toObservable()
+  .subscribe(response => console.log(response));
 // EndDocSection

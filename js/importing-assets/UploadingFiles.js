@@ -11,12 +11,18 @@ const client = new ManagementClient({
 
 const data = readFileSync('./<YOUR_PATH>/brno-cafe-1080px.jpg');
 
-const response = await client.uploadBinaryFile()
+client.uploadBinaryFile()
   .withData({
     binaryData: data,
     contentLength: data.byteLength,
     contentType: 'image/jpg',
     filename: 'brno-cafe-1080px.jpg'
   })
-  .toPromise();
+  .toObservable()
+  .subscribe((response) => {
+    console.log(response);
+  },
+    (error) => {
+      console.log(error);
+    });
 // EndDocSection

@@ -9,12 +9,21 @@ class Article extends KontentDelivery.ContentItem {
   }
 }
 
-const client = KontentDelivery.createDeliveryClient({
-  projectId: '<YOUR_PROJECT_ID>'
+const client = new KontentDelivery.DeliveryClient({
+  projectId: '<YOUR_PROJECT_ID>',
+  typeResolvers: [
+      new KontentDelivery.TypeResolver('article', (rawData) => new Article())
+  ]
 });
 
 // Gets feed of all articles in the project
-const response = await client.itemsFeed()
+client.itemsFeedAll()
   .type('article')
-  .toAllPromise();
+  .toObservable()
+  .subscribe((response) => {
+    console.log(response);
+  },
+    (error) => {
+      console.log(error);
+    });
 // EndDocSection

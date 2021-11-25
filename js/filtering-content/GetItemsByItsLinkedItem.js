@@ -1,11 +1,13 @@
 // DocSection: filtering_get_items_by_linked_item
 // Gets items attributed to Jane.
-const response = await deliveryClient.items()
+deliveryClient.items()
   .containsFilter('elements.author', ['jane_doe'])
-  .toPromise();
+  .toObservable()
+  .subscribe(response => console.log(response));
 
 // Gets items attributed to at least Jane, John, or both.
-const response = await deliveryClient.items()
+deliveryClient.items()
   .anyFilter('elements.author', ['jane_doe', 'john_wick'])
-  .toPromise();
+  .toObservable()
+  .subscribe(response => console.log(response));
 // EndDocSection

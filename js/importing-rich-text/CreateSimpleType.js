@@ -8,7 +8,7 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-const response = await client.addContentType()
+client.addContentType()
   .withData(
     {
       external_id: "simple-rich-text",
@@ -22,5 +22,11 @@ const response = await client.addContentType()
       ]
     }
   )
-  .toPromise();
+  .toObservable()
+  .subscribe((response) => {
+    console.log(response);
+  },
+    (error) => {
+      console.log(error);
+    });
 // EndDocSection

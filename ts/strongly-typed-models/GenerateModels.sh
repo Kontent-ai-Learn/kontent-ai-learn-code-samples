@@ -1,3 +1,3 @@
 # DocSection: strongly_typed_models_generators
-kontent-generate --projectId=8d20758c-d74c-4f59-ae04-ee928c0816b7 --addTimestamp=false --nameResolver=camelCase
+kontent-generate --projectId=8d20758c-d74c-4f59-ae04-ee928c0816b7 --codeType=TypeScript --moduleResolution=ES2015
 # EndDocSection

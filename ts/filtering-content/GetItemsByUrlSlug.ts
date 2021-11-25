@@ -1,6 +1,7 @@
 // DocSection: filtering_get_items_by_url_slug
 // Gets items whose URL slug equals to sample-url-slug
-const response = await deliveryClient.items()
+deliveryClient.items<ContentItem>()
   .equalsFilter('elements.url_slug', 'sample-url-slug')
-  .toPromise();
+  .toObservable()
+  .subscribe(response => console.log(response));
 // EndDocSection

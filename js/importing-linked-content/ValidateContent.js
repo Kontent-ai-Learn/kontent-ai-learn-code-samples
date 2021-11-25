@@ -8,7 +8,13 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-const response = await client.validateProjectContent()
+client.validateProjectContent()
   .forProjectId('<YOUR_PROJECT_ID>')
-  .toPromise();
+  .toObservable()
+  .subscribe((response) => {
+    console.log(response);
+  },
+    (error) => {
+      console.log(error);
+    });
 // EndDocSection
