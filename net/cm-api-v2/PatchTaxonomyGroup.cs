@@ -34,9 +34,9 @@ var response = await client.ModifyTaxonomyGroupAsync(identifier, new TaxonomyGro
             {
                 Name = "Second-level taxonomy term",
                 Codename = "second_term",
-                Terms = new TaxonomyGroupCreateModel[]
+                Terms = new TaxonomyTermCreateModel[]
                 {
-                    new TaxonomyGroupCreateModel
+                    new TaxonomyTermCreateModel
                     {
                         Name = "Third-level taxonomy term",
                     }
@@ -51,11 +51,11 @@ var response = await client.ModifyTaxonomyGroupAsync(identifier, new TaxonomyGro
     new TaxonomyGroupAddIntoPatchModel
     {
         Reference = Reference.ByCodename("second_term"),
-        Value = new TaxonomyGroupCreateModel
+        Value = new TaxonomyTermCreateModel
         {
             Name = "New taxonomy term",
             ExternalId = "my-new-term",
-            Terms = Array.Empty<TaxonomyGroupCreateModel>()
+            Terms = Array.Empty<TaxonomyTermCreateModel>()
         }
     }
 });
