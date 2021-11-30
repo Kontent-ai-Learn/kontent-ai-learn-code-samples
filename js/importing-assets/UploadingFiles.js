@@ -15,7 +15,7 @@ const response = await client.uploadBinaryFile()
   .withData({
     binaryData: data,
     contentLength: data.byteLength,
-    contentType: 'image/jpg',
+    contentType: 'image/jpeg',
     filename: 'brno-cafe-1080px.jpg'
   })
   .toPromise();
