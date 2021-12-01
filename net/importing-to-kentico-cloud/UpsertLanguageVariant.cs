@@ -1,33 +1,52 @@
 // DocSection: importing_upsert_variant
 // Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
-// Using Management API v1
 using Kentico.Kontent.Management;
 
-ManagementOptions options = new ManagementOptions()
+var client = new ManagementClient(new ManagementOptions
 {
-    ApiKey = "<YOUR_MANAGEMENT_API_KEY>",
+    ApiKey = "<YOUR_API_KEY>",
     ProjectId = "<YOUR_PROJECT_ID>"
-};
+});
 
-ManagementClient client = new ManagementClient(options);
-
-// Elements to update
-CafeContentTypeModel stronglyTypedElements = new CafeContentTypeModel()
+var response = await client.UpsertLanguageVariantAsync(identifier, new LanguageVariantUpsertModel
 {
-    Street = "Nove Sady 25",
-    City = "Brno",
-    Country = "Czech Republic",
-    State = "Jihomoravsky kraj",
-    ZipCode = "60200",
-    Phone = "+420 555 555 555",
-    Email = "brnocafe@kontent.ai"
-};
-
-ContentItemIdentifier itemIdentifier = ContentItemIdentifier.ByExternalId("ext-cafe-brno");
-
-LanguageIdentifier languageIdentifier = LanguageIdentifier.ByCodename("en-US");
-
-ContentItemVariantIdentifier identifier = new ContentItemVariantIdentifier(itemIdentifier, languageIdentifier);
-
-ContentItemVariantModel<CafeContentTypeModel> responseVariant = await client.UpsertContentItemVariantAsync<CafeContentTypeModel>(identifier, stronglyTypedElements);
+    Elements = ElementBuilder.GetElementsAsDynamic(new BaseElement[]
+    {
+        new TextElement
+        {
+            Element = Reference.ByExternalId("street"),
+            Value = "Nove Sady 25",
+        },
+        new TextElement
+        {
+            Element = Reference.ByExternalId("city"),
+            Value = "Brno",
+        },
+        new TextElement
+        {
+            Element = Reference.ByExternalId("country"),
+            Value = "Czech republic",
+        },
+        new TextElement
+        {
+            Element = Reference.ByExternalId("state"),
+            Value = "Jihomoravsky kraj",
+        },
+        new TextElement
+        {
+            Element = Reference.ByExternalId("zip_code"),
+            Value = "60200",
+        },
+        new TextElement
+        {
+            Element = Reference.ByExternalId("phone"),
+            Value = "+420 555 555 555",
+        },
+        new TextElement
+        {
+            Element = Reference.ByExternalId("email"),
+            Value = "brnocafe@kontent.ai",
+        },
+    })
+});
 // EndDocSection

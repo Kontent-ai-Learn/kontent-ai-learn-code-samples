@@ -1,14 +1,24 @@
 // DocSection: importing_assets_use_asset_rich_text
 // Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
-// Using Management API v1
-ArticleModel stronglyTypedElements = new ArticleModel
+using Kentico.Kontent.Management;
+
+var client = new ManagementClient(new ManagementOptions
 {
-    BodyCopy = @"<p>...</p> <figure data-asset-external-id=\"brno-cafe-image\"></figure>"
-};
+    ApiKey = "<YOUR_API_KEY>",
+    ProjectId = "<YOUR_PROJECT_ID>"
+});
 
-ContentItemIdentifier itemIdentifier = ContentItemIdentifier.ByExternalId("new-cafes");
-LanguageIdentifier languageIdentifier = LanguageIdentifier.ByCodename("en-US");
-ContentItemVariantIdentifier identifier = new ContentItemVariantIdentifier(itemIdentifier, languageIdentifier);
+var identifier = new LanguageVariantIdentifier(Reference.ByExternalId("new-cafes"), Reference.ByCodename("en-US"));
 
-ContentItemVariantModel<ArticleModel> variantResponse = await client.UpsertContentItemVariantAsync<ArticleModel>(identifier, stronglyTypedElements);
+var response = await client.UpsertLanguageVariantAsync(identifier, new LanguageVariantUpsertModel
+{
+    Elements = new dynamic[]
+    {
+        new RichTextElement
+        {
+            Element = Reference.ByCodename("body_copy"),
+            Value = "<p>...</p> <figure data-asset-external-id=\"brno-cafe-image\"></figure>",
+        }.ToDynamic()
+    }
+});
 // EndDocSection
