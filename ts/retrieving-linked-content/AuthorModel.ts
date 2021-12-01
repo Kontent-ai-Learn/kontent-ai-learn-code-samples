@@ -1,9 +1,9 @@
 // DocSection: linked_content_author_model
 // Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
-import { ContentItem, Elements } from '@kentico/kontent-delivery';
+import { IContentItem, Elements } from '@kentico/kontent-delivery';
 
-export class Author extends ContentItem {
-    public name: Elements.TextElement;
-    public bio: Elements.RichTextElement;
-}
+export type Author = IContentItem<{
+    name: Elements.TextElement;
+    bio: Elements.RichTextElement;
+}>;
 // EndDocSection

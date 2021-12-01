@@ -9,7 +9,7 @@ var client = new ManagementClient(new ManagementOptions
 });
 
 string filePath = Path.Combine(Environment.CurrentDirectory, "Unit", "Data", "brno-cafe-1080px.jpg");
-string contentType = "image/jpg";
+string contentType = "image/jpeg";
 
 // Binary file reference to be used when adding a new asset
 var response = await client.UploadFileAsync(new FileContentSource(filePath, contentType));

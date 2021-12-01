@@ -1,20 +1,17 @@
 // DocSection: filtering_get_items_by_taxonomy_term
 // Note: Filters work with codenames of the tags.
 // Gets items tagged with one specific tag
-deliveryClient.items<ContentItem>()
+const response = await deliveryClient.items()
   .containsFilter('elements.tags', ['kontent'])
-  .toObservable()
-  .subscribe(response => console.log(response));
+  .toPromise();
 
 // Gets items tagged with a list of specific tags
-deliveryClient.items<ContentItem>()
+const response = await deliveryClient.items()
   .allFilter('elements.tags', ['kontent', 'headless'])
-  .toObservable()
-  .subscribe(response => console.log(response));
+  .toPromise();
 
 // Gets items tagged with at least one tag from the list
-deliveryClient.items<ContentItem>()
+const response = await deliveryClient.items()
   .anyFilter('elements.tags', ['football', 'soccer'])
-  .toObservable()
-  .subscribe(response => console.log(response));
+  .toPromise();
 // EndDocSection
