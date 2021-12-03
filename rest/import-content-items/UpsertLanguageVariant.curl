@@ -8,43 +8,43 @@ curl --request PUT \
     "elements": [
       {
         "element": {
-          codename: "street"
+          "codename": "street"
         },
         "value": "Nove Sady 25"
       },
       {
         "element": {
-          codename: "city"
+          "codename": "city"
         },
         "value": "Brno"
       },
       {
         "element": {
-          codename: "country"
+          "codename": "country"
         },
         "value": "Czech Republic"
       },
       {
         "element": {
-          codename: "state"
+          "codename": "state"
         },
         "value": "Jihomoravsky kraj"
       },
       {
         "element": {
-          codename: "zip_code"
+          "codename": "zip_code"
         },
         "value": "60200"
       },
       {
         "element": {
-          codename: "phone"
+          "codename": "phone"
         },
         "value": "+420 555 555 555"
       },
       {
         "element": {
-          codename: "email"
+          "codename": "email"
         },
         "value": "brnocafe@kontent.ai"
       }
