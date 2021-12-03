@@ -1,31 +1,36 @@
 // DocSection: importing_assets_create_asset
 // Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
-// Using Management API v1
-AssetDescription englishDescription = new AssetDescription
+using Kentico.Kontent.Management;
+
+var client = new ManagementClient(new ManagementOptions
 {
-    Description = "Cafe in Brno",
-    Language = LanguageIdentifier.ByCodename("en-US")
-};
-AssetDescription spanishDescription = new AssetDescription
+    ApiKey = "<YOUR_API_KEY>",
+    ProjectId = "<YOUR_PROJECT_ID>"
+});
+
+// Uses the file reference object obtained in step 1
+var createdAssetResponse = await client.UpsertAssetByExternalIdAsync("which-brewing-fits-you", new AssetUpsertModel
 {
-    Description = "Café en Brno",
-    Language = LanguageIdentifier.ByCodename("es-ES")
-};
-IEnumerable<AssetDescription> descriptions = new [] { englishDescription, spanishDescription };
-
-string title = "Brno Cafe";
-
-// Defines the asset to upsert
-AssetUpsertModel asset = new AssetUpsertModel
-{
-    // Uses the file reference object obtained in step 1
-    FileReference = fileResult,
-    Descriptions = descriptions,
-    Title = title
-};
-
-string assetExternalId = "brno-cafe-image";
-
-// Upserts an asset by external ID
-AssetModel response = await client.UpsertAssetByExternalIdAsync(externalId, asset);
+    // 'fileReference' is only required when creating a new asset
+    // To create a file reference, see the "Upload a binary file" endpoint
+    FileReference = new FileReference
+    {
+        Id = "8660e19c-7bbd-48a3-bb51-721934c7756c",
+        Type = FileReferenceTypeEnum.Internal
+    },
+    Title = "Brno Cafe",
+    Descriptions = new AssetDescription[]
+    {
+        new AssetDescription
+        {
+            Description = "Cafe in Brno",
+            Language = Reference.ByCodename("en-US")
+        },
+        new AssetDescription
+        {
+            Description = "Café en Brno",
+            Language = Reference.ByCodename("es-ES")
+        }
+    }
+});
 // EndDocSection
