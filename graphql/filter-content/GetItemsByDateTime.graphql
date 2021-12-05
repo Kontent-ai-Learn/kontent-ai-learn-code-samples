@@ -1,0 +1,37 @@
+# DocSection: filtering_get_items_by_datetime
+# Gets articles modified after November 1 2021, 9 am UTC+0
+query GetArticlesModifiedAfterDate {
+  article_All (where: {_system_: {lastModified: {gt: "2021-11-01T09:00:00Z"}}}) {
+    items {
+      title
+    }
+  }
+}
+
+# Gets articles released at or after November 1 2021, 9 am UTC+0
+query GetArticlesReleasedAfterDate {
+  article_All (where: {releaseDate: {gte: "2021-11-01T09:00:00Z"}}) {
+    items {
+      title
+    }
+  }
+}
+
+# Gets articles modified before November 1 2021, 12 pm UTC+0. Last match would be at 2021-10-31T:11:59:59
+query GetArticlesModifiedBeforeDate {
+  article_All (where: {_system_: {lastModified: {lt: "2021-11-01T00:00:00Z"}}}) {
+    items {
+      title
+    }
+  } 
+}
+
+# Gets articles released at or before November 1 2021, 9 am UTC+0
+query GetArticlesReleasedAfterDate {
+  article_All (where: {releaseDate: {lte: "2021-11-01T09:00:00Z"}}) {
+    items {
+      title
+    }
+  }
+}
+# EndDocSection

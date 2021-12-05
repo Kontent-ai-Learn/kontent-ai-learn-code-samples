@@ -1,0 +1,19 @@
+# DocSection: filtering_get_items_by_linked_item
+# Gets items attributed to Jane.
+query GetArticlesByAuthor {
+  article_All(where: {author: {containsAll: ["jane_doe"]}}) {
+    items {
+      title
+    }
+  }
+}
+
+# Gets items attributed to at least Jane, John, or both.
+query GetArticlesByOneOfAuthors {
+  article_All(where: {author: {containsAny: ["jane_doe", "john_wick"]}}) {
+    items {
+      title
+    }
+  }
+}
+# EndDocSection

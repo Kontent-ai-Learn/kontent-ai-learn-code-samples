@@ -1,0 +1,9 @@
+# DocSection: getting_localized_content_url_slug
+query GetArticlesByLocalizedSlug {
+  article_All(where: {title: {eq: "acerda-de-nosotros"}}, languageFilter: {languageCodename: "es-ES"}) {
+    items {
+      title
+    }
+  }
+}
+# EndDocSection
