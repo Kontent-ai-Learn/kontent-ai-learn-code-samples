@@ -1,4 +1,4 @@
-// DocSection: structure_in_rte_retrieve_article
+// DocSection: structure_in_rte_resolve_links_to_items
 // Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 import { createRichTextHtmlResolver, Elements, createDeliveryClient, linkedItemsHelper, IContentItem } from '@kentico/kontent-delivery';
 
@@ -11,11 +11,6 @@ export type Article = IContentItem<{
   body: Elements.RichTextElement;
 }>;
 
-export type Author = IContentItem<{
-  firstName: Elements.TextElement;
-  lastName: Elements.RichTextElement;
-}>;
-
 const response = await deliveryClient.item<Article>('my_article')
   .toPromise();
 
@@ -25,31 +20,11 @@ const richTextElement = response.data.item.body;
 // resolve HTML
 const resolvedRichText = createRichTextHtmlResolver().resolveRichText({
   element: richTextElement,
-  linkedItems: linkedItemsHelper.convertLinkedItemsToArray(response.data.linkedItems),
-  imageResolver: (image) => {
-      return {
-          imageHtml: `<img class="xImage" src="${image?.url}">`,
-          // alternatively you may return just url
-          url: 'customUrl'
-      };
-  },
   urlResolver: (link) => {
       return {
-          linkHtml: `<a class="xLink">${link?.link?.urlSlug}</a>`,
+          linkHtml: `<a>${link?.link?.urlSlug}</a>`,
           // alternatively you may return just url
           url: 'customUrl'
-      };
-  },
-  contentItemResolver: (contentItem) => {
-      if (contentItem && contentItem.system.type === 'Author') {
-          const author = contentItem as Author;
-          return {
-              contentItemHtml: `<div class="xClass">${author.elements.firstName.value}</div>`
-          };
-      }
-
-      return {
-          contentItemHtml: ''
       };
   }
 });
