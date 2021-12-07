@@ -28,7 +28,7 @@ const resolvedRichText = KontentDelivery.createRichTextHtmlResolver().resolveRic
     let url = '#unsupported-link-type';
     // Checks the content type of the linked content item
     if (link.type === 'article')
-      url = `articles/${link.urlSlug}`;
+      url = `/articles/${link.urlSlug}`;
     return {
       linkUrl: url,
     };
