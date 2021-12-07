@@ -19,6 +19,7 @@ const response = await deliveryClient.item<Article>('my_article')
 // Gets the contents of the rich text element
 const richTextElement = response.data.item.elements.body;
 
+// Note: The code below works run correctly in browser. To adjust the code for nodejs, see https://docs.kontent.ai/js-rte-nodejs.
 // Defines how to resolve the rich text element
 const resolvedRichText = KontentDelivery.createRichTextHtmlResolver().resolveRichText({
   // Gives the resolver the contents of your rich text
