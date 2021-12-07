@@ -17,7 +17,7 @@ const response = await deliveryClient.item<Article>('my_article')
   .toPromise();
 
 // Gets the contents of the rich text element
-const richTextElement = response.data.item.body;
+const richTextElement = response.data.item.elements.body;
 
 // Defines how to resolve the rich text element
 const resolvedRichText = KontentDelivery.createRichTextHtmlResolver().resolveRichText({
@@ -35,7 +35,7 @@ const resolvedRichText = KontentDelivery.createRichTextHtmlResolver().resolveRic
 
     // For other type of items and components, resolves to an empty string
     return {
-      contentItemHtml: ''
+      contentItemHtml: `<div>Unsupported type ${contentItem.system.type}</div>`
     };
   }
 });
