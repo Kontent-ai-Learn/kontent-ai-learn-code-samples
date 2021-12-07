@@ -18,14 +18,15 @@ const resolvedRichText = KontentDelivery.createRichTextHtmlResolver().resolveRic
   // Gives the resolver the contents of your rich text.
   element: richTextElement,
   urlResolver: (link) => {
+    let url = '#unsupported-link-type';
+    // Checks the content type of the linked content item
+    if (link.type === 'article')
+      url = `articles/${link.urlSlug}`;
     return {
-      linkHtml: `<a>${link?.link?.urlSlug}</a>`,
-      // alternatively you may return just url
-      url: 'customUrl'
+      linkUrl: url,
     };
   }
 });
-
 
 // Gets the resolved HTML content of your rich text
 const resolvedRichTextHtml = resolvedRichText.html;

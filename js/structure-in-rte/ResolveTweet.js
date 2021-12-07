@@ -27,7 +27,7 @@ const resolvedRichText = KontentDelivery.createRichTextHtmlResolver().resolveRic
       };
     }
 
-    // For other type of items and components, resolves the object to an empty string.
+    // For other type of items and components, resolves to an empty string.
     return {
       contentItemHtml: ''
     };

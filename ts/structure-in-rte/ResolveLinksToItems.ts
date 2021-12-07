@@ -2,30 +2,36 @@
 // Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
 import { createRichTextHtmlResolver, Elements, createDeliveryClient, linkedItemsHelper, IContentItem } from '@kentico/kontent-delivery';
 
+// Initializes the Delivery client.
 const deliveryClient = createDeliveryClient({
   projectId: '<YOUR_PROJECT_ID>',
 });
 
+// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
 export type Article = IContentItem<{
   title: Elements.TextElement;
   body: Elements.RichTextElement;
 }>;
 
+// Gets your content item.
 const response = await deliveryClient.item<Article>('my_article')
   .toPromise();
 
-// get rich text element
+// Stores the contents of the rich text element.
 const richTextElement = response.data.item.body;
 
-// resolve HTML
-const resolvedRichText = createRichTextHtmlResolver().resolveRichText({
+// Defines how to resolve the rich text element
+const resolvedRichText = KontentDelivery.createRichTextHtmlResolver().resolveRichText({
+  // Gives the resolver the contents of your rich text.
   element: richTextElement,
   urlResolver: (link) => {
-      return {
-          linkHtml: `<a>${link?.link?.urlSlug}</a>`,
-          // alternatively you may return just url
-          url: 'customUrl'
-      };
+    let url = '#unsupported-link-type';
+    // Checks the content type of the linked content item
+    if (link.type === 'article')
+      url = `articles/${link.urlSlug}`;
+    return {
+      linkUrl: url,
+    };
   }
 });
 
