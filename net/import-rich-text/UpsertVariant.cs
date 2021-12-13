@@ -8,7 +8,7 @@ var client = new ManagementClient(new ManagementOptions
     ProjectId = "<YOUR_PROJECT_ID>"
 });
 
-var identifier = new LanguageVariantIdentifier(Reference.ByExternalId("123"), Reference.ByCodename("en-US"));
+var identifier = new LanguageVariantIdentifier(Reference.ByExternalId("simple-example"), Reference.ById(Guid.Parse("00000000-0000-0000-0000-000000000000")));
 
 await client.UpsertLanguageVariantAsync(identifier, new LanguageVariantUpsertModel
 {
