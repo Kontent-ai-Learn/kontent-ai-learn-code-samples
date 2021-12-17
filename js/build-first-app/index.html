@@ -1,0 +1,28 @@
+<!-- DocSection: build_first_js_app_index -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <!-- Include the Delivery JS SDK  -->
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@kentico/kontent-delivery@11.0.0/dist/bundles/kontent-delivery.umd.js"></script>
+  <title>Kontent JavaScript sample app</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="app-header">
+    <h1><a href="index.html">Articles</a><a class="github-link" target="_blank"
+        href="https://github.com/Kentico/kontent-tutorial-plain-javascript"><img src="img/gh.png"></a></h1>
+  </div>
+  <div id="app"></div>
+
+  <!-- Include core functions -- code you'll use in multiple places in the app -->
+  <script type="text/javascript" src="core.js"></script>
+
+  <!-- Include script for the list of articles -- code that is unique to this list -->
+  <script src="articleList.js"></script>
+</body>
+</html>
+<!-- EndDocSection -->
