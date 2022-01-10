@@ -4,5 +4,6 @@ curl --request GET \
 # --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/collections/codename/blogs/variants \
 # --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/collections/external-id/my-blogs-id/variants \
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'x-continuation: <continuation_token>' \
   --header 'Content-type: application/json'
 # EndDocSection
