@@ -1,0 +1,32 @@
+# DocSection: cm_api_v2_put_user
+curl --request PUT \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/users/d94bc87a-c066-48a1-a910-4f991ccc1fb5/roles
+#  --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/users/email/user@example.com/roles
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: application/json' \
+  --data '
+{
+  "collection_groups": [
+    {
+      "collections": [
+        {
+          "id": "00000000-0000-0000-0000-000000000000"
+        },
+        {
+          "codename": "collection-1"
+        }
+      ],
+      "roles": [
+        {
+          "id": "f58733b9-520b-406b-9d45-eb15a2baee96",
+          "languages": [
+            {
+              "codename": "english"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}'
+# EndDocSection
