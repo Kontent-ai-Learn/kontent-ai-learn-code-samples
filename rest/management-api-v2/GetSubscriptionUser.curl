@@ -2,6 +2,6 @@
 curl --request GET \
   --url https://manage.kontent.ai/v2/subscriptions/<YOUR_SUBSCRIPTION_ID>/users/e67eadda-dc58-4bf9-89fc-1dadc0b95858 \
 # --url https://manage.kontent.ai/v2/subscriptions/<YOUR_SUBSCRIPTION_ID>/users/email/jonh.doe@exmaple.com \
-  --header 'Authorization: Bearer <YOUR_SAPI_KEY>' \
+  --header 'Authorization: Bearer <YOUR_SUBSCRIPTION_API>' \
   --header 'Content-type: application/json'
 # EndDocSection
