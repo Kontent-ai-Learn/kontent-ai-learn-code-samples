@@ -8,7 +8,13 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
+// Gets the first page of results
 const response = await client.listLanguageVariantsOfContentType()
   .byTypeCodename('article')
   .toPromise();
+
+// Gets all pages of results
+// const response = await client.listLanguageVariantsOfContentType()
+//   .byTypeCodename('article')
+//   .toAllPromise();
 // EndDocSection

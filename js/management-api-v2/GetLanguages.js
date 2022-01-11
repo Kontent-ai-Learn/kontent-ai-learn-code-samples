@@ -8,6 +8,11 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
+// Gets the first page of results
 const response = await client.listLanguages()
   .toPromise();
+
+// Gets all pages of results
+// const response = await client.listLanguages()
+//   .toAllPromise();
 // EndDocSection
