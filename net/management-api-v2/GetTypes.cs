@@ -8,6 +8,5 @@ var client = new ManagementClient(new ManagementOptions
     ProjectId = "<YOUR_PROJECT_ID>"
 });
 
-// Gets all pages of results
 var response = await client.ListContentTypesAsync();
 // EndDocSection

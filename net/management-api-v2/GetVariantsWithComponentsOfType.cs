@@ -12,6 +12,5 @@ var identifier = Reference.ById(Guid.Parse("6434e475-5a29-4866-9fd1-6d1ca873f5be
 // var identifier = Reference.ByCodename("article");
 // var identifier = Reference.ByExternalId("my-article-id");
 
-// Gets all pages of results
 var response = await client.ListLanguageVariantsOfContentTypeWithComponentsAsync(identifier);
 // EndDocSection
