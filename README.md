@@ -1,6 +1,6 @@
-# Kentico Kontent Documentation - Code Samples
+# Learn Kontent - Code Samples
 
-This repository contains code samples used in the [Kentico Kontent Docs](https://docs.kontent.ai/) portal.
+This repository contains code samples used in the [Kontent Docs](https://docs.kontent.ai/) portal.
 
 ## How To Contribute
 

@@ -11,7 +11,7 @@ const deliveryClient = createDeliveryClient({
 
 var homepage: Homepage;
 
-// Gets a content item from Kentico Kontent by its codename and maps it to its strongly typed model
+// Gets a content item from Kontent by its codename and maps it to its strongly typed model
 const response = await deliveryClient.item<Homepage>('hello_caas_world')
   .toPromise();
 
