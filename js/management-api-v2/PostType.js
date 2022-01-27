@@ -33,7 +33,7 @@ const response = await client.addContentType()
             external_id: "article-copy"
           },
         }),
-        builder.richtTextElement({
+        builder.richTextElement({
           name: "Article body",
           codename: "body",
           type: ElementModels.ElementType.richText,
@@ -41,7 +41,7 @@ const response = await client.addContentType()
             external_id: "article-copy"
           },
         }),
-        builder.richtTextElement({
+        builder.richTextElement({
           name: "Author bio",
           codename: "bio",
           type: ElementModels.ElementType.richText,
