@@ -8,5 +8,6 @@ var client = new ManagementClient(new ManagementOptions
     ProjectId = "<YOUR_PROJECT_ID>"
 });
 
+// Gets the first page of results
 var response = await client.ListContentTypesAsync();
 // EndDocSection
