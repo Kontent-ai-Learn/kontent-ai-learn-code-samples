@@ -1,5 +1,5 @@
 // DocSection: sharing_project_content_get_items
-// Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
+// Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
 using Kentico.Kontent.Delivery;
 
 public class Startup
@@ -14,7 +14,7 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         // Registers named clients based on the DeliveryOptions objects defined in appsettings.json
-        // See https://docs.kontent.ai/net-register-multiple-clients for details
+        // See https://kontent.ai/learn/net-register-multiple-clients for details
         services.AddDeliveryClient("first_project", Configuration, "DeliveryOptionsForFirstProject");
         services.AddDeliveryClient("second_project", Configuration, "DeliveryOptionsForSecondProject");
     }

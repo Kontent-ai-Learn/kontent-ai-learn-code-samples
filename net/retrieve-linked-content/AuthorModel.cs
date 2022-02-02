@@ -1,5 +1,5 @@
 // DocSection: linked_content_author_model
-// Create strongly typed models according to https://docs.kontent.ai/net-strong-types
+// Create strongly typed models according to https://kontent.ai/learn/net-strong-types
 
 using System;
 using System.Collections.Generic;

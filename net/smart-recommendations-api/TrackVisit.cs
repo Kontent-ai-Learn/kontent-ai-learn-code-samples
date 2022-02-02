@@ -1,5 +1,5 @@
 // DocSection: rapi_v2_track_visit
-// Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
+// Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
 using Kentico.Kontent.Recommendations;
 
 // Creates an instance of the recommendation client

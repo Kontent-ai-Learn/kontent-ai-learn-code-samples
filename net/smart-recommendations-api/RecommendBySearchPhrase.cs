@@ -1,5 +1,5 @@
 // DocSection: rapi_v2_recommend_by_search_phrase
-// Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
+// Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
 using Kentico.Kontent.Recommendations;
 using Kentico.Kontent.Recommendations.Models;
 
