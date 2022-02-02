@@ -1,5 +1,5 @@
 // DocSection: import_rich_create_simple_type
-// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
+// Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
 // Using ES6 syntax
 import { ManagementClient, ElementModels } from '@kentico/kontent-management';
 

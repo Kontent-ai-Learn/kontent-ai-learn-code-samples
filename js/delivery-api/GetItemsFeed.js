@@ -1,5 +1,5 @@
 // DocSection: delivery_api_get_items_feed
-// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
+// Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
 const KontentDelivery = require('@kentico/kontent-delivery');
 
 const client = KontentDelivery.createDeliveryClient({

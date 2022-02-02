@@ -1,5 +1,5 @@
 // DocSection: rapi_v2_track_visitor
-// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
+// Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
 import { RecommendationClient } from '@kentico/kontent-recommendations';
 
 // Creates an instance of the recommendation client

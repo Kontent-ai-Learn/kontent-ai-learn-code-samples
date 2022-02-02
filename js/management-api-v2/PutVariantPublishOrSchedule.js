@@ -1,5 +1,5 @@
 // DocSection: cm_api_v2_put_variant_publish_or_schedule
-// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
+// Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
 // Using ES6 syntax
 import { ManagementClient } from '@kentico/kontent-management';
 

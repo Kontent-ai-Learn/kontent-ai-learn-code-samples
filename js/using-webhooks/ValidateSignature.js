@@ -1,5 +1,5 @@
 // DocSection: webhooks_validate_signature
-// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
+// Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
 const signatureHelper = require('@kentico/kontent-webhook-helper');
 
 // Example of generating the hash to verify the notification
