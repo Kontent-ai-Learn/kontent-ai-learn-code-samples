@@ -1,10 +1,10 @@
 // DocSection: securing_public_access_get_article
-// Tip: Find more about Swift SDK at https://docs.kontent.ai/ios
+// Tip: Find more about Swift SDK at https://kontent.ai/learn/ios
 import KenticoKontentDelivery
 
 let client = DeliveryClient.init(projectId: "<YOUR_PROJECT_ID>", secureApiKey: "<YOUR_API_KEY>")
 
-// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
+// Create strongly typed models according to https://kontent.ai/learn/strongly-typed-models
 client.getItem(modelType: Article.self, itemName: "my_article") { (isSuccess, deliveryItem, error) in
      if isSuccess {
         if let article = deliveryItem.item {

@@ -1,5 +1,5 @@
 // DocSection: structure_in_rte_resolve_links_to_items
-// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
+// Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
 import { createRichTextHtmlResolver, Elements, createDeliveryClient, linkedItemsHelper, IContentItem } from '@kentico/kontent-delivery';
 
 // Initializes the Delivery client.
@@ -7,7 +7,7 @@ const deliveryClient = createDeliveryClient({
   projectId: '<YOUR_PROJECT_ID>',
 });
 
-// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
+// Create strongly typed models according to https://kontent.ai/learn/strongly-typed-models
 export type Article = IContentItem<{
   title: Elements.TextElement;
   body: Elements.RichTextElement;
@@ -20,7 +20,7 @@ const response = await deliveryClient.item<Article>('my_article')
 // Stores the contents of the rich text element.
 const richTextElement = response.data.item.elements.body;
 
-// Note: The code below executes correctly in browser. To adjust the code for nodejs, see https://docs.kontent.ai/js-rte-nodejs.
+// Note: The code below executes correctly in browser. To adjust the code for nodejs, see https://kontent.ai/learn/js-rte-nodejs.
 // Defines how to resolve the rich text element
 const resolvedRichText = KontentDelivery.createRichTextHtmlResolver().resolveRichText({
   // Gives the resolver the contents of your rich text.

@@ -1,6 +1,6 @@
 // DocSection: structure_in_rte_tweet_model
 // Generate strongly typed models at https://github.com/Kentico/kontent-java-packages/tree/master/kontent-delivery-generators
-// Tip: Find more about Java SDK at https://docs.kontent.ai/java
+// Tip: Find more about Java SDK at https://kontent.ai/learn/java
 
 import kentico.kontent.delivery.ContentItemMapping;
 import kentico.kontent.delivery.ElementMapping;

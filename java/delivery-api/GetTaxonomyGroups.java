@@ -1,5 +1,5 @@
 // DocSection: delivery_api_get_taxonomy_groups
-// Tip: Find more about Java SDK at https://docs.kontent.ai/java
+// Tip: Find more about Java SDK at https://kontent.ai/learn/java
 import kentico.kontent.delivery.*;
 
 // Initializes a DeliveryClient
@@ -11,5 +11,5 @@ CompletionStage<List<TaxonomyGroup>> taxonomies = client.getTaxonomyGroups(
         .page(null, 3)
         .build()
     ).thenApply(taxonomyGroupListingResponse -> taxonomyGroupListingResponse.getTaxonomies());
-// To use the code for Android projects, see http://docs.kontent.ai/android
+// To use the code for Android projects, see http://kontent.ai/learn/android
 // EndDocSection

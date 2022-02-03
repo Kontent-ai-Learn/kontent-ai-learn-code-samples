@@ -1,8 +1,8 @@
 // DocSection: securing_public_access_get_article
-// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
+// Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
 import { IContentItem, createDeliveryClient, Elements } from '@kentico/kontent-delivery';
 
-// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
+// Create strongly typed models according to https://kontent.ai/learn/strongly-typed-models
 export type Article = IContentItem<{
 	 title: Elements.TextElement;
 	 summary: Elements.TextElement;

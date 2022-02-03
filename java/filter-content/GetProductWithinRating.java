@@ -5,5 +5,5 @@ CompletionStage<ContentItemsListingResponse> items = client.getItems(
     .filterRange("elements.product_rating", "6.5", "9")
     .build()
 );
-// To use the code for Android projects, see http://docs.kontent.ai/android
+// To use the code for Android projects, see http://kontent.ai/learn/android
 // EndDocSection

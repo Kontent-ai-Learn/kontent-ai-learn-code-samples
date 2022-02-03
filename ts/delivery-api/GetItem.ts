@@ -1,5 +1,5 @@
 // DocSection: delivery_api_get_item
-// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
+// Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
 import { createDeliveryClient, IContentItem, Elements } from '@kentico/kontent-delivery';
 
 const deliveryClient = createDeliveryClient({
@@ -14,7 +14,7 @@ export type Article = IContentItem<{
   related_articles: Article[];
 }>;
 
-// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
+// Create strongly typed models according to https://kontent.ai/learn/strongly-typed-models
 const response = await deliveryClient.item<Article>('my_article')
   .toPromise();
 // EndDocSection

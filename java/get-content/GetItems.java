@@ -1,5 +1,5 @@
 // DocSection: getting_content_get_items
-// Tip: Find more about Java SDK at https://docs.kontent.ai/java
+// Tip: Find more about Java SDK at https://kontent.ai/learn/java
 import kentico.kontent.delivery.*;
 
 // Initializes a DeliveryClient
@@ -7,5 +7,5 @@ DeliveryClient client = new DeliveryClient("<YOUR_PROJECT_ID>");
 
 // Gets all content items
 CompletionStage<ContentItemsListingResponse> listingResponse = client.getItems();
-// To use the code for Android projects, see http://docs.kontent.ai/android
+// To use the code for Android projects, see http://kontent.ai/learn/android
 // EndDocSection

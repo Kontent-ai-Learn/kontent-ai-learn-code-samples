@@ -1,5 +1,5 @@
 // DocSection: structure_in_rte_implement_resolver
-// Tip: Find more about Java SDK at https://docs.kontent.ai/java
+// Tip: Find more about Java SDK at https://kontent.ai/learn/java
 public class TweetInlineContentItemsResolver extends InlineContentItemsResolver<Tweet> {
     @Override
     String resolve() {

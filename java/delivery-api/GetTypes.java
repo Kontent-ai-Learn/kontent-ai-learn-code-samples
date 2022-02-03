@@ -1,5 +1,5 @@
 // DocSection: delivery_api_get_types
-// Tip: Find more about Java SDK at https://docs.kontent.ai/java
+// Tip: Find more about Java SDK at https://kontent.ai/learn/java
 import kentico.kontent.delivery.*;
 
 // Initializes a DeliveryClient
@@ -11,5 +11,5 @@ CompletionStage<ContentTypesListingResponse> types = client.getTypes(
         .page(null, 3)
         .build()
     );
-// To use the code for Android projects, see http://docs.kontent.ai/android
+// To use the code for Android projects, see http://kontent.ai/learn/android
 // EndDocSection

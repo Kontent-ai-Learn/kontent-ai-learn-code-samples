@@ -1,5 +1,5 @@
 // DocSection: language_fallbacks_ignore
-// Tip: Find more about Swift SDK at https://docs.kontent.ai/ios
+// Tip: Find more about Swift SDK at https://kontent.ai/learn/ios
 import KenticoKontentDelivery
  
 let client = DeliveryClient.init(projectId:"975bf280-fd91-488c-994c-2f04416e5ee3")
