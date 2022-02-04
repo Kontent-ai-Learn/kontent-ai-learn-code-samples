@@ -1,5 +1,5 @@
 // DocSection: language_fallbacks_ignore
-// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
+// Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
 import { createDeliveryClient } from '@kentico/kontent-delivery';
 
 const deliveryClient = createDeliveryClient({

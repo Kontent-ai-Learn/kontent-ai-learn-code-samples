@@ -12,5 +12,5 @@ CompletionStage<ContentItemsListingResponse> items = client.getItems(
     .filterAny("elements.subpages", "travel_insurance", "car_insurance")
     .build()
 );
-// To use the code for Android projects, see http://docs.kontent.ai/android
+// To use the code for Android projects, see http://kontent.ai/learn/android
 // EndDocSection

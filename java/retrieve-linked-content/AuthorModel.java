@@ -1,5 +1,5 @@
 // DocSection: linked_content_author_model
-// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
+// Create strongly typed models according to https://kontent.ai/learn/strongly-typed-models
 
 import kentico.kontent.delivery.ContentItemMapping;
 import kentico.kontent.delivery.ElementMapping;

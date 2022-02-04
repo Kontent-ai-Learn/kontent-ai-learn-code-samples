@@ -1,5 +1,5 @@
 // DocSection: strongly_typed_models_definition
-// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
+// Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
 import { Elements, IContentItem } from '@kentico/kontent-delivery';
 
 /**

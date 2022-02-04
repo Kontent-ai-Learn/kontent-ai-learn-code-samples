@@ -1,5 +1,5 @@
 // DocSection: import_linked_validate_content
-// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
+// Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
 // Using ES6 syntax
 import { ManagementClient } from '@kentico/kontent-management';
 

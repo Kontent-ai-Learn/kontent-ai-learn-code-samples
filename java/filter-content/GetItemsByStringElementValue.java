@@ -5,5 +5,5 @@ CompletionStage<ContentItemsListingResponse> items = client.getItems(
     .filterEquals("elements.title", "Hello World")
     .build()
 );
-// To use the code for Android projects, see http://docs.kontent.ai/android
+// To use the code for Android projects, see http://kontent.ai/learn/android
 // EndDocSection

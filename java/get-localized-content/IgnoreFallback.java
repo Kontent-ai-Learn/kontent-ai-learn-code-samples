@@ -1,5 +1,5 @@
 // DocSection: language_fallbacks_ignore
-// Tip: Find more about Java SDK at https://docs.kontent.ai/java
+// Tip: Find more about Java SDK at https://kontent.ai/learn/java
 import kentico.kontent.delivery.*;
 
 // Initializes a DeliveryClient
@@ -12,5 +12,5 @@ CompletionsStage<ContentItemsListingResponse> listingResponse = client.getItems(
         .filterEquals("system.language", "es-ES")
         .build()
 );
-// To use the code for Android projects, see http://docs.kontent.ai/android
+// To use the code for Android projects, see http://kontent.ai/learn/android
 // EndDocSection

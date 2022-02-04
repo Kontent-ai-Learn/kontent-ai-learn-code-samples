@@ -1,5 +1,5 @@
 // DocSection: import_model_create_type
-// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
+// Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
 var client = new KontentManagement.ManagementClient({
   projectId: '<YOUR_PROJECT_ID>',
   apiKey: '<YOUR_API_KEY>'

@@ -6,5 +6,5 @@ CompletionStage<ContentItemsListingResponse> items = client.getItems(
     .filterRange("system.last_modified", "2020-05-05T10:30:00", "2020-05-07T07:00:00")
     .build()
 );
-// To use the code for Android projects, see http://docs.kontent.ai/android
+// To use the code for Android projects, see http://kontent.ai/learn/android
 // EndDocSection

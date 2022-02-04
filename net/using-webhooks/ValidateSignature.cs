@@ -1,5 +1,5 @@
 // DocSection: webhooks_validate_signature
-// Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
+// Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
 using System;
 using System.Security.Cryptography;
 using System.Text;

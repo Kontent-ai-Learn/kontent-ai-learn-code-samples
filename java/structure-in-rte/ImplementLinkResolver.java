@@ -1,5 +1,5 @@
 // DocSection: structure_in_rte_implement_link_resolver
-// Tip: Find more about Java SDK at https://docs.kontent.ai/java
+// Tip: Find more about Java SDK at https://kontent.ai/learn/java
 public class CustomContentLinkUrlResolver implements ContentLinkUrlResolver {
     
     @Override

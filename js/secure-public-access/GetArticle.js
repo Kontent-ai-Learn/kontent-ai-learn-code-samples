@@ -1,5 +1,5 @@
 // DocSection: securing_public_access_get_article
-// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
+// Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
 const KontentDelivery = require('@kentico/kontent-delivery');
 
 const deliveryClient = KontentDelivery.createDeliveryClient({

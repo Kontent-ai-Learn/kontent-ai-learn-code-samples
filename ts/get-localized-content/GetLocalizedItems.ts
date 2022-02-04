@@ -1,5 +1,5 @@
 // DocSection: getting_localized_content_language
-// Tip: Find more about JS/TS SDKs at https://docs.kontent.ai/javascript
+// Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
 import { createDeliveryClient } from '@kentico/kontent-delivery';
 import { Article } from './models/Article';
 

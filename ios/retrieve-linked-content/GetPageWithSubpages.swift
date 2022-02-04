@@ -1,6 +1,6 @@
 // DocSection: linked_content_get_page_with_subpages
-// Create strongly typed models according to https://docs.kontent.ai/strongly-typed-models
-// Tip: Find more about Swift SDK at https://docs.kontent.ai/ios
+// Create strongly typed models according to https://kontent.ai/learn/strongly-typed-models
+// Tip: Find more about Swift SDK at https://kontent.ai/learn/ios
 import KenticoKontentDelivery
 
 let client = DeliveryClient.init(projectId: "8d20758c-d74c-4f59-ae04-ee928c0816b7")

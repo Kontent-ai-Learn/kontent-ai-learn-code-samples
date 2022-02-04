@@ -5,5 +5,5 @@ CompletionStage<ContentItemsListingResponse> items = client.getItems(
     .filterIn("system.codename", "delivery_api", "get_content", "hello_world")
     .build()
 );
-// To use the code for Android projects, see http://docs.kontent.ai/android
+// To use the code for Android projects, see http://kontent.ai/learn/android
 // EndDocSection

@@ -1,5 +1,5 @@
 // DocSection: preview_content_get_article
-// Tip: Find more about Swift SDK at https://docs.kontent.ai/ios
+// Tip: Find more about Swift SDK at https://kontent.ai/learn/ios
 import KenticoKontentDelivery
 
 let client = DeliveryClient.init(projectId: "<YOUR_PROJECT_ID>", apiKey: "<YOUR_PREVIEW_API_KEY>")

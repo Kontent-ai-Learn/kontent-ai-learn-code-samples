@@ -1,5 +1,5 @@
 // DocSection: import_linked_create_sec_item
-// Tip: Find more about .NET SDKs at https://docs.kontent.ai/net
+// Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
 using Kentico.Kontent.Management;
 
 var client = new ManagementClient(new ManagementOptions
