@@ -9,7 +9,7 @@ IDeliveryClient client = DeliveryClientBuilder
 
 // Gets navigation items and their linked items
 // Tip: Create strongly typed models according to https://kontent.ai/learn/net-strong-types
-IDeliveryItemResponse<NavigationItem> rootResponse =  await client.GetItemAsync<NavigationItem>("root_navigation_item",
+IDeliveryItemResponse<NavigationItem> rootResponse = await client.GetItemAsync<NavigationItem>("root_navigation_item",
     new DepthParameter(5)
     );
 
