@@ -4,7 +4,7 @@ const KontentDelivery = require('@kentico/kontent-delivery');
 
 const deliveryClient = KontentDelivery.createDeliveryClient({
   projectId: '<YOUR_PROJECT_ID>',
-  globalQueryConfig: {
+  defaultQueryConfig: {
     useSecuredMode: true, // Queries the Delivery API using secure access.
   },
   secureApiKey: '<YOUR_API_KEY>',

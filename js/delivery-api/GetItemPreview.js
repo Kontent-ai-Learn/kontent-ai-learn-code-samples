@@ -5,7 +5,7 @@ const KontentDelivery = require('@kentico/kontent-delivery');
 const deliveryClient = KontentDelivery.createDeliveryClient({
   projectId: '<YOUR_PROJECT_ID>',
   previewApiKey: '<YOUR_PREVIEW_API_KEY>',
-  globalQueryConfig: {
+  defaultQueryConfig: {
     usePreviewMode: true, // Queries the Delivery Preview API.
   }
 });

@@ -13,7 +13,7 @@ export type Article = IContentItem<{
 
 const deliveryClient = createDeliveryClient({
 	projectId: '<YOUR_PROJECT_ID>',
-	globalQueryConfig: {
+	defaultQueryConfig: {
 		useSecuredMode: true // Queries the Delivery API using secure access.
 	},
 	secureApiKey: '<YOUR_API_KEY>',
