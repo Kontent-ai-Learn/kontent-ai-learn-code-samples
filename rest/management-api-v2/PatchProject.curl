@@ -1,0 +1,13 @@
+# DocSection: cm_api_v2_patch_language
+curl --request PATCH \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID> \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: application/json'
+  --data '
+[
+  {
+    "op": "rename-environment",
+    "value": "My Little Production"
+  }
+]'
+# EndDocSection
