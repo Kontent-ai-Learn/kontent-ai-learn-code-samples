@@ -8,5 +8,5 @@ var client = new ManagementClient(new ManagementOptions
     ProjectId = "<YOUR_PROJECT_ID>"
 });
 
-var response = await client.GetProjectInformation();
+var response = await client.GetProjectInformationAsync();
 // EndDocSection
