@@ -16,10 +16,10 @@ var identifier = new LanguageVariantIdentifier(Reference.ById(Guid.Parse("f4b3fc
 // var identifier = new LanguageVariantIdentifier(Reference.ByExternalId("59713"), Reference.ByCodename("es-ES"));
 
 // Immediate publish
-await client.PublishLanguageVariant(identifier);
+await client.PublishLanguageVariantAsync(identifier);
 
 // Scheduled publish
-await client.SchedulePublishingOfLanguageVariant(identifier, new ScheduleModel
+await client.SchedulePublishingOfLanguageVariantAsync(identifier, new ScheduleModel
 {
     ScheduleTo = DateTime.Parse("2038-01-19T04:14:08+01:00")
 });
