@@ -8,7 +8,5 @@ var client = new ManagementClient(new ManagementOptions
     ProjectId = "<YOUR_PROJECT_ID>"
 });
 
-var client = _fileSystemFixture.CreateMockClientWithResponse("SubscriptionUsers.json");
-
 var response = await client.ListSubscriptionUsersAsync();
 // EndDocSection
