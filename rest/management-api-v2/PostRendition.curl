@@ -1,0 +1,21 @@
+# DocSection: cm_api_v2_post_rendition
+curl --request POST \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/assets/ba00e3ba-e217-4fc0-9f4e-90b9510d2b08/renditions \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/assets/external-id/which-brewing-fits-you/renditions \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: application/json' \
+  --data '
+{
+  "transformation": {
+    "mode": "rect",
+    "fit": "clip",
+    "custom_width": 200,
+    "custom_height": 50,
+    "x": 0,
+    "y": 30,
+    "width": 400,
+    "height": 100
+  },
+  "external_id": "hero-image-rendition"
+}'
+# EndDocSection
