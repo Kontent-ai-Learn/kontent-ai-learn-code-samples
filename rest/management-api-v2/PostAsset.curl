@@ -27,6 +27,21 @@ curl --request POST \
       },
       "description": "Técnicas para hacer café"
     }
+  ],
+  "elements": [
+    {
+      "element": {
+        "codename": "taxonomy-categories"
+      },
+      "value": [
+        {
+          "codename": "coffee"
+        },
+        {
+          "codename": "brewing"
+        }
+      ]
+    }
   ]
 }'
 # EndDocSection

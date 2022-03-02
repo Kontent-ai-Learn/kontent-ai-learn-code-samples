@@ -12,9 +12,9 @@ const client = new ManagementClient({
 const response = await client.updateAsset()
   .byAssetExternalId('which-brewing-fits-you')
   // .byAssetId('fcbb12e6-66a3-4672-85d9-d502d16b8d9c')
-  .withData(
-    {
-      title: "Coffee Brewing Techniques",
+  .withData((builder) => {
+    return {
+      title: 'Coffee Brewing Techniques',
       assetId: 'fcbb12e6-66a3-4672-85d9-d502d16b8d9c',
       descriptions: [
         {
@@ -29,9 +29,24 @@ const response = await client.updateAsset()
           },
           description: 'Técnicas para hacer café'
         }
+      ],
+      elements: [
+        builder.taxonomyElement({
+          element: {
+            codename: 'taxonomy-categories'
+          },
+          value: [
+            {
+              codename: 'coffee'
+            },
+            {
+              codename: 'brewing'
+            }
+          ]
+        }),
       ]
     }
-  )
+  })
   .toPromise();
 
 
@@ -39,15 +54,15 @@ const response = await client.updateAsset()
 const response = await client.upsertAsset()
   .byAssetExternalId('which-brewing-fits-you')
   // .byAssetId('fcbb12e6-66a3-4672-85d9-d502d16b8d9c')
-  .withData(
-    {
+  .withData((builder) => {
+    return {
       // 'file_reference' is only required when creating a new asset
       // To create a file reference, see the "Upload a binary file" endpoint
       file_reference: {
         id: 'fcbb12e6-66a3-4672-85d9-d502d16b8d9c',
         type: 'internal'
       },
-      title: "Coffee Brewing Techniques",
+      title: 'Coffee Brewing Techniques',
       external_id: 'which-brewing-fits-you',
       descriptions: [
         {
@@ -62,8 +77,23 @@ const response = await client.upsertAsset()
           },
           description: 'Técnicas para hacer café'
         }
+      ],
+      elements: [
+        builder.taxonomyElement({
+          element: {
+            codename: 'taxonomy-categories'
+          },
+          value: [
+            {
+              codename: 'coffee'
+            },
+            {
+              codename: 'brewing'
+            }
+          ]
+        }),
       ]
     }
-  )
+  })
   .toPromise();
 // EndDocSection

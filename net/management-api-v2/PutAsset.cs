@@ -27,7 +27,17 @@ var updatedAssetResponse = await client.UpdateAssetAsync(identifier, new AssetUp
             Description = "Técnicas para hacer café",
             Language = Reference.ByCodename("es-ES")
         }
-    }
+    },
+    Elements = ElementBuilder.GetElementsAsDynamic(
+        new TaxonomyElement
+        {
+            Element = Reference.ByCodename("taxonomy-categories"),
+            Value = new []
+            {
+                Reference.ByCodename("coffee"),
+                Reference.ByCodename("brewing"),
+            }
+        })
 });
 
 // Used when creating a new asset or updating an existing one
@@ -53,6 +63,16 @@ var createdAssetResponse = await client.UpsertAssetByExternalIdAsync("which-brew
             Description = "Técnicas para hacer café",
             Language = Reference.ByCodename("es-ES")
         }
-    }
+    },
+    Elements = ElementBuilder.GetElementsAsDynamic(
+        new TaxonomyElement
+        {
+            Element = Reference.ByCodename("taxonomy-categories"),
+            Value = new []
+            {
+                Reference.ByCodename("coffee"),
+                Reference.ByCodename("brewing"),
+            }
+        })
 });
 // EndDocSection
