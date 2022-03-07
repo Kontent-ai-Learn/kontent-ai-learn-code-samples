@@ -6,7 +6,7 @@ curl --request PATCH \
   --data '
 [
   {
-    "op": "rename-environment",
+    "op": "rename_environment",
     "value": "My Little Production"
   }
 ]'
