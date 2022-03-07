@@ -12,7 +12,7 @@ const response = await client.modifyEnvironment()
     .withData(
         [
             {
-                op: "rename-environment",
+                op: "rename_environment",
                 value: "My Little Production"
             }
         ]
