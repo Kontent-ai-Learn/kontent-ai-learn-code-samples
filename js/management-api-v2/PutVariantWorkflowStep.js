@@ -1,4 +1,4 @@
-// DocSection: cm_api_v2_put_variant_workflow
+// DocSection: cm_api_v2_put_variant_workflow_step
 // Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
 // Using ES6 syntax
 import { ManagementClient } from '@kentico/kontent-management';
