@@ -1,6 +1,6 @@
-# DocSection: cm_api_v2_get_workflow_steps
+# DocSection: cm_api_v2_get_workflows
 curl --request GET \
-  --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/workflow-steps \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/workflows \
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
   --header 'Content-type: application/json'
 # EndDocSection
