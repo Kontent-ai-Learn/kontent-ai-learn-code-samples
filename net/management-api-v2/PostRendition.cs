@@ -13,7 +13,7 @@ var assetReference = Reference.ById(Guid.Parse("fcbb12e6-66a3-4672-85d9-d502d16b
 
 var response = await client.CreateAssetRenditionAsync(assetReference, new AssetRenditionCreateModel
 {
-    ExternalId = "rendition-1",
+    ExternalId = "hero-image-rendition",
     Transformation = new RectangleResizeTransformation
     {
         CustomWidth = 120,
