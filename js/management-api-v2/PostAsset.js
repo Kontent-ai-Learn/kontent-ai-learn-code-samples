@@ -9,8 +9,8 @@ const client = new ManagementClient({
 });
 
 const response = await client.addAsset()
-  .withData(
-    {
+  .withData((builder) => {
+    return {
       // To create a file reference, see the "Upload a binary file" endpoint
       file_reference: {
         id: 'fcbb12e6-66a3-4672-85d9-d502d16b8d9c',
@@ -31,8 +31,23 @@ const response = await client.addAsset()
           },
           description: 'Técnicas para hacer café'
         }
+      ],
+      elements: [
+        builder.taxonomyElement({
+          element: {
+            codename: 'taxonomy-categories'
+          },
+          value: [
+            {
+              codename: 'coffee'
+            },
+            {
+              codename: 'brewing'
+            }
+          ]
+        }),
       ]
     }
-  )
+  })
   .toPromise();
 // EndDocSection

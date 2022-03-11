@@ -30,6 +30,16 @@ var response = await client.CreateAssetAsync(new AssetCreateModel
             Language = Reference.ByCodename("es-ES"),
             Description = "Técnicas para hacer café"
         }
-    }
+    },
+    Elements = ElementBuilder.GetElementsAsDynamic(
+        new TaxonomyElement
+        {
+            Element = Reference.ByCodename("taxonomy-categories"),
+            Value = new []
+            {
+                Reference.ByCodename("coffee"),
+                Reference.ByCodename("brewing"),
+            }
+        })
 });
 // EndDocSection
