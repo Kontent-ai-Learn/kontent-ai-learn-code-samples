@@ -8,5 +8,6 @@ var client = new ManagementClient(new ManagementOptions
     ProjectId = "<YOUR_PROJECT_ID>"
 });
 
-var response = await client.ListWorkflowStepsAsync();
+var response = await client.ListWorkflowsAsync();
+var workflowSteps = response.FirstOrDefault(x => x.Codename == "default").Steps;
 // EndDocSection
