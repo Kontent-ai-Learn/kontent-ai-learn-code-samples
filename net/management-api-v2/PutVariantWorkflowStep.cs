@@ -17,5 +17,7 @@ var languageIdentifier = Reference.ById(Guid.Parse("d1f95fde-af02-b3b5-bd9e-f232
 
 var workflowStepIdentifier = Reference.ById(Guid.Parse("16221cc2-bd22-4414-a513-f3e555c0fc93"));
 
-await client.ChangeLanguageVariantWorkflowStepAsync(new WorkflowIdentifier(itemIdentifier, languageIdentifier, workflowStepIdentifier));
+await client.ChangeLanguageVariantWorkflowAsync(
+    new LanguageVariantIdentifier(itemIdentifier, languageIdentifier),
+    new WorkflowStepIdentifier(Reference.ById(Guid.Empty), workflowStepIdentifier)));
 // EndDocSection

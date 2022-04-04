@@ -35,7 +35,7 @@ var response = await client.CreateAssetAsync(new AssetCreateModel
         new TaxonomyElement
         {
             Element = Reference.ByCodename("taxonomy-categories"),
-            Value = new []
+            Value = new[]
             {
                 Reference.ByCodename("coffee"),
                 Reference.ByCodename("brewing"),

@@ -9,7 +9,7 @@ var client = new ManagementClient(new ManagementOptions
 });
 
 // Uses the file reference object obtained in step 1
-var createdAssetResponse = await client.UpsertAssetByExternalIdAsync("which-brewing-fits-you", new AssetUpsertModel
+var createdAssetResponse = await client.UpsertAssetAsync(Reference.ByExternalId("which-brewing-fits-you"), new AssetUpsertModel
 {
     // 'fileReference' is only required when creating a new asset
     // To create a file reference, see the "Upload a binary file" endpoint

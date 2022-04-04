@@ -8,7 +8,7 @@ var client = new ManagementClient(new ManagementOptions
     ProjectId = "<YOUR_PROJECT_ID>"
 });
 
-var response = await client.CreateContentTypeSnippetAsync(new CreateContentSnippetCreateModel
+var response = await client.CreateContentTypeSnippetAsync(new ContentTypeSnippetCreateModel
 {
     Name = "metadata",
     Codename = "my_metadata",

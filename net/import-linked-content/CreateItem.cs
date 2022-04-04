@@ -8,9 +8,7 @@ var client = new ManagementClient(new ManagementOptions
     ProjectId = "<YOUR_PROJECT_ID>"
 });
 
-await client.UpsertContentItemByExternalIdAsync("123", new ContentItemUpsertModel
-{
-    Name = "On Roasts",
-    Type = Reference.ByCodename("article"),
-});
+await client.UpsertContentItemAsync(
+    Reference.ByExternalId("123"),
+    new ContentItemUpsertModel { Name = "On Roasts", Type = Reference.ByCodename("article") });
 // EndDocSection

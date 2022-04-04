@@ -34,11 +34,11 @@ var response = await client.ModifyContentTypeSnippetAsync(identifier, new Conten
             ExternalId = "my-meta-title-id"
         },
     },
-    new SnippetPatchRemoveModel
+    new ContentTypeSnippetPatchRemoveModel
     {
         Path = "/elements/id:0b2015d0-16ae-414a-85f9-7e1a4b3a3eae"
     },
-    new SnippetPatchRemoveModel
+    new ContentTypeSnippetPatchRemoveModel
     {
         Path = "/elements/external_id:my-multiple-choice-id/options/codename:my_option"
     }

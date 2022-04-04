@@ -8,7 +8,7 @@ var client = new ManagementClient(new ManagementOptions
     ProjectId = "<YOUR_PROJECT_ID>"
 });
 
-var filePath = Path.Combine(Environment.CurrentDirectory, "Unit", "Data", "kentico_rgb_bigger.png");
+var filePath = Path.Combine(Environment.CurrentDirectory, "Data", "kentico_rgb_bigger.png");
 var contentType = "image/png";
 
 // Binary file reference to be used when adding a new asset
