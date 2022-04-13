@@ -1,16 +1,11 @@
 ### Motivation
 
-Which issue does this fix? Fixes #`issue number`
+Provide GitHub issue or Jira issue URL. Add more explanation if necessary.
 
-If no issue exists, what is the fix or new feature? Were there any reasons to fix/implement things that are not obvious?
+### Context
 
-### Checklist
+Add the following information:
 
-- [ ] Code follows coding conventions held in this repo
-- [ ] Tests are passing
-- [ ] Documentation has been updated (if applicable)
-- [ ] Temporary settings (e.g. project ID used during development and testing) have been reverted to defaults
-
-### How to test
-
-If manual testing is required, what are the steps?
+* When do you need the code to go public? Provide a release date and/or explanation.
+* Is the pull request complete and ready for review? Yes/No
+  * If not, set the [PR as draft](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests#draft-pull-requests).

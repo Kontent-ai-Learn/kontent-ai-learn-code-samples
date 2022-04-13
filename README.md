@@ -12,6 +12,6 @@ If your changes are merged to the master branch, the new code is automatically p
 
 The changes will not automatically appear in <https://kontent.ai/learn/>. Your changes must be approved and published by the Customer Education team before they can go live.
 
-## Licence
+## License
 
-All source code is published under MIT licence.
+All source code is published under MIT license.

@@ -2,7 +2,7 @@
 
 // EndDocSection
 
-For Curl and Ruby:
+For cURL and Ruby:
 
 # DocSection: name
 
