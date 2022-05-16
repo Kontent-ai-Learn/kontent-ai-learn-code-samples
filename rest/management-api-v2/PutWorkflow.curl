@@ -19,6 +19,7 @@ curl --request PUT \
     {
       "name": "First step",
       "codename": "first_step",
+      "id": "16221cc2-bd22-4414-a513-f3e555c0fc93",
       "color": "sky-blue",
       "transitions_to": [
         {
