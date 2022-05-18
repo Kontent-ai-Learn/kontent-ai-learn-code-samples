@@ -1,4 +1,4 @@
-// DocSection: cm_api_v2_get_workflow_steps
+// DocSection: cm_api_v2_get_workflows
 // Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
 // Using ES6 syntax
 import { ManagementClient } from '@kentico/kontent-management';
@@ -10,5 +10,4 @@ const client = new ManagementClient({
 
 const response = await client.listWorkflows()
   .toPromise();
-const steps = response.data.find(workflow => workflow.codeName === 'default').steps;
 // EndDocSection
