@@ -18,7 +18,7 @@ const response = await client.updateWorkflow()
         {
           content_types: [
             {
-              codename: "Article"
+              codename: "article"
             }
           ]
         }

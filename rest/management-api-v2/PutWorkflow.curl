@@ -10,7 +10,7 @@ curl --request PUT \
     {
       "content_types": [
         {
-          "codename": "Article"
+          "codename": "article"
         }
       ]
     }

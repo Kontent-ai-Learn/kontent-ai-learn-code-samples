@@ -42,7 +42,7 @@ var updatedWorkflow = new WorkflowUpsertModel
     CodeName = "my_updated_workflow",
     Scopes = new [] {
         new WorkflowScopeUpsertModel {
-            ContentTypes = new [] { Reference.ByCodename("Article") }
+            ContentTypes = new [] { Reference.ByCodename("article") }
         }
     },
     Steps = new [] {
