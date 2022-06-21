@@ -28,6 +28,11 @@ curl--request POST\
       "content_group": {
         "external_id": "content"
       }
+      "default": {
+        "global": {
+          "value": "This is the default value of the text element."
+        }
+      }
     },
     {
       "name": "Image",
