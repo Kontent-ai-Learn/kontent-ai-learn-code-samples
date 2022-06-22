@@ -25,6 +25,11 @@ curl --request POST \
      "type": "text",
      "content_group": {
        "external_id": "article-copy"
+     },
+     "default": {
+       "global": {
+         "value": "This is the default value of the text element."
+       }
      }
    },
    {
