@@ -33,6 +33,13 @@ var response = await client.CreateContentTypeAsync(new ContentTypeCreateModel
             Name = "Article title",
             Codename = "title",
             ContentGroup = Reference.ByCodename("article-copy"),
+            DefaultValue = new TextElementDefaultValueModel
+            {
+                Global = new TypeValue<string>()
+                {
+                    Value = "This is the default value of the text element."
+                }
+            }
         },
         new RichTextElementMetadataModel
         {

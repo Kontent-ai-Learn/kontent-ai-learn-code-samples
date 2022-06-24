@@ -35,7 +35,14 @@ var response = await client.CreateContentTypeAsync(new ContentTypeCreateModel
         new TextElementMetadataModel
         {
             Name = "Title",
-            ContentGroup = Reference.ByExternalId("content")
+            ContentGroup = Reference.ByExternalId("content"),
+            DefaultValue = new TextElementDefaultValueModel
+            {
+                Global = new TypeValue<string>()
+                {
+                    Value = "This is the default value of the text element."
+                }
+            }
         },
         new AssetElementMetadataModel
         {
