@@ -5,5 +5,4 @@ CompletionStage<ContentItemsListingResponse> items = client.getItems(
     .filterEquals("system.type", "product")
     .build()
 );
-// To use the code for Android projects, see http://kontent.ai/learn/android
 // EndDocSection

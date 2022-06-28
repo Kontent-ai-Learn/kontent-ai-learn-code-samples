@@ -5,5 +5,4 @@ CompletionStage<ContentItemsListingResponse> items = client.getItems(
     .filterEquals("system.id", "2f7288a1-cfc8-47be-9bf1-b1d312f7da18")
     .build()
 );
-// To use the code for Android projects, see http://kontent.ai/learn/android
 // EndDocSection

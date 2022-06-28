@@ -7,5 +7,4 @@ DeliveryClient client = new DeliveryClient("<YOUR_PROJECT_ID>");
 
 // Gets all content items
 CompletionStage<ContentItemsListingResponse> listingResponse = client.getItems();
-// To use the code for Android projects, see http://kontent.ai/learn/android
 // EndDocSection

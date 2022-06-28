@@ -12,5 +12,4 @@ DeliveryClient client = new DeliveryClient(
 
 // Gets the latest version of an item
 CompletionStage<ContentItemResponse> item = client.getItem("my_article");
-// To use the code for Android projects, see http://kontent.ai/learn/android
 // EndDocSection

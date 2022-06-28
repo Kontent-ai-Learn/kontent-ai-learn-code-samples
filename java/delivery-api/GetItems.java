@@ -17,5 +17,4 @@ CompletionStage<List<Article>> articles = client.getItems(
         .orderByDesc("post_date")
         .build()
 );
-// To use the code for Android projects, see http://kontent.ai/learn/android
 // EndDocSection

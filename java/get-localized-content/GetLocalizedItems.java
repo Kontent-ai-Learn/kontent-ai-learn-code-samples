@@ -18,5 +18,4 @@ CompletionStage<Article> item = client.getItem(
 		.build()
 	
 );
-// To use the code for Android projects, see http://kontent.ai/learn/android
 // EndDocSection

@@ -11,5 +11,4 @@ CompletionStage<ContentTypesListingResponse> types = client.getTypes(
         .page(null, 3)
         .build()
     );
-// To use the code for Android projects, see http://kontent.ai/learn/android
 // EndDocSection
