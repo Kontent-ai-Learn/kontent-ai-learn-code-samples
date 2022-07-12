@@ -3,21 +3,21 @@
 // Gets items tagged with one specific tag
 CompletionStage<ContentItemsListingResponse> items = client.getItems(
   DeliveryParameterBuilder.params()
-    .filterContains("elements.tags", "kentico")
+    .filterContains("elements.tags", "kontent_ai")
     .build()
 );
 
 // Gets items tagged with a list of specific tags
 CompletionStage<ContentItemsListingResponse> items = client.getItems(
   DeliveryParameterBuilder.params()
-    .filterAll("elements.tags", "kontent", "headless")
+    .filterAll("elements.tags", "kontent_ai", "platform")
     .build()
 );
 
 // Gets items tagged with at least one of multiple tags
 CompletionStage<ContentItemsListingResponse> items = client.getItems(
   DeliveryParameterBuilder.params()
-    .filterAny("elements.tags", "football", "soccer")
+    .filterAny("elements.tags", "modular", "platform")
     .build()
 );
 // EndDocSection

@@ -2,7 +2,7 @@
 # Note: Filters work with codenames. This means codenames of the taxonomy terms or multiple choice options.
 # Gets items tagged with one specific tag
 query GetArticlesTaggedWithATerm {
-  article_All(where: {topic: {containsAny: ["kontent"]}}) {
+  article_All(where: {topic: {containsAny: ["kontent_ai"]}}) {
     items {
       title
     }
@@ -11,7 +11,7 @@ query GetArticlesTaggedWithATerm {
 
 # Gets items tagged with a list of specific tags
 query GetArticlesTaggedWithTerms {
-  article_All(where: {topic: {containsAll: ["kontent", "headless"]}}) {
+  article_All(where: {topic: {containsAll: ["kontent_ai", "platform"]}}) {
     items {
       title
     }
@@ -20,7 +20,7 @@ query GetArticlesTaggedWithTerms {
 
 # Gets items tagged with at least one tag from the list
 query GetArticlesTaggedWithOneOfTerms {
-  article_All(where: {topic: {containsAny: ["cms", "headless"]}}) {
+  article_All(where: {topic: {containsAny: ["modular", "platform"]}}) {
     items {
       title
     }

@@ -1,11 +1,14 @@
 // DocSection: import_model_create_snippet
 // Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
-var client = new KontentManagement.ManagementClient({
+// Using ES6 syntax
+import { ManagementClient } from '@kentico/kontent-management';
+
+const client = new ManagementClient({
   projectId: '<YOUR_PROJECT_ID>',
   apiKey: '<YOUR_API_KEY>'
 });
 
-client.addContentTypeSnippet()
+const response = client.addContentTypeSnippet()
   .withData(builder => {
     return {
       name: "Metadata",
@@ -29,4 +32,5 @@ client.addContentTypeSnippet()
       ]
     };
   })
+  .toPromise();
 // EndDocSection

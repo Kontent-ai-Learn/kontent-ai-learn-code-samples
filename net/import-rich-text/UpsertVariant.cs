@@ -34,7 +34,7 @@ await client.UpsertLanguageVariantAsync(identifier, new LanguageVariantUpsertMod
                         new TextElement
                         {
                             Element = Reference.ByExternalId("button-link"),
-                            Value = "https://kontent.a",
+                            Value = "https://kontent.ai",
                         }
                     })
                 }

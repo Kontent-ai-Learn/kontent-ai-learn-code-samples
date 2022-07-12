@@ -1,6 +1,6 @@
 // DocSection: importing_assets_upload_file
 // Using ES6 syntax
-// Note that this approach works when using Node.js. See a worked example using the browser: https://github.com/Enngage/kentico-cloud-content-management-js-demo
+// This approach works when using Node.js.
 import { ManagementClient } from '@kentico/kontent-management';
 import { readFileSync } from 'fs'
 

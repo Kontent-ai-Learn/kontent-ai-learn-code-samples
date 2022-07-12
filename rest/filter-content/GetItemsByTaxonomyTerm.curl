@@ -2,16 +2,16 @@
 # Note: Filters work with codenames of the tags.
 # Gets items tagged with one specific tag
 curl --request GET \
-  --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?elements.tags[contains]=kontent' \
+  --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?elements.tags[contains]=kontent_ai' \
   --header 'content-type: application/json'
   
 # Gets items tagged with a list of specific tags
 curl --request GET \
-  --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?elements.tags[all]=kontent,headless' \
+  --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?elements.tags[all]=kontent_ai,platform' \
   --header 'content-type: application/json'
 
 # Gets items tagged with at least one of multiple tags
 curl --request GET \
-  --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?elements.tags[any]=football,soccer' \
+  --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?elements.tags[any]=modular,platform' \
   --header 'content-type: application/json'
 # EndDocSection
