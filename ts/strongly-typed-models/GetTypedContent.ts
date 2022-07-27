@@ -4,14 +4,14 @@ import { createDeliveryClient } from '@kontent-ai/delivery-sdk';
 
 import { Homepage } from './models/homepage';
 
-// Creates an instance of the Delivery client and registers your model in type resolvers
+// Initializes the Delivery client and registers your model in type resolvers
 const deliveryClient = createDeliveryClient({
     projectId: '8d20758c-d74c-4f59-ae04-ee928c0816b7',
 });
 
 var homepage: Homepage;
 
-// Gets a content item from Kontent by its codename and maps it to its strongly typed model
+// Gets an item by codename from Kontent.ai and maps it to a strongly typed model
 const response = await deliveryClient.item<Homepage>('hello_caas_world')
   .toPromise();
 

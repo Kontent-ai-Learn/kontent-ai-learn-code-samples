@@ -14,12 +14,12 @@ namespace KenticoKontentModels
     public partial class Homepage
     {
         public const string Codename = "homepage";
-        public const string HeadlineCodename = "headline";
         public const string BodyTextCodename = "body_text";
+        public const string HeadlineCodename = "headline";
         public const string PictureCodename = "picture";
 
-        public string Headline { get; set; }
         public IRichTextContent BodyText { get; set; }
+        public string Headline { get; set; }
         public IEnumerable<IAsset> Picture { get; set; }
         public IContentItemSystemAttributes System { get; set; }
     }
