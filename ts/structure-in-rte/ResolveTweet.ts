@@ -1,6 +1,6 @@
 // DocSection: structure_in_rte_resolve_tweet
 // Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
-import { createRichTextHtmlResolver, Elements, createDeliveryClient, linkedItemsHelper, IContentItem } from '@kentico/kontent-delivery';
+import { createRichTextHtmlResolver, Elements, createDeliveryClient, linkedItemsHelper, IContentItem } from '@kontent-ai/delivery-sdk';
 
 const deliveryClient = createDeliveryClient({
   projectId: '<YOUR_PROJECT_ID>',

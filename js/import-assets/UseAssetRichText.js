@@ -1,7 +1,7 @@
 // DocSection: importing_assets_use_asset_rich_text
 // Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
 // Using ES6 syntax
-import { ManagementClient } from '@kentico/kontent-management';
+import { ManagementClient } from '@kontent-ai/management-sdk';
 
 const client = new ManagementClient({
   projectId: '<YOUR_PROJECT_ID>',

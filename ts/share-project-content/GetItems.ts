@@ -1,6 +1,6 @@
 // DocSection: sharing_project_content_get_items
 // Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
-import { IContentItem, createDeliveryClient } from "@kentico/kontent-delivery";
+import { IContentItem, createDeliveryClient } from "@kontent-ai/delivery-sdk";
 
 const deliveryClient1 = createDeliveryClient({
     projectId: "975bf280-fd91-488c-994c-2f04416e5ee3"

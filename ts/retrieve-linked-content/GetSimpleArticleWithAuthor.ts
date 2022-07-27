@@ -1,6 +1,6 @@
 // DocSection: linked_content_get_article_with_author
 // Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
-import { createDeliveryClient } from '@kentico/kontent-delivery';
+import { createDeliveryClient } from '@kontent-ai/delivery-sdk';
 import { Author } from './models/Author';
 import { SimpleArticle } from './models/SimpleArticle';
 

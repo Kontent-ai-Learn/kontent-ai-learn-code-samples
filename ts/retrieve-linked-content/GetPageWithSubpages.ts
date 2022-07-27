@@ -1,6 +1,6 @@
 // DocSection: linked_content_get_page_with_subpages
 // Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
-import { createDeliveryClient } from '@kentico/kontent-delivery';
+import { createDeliveryClient } from '@kontent-ai/delivery-sdk';
 import { Page } from './models/Page';
 
 const deliveryClient = createDeliveryClient({
