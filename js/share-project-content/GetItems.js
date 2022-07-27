@@ -1,6 +1,6 @@
 // DocSection: sharing_project_content_get_items
 // Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
-const KontentDelivery = require("@kentico/kontent-delivery");
+const KontentDelivery = require("@kontent-ai/delivery-sdk");
 
 const deliveryClient1 = KontentDelivery.createDeliveryClient({
   projectId: "975bf280-fd91-488c-994c-2f04416e5ee3"

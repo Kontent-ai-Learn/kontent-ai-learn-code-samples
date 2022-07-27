@@ -1,6 +1,6 @@
 // DocSection: securing_public_access_get_article
 // Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
-import { IContentItem, createDeliveryClient, Elements } from '@kentico/kontent-delivery';
+import { IContentItem, createDeliveryClient, Elements } from '@kontent-ai/delivery-sdk';
 
 // Create strongly typed models according to https://kontent.ai/learn/strongly-typed-models
 export type Article = IContentItem<{

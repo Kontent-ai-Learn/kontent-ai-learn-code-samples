@@ -1,6 +1,6 @@
 // DocSection: managing_navigation_articles_slugs
 // Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
-import { createDeliveryClient } from '@kentico/kontent-delivery';
+import { createDeliveryClient } from '@kontent-ai/delivery-sdk';
 import { Article } from './models/Article';
 import { NavigationItem } from './models/NavigationItem';
 

@@ -1,5 +1,5 @@
 // DocSection: structure_in_rte_resolve_tweet
-const KontentDelivery = require('@kentico/kontent-delivery');
+const KontentDelivery = require('@kontent-ai/delivery-sdk');
 
 // Initializes the Delivery client.
 const deliveryClient = KontentDelivery.createDeliveryClient({

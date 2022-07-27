@@ -1,7 +1,7 @@
 // DocSection: importing_assets_upload_file
 // Using ES6 syntax
 // This approach works when using Node.js.
-import { ManagementClient } from '@kentico/kontent-management';
+import { ManagementClient } from '@kontent-ai/management-sdk';
 import { readFileSync } from 'fs'
 
 const client = new ManagementClient({

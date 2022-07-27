@@ -1,7 +1,7 @@
 // DocSection: cm_api_v2_post_asset_folders
 // Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
 // Using ES6 syntax
-import { ManagementClient } from '@kentico/kontent-management';
+import { ManagementClient } from '@kontent-ai/management-sdk';
 
 const client = new ManagementClient({
   projectId: '<YOUR_PROJECT_ID>',
