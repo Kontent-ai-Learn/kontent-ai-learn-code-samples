@@ -1,6 +1,6 @@
 // DocSection: delivery_api_get_items_feed
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
-using Kentico.Kontent.Delivery;
+using Kontent.Ai.Delivery;
 
 // Creates an instance of the delivery client; see https://kontent.ai/learn/net-register-client
 IDeliveryClient client = DeliveryClientBuilder

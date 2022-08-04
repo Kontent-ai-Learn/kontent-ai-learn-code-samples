@@ -1,6 +1,6 @@
 // DocSection: import_model_create_type
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
-using Kentico.Kontent.Management;
+using Kontent.Ai.Management;
 
 var client = new ManagementClient(new ManagementOptions
 {

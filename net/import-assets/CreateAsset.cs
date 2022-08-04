@@ -1,6 +1,6 @@
 // DocSection: importing_assets_create_asset
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
-using Kentico.Kontent.Management;
+using Kontent.Ai.Management;
 
 var client = new ManagementClient(new ManagementOptions
 {

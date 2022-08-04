@@ -1,7 +1,7 @@
 // DocSection: cm_api_v2_patch_environment
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
-using Kentico.Kontent.Management;
-using Kentico.Kontent.Management.Models.Environments.Patch;
+using Kontent.Ai.Management;
+using Kontent.Ai.Management.Models.Environments.Patch;
 
 var client = new ManagementClient(new ManagementOptions
 {

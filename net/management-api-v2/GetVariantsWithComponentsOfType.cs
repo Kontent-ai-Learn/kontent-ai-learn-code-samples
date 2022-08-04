@@ -1,6 +1,6 @@
 // DocSection: cm_api_v2_get_components_of_type
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
-using Kentico.Kontent.Management;
+using Kontent.Ai.Management;
 
 var client = new ManagementClient(new ManagementOptions
 {

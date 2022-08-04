@@ -1,6 +1,6 @@
 // DocSection: cm_api_v2_put_variant_workflow_step
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
-using Kentico.Kontent.Management;
+using Kontent.Ai.Management;
 
 var client = new ManagementClient(new ManagementOptions
 {

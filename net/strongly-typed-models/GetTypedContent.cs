@@ -1,6 +1,6 @@
 // DocSection: strongly_typed_models_retrieve
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
-using Kentico.Kontent.Delivery;
+using Kontent.Ai.Delivery;
 using KenticoKontentModels;
 
 // Creates an instance of the delivery client

@@ -1,6 +1,6 @@
 // DocSection: managing_navigation_articles_slugs
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
-using Kentico.Kontent.Delivery;
+using Kontent.Ai.Delivery;
 
 // Tip: Use DI for this in your apps https://kontent.ai/learn/net-register-client
 IDeliveryClient client = DeliveryClientBuilder
