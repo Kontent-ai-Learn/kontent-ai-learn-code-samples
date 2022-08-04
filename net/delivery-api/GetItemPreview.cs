@@ -10,7 +10,7 @@ IDeliveryClient client = DeliveryClientBuilder
         .Build())
     .Build();
 
-// Generate strongly typed models via https://github.com/Kentico/kontent-generators-net
+// Generate strongly typed models via https://github.com/kontent-ai/model-generator-net
 IDeliveryItemResponse<Article> response = await client.GetItemAsync<Article>("my_article");
 Article item = response.Item;
 // EndDocSection
