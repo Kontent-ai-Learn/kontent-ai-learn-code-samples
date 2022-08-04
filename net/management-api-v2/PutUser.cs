@@ -8,7 +8,7 @@ var client = new ManagementClient(new ManagementOptions
     ProjectId = "<YOUR_PROJECT_ID>"
 });
 
-var identifier = UserIdentifier.ByEmail("user@kentico.com");
+var identifier = UserIdentifier.ByEmail("user@kontent.ai");
 //var identifier = UserIdentifier.ById("d94bc87a-c066-48a1-a910-4f991ccc1fb5");
 
 var response = await client.ModifyUsersRolesAsync(
