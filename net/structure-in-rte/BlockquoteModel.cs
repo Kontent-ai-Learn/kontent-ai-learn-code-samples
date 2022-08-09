@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using Kontent.Ai.Delivery.Abstractions;
 
-namespace KenticoKontentModels
+namespace KontentAiModels
 {
     public partial class Blockquote
     {
