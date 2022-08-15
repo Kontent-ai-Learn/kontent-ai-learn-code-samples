@@ -1,11 +1,11 @@
 // DocSection: structure_in_rte_tweet_model
-// Generate strongly typed models at https://github.com/Kentico/kontent-generators-net
+// Generate strongly typed models at https://github.com/kontent-ai/model-generator-net
 
 using System;
 using System.Collections.Generic;
-using Kentico.Kontent.Delivery.Abstractions;
+using Kontent.Ai.Delivery.Abstractions;
 
-namespace KenticoKontentModels
+namespace KontentAiModels
 {
     public partial class Tweet
     {

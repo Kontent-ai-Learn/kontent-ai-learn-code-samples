@@ -1,6 +1,6 @@
 // DocSection: cm_api_v2_put_var_cancel_sched_unpublish
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
-using Kentico.Kontent.Management;
+using Kontent.Ai.Management;
 
 var client = new ManagementClient(new ManagementOptions
 {

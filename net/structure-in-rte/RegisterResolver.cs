@@ -1,8 +1,8 @@
 // DocSection: structure_in_rte_register_resolver
-// You can also register it in IServiceCollection or another framework for dependency injection: https://github.com/Kentico/delivery-sdk-net/wiki/String-based-rendering-of-items-in-Rich-text#registering-a-resolver
+// You can also register it in IServiceCollection or another framework for dependency injection: https://github.com/kontent-ai/delivery-sdk-net/blob/master/docs/customization-and-extensibility/rich-text/string-based-linked-items-rendering.md#registering-a-resolver
 
-using Kentico.Kontent.Delivery;
-using Kentico.Kontent.Delivery.InlineContentItems;
+using Kontent.Ai.Delivery;
+using Kontent.Ai.Delivery.InlineContentItems;
 
 IDeliveryClient client = DeliveryClientBuilder
     .WithProjectId("<YOUR_PROJECT_ID>")

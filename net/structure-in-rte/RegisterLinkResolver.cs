@@ -1,6 +1,6 @@
 // DocSection: structure_in_rte_register_link_resolver
 // You can also register the resolver in IServiceCollection or another framework for dependency injection: https://kontent.ai/learn/net-register-resolver
-using Kentico.Kontent.Delivery;
+using Kontent.Ai.Delivery;
 
 IDeliveryClient client = DeliveryClientBuilder
     .WithProjectId("<YOUR_PROJECT_ID>")

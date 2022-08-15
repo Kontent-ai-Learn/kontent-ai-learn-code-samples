@@ -1,6 +1,6 @@
 // DocSection: sharing_project_content_get_items
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
-using Kentico.Kontent.Delivery;
+using Kontent.Ai.Delivery;
 
 public class Startup
 {

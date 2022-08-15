@@ -1,6 +1,6 @@
 // DocSection: using_webhooks_get_latest_content
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
-using Kentico.Kontent.Delivery;
+using Kontent.Ai.Delivery;
 
 // Initializes a client that retrieves the latest version of published content
 IDeliveryClient client = DeliveryClientBuilder

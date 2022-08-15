@@ -1,6 +1,6 @@
 // DocSection: preview_content_get_article
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
-using Kentico.Kontent.Delivery;
+using Kontent.Ai.Delivery;
 
 // Creates an instance of the delivery client
 // ProTip: Use DI for this in your apps https://kontent.ai/learn/net-register-client for previewing content
