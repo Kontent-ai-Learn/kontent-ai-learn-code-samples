@@ -21,12 +21,12 @@ const richTextElement = response.data.item.elements.body;
 
 // Note: The code below executes correctly in browser. To adjust the code for nodejs, see https://kontent.ai/learn/js-rte-nodejs
 // Defines how to resolve the rich text element
-const resolvedRichText = KontentDelivery.createRichTextHtmlResolver().resolveRichText({
+const resolvedRichText = createRichTextHtmlResolver().resolveRichText({
   // Gives the resolver the contents of your rich text
   element: richTextElement,
   // Points the resolver to the content items and components that might be used in the rich text element
-  linkedItems: KontentDelivery.linkedItemsHelper.convertLinkedItemsToArray(response.data.linkedItems),
-  contentItemResolver: (contentItem) => {
+  linkedItems: linkedItemsHelper.convertLinkedItemsToArray(response.data.linkedItems),
+  contentItemResolver: (itemId, contentItem) => {
     // For tweet items and components, resolves to the following HTML markup
     if (contentItem && contentItem.system.type === 'tweet') {
       return {
