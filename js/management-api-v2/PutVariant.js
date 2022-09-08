@@ -32,7 +32,8 @@ const response = await client.upsertLanguageVariant()
         element: {
             codename: 'post_date'
         },
-        value: '2014-11-07T00:00:00Z'
+        value: '2014-11-07T00:00:00Z',
+        display_timezone: "Australia/Sydney"
     }),
     builder.textElement({
       element: {

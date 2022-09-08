@@ -28,7 +28,8 @@ curl --request PUT \
       "element":{
         "codename":"post_date"
       },
-      "value":"2014-11-07T00:00:00Z"
+      "value":"2014-11-07T00:00:00Z",
+      "display_timezone":"Australia/Sydney"
     },
     {
       "element":{
