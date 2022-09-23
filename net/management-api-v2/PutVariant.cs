@@ -33,7 +33,8 @@ var response = await client.UpsertLanguageVariantAsync(
             new DateTimeElement
             {
                 Element = Reference.ByCodename("post_date"),
-                Value = DateTime.Parse("2014-11-07T00:00:00Z")
+                Value = DateTime.Parse("2014-11-07T00:00:00Z"),
+                DisplayTimeZone = "Australia/Sydney"
             },
             new TextElement
             {
