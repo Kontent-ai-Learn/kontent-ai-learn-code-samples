@@ -12,7 +12,7 @@ IDeliveryClient client = DeliveryClientBuilder
 IDeliveryItemListingResponse<object> response = await 
 client.GetItemsAsync<object>(
     new LanguageParameter("es-ES"),
-    new EqualsParameter("system.language", "es-ES")
+    new EqualsFilter("system.language", "es-ES")
     );
 
 IList<object> items = response.Items;
