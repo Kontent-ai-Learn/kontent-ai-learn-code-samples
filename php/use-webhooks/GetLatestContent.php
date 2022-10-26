@@ -4,7 +4,7 @@
 // Defined by Composer to include required libraries
 require __DIR__ . '/vendor/autoload.php';
 
-use Kentico\Kontent\Delivery\DeliveryClient;
+use Kontent\Ai\Delivery\DeliveryClient;
 
 $client = new DeliveryClient("<YOUR_PROJECT_ID>", null, true);
 
