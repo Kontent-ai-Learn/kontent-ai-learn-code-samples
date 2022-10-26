@@ -7,10 +7,10 @@ import kontent.ai.delivery.generators.CodeGenerator
 
 buildscript {
     repositories {
-        jcenter()
+        mavenCentral()
     }
     dependencies {
-        classpath('com.github.kentico:kontent-delivery-generators:latest.release')
+        classpath('ai.kontent:kontent-delivery-generators:latest.release')
     }
 }
 
