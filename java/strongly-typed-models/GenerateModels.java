@@ -1,5 +1,5 @@
 // DocSection: strongly_typed_models_generators
-// Find instructions on using the Java model generator at https://github.com/Kentico/kontent-java-packages/tree/master/kontent-delivery-generators
+// Find instructions on using the Java model generator at https://github.com/kontent-ai/java-packages/tree/master/delivery-sdk-generators
 import com.squareup.javapoet.JavaFile
 import kentico.kontent.delivery.DeliveryClient
 import kentico.kontent.delivery.DeliveryOptions
