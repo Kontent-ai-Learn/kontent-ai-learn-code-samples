@@ -2,10 +2,10 @@
 // Generate strongly typed models at https://github.com/kontent-ai/java-packages/tree/master/delivery-sdk-generators
 // Tip: Find more about Java SDK at https://kontent.ai/learn/java
 
-import kentico.kontent.delivery.ContentItemMapping;
-import kentico.kontent.delivery.ElementMapping;
-import kentico.kontent.delivery.Option;
-import kentico.kontent.delivery.System;
+import kontent.ai.delivery.ContentItemMapping;
+import kontent.ai.delivery.ElementMapping;
+import kontent.ai.delivery.Option;
+import kontent.ai.delivery.System;
 import java.lang.String;
 import java.util.List;
 

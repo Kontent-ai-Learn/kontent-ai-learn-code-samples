@@ -1,6 +1,6 @@
 // DocSection: securing_public_access_get_article
 // Tip: Find more about Java SDK at https://kontent.ai/learn/java
-import kentico.kontent.delivery.*;
+import kontent.ai.delivery.*;
 
 // Initializes a DeliveryClient with secure access key
 DeliveryClient client = new DeliveryClient(

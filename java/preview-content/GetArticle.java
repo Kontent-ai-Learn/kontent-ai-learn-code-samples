@@ -1,6 +1,6 @@
 // DocSection: preview_content_get_article
 // Tip: Find more about Java SDK at https://kontent.ai/learn/java
-import kentico.kontent.delivery.*;
+import kontent.ai.delivery.*;
 
 // Initializes a DeliveryClient for preview
 DeliveryClient client = new DeliveryClient(

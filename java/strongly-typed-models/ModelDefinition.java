@@ -1,9 +1,9 @@
 // DocSection: strongly_typed_models_definition
 // Tip: Find more about Java SDK at https://kontent.ai/learn/java
-import kentico.kontent.delivery.Asset;
-import kentico.kontent.delivery.ContentItemMapping;
-import kentico.kontent.delivery.ElementMapping;
-import kentico.kontent.delivery.System;
+import kontent.ai.delivery.Asset;
+import kontent.ai.delivery.ContentItemMapping;
+import kontent.ai.delivery.ElementMapping;
+import kontent.ai.delivery.System;
 import java.lang.String;
 import java.util.List;
 

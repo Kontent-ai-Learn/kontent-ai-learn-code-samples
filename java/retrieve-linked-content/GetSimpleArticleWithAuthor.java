@@ -1,6 +1,6 @@
 // DocSection: linked_content_get_article_with_author
 // Tip: Find more about Java SDK at https://kontent.ai/learn/java
-import kentico.kontent.delivery.*;
+import kontent.ai.delivery.*;
 
 // Initializes a DeliveryClient
 DeliveryClient client = new DeliveryClient("<YOUR_PROJECT_ID>");

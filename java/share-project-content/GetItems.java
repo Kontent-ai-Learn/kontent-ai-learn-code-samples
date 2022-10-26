@@ -1,6 +1,6 @@
 // DocSection: sharing_project_content_get_items
 // Tip: Find more about Java SDK at https://kontent.ai/learn/java
-import kentico.kontent.delivery.*;
+import kontent.ai.delivery.*;
 
 // Initializes the content delivery clients
 DeliveryClient client1 = new DeliveryClient("975bf280-fd91-488c-994c-2f04416e5ee3");
