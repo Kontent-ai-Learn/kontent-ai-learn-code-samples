@@ -1,6 +1,6 @@
 // DocSection: using_webhooks_get_latest_content
 // Tip: Find more about Java SDK at https://kontent.ai/learn/java
-import kentico.kontent.delivery.*;
+import kontent.ai.delivery.*;
 
 DeliveryOptions deliveryOptions = new DeliveryOptions();
 deliveryOptions.setProjectId("<YOUR_PROJECT_ID>");

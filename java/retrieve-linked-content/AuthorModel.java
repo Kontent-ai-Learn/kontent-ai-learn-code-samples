@@ -1,11 +1,11 @@
 // DocSection: linked_content_author_model
 // Create strongly typed models according to https://kontent.ai/learn/strongly-typed-models
 
-import kentico.kontent.delivery.ContentItemMapping;
-import kentico.kontent.delivery.ElementMapping;
-import kentico.kontent.delivery.System;
 import java.lang.String;
 import java.util.List;
+import kontent.ai.delivery.ContentItemMapping;
+import kontent.ai.delivery.ElementMapping;
+import kontent.ai.delivery.System;
 
 @ContentItemMapping("author")
 public class Homepage {

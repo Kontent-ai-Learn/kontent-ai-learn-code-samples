@@ -1,16 +1,16 @@
 // DocSection: strongly_typed_models_generators
 // Find instructions on using the Java model generator at https://github.com/kontent-ai/java-packages/tree/master/delivery-sdk-generators
 import com.squareup.javapoet.JavaFile
-import kentico.kontent.delivery.DeliveryClient
-import kentico.kontent.delivery.DeliveryOptions
-import kentico.kontent.delivery.generators.CodeGenerator
+import kontent.ai.delivery.DeliveryClient
+import kontent.ai.delivery.DeliveryOptions
+import kontent.ai.delivery.generators.CodeGenerator
 
 buildscript {
     repositories {
-        jcenter()
+        mavenCentral()
     }
     dependencies {
-        classpath('com.github.kentico:kontent-delivery-generators:latest.release')
+        classpath('ai.kontent:kontent-delivery-generators:latest.release')
     }
 }
 
@@ -26,7 +26,7 @@ task generateModels {
 
         CodeGenerator generator = new CodeGenerator(
             options.getProjectId(),
-            'com.kentico.kontent.test.springapp.models',
+            'ai.kontent.test.springapp.models',
             file('src/main/java')
         );
         List<JavaFile> sources = generator.generateSources(client);

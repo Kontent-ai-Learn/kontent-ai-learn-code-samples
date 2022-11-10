@@ -2,7 +2,7 @@
 // Tip: Find more about Java SDK at https://kontent.ai/learn/java
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class KenticoKontentWebhookModel {
+public class KontentWebhookModel {
     @JsonProperty("message")
     Message message;
 
