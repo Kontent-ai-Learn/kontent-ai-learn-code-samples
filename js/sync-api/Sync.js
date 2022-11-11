@@ -8,18 +8,17 @@ const deliveryClient = KontentDelivery.createDeliveryClient({
 
 const response = await deliveryClient.syncChanges().toPromise();
 
-// store this token in persistent storage for later use
+// Store the X-Continuation token in a persistent storage for later use
 const continuationToken = response.xContinuationToken;
 
 for (const item of response.data.items) {
   if (item.changeType === "changed") {
-    // process changed item
+    // Add logic for case when a content item is changed
   } else if (item.changeType === "deleted") {
-    // process deleted item
+    // Add logic for case when a content item is deleted
   }
 }
 
-// query next set of sync items
+// Synchronize the next batch of changes
 const nextResponse = await deliveryClient.syncChanges().withContinuationToken(continuationToken).toPromise();
-
 // EndDocSection

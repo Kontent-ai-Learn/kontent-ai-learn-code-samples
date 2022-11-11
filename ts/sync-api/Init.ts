@@ -8,6 +8,6 @@ const deliveryClient = createDeliveryClient({
 
 const response = await deliveryClient.initializeSync().toPromise();
 
-// store this token in persistent storage for later use
+// Store the X-Continuation token in a persistent storage for later use
 const continuationToken = response.xContinuationToken;
 // EndDocSection
