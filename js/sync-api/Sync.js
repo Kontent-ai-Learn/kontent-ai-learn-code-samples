@@ -1,4 +1,4 @@
-// DocSection: sync_api_sync
+// DocSection: sync_api_synchronize_changes
 // Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
 const KontentDelivery = require('@kontent-ai/delivery-sdk');
 
