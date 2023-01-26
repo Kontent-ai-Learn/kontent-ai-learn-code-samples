@@ -8,3 +8,4 @@ curl --location --request POST \
     "name": "Space 1",
     "codename": "space_1,
   }'
+# EndDocSection
