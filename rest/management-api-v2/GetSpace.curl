@@ -1,0 +1,7 @@
+# DocSection: cm_api_v2_get_space
+curl --location --request GET \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/spaces/6291c693-f6e4-4a6b-ac67-5c31c32f9388 \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/spaces/codename/space_1 \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: application/json'
+# EndDocSection
