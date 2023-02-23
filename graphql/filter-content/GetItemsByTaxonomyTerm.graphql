@@ -11,7 +11,7 @@ query GetArticlesTaggedWithATerm {
 
 # Gets items tagged with a list of specific tags
 query GetArticlesTaggedWithTerms {
-  article_All(where: {topic: {containsAll: ["kontent_ai", "platform"]}}) {
+  article_All(where: {topic: {containsAll: ["kontent_ai", "cms"]}}) {
     items {
       title
     }
@@ -20,7 +20,7 @@ query GetArticlesTaggedWithTerms {
 
 # Gets items tagged with at least one tag from the list
 query GetArticlesTaggedWithOneOfTerms {
-  article_All(where: {topic: {containsAny: ["modular", "platform"]}}) {
+  article_All(where: {topic: {containsAny: ["headless", "cms"]}}) {
     items {
       title
     }

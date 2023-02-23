@@ -10,14 +10,14 @@ CompletionStage<ContentItemsListingResponse> items = client.getItems(
 // Gets items tagged with a list of specific tags
 CompletionStage<ContentItemsListingResponse> items = client.getItems(
   DeliveryParameterBuilder.params()
-    .filterAll("elements.tags", "kontent_ai", "platform")
+    .filterAll("elements.tags", "kontent_ai", "cms")
     .build()
 );
 
 // Gets items tagged with at least one of multiple tags
 CompletionStage<ContentItemsListingResponse> items = client.getItems(
   DeliveryParameterBuilder.params()
-    .filterAny("elements.tags", "modular", "platform")
+    .filterAny("elements.tags", "headless", "cms")
     .build()
 );
 // EndDocSection

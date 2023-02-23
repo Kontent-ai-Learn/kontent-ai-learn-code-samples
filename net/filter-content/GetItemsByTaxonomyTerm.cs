@@ -7,11 +7,11 @@ IDeliveryItemListingResponse<object> response = await deliveryClient.GetItemsAsy
 
 // Gets items tagged with a list of specific tags
 IDeliveryItemListingResponse<object> response = await deliveryClient.GetItemsAsync<object>(
-    new AllFilter("elements.tags", "kontent_ai", "platform")
+    new AllFilter("elements.tags", "kontent_ai", "cms")
 );
 
 // Gets items tagged with at least one tag from the list
 IDeliveryItemListingResponse<object> response = await deliveryClient.GetItemsAsync<object>(
-    new AnyFilter("elements.tags", "modular", "platform")
+    new AnyFilter("elements.tags", "headless", "cms")
 );
 // EndDocSection
