@@ -12,6 +12,11 @@ curl --request PUT \
         {
           "codename": "article"
         }
+      ],
+      collections: [
+        {
+          "codename": "marketing"
+        }
       ]
     }
   ],
