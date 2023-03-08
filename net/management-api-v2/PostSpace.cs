@@ -8,7 +8,7 @@ var client = new ManagementClient(new ManagementOptions
     ProjectId = "<YOUR_PROJECT_ID>"
 });
 
-var response = await client.CreateSpaceAsync(new SpaceCreateRequestModel
+var response = await client.CreateSpaceAsync(new SpaceCreateModel
     {
         Name = "Space 1", 
         Codename = "space_1"

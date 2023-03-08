@@ -8,9 +8,9 @@ var client = new ManagementClient(new ManagementOptions
     ProjectId = "<YOUR_PROJECT_ID>"
 });
 
-var response = await client.UpdatePreviewConfigurationAsync(new PreviewConfigurationRequestModel()
+var response = await client.UpdatePreviewConfigurationAsync(new PreviewConfigurationModel()
     {
-        SpaceDomains = new List<SpaceDomainRequestModel>
+        SpaceDomains = new List<SpaceDomainModel>
         {
             new()
             {
@@ -18,12 +18,12 @@ var response = await client.UpdatePreviewConfigurationAsync(new PreviewConfigura
                 Space = Reference.ByCodename("my_space")
             }
         },
-        PreviewUrlPatterns = new List<TypePreviewUrlPatternRequestModel>
+        PreviewUrlPatterns = new List<TypePreviewUrlPatternModel>
         {
             new()
             {
                 ContentType = Reference.ByCodename("article"),
-                UrlPatterns = new List<PreviewUrlPatternRequestModel>
+                UrlPatterns = new List<PreviewUrlPatternModel>
                 {
                     new()
                     {
