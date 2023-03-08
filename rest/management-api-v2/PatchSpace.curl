@@ -9,9 +9,7 @@ curl --location --request PATCH \
     {
       "op": "replace",
       "property_name": "codename",
-      "value": {
-    	  "codename": "new_space_codename"
-      }
+      "value": "new_space_codename"
     },
     {
       "op": "replace",
