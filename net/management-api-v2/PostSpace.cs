@@ -11,7 +11,8 @@ var client = new ManagementClient(new ManagementOptions
 var response = await client.CreateSpaceAsync(new SpaceCreateModel
     {
         Name = "Space 1", 
-        Codename = "space_1"
+        Codename = "space_1",
+        WebSpotlightRootItem = Reference.ByCodename("root_item_1")
     }
 );
 // EndDocSection

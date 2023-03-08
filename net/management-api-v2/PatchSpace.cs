@@ -22,6 +22,11 @@ var response = await client.ModifySpaceAsync(identifier, new SpaceOperationRepla
         {
             PropertyName = PropertyName.Codename,
             Value = "new_space_codename"
+        },
+        new SpaceOperationReplaceModel
+        {
+            PropertyName = PropertyName.WebSpotlightRootItem,
+            Value = Reference.ById(Guid.Parse("1024356f-858f-421a-b804-07c6bfe10ce5"))
         } 
     }
 );
