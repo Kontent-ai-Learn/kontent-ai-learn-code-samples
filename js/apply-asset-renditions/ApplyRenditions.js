@@ -1,3 +1,4 @@
+// DocSection: apply_asset_renditions
 // Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
 const KontentDelivery = require('@kontent-ai/delivery-sdk');
 
@@ -17,3 +18,4 @@ const asset = response.data.item.elements.teaser_image.value[0];
 
 // Gets the asset's URL. If the asset specifies a rendition, it's automatically applied.
 const assetUrl = asset.url;
+// EndDocSection

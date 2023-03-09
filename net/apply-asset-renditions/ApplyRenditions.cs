@@ -1,3 +1,4 @@
+// DocSection: apply_asset_renditions
 // Initializes a Delivery client
 _client = DeliveryClientBuilder
     .WithOptions(builder => builder
@@ -17,3 +18,4 @@ var renditionQuery = imageWithRendition.Renditions["default"].Query;
 
 // Combines the original image URL with the asset rendition query, if the image specifies a query
 var assetUrl = $"{imageWithRenditions.Url}?{renditionQuery}";
+// EndDocSection
