@@ -9,5 +9,6 @@ const client = new ManagementClient({
 });
 
 const response = await client
-.listSpaces()
-.toPromise();
+  .listSpaces()
+  .toPromise();
+// EndDocSection

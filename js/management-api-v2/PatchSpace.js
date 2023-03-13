@@ -10,22 +10,23 @@ const client = new ManagementClient({
 });
 
 client
-.modifySpace()
-.bySpaceCodename('my_new_space')
-.withData(
+  .modifySpace()
+  .bySpaceCodename('my_new_space')
+  .withData(
     [
-        {
-            "op": "replace",
-            "property_name": "codename",
-            "value": "new_space_codename" 
-            
-        },
-        {
-            "op": "replace",
-            "property_name": "name",
-            "value": "new_space_name"
-        },
+      {
+        "op": "replace",
+        "property_name": "codename",
+        "value": "new_space_codename"
+
+      },
+      {
+        "op": "replace",
+        "property_name": "name",
+        "value": "new_space_name"
+      },
     ]
 
-)
-.toPromise();
+  )
+  .toPromise();
+// EndDocSection

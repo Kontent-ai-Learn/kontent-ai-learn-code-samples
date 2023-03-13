@@ -9,6 +9,7 @@ const client = new ManagementClient({
 });
 
 const response = await client
-.deleteSpace()
-.bySpaceCodename('my_new_space')
-.toPromise();
+  .deleteSpace()
+  .bySpaceCodename('my_new_space')
+  .toPromise();
+// EndDocSection
