@@ -4,8 +4,8 @@
 delivery_client.items('elements.tags'.contains('kontent_ai'))
 
 # Gets items tagged with a list of specific tags
-delivery_client.items('elements.tags'.any('kontent_ai', 'platform'))
+delivery_client.items('elements.tags'.any('kontent_ai', 'cms'))
 
 # Gets items tagged with at least one of multiple tags
-delivery_client.items('elements.tags'.contains('modular', 'content', 'platform'))
+delivery_client.items('elements.tags'.contains('headless', 'cms'))
 # EndDocSection

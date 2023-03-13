@@ -41,6 +41,10 @@ var newWorkflow = new WorkflowUpsertModel
             ContentTypes = new [] {
                 Reference.ById(Guid.Parse("1aeb9220-f167-4f8e-a7db-1bfec365fa80")),
                 Reference.ByCodename("Article")
+            },
+            Collections = new [] {
+                Reference.ById(Guid.Parse("b15b6050-80d8-406d-bf21-3012e4ad0ac5")),
+                Reference.ByCodename("Marketing")
             }
         }
     },

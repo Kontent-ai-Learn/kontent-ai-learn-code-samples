@@ -20,6 +20,11 @@ const response = await client.updateWorkflow()
             {
               codename: "article"
             }
+          ],
+          collections: [
+            {
+              "id": "b15b6050-80d8-406d-bf21-3012e4ad0ac5"
+            }
           ]
         }
       ],

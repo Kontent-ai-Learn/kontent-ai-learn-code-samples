@@ -12,6 +12,11 @@ curl --request POST \
         {
           "id": "1aeb9220-f167-4f8e-a7db-1bfec365fa80"
         }
+      ],
+      "collections": [
+        {
+          "id": "b15b6050-80d8-406d-bf21-3012e4ad0ac5"
+        }
       ]
     }
   ],
