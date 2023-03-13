@@ -78,7 +78,7 @@ const response = await client.upsertLanguageVariant()
       ],
       workflow: {
         step_identifier: {
-          codename: 'my_workflow step'
+          codename: 'my_workflow_step'
         },
         workflow_identifier: {
           codename: 'my_workflow'
