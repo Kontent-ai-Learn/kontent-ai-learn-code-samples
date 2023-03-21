@@ -1,6 +1,6 @@
 # DocSection: cm_api_v2_patch_environment
 curl --request PATCH \
-  --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID> \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID> \
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
   --header 'Content-type: application/json'
   --data '

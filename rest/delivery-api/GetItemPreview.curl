@@ -1,5 +1,5 @@
 # DocSection: delivery_api_get_item_preview
 curl --request GET \
-  --url https://preview-deliver.kontent.ai/<YOUR_PROJECT_ID>/items/my_article \
+  --url https://preview-deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/items/my_article \
   --header 'authorization: Bearer <YOUR_PREVIEW_API_KEY>'
 # EndDocSection

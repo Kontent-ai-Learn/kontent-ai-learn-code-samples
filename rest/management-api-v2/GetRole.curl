@@ -1,7 +1,7 @@
 # DocSection: cm_api_v2_get_role
 curl --request GET \
-  --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/roles/7dedb656-aef7-40ae-8158-98bbf3542f4a \
-# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/roles/codename/project-manager \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/roles/7dedb656-aef7-40ae-8158-98bbf3542f4a \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/roles/codename/project-manager \
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
   --header 'Content-type: application/json
 # EndDocSection

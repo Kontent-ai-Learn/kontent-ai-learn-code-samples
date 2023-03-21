@@ -2,21 +2,21 @@
 # Note: Date & time element values are provided by users and stored with minute precision. The system.last_modified value reflects Last content change to an item and is stored with ms precision.
 # Gets items modified after April 9 2020, 9 am UTC+0
 curl --request GET \
-  --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?system.last_modified[gt]=2020-05-09T09:00:00.000000Z' \
+  --url 'https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/items?system.last_modified[gt]=2020-05-09T09:00:00.000000Z' \
   --header 'content-type: application/json'
 
 # Gets items released at or after April 9 2020, 7 am UTC+0
 curl --request GET \
-  --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?"elements.release_date[gte]=2020-05-09T07:00:00Z"' \
+  --url 'https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/items?"elements.release_date[gte]=2020-05-09T07:00:00Z"' \
   --header 'content-type: application/json'
 
 # Gets items modified before April 5 2020 UTC+0. Last match would be at 2020-05-04T23:59:59.
 curl --request GET \
-  --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?system.last_modified[lt]=2020-05-05' \
+  --url 'https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/items?system.last_modified[lt]=2020-05-05' \
   --header 'content-type: application/json'
 
 # Gets items released at or before April 5 2020 10:30 am UTC+0
 curl --request GET \
-  --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?elements.release_date", "2020-05-05T10:30:00Z' \
+  --url 'https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/items?elements.release_date", "2020-05-05T10:30:00Z' \
   --header 'content-type: application/json'
 # EndDocSection 

@@ -1,6 +1,6 @@
 # DocSection: using_webhooks_get_latest_content
 curl --request GET \
-  --url https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items/my_article \
+  --url https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/items/my_article \
   --header 'X-KC-Wait-For-Loading-New-Content: true' \
   --header 'content-type: application/json'
 # EndDocSection

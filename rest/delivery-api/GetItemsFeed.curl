@@ -1,5 +1,5 @@
 # DocSection: delivery_api_get_items_feed
 curl --request GET \
-  --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items-feed?system.type=article' \
+  --url 'https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/items-feed?system.type=article' \
   --header 'content-type: application/json'
 # EndDocSection
