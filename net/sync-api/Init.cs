@@ -1,4 +1,4 @@
-﻿// DocSection: delivery_api_post_sync_init
+﻿// DocSection: sync_api_initialize_sync
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
 using Kontent.Ai.Delivery;
 
@@ -10,8 +10,9 @@ IDeliveryClient client = DeliveryClientBuilder
 
 // Gets the continuation token based on the given parameters
 IDeliverySyncInitResponse response = await client.PostSyncInitAsync(
-    new LanguageParameter("cs"),
+    new LanguageParameter("en-US"),
     new EqualsFilter("system.type", "article"),
     new NotEqualsFilter("system.collection", "default"));
+    
 string continuationToken = response.ApiResponse.ContinuationToken;
 // EndDocSection

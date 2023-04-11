@@ -1,4 +1,4 @@
-﻿// DocSection: delivery_api_get_sync
+﻿// DocSection: sync_api_synchronize_changes
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
 using Kontent.Ai.Delivery;
 
@@ -8,8 +8,8 @@ IDeliveryClient client = DeliveryClientBuilder
     .WithProjectId("<YOUR_PROJECT_ID>")
     .Build();
 
-// Gets list of sync items
+// Gets a list of recently changed content items
 IDeliverySyncResponse response = await client.GetSyncAsync("<CONTINUATION_TOKEN>");
 IList<ISyncItem> syncItems = response.SyncItems;
+await client.GetSyncAsync("token");
 // EndDocSection
-//await client.GetSyncAsync("token");
