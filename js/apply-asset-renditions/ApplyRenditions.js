@@ -4,7 +4,7 @@ const KontentDelivery = require('@kontent-ai/delivery-sdk');
 
 // Specifies which asset rendition to use by default by providing defaultRenditionPreset
 const deliveryClient = KontentDelivery.createDeliveryClient({
-  projectId: '<YOUR_PROJECT_ID>',
+  environmentId: '<YOUR_ENVIRONMENT_ID>',
   // Automatically applies the 'default' asset rendition if assets specify it
   defaultRenditionPreset: 'default'
 });

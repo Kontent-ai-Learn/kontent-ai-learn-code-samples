@@ -3,7 +3,7 @@ const KontentDelivery = require('@kontent-ai/delivery-sdk');
 
 // Initializes the Delivery client
 const deliveryClient = KontentDelivery.createDeliveryClient({
-  projectId: '<YOUR_PROJECT_ID>',
+  environmentId: '<YOUR_ENVIRONMENT_ID>',
 });
 
 // Gets your content item

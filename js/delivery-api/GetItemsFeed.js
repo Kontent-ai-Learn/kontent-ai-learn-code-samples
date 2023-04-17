@@ -3,7 +3,7 @@
 const KontentDelivery = require('@kontent-ai/delivery-sdk');
 
 const client = KontentDelivery.createDeliveryClient({
-  projectId: '<YOUR_PROJECT_ID>'
+  environmentId: '<YOUR_ENVIRONMENT_ID>'
 });
 
 // Gets feed of all articles in the project

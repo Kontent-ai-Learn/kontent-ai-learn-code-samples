@@ -4,7 +4,7 @@
 import { ManagementClient, ElementModels } from '@kontent-ai/management-sdk';
 
 const client = new ManagementClient({
-  projectId: '<YOUR_PROJECT_ID>',
+  environmentId: '<YOUR_ENVIRONMENT_ID>',
   apiKey: '<YOUR_MANAGEMENT_API_KEY>'
 });
 
