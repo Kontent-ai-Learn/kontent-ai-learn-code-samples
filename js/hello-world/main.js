@@ -5,7 +5,7 @@ var KontentDelivery = window['kontentDelivery'];
 // Creates a delivery client for retrieving data from Kontent.ai
 const deliveryClient = new KontentDelivery.createDeliveryClient({
   // Tip: Use your project ID to display your own content.
-  projectId: '8d20758c-d74c-4f59-ae04-ee928c0816b7'
+  environmentId: '8d20758c-d74c-4f59-ae04-ee928c0816b7'
 });
 
 // Retrieves the content item

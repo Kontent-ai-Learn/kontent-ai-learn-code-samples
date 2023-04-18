@@ -3,7 +3,7 @@
 import { ManagementClient } from '@kontent-ai/management-sdk';
 
 const client = new ManagementClient({
-  projectId: '<YOUR_PROJECT_ID>',
+  environmentId: '<YOUR_ENVIRONMENT_ID>,
   apiKey: '<YOUR_API_KEY>'
 });
 

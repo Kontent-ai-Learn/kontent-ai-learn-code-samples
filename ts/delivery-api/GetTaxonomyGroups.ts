@@ -3,7 +3,7 @@
 import { createDeliveryClient } from '@kontent-ai/delivery-sdk';
 
 const deliveryClient = createDeliveryClient({
-  projectId: '<YOUR_PROJECT_ID>'
+  environmentId: '<YOUR_ENVIRONMENT_ID>
 });
 
 const response = await deliveryClient.taxonomies()

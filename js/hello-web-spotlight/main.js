@@ -4,7 +4,7 @@ const KontentDelivery = window['kontentDelivery'];
 
 // Tip: Change the project ID of the API call to yours to display your own content. Make sure the codenames still match.
 const deliveryClient = new KontentDelivery.createDeliveryClient({
-  projectId: '8d20758c-d74c-4f59-ae04-ee928c0816b7',
+  environmentId: '8d20758c-d74c-4f59-ae04-ee928c0816b7',
 });
 
 // Retrieves the landing page from your project
