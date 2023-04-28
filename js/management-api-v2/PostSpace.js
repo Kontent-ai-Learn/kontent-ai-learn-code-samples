@@ -9,11 +9,12 @@ const client = new ManagementClient({
 });
 
 const response = await client
-.addSpace()
-.withData(
+  .addSpace()
+  .withData(
     {
-        name: "my new_space",
-        codename: "my_new_space"
+      name: "my new_space",
+      codename: "my_new_space"
     }
-)
-.toPromise();
+  )
+  .toPromise();
+// EndDocSection

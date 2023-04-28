@@ -9,6 +9,6 @@ const client = new ManagementClient({
 });
 
 const response = await client.listEnvironmentValidationIssues()
-.byTaskId('15c68e60-dc30-4d34-a921-396563abd08d')
-.toPromise();
+  .byTaskId('15c68e60-dc30-4d34-a921-396563abd08d')
+  .toPromise();
 // EndDocSection

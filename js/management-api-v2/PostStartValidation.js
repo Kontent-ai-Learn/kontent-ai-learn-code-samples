@@ -9,7 +9,7 @@ const client = new ManagementClient({
 });
 
 const response = await client
-.startEnvironmentValidation()
-.byTaskId('15c68e60-dc30-4d34-a921-396563abd08d')
-.toPromise()
+  .startEnvironmentValidation()
+  .byTaskId('15c68e60-dc30-4d34-a921-396563abd08d')
+  .toPromise()
 //EndDocSection
