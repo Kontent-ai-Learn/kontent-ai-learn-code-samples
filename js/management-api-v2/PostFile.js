@@ -6,7 +6,7 @@ import { ManagementClient } from '@kontent-ai/management-sdk';
 import { readFileSync } from 'fs';
 
 const client = new ManagementClient({
-  environmentId: '<YOUR_ENVIRONMENT_ID>,
+  environmentId: '<YOUR_ENVIRONMENT_ID>',
   apiKey: '<YOUR_API_KEY>'
 });
 
