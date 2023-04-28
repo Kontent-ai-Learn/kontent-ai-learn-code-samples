@@ -1,5 +1,5 @@
 # DocSection: securing_public_access_get_article
 curl --request GET \
-  --url https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items/my_article \
+  --url https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/items/my_article \
   --header 'authorization: Bearer <YOUR_API_KEY>'
 # EndDocSection

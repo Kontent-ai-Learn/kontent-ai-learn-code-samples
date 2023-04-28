@@ -1,8 +1,8 @@
 # DocSection: cm_api_v2_delete_taxonomy_group 
 curl --request DELETE \
-  --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/taxonomies/0be13600-e57c-577d-8108-c8d860330985 \
-# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/taxonomies/codename/personas/ \
-# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/taxonomies/external-id/Tax-Group-123 \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/taxonomies/0be13600-e57c-577d-8108-c8d860330985 \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/taxonomies/codename/personas/ \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/taxonomies/external-id/Tax-Group-123 \
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
   --header 'Content-type: application/json'
 # EndDocSection

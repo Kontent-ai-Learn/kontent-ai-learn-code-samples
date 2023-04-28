@@ -7,11 +7,11 @@ const response = await deliveryClient.items()
 
 // Gets items tagged with a list of specific tags
 const response = await deliveryClient.items()
-  .allFilter('elements.tags', ['kontent_ai', 'platform'])
+  .allFilter('elements.tags', ['kontent_ai', 'cms'])
   .toPromise();
 
 // Gets items tagged with at least one tag from the list
 const response = await deliveryClient.items()
-  .anyFilter('elements.tags', ['modular', 'platform'])
+  .anyFilter('elements.tags', ['headless', 'cms'])
   .toPromise();
 // EndDocSection

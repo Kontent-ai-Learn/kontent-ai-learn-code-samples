@@ -4,7 +4,7 @@
 import { ManagementClient } from '@kontent-ai/management-sdk';
 
 const client = new ManagementClient({
-  projectId: '<YOUR_PROJECT_ID>',
+  environmentId: '<YOUR_ENVIRONMENT_ID>,
   apiKey: '<YOUR_API_KEY>'
 });
 
@@ -17,6 +17,11 @@ const response = await client.addWorkflow()
           content_types: [
             {
               id: "1aeb9220-f167-4f8e-a7db-1bfec365fa80"
+            }
+          ],
+          collections: [
+            {
+              "id": "b15b6050-80d8-406d-bf21-3012e4ad0ac5"
             }
           ]
         }

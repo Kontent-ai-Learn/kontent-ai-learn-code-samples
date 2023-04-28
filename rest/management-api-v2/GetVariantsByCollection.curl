@@ -1,8 +1,8 @@
 # DocSection: cm_api_v2_get_variants_by_collection
 curl --request GET \
-  --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/collections/b7aa4a53-d9b1-48cf-b7a6-ed0b182c4b89/variants \
-# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/collections/codename/blogs/variants \
-# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/collections/external-id/my-blogs-id/variants \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/collections/b7aa4a53-d9b1-48cf-b7a6-ed0b182c4b89/variants \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/collections/codename/blogs/variants \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/collections/external-id/my-blogs-id/variants \
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
   --header 'x-continuation: <continuation_token>' \
   --header 'Content-type: application/json'

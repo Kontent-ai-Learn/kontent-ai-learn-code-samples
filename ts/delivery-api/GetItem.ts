@@ -3,7 +3,7 @@
 import { createDeliveryClient, IContentItem, Elements } from '@kontent-ai/delivery-sdk';
 
 const deliveryClient = createDeliveryClient({
-  projectId: '<YOUR_PROJECT_ID>',
+  environmentId: '<YOUR_ENVIRONMENT_ID>,
 });
 
 export type Article = IContentItem<{

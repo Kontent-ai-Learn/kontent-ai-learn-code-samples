@@ -3,7 +3,7 @@
 const KontentDelivery = require('@kontent-ai/delivery-sdk');
 
 const deliveryClient = KontentDelivery.createDeliveryClient({
-  projectId: '975bf280-fd91-488c-994c-2f04416e5ee3',
+  environmentId: '975bf280-fd91-488c-994c-2f04416e5ee3',
 });
 
 const response = await deliveryClient.items()

@@ -7,10 +7,10 @@ $items = $client->getItems((new QueryParams())
 
 // Gets items tagged with a list of specific tags
 $items = $client->getItems((new QueryParams())
-  ->all('elements.tags', ['kontent_ai','platform']));
+  ->all('elements.tags', ['kontent_ai','cms']));
 
 // Gets items tagged with at least one of multiple tags
 $items = $client->getItems((new QueryParams())
-  ->any('elements.tags', ['modular','platform']));
+  ->any('elements.tags', ['headless','cms']));
 // EndDocSection
 ?>

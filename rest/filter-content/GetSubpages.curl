@@ -1,11 +1,11 @@
 # DocSection: filtering_get_subpages
 # Gets pages linking travel insurance as their subpage.
 curl --request GET \
-  --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?elements.subpages[contains]=travel_insurance' \
+  --url 'https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/items?elements.subpages[contains]=travel_insurance' \
   --header 'content-type: application/json'
 
 # Gets pages linking at least travel insurance, car insurance, or both as their subpage.
 curl --request GET \
-  --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/items?elements.subpages[any]=travel_insurance,car_insurance' \
+  --url 'https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/items?elements.subpages[any]=travel_insurance,car_insurance' \
   --header 'content-type: application/json'
 # EndDocSection

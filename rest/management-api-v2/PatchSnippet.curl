@@ -1,8 +1,8 @@
 # DocSection: cm_api_v2_patch_snippet
 curl --request PATCH \
-  --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/snippets/baf884be-531f-441f-ae88-64205efdd0f6 \
-# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/snippets/codename/my_metadata_snippet \
-# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/snippets/external_id/my-metadata-snippet-id \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/snippets/baf884be-531f-441f-ae88-64205efdd0f6 \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/snippets/codename/my_metadata_snippet \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/snippets/external_id/my-metadata-snippet-id \
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
   --header 'Content-type: application/json'
   --data '

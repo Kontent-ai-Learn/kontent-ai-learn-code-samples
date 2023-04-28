@@ -1,5 +1,5 @@
 # DocSection: delivery_api_get_languages
 curl --request GET \
-  --url 'https://deliver.kontent.ai/<YOUR_PROJECT_ID>/languages?limit=3' \
+  --url 'https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/languages?limit=3' \
   --header 'content-type: application/json'
 # EndDocSection

@@ -1,0 +1,14 @@
+# DocSection: cm_api_v2_post_space
+curl --location --request POST \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/spaces \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: application/json' \
+  --data '
+  {
+    "name": "Space 1",
+    "codename": "space_1,
+    "web_spotlight_root_item": {
+        "codename": "root_item_1"
+    }
+  }'
+# EndDocSection

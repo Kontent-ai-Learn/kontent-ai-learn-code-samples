@@ -1,6 +1,6 @@
 # DocSection: cm_api_v2_post_workflow
 curl --request POST \
-  --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/workflows \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/workflows \
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
   --header 'Content-type: application/json' \
   --data '
@@ -11,6 +11,11 @@ curl --request POST \
       "content_types": [
         {
           "id": "1aeb9220-f167-4f8e-a7db-1bfec365fa80"
+        }
+      ],
+      "collections": [
+        {
+          "id": "b15b6050-80d8-406d-bf21-3012e4ad0ac5"
         }
       ]
     }

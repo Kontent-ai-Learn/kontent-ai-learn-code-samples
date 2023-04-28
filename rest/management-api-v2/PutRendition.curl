@@ -1,9 +1,9 @@
 # DocSection: cm_api_v2_put_rendition
 curl --request PUT \
-  --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/assets/fcbb12e6-66a3-4672-85d9-d502d16b8d9c/renditions/ce559491-0fc1-494b-96f3-244bc095de57 \
-# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/assets/fcbb12e6-66a3-4672-85d9-d502d16b8d9c/renditions/external-id/hero-image-rendition \
-# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/assets/external-id/which-brewing-fits-you/renditions/ce559491-0fc1-494b-96f3-244bc095de57 \
-# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/assets/external-id/which-brewing-fits-you/renditions/external-id/hero-image-rendition \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/assets/fcbb12e6-66a3-4672-85d9-d502d16b8d9c/renditions/ce559491-0fc1-494b-96f3-244bc095de57 \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/assets/fcbb12e6-66a3-4672-85d9-d502d16b8d9c/renditions/external-id/hero-image-rendition \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/assets/external-id/which-brewing-fits-you/renditions/ce559491-0fc1-494b-96f3-244bc095de57 \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/assets/external-id/which-brewing-fits-you/renditions/external-id/hero-image-rendition \
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
   --header 'Content-type: application/json'
   --data '

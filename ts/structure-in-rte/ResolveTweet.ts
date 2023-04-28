@@ -3,7 +3,7 @@
 import { createRichTextHtmlResolver, Elements, createDeliveryClient, linkedItemsHelper, IContentItem } from '@kontent-ai/delivery-sdk';
 
 const deliveryClient = createDeliveryClient({
-  projectId: '<YOUR_PROJECT_ID>',
+  environmentId: '<YOUR_ENVIRONMENT_ID>,
 });
 
 // Create strongly typed models according to https://kontent.ai/learn/strongly-typed-models

@@ -1,9 +1,9 @@
 # DocSection: cm_api_v2_put_item
 # The 'type' property in the request body is only required when creating a new content item
 curl --request PUT \
-  --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/items/external-id/59713 \
-# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/items/f4b3fc05-e988-4dae-9ac1-a94aba566474 \
-# --url https://manage.kontent.ai/v2/projects/<YOUR_PROJECT_ID>/items/codename/my_article  \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/items/external-id/59713 \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/items/f4b3fc05-e988-4dae-9ac1-a94aba566474 \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/items/codename/my_article  \
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
   --header 'Content-type: application/json' \
   --data '

@@ -1,0 +1,27 @@
+# DocSection: cm_api_v2_patch_space
+curl --location --request PATCH \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/spaces/6291c693-f6e4-4a6b-ac67-5c31c32f9388 \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/spaces/codename/space_1 \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: application/json'
+  --data '
+  [
+    {
+      "op": "replace",
+      "property_name": "codename",
+      "value": "new_space_codename"
+    },
+    {
+      "op": "replace",
+      "property_name": "name",
+      "value": "New space name"
+    },
+    {
+      "op": "replace",
+      "property_name": "web_spotlight_root_item",
+      "value": {
+        "id": 1024356f-858f-421a-b804-07c6bfe10ce5"
+      }
+    }
+  ]'
+# EndDocSection
