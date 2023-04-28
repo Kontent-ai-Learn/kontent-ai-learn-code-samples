@@ -4,7 +4,7 @@ import { createRichTextHtmlResolver, Elements, createDeliveryClient, linkedItems
 
 // Initializes the Delivery client
 const deliveryClient = createDeliveryClient({
-  environmentId: '<YOUR_ENVIRONMENT_ID>,
+  environmentId: '<YOUR_ENVIRONMENT_ID>'
 });
 
 // Create strongly typed models according to https://kontent.ai/learn/strongly-typed-models

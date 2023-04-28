@@ -3,7 +3,7 @@
 import { createDeliveryClient } from '@kontent-ai/delivery-sdk';
 
 const deliveryClient = createDeliveryClient({
-  environmentId: '<YOUR_ENVIRONMENT_ID>,
+  environmentId: '<YOUR_ENVIRONMENT_ID>'
 });
 
 const response = await deliveryClient.initializeSync().toPromise();

@@ -12,7 +12,7 @@ export type Article = IContentItem<{
   }>;
 
 const deliveryClient = createDeliveryClient({
-    environmentId: '<YOUR_ENVIRONMENT_ID>,
+    environmentId: '<YOUR_ENVIRONMENT_ID>',
     previewApiKey: '<YOUR_PREVIEW_API_KEY>',
     defaultQueryConfig:  {
         usePreviewMode: true, // Queries the Delivery Preview API.

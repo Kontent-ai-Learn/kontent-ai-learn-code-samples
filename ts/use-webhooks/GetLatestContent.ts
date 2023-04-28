@@ -4,7 +4,7 @@ import { createDeliveryClient } from '@kontent-ai/delivery-sdk';
 import { Article } from './models/Article';
 
 const deliveryClient = createDeliveryClient({
-  environmentId: '<YOUR_ENVIRONMENT_ID>,
+  environmentId: '<YOUR_ENVIRONMENT_ID>'
 });
 
 const response = await deliveryClient.item<Article>('my_article')
