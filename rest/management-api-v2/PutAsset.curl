@@ -12,6 +12,11 @@ curl --request PUT \
     "type": "internal"
   },
   "title": "Coffee Brewing Techniques",
+  "collection": {
+    "reference": {
+        "codename": "first_collection"
+    }
+  },
   "folder": {
     "external_id": "another-folder"
   },
