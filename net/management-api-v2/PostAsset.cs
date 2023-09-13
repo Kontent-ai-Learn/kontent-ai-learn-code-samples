@@ -15,6 +15,9 @@ var response = await client.CreateAssetAsync(new AssetCreateModel
         Id = "fcbb12e6-66a3-4672-85d9-d502d16b8d9c",
         Type = FileReferenceTypeEnum.Internal
     },
+    Collection = new AssetCollectionReference {
+        Reference = Reference.ByCodename("first_collection")
+    },
     Folder = Reference.ByExternalId("another-folder"),
     Title = "Coffee Brewing Techniques",
     ExternalId = "which-brewing-fits-you",

@@ -15,6 +15,9 @@ var identifier = Reference.ByExternalId("which-brewing-fits-you");
 var updatedAssetResponse = await client.UpsertAssetAsync(identifier, new AssetUpsertModel
 {
     Title = "Coffee Brewing Techniques",
+    Collection = new AssetCollectionReference {
+        Reference = Reference.ByCodename("first_collection")
+    },
     Descriptions = new List<AssetDescription>
     {
         new AssetDescription
@@ -51,6 +54,9 @@ var createdAssetResponse = await client.UpsertAssetAsync(Reference.ByExternalId(
         Type = FileReferenceTypeEnum.Internal
     },
     Title = "Coffee Brewing Techniques",
+    Collection = new AssetCollectionReference {
+        Reference = Reference.ByCodename("first_collection")
+    },
     Descriptions = new AssetDescription[]
     {
         new AssetDescription
