@@ -2,7 +2,7 @@
 // Initializes a Delivery client
 _client = DeliveryClientBuilder
     .WithOptions(builder => builder
-        .WithProjectId("<YOUR_PROJECT_ID>")
+        .WithProjectId("<YOUR_ENVIRONMENT_ID>")
         .UseProductionApi()
         .Build())
     .Build();

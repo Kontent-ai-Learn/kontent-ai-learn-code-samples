@@ -5,7 +5,7 @@ using Kontent.Ai.Delivery;
 using Kontent.Ai.Delivery.InlineContentItems;
 
 IDeliveryClient client = DeliveryClientBuilder
-    .WithProjectId("<YOUR_PROJECT_ID>")
+    .WithProjectId("<YOUR_ENVIRONMENT_ID>")
     // Registers a content item resolver for tweets
     .WithInlineContentItemsResolver(new TweetResolver())
     // Registers the generated strongly typed models

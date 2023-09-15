@@ -3,7 +3,7 @@
 using Kontent.Ai.Delivery;
 
 IDeliveryClient client = DeliveryClientBuilder
-    .WithProjectId("<YOUR_PROJECT_ID>")
+    .WithProjectId("<YOUR_ENVIRONMENT_ID>")
     // Registers the resolver
     .WithContentLinkUrlResolver(new CustomContentLinkUrlResolver())
     .Build();

@@ -5,7 +5,7 @@ using Kontent.Ai.Delivery;
 // Initializes a client that retrieves the latest version of published content
 IDeliveryClient client = DeliveryClientBuilder
     .WithOptions(builder => builder
-        .WithProjectId("<YOUR_PROJECT_ID>")
+        .WithProjectId("<YOUR_ENVIRONMENT_ID>")
         .UseProductionApi
         .WaitForLoadingNewContent
         .Build())

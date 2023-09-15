@@ -5,7 +5,7 @@ using Kontent.Ai.Management;
 var client = new ManagementClient(new ManagementOptions
 {
     ApiKey = "<YOUR_API_KEY>",
-    ProjectId = "<YOUR_PROJECT_ID>"
+    ProjectId = "<YOUR_ENVIRONMENT_ID>"
 });
 
 var identifier = new LanguageVariantIdentifier(Reference.ByExternalId("456"), Reference.ByCodename("en-US"));

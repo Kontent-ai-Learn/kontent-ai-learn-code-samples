@@ -5,7 +5,7 @@ using Kontent.Ai.Delivery;
 // Initializes a delivery client for previewing content
 IDeliveryClient client = DeliveryClientBuilder
     .WithOptions(builder => builder
-        .WithProjectId("<YOUR_PROJECT_ID>")
+        .WithProjectId("<YOUR_ENVIRONMENT_ID>")
         .UsePreviewApi("<YOUR_PREVIEW_API_KEY>")
         .Build())
     .Build();
