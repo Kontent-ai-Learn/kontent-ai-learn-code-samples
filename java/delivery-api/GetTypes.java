@@ -3,7 +3,7 @@
 import kontent.ai.delivery.*;
 
 // Initializes a DeliveryClient
-DeliveryClient client = new DeliveryClient("<YOUR_PROJECT_ID>");
+DeliveryClient client = new DeliveryClient("<YOUR_ENVIRONMENT_ID>");
 
 // Gets 3 content types
 CompletionStage<ContentTypesListingResponse> types = client.getTypes(

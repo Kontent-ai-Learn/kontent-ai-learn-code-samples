@@ -3,7 +3,7 @@
 import kontent.ai.delivery.*;
 
 // Initializes a DeliveryClient
-DeliveryClient client = new DeliveryClient("<YOUR_PROJECT_ID>");
+DeliveryClient client = new DeliveryClient("<YOUR_ENVIRONMENT_ID>");
 
 // Gets the Spanish variant of all content items (while ignoring language fallbacks)
 CompletionsStage<ContentItemsListingResponse> listingResponse = client.getItems(

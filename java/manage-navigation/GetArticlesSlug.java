@@ -3,7 +3,7 @@
 import kontent.ai.delivery.*;
 
 // Initializes a DeliveryClient
-DeliveryClient client = new DeliveryClient("<YOUR_PROJECT_ID>");
+DeliveryClient client = new DeliveryClient("<YOUR_ENVIRONMENT_ID>");
 
 // Registers the model class for navigation items
 // Tip: Create strongly typed models according to https://kontent.ai/learn/strongly-typed-models
