@@ -6,7 +6,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 use Kontent\Ai\Delivery\DeliveryClient;
 
-$client = new DeliveryClient("<YOUR_PROJECT_ID>", null, true);
+$client = new DeliveryClient("<YOUR_ENVIRONMENT_ID>", null, true);
 
 $item = $client->getItem('my_article');
 // EndDocSection

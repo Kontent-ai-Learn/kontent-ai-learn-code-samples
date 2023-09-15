@@ -6,7 +6,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 use Kontent\Ai\Delivery\DeliveryClient;
 
-$client = new DeliveryClient('<YOUR_PROJECT_ID>');
+$client = new DeliveryClient('<YOUR_ENVIRONMENT_ID>');
 
 $taxonomyGroups = $client->getTaxonomies((new QueryParams())
             ->limit(3));
