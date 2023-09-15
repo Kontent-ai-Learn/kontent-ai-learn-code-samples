@@ -5,7 +5,7 @@ using Kontent.Ai.Management;
 var client = new ManagementClient(new ManagementOptions
 {
     ApiKey = "<YOUR_API_KEY>",
-    ProjectId = "<YOUR_PROJECT_ID>"
+    ProjectId = "<YOUR_ENVIRONMENT_ID>"
 });
 
 var identifier = Reference.ById(Guid.Parse("a23d3727-3b16-4d94-9eb0-85225d29cfef"));

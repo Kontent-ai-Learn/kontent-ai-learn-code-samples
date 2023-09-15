@@ -5,7 +5,7 @@ using Kontent.Ai.Management;
 var client = new ManagementClient(new ManagementOptions
 {
     ApiKey = "<YOUR_API_KEY>",
-    ProjectId = "<YOUR_PROJECT_ID>"
+    ProjectId = "<YOUR_ENVIRONMENT_ID>"
 });
 
 await client.DisableWebhookAsync(Reference.ById(Guid.Parse("5df74e27-1213-484e-b9ae-bcbe90bd5990")));

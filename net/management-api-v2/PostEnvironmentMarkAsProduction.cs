@@ -6,7 +6,7 @@ using Kontent.Ai.Management.Models.Environments;
 var client = new ManagementClient(new ManagementOptions
 {
     ApiKey = "<YOUR_API_KEY>",
-    ProjectId = "<YOUR_PROJECT_ID>"
+    ProjectId = "<YOUR_ENVIRONMENT_ID>"
 });
 
 await client.MarkEnvironmentAsProductionAsync(new MarkAsProductionModel
