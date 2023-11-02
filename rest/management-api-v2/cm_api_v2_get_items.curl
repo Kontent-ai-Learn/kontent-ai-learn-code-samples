@@ -1,0 +1,5 @@
+curl --request GET \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/items \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'x-continuation: <continuation_token>' \
+  --header 'Content-type: application/json'

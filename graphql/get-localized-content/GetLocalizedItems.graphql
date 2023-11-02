@@ -1,7 +1,0 @@
-# DocSection: getting_localized_content_language
-query GetArticleInSpanish {
-  article(codename: "about_us", languageFilter: {languageCodename: "es-ES"}) {
-    title
-  }
-}
-# EndDocSection

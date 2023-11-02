@@ -8,11 +8,11 @@ Check out our [guidelines on writing code samples and versioning them](https://k
 
 Create a pull request from your branch or fork with the proposed changes and additions.
 
-Each code sample is specified by a DocSection identifier. See examples in the `DocSectionTemplate.txt` file. The DocSection identifier must be unique for each technology.
+The file names of the code sample files are used for content item names and codenames. If you're adding code samples for a single scenario AND for multiple technologies or programming languages, make sure to name the files the same. For example, `scenario.ts` and `scenario.cs`. This way, they will be grouped in the CMS.
 
-If your changes are merged to the master branch, the new code is automatically added to the Kontent.ai Learn project.
+If your code changes are merged to the master branch, the new code is automatically added to the Kontent.ai Learn project.
 
-The changes will not automatically appear in <https://kontent.ai/learn/>. Your changes must be approved and published by the Customer Education team before they can go live.
+The code changes will NOT  automatically appear in <https://kontent.ai/learn/>. Your changes must be approved and published by the Customer Education team before they can go live.
 
 ## License
 

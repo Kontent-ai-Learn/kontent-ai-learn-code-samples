@@ -1,5 +1,0 @@
-# DocSection: sync_api_synchronize_changes
-curl --request GET \
-  --url https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/early-access/sync \
-  --header 'X-Continuation: <YOUR_CONTINUATION_TOKEN>'
-# EndDocSection

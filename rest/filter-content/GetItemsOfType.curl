@@ -1,6 +1,0 @@
-# DocSection: filtering_get_items_of_type
-# Gets items based on the type Product
-curl --request GET \
-  --url 'https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/items?system.type=product' \
-  --header 'content-type: application/json'
-# EndDocSection

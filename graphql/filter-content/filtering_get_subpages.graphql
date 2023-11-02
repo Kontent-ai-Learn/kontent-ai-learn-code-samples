@@ -1,0 +1,17 @@
+# Gets pages linking travel insurance as their subpage.
+query GetArticlesTaggedWithATerm {
+  article_All(where: {subpages: {containsAll: ["travel_insurance"]}}) {
+    items {
+      title
+    }
+  }
+}
+
+# Gets pages linking at least travel insurance, car insurance, or both as their subpage.
+query GetArticlesTaggedWithTerms {
+  article_All(where: {subpages: {containsAny: ["travel_insurance", "car_insurance"]}}) {
+    items {
+      title
+    }
+  }
+}

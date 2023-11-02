@@ -1,5 +1,0 @@
-# DocSection: delivery_api_get_taxonomy_group
-curl --request GET \
-  --url 'https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/taxonomies/personas' \
-  --header 'content-type: application/json'
-# EndDocSection

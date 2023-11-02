@@ -1,0 +1,55 @@
+curl --request POST \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/types
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: application/json' \
+  --data '
+{
+ "external_id": "article",
+ "name": "Article",
+ "codename": "my_article",
+ "content_groups": [
+   {
+     "name": "Article copy",
+     "external_id": "article-copy"
+   },
+   {
+     "name": "Author",
+     "codename": "author"
+   }
+ ],
+ "elements": [
+   {
+     "name": "Article title",
+     "codename": "title",
+     "type": "text",
+     "content_group": {
+       "external_id": "article-copy"
+     },
+     "default": {
+       "global": {
+         "value": "This is the default value of the text element."
+       }
+     }
+   },
+   {
+     "name": "Article body",
+     "codename": "body",
+     "type": "rich_text",
+     "content_group": {
+       "external_id": "article-copy"
+     }
+   },
+   {
+     "name": "Author bio",
+     "codename": "bio",
+     "allowed_blocks": [
+     	"images",
+     	"text"
+     	],
+     "type": "rich_text",
+     "content_group": {
+       "codename": "author"
+     }
+   }
+ ]
+}'

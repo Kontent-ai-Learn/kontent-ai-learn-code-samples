@@ -1,0 +1,27 @@
+# Note: Filters work with codenames. This means codenames of the taxonomy terms or multiple choice options.
+# Gets items tagged with one specific tag
+query GetArticlesTaggedWithATerm {
+  article_All(where: {topic: {containsAny: ["kontent_ai"]}}) {
+    items {
+      title
+    }
+  }
+}
+
+# Gets items tagged with a list of specific tags
+query GetArticlesTaggedWithTerms {
+  article_All(where: {topic: {containsAll: ["kontent_ai", "cms"]}}) {
+    items {
+      title
+    }
+  }
+}
+
+# Gets items tagged with at least one tag from the list
+query GetArticlesTaggedWithOneOfTerms {
+  article_All(where: {topic: {containsAny: ["headless", "cms"]}}) {
+    items {
+      title
+    }
+  }
+}

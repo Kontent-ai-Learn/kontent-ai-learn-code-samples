@@ -1,0 +1,9 @@
+# Gets items attributed to Jane.
+curl --request GET \
+  --url 'https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/items?elements.author[contains]=jane_doe' \
+  --header 'content-type: application/json'
+
+# Gets items attributed to at least Jane, John, or both.
+curl --request GET \
+  --url 'https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/items?elements.author[any]=jane_doe,john_wick' \
+  --header 'content-type: application/json'

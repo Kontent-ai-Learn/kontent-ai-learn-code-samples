@@ -1,0 +1,5 @@
+curl --request PUT \
+  --url https://manage.kontent.ai/v2/subscriptions/<YOUR_SUBSCRIPTION_ID>/users/5bbf48135624682e96bb8c21/deactivate \
+# --url https://manage.kontent.ai/v2/subscriptions/<YOUR_SUBSCRIPTION_ID>/users/email/jonh.doe@exmaple.com/deactivate \
+  --header 'Authorization: Bearer <YOUR_SUBSCRIPTION_API_KEY>' \
+  --header 'Content-type: application/json'

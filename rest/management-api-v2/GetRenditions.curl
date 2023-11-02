@@ -1,8 +1,0 @@
-# DocSection: cm_api_v2_get_renditions
-curl --request GET \
-  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/assets/fcbb12e6-66a3-4672-85d9-d502d16b8d9c/renditions \
-# --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/assets/external-id/which-brewing-fits-you/renditions \
-  --header 'Authorization: Bearer <YOUR_API_KEY>' \
-  --header 'x-continuation: <continuation_token>' \
-  --header 'Content-type: application/json'
-# EndDocSection

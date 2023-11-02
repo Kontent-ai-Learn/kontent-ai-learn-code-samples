@@ -1,0 +1,3 @@
+curl --request GET \
+  --url 'https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/items-feed?system.type=article' \
+  --header 'content-type: application/json'

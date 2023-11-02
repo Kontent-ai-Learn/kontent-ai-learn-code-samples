@@ -1,0 +1,11 @@
+query GetArticlesInSpanishOnly {
+  article_All(
+    # Requests items in Spanish
+    languageFilter: {languageCodename: "es-ES"}, 
+    # Filters the items so that only Spanish is returned, ignoring language fallbacks
+    where: {_system_: {language: {_system_: {codename: {eq: "es-ES"}}}}}) {
+    items {
+      title
+    }
+  }
+}

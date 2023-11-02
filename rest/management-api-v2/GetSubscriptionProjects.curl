@@ -1,7 +1,0 @@
-# DocSection: cm_api_v2_get_subscription_projects
-curl --request GET \
-  --url https://manage.kontent.ai/v2/subscriptions/<YOUR_SUBSCRIPTION_ID>/projects \
-  --header 'Authorization: Bearer <YOUR_SUBSCRIPTION_API_KEY>' \
-  --header 'x-continuation: <continuation_token>' \
-  --header 'Content-type: application/json'
-# EndDocSection

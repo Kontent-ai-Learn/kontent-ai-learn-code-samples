@@ -1,0 +1,26 @@
+curl--request POST\
+--url https: //manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/snippets \
+  --header 'Authorization: Bearer <YOUR_MANAGEMENT_API_KEY>'\
+  --header 'Content-type: application/json'\
+  --data '
+{
+  "name": "Metadata",
+  "codename": "metadata",
+  "elements": [
+    {
+      "name": "Title",
+      "codename": "title",
+      "type": "text"
+    },
+    {
+      "name": "Keywords",
+      "codename": "keywords",
+      "type": "text"
+    },
+    {
+      "name": "Description",
+      "codename": "description",
+      "type": "text"
+    }
+  ]
+}'

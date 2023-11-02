@@ -1,0 +1,3 @@
+curl --request GET \
+  --url 'https://deliver.kontent.ai/8d20758c-d74c-4f59-ae04-ee928c0816b7/items?system.type=article&limit=3&order=system.last_modified[desc]'
+  --header 'content-type: application/json'

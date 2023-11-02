@@ -1,8 +1,0 @@
-# DocSection: cm_api_v2_get_item
-curl --request GET \
-  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/items/f4b3fc05-e988-4dae-9ac1-a94aba566474 \
-# --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/items/codename/my_article \
-# --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/items/external-id/59713 \
-  --header 'Authorization: Bearer <YOUR_API_KEY>' \
-  --header 'Content-type: application/json'
-# EndDocSection

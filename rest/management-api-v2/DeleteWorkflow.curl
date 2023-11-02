@@ -1,7 +1,0 @@
-# DocSection: cm_api_v2_delete_workflow
-curl --request DELETE \
-  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/workflows/8bfdb62d-7aa1-473b-9d80-311ef93db108 \
-# --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/workflows/codename/my_workflow \
-  --header 'Authorization: Bearer <YOUR_API_KEY>' \
-  --header 'Content-type: application/json'
-# EndDocSection

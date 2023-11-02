@@ -1,0 +1,8 @@
+# Gets items based on the type Product
+query GetItemsByType {
+    product_All { # Root collection query specifies the content type
+        items {
+            price
+        }
+    }
+}

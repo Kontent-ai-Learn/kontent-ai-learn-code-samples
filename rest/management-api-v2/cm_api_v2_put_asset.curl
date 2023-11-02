@@ -1,0 +1,51 @@
+# The 'file_reference' property in the request body is only required when creating a new asset
+curl --request PUT \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/assets/external-id/which-brewing-fits-you \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/assets/fcbb12e6-66a3-4672-85d9-d502d16b8d9c \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: application/json'
+  --data '
+{
+  "file_reference": {
+    "id": "fcbb12e6-66a3-4672-85d9-d502d16b8d9c",
+    "type": "internal"
+  },
+  "title": "Coffee Brewing Techniques",
+  "collection": {
+    "reference": {
+        "codename": "first_collection"
+    }
+  },
+  "folder": {
+    "external_id": "another-folder"
+  },
+  "descriptions": [
+    {
+      "language": {
+        "codename": "en-US"
+      },
+      "description": "Coffee Brewing Techniques"
+    },
+    {
+      "language": {
+        "codename": "es-ES"
+      },
+      "description": "Técnicas para hacer café"
+    }
+  ],
+  "elements": [
+    {
+      "element": {
+        "codename": "taxonomy-categories"
+      },
+      "value": [
+        {
+          "codename": "coffee"
+        },
+        {
+          "codename": "brewing"
+        }
+      ]
+    }
+  ]
+}'

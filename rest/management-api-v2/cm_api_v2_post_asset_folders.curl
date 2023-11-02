@@ -1,0 +1,20 @@
+curl --request POST \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/folders \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: application/json' \
+  --data '
+{
+  "folders": [
+    {
+      "name": "Top level folder",
+      "external_id": "top-folder",
+      "folders": [
+        {
+          "name": "Second level folder",
+          "external_id": "second-folder",
+          "folders": []
+        }
+      ]
+    }
+  ]
+}'

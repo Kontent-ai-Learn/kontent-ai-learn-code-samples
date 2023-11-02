@@ -1,0 +1,41 @@
+curl --request PATCH \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/types/0be13600-e57c-577d-8108-c8d860330985 \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/types/codename/my_article \
+# --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/types/external_id/my-article-id \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: application/json'
+  --data '
+[
+  {
+    "op": "replace",
+    "path": "/name",
+    "value": "A new type name"
+  },
+  {
+    "op": "replace",
+    "path": "/elements/codename:my_text_element/guidelines",
+    "value": "Here you can tell users how to fill in the element."
+  },
+  {
+    "op": "addInto",
+    "path": "/elements",
+    "value": {
+      "name": "My title",
+      "type": "text",
+      "guidelines": "Title of the article in plain text.",
+      "external_id": "my-title-id"
+    }
+  },
+  {
+    "op": "remove",
+    "path": "/elements/id:0b2015d0-16ae-414a-85f9-7e1a4b3a3eae"
+  },
+  {
+    "op": "remove",
+    "path": "/elements/external_id:my-multiple-choice-id/options/codename:my_option"
+  },
+  {
+   "op": "remove",
+   "path": "/elements/id:e94fab1f-c2c1-4f4a-b36c-3f7a0808d2b8/allowed_blocks/text"
+  }
+]'

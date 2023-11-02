@@ -1,0 +1,11 @@
+curl --request PATCH \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID> \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: application/json'
+  --data '
+[
+  {
+    "op": "rename_environment",
+    "value": "My Little Production"
+  }
+]'

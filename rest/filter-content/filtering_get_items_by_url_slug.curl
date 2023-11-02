@@ -1,0 +1,4 @@
+# Gets items whose URL slug equals to sample-url-slug
+curl --request GET \
+  --url 'https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/items?elements.url_slug=sample-url-slug' \
+  --header 'content-type: application/json'

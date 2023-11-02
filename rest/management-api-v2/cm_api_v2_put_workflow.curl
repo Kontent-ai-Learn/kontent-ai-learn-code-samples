@@ -1,0 +1,69 @@
+curl --request PUT \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/workflows/<WORKFLOW_IDENTIFIER \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: application/json' \
+  --data '
+{
+  "name": "My workflow",
+  "scopes": [
+    {
+      "content_types": [
+        {
+          "codename": "article"
+        }
+      ],
+      collections: [
+        {
+          "codename": "marketing"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "name": "First step",
+      "codename": "first_step",
+      "color": "sky-blue",
+      "transitions_to": [
+        {
+          "step": {
+            "id": "16221cc2-bd22-4414-a513-f3e555c0fc93"
+          }
+        },
+        {
+          "step": {
+            "codename": "archived"
+          }
+        }
+      ],
+      "role_ids": [
+        "e796887c-38a1-4ab2-a999-c40861bb7a4b"
+      ]
+    },
+    {
+      "name": "Renamed Second step",
+      "codename": "second_step_renamed",
+      "color": "rose",
+      "id": "16221cc2-bd22-4414-a513-f3e555c0fc93",
+      "transitions_to": [
+        {
+          "step": {
+            "codename": "published"
+          }
+        }
+      ],
+      "role_ids": []
+    }
+  ],
+  "published_step": {
+    "unpublish_role_ids": [],
+    "create_new_version_role_ids": [
+        "e796887c-38a1-4ab2-a999-c40861bb7a4b"
+    ]
+  },
+  "archived_step": {
+    "role_ids": [
+        "e796887c-38a1-4ab2-a999-c40861bb7a4b"
+    ]
+  }
+}'

@@ -1,5 +1,0 @@
-# DocSection: delivery_api_get_element
-curl --request GET \
-  --url 'https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/types/article/elements/title' \
-  --header 'content-type: application/json'
-# EndDocSection

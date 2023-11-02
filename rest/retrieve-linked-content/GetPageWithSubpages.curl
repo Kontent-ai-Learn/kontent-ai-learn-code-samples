@@ -1,5 +1,0 @@
-# DocSection: linked_content_get_page_with_subpages
-curl --request GET \
-  --url 'https://deliver.kontent.ai/8d20758c-d74c-4f59-ae04-ee928c0816b7/items/insurance_listing?depth=1' \
-  --header 'content-type: application/json'
-# EndDocSection

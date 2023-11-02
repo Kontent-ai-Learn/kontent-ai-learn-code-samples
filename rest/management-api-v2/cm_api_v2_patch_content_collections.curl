@@ -1,0 +1,41 @@
+curl --request PATCH \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/collections \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: application/json'
+  --data '
+[
+  {
+    "op": "addinto",
+    "value": {
+      "external_id": "another-collection",
+      "name": "Another collection",
+      "codename": "another_collection_codename"
+    },
+    "after": {
+      "codename": "second_collection"
+    }
+  },
+  {
+    "op": "move",
+    "reference" : {
+      "codename": "important_collection"
+    },
+    "before": {
+      "codename": "first_collection"
+    }
+  },
+  {
+    "op": "remove",
+    "reference" : {
+      "codename": "extra_collection"
+    }
+  },
+  {
+    "op": "replace",
+    "property_name": "name",
+    "value":"A new name",
+    "reference" : {
+      "codename": "second_collection"
+    }
+  }
+]'

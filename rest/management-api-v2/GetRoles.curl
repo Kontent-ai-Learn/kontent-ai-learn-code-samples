@@ -1,6 +1,0 @@
-# DocSection: cm_api_v2_get_roles
-curl --request GET \
-  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/roles \
-  --header 'Authorization: Bearer <YOUR_API_KEY>' \
-  --header 'Content-type: application/json'
-# EndDocSection

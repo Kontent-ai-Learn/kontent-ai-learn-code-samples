@@ -1,0 +1,7 @@
+query GetArticlesByLocalizedSlug {
+  article_All(where: {title: {eq: "acerda-de-nosotros"}}, languageFilter: {languageCodename: "es-ES"}) {
+    items {
+      title
+    }
+  }
+}

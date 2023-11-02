@@ -1,4 +1,0 @@
-# DocSection: sync_api_initialize_sync
-curl --request POST \
-  --url https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/early-access/sync/init
-# EndDocSection

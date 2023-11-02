@@ -1,8 +1,0 @@
-# DocSection: cm_api_v2_delete_type
-curl --request DELETE \
-  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/types/269202ad-1d9d-47fd-b3e8-bdb05b3e3cf0 \
-# --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/types/codename/hosted_video \
-# --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/types/external-id/Content-Type-123 \
-  --header 'Authorization: Bearer <YOUR_API_KEY>' \
-  --header 'Content-type: application/json'
-# EndDocSection

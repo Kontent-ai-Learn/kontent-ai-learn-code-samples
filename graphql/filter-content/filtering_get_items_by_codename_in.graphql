@@ -1,0 +1,12 @@
+# Gets three articles by their codenames. Use GraphQL aliases to retrieve multiple items of the same type.
+query GetArticlesByCodenames {
+  helloWorldArticle: article(codename: "hello_world") {
+    title
+  }
+  getContentArticle: article(codename: "get_content") {
+    title
+  }
+  filterContentArticle: article(codename: "filter_content") {
+    title
+  }
+}

@@ -1,0 +1,3 @@
+curl --request GET \
+  --url 'https://deliver.kontent.ai/975bf280-fd91-488c-994c-2f04416e5ee3/items?language=es-ES&system.language=es-ES' \
+  --header 'content-type: application/json'

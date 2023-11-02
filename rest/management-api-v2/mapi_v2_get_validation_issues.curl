@@ -1,0 +1,4 @@
+curl --request GET \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/validate-async/tasks/88d94fed-4899-4944-9b4b-c919b11a9db0/issues \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-type: application/json'

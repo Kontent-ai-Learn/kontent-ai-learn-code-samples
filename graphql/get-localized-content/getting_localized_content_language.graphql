@@ -1,0 +1,5 @@
+query GetArticleInSpanish {
+  article(codename: "about_us", languageFilter: {languageCodename: "es-ES"}) {
+    title
+  }
+}

@@ -1,5 +1,0 @@
-# DocSection: getting_localized_content_url_slug
-curl --request GET \
-  --url 'https://deliver.kontent.ai/8d20758c-d74c-4f59-ae04-ee928c0816b7/items?language=es-ES&system.type=article&elements.url_pattern=acerda-de-nosotros' \
-  --header 'content-type: application/json'
-# EndDocSection

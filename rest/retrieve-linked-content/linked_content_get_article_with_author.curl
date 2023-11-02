@@ -1,0 +1,3 @@
+curl --request GET \
+  --url 'https://deliver.kontent.ai/8d20758c-d74c-4f59-ae04-ee928c0816b7/items/the_origin_of_coffee?depth=1' \
+  --header 'content-type: application/json'

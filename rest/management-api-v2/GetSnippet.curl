@@ -1,8 +1,0 @@
-# DocSection: cm_api_v2_get_snippet
-curl --request GET \
-  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/snippets/baf884be-531f-441f-ae88-64205efdd0f6 \
-# --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/snippets/codename/metadata \
-# --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/snippets/external-id/snippet-type-123 \
-  --header 'Authorization: Bearer <YOUR_API_KEY>' \
-  --header 'Content-type: application/json'
-# EndDocSection

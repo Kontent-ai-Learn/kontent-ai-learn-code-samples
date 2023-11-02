@@ -1,6 +1,0 @@
-# DocSection: cm_api_v2_post_validate
-curl --request POST \
-  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/validate \
-  --header 'Authorization: Bearer <YOUR_API_KEY>' \
-  --header 'Content-type: application/json'
-# EndDocSection
