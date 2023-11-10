@@ -1,0 +1,35 @@
+name: Check for unique filenames
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Check for unique filenames, ignoring file extensions
+      run: |
+        #!/bin/bash
+
+        # Initialize the directories
+        directories=(./graphql/ ./java ./js/ ./net/ ./php/ ./rest/ ./ruby/ ./ts/)
+
+        # Loop over each directory
+        for directory in "${directories[@]}"; do
+            # Find all files in the directory and its subdirectories, convert to lowercase, remove extensions and sort
+            files=$(find "$directory" -type f | tr '[:upper:]' '[:lower:]' | sed -r 's/.*\/(.*)\..*/\1/' | sort)
+            
+            # Find duplicates
+            duplicates=$(echo "$files" | uniq -d)
+            
+            # If duplicates exist, report them
+            if [ -n "$duplicates" ]; then
+                # echo "Duplicates found in $directory:"
+                for duplicate in $duplicates; do
+                    # Find the original files that caused the duplicates
+                    original_files=$(find "$directory" -type f | grep -i "$duplicate")
+                    echo "Duplicate found: $original_files"
+                done
+            fi
+        done
