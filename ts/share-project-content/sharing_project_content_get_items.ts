@@ -14,9 +14,9 @@ const allContentItems: IContentItem[] = [];
 const response1 = await deliveryClient1.items()
     .toPromise();
 
-allContentItems.push(response1.data.items);
+allContentItems.push(...response1.data.items);
    
 const response2 = await deliveryClient2.items()
     .toPromise();
 
-allContentItems.push(response2.data.items);
+allContentItems.push(...response2.data.items);
