@@ -12,74 +12,70 @@ var response = await client.CreateWebhookAsync(new WebhookCreateModel
     Name = "Example webhook",
     Url = "https://example.com/webhook",
     Secret = "secret_key",
-    Triggers = new WebhookTriggersModel
+    DeliveryTriggers = new DeliveryTriggersModel
     {
-        DeliveryApiContentChanges = new[]
+        ContentType = new ContentTypeTriggerModel
         {
-            new DeliveryApiTriggerModel
+            Enabled = true,
+            Actions = new []
             {
-                Type = TriggerChangeType.LanguageVariant,
-                Operations = new []
+               new ContentTypeActionModel { Action = ContentTypeActionEnum.Created },
+               new ContentTypeActionModel { Action = ContentTypeActionEnum.Changed },
+               new ContentTypeActionModel { Action = ContentTypeActionEnum.Deleted }
+            }
+        },
+        ContentItem = new ContentItemTriggerModel
+        {
+            Enabled = true,
+            Actions = new []
+            {
+                new ContentItemActionModel
                 {
-                    "publish",
-                    "unpublish"
+                    Action = ContentItemActionEnum.Deleted,
+                    TransitionTo = new []
+                    {
+                        new WorkflowApiReference {
+                            WorkflowReference = Reference.ById(Guid.Parse("88ac5e6e-1c5c-4638-96e1-0d61221ad5bf")),
+                            WorkflowStepReference = Reference.ById(Guid.Parse("b4363ccd-8f21-45fd-a840-5843d7b7f008"))
+                        }
+                    }
                 }
             },
-            new DeliveryApiTriggerModel
+            Filters = new ContentItemFiltersModel
             {
-                Type = TriggerChangeType.Taxonomy,
-                Operations = new []
+                Languages = new []
                 {
-                    "archive",
-                    "restore",
-                    "upsert"
+                    Reference.ById(Guid.Parse("b4363ccd-8f21-45fd-a840-5843d7b7f008"))
                 }
             }
         },
-        PreviewDeliveryApiContentChanges = new[]
+        Taxonomy = new TaxonomyTriggerModel
         {
-            new DeliveryApiTriggerModel
+            Enabled = true,
+            Actions = new []
             {
-                Type = TriggerChangeType.LanguageVariant,
-                Operations = new []
-                {
-                    "archive",
-                    "upsert"
-                }
-            },
-            new DeliveryApiTriggerModel
-            {
-                Type = TriggerChangeType.Taxonomy,
-                Operations = new []
-                {
-                    "archive",
-                    "restore",
-                    "upsert"
-                }
+                new TaxonomyActionModel { Action = TaxonomyActionEnum.TermChanged },
+                new TaxonomyActionModel { Action = TaxonomyActionEnum.MetadataChanged }
             }
         },
-        WorkflowStepChanges = new[]
+        Asset = new AssetTriggerModel
         {
-            new WorkflowStepTriggerModel
+            Enabled = true,
+            Actions = new []
             {
-                TransitionsTo = new []
-                {
-                    Reference.ById(Guid.Parse("b4363ccd-8f21-45fd-a840-5843d7b7f008")),
-                    Reference.ById(Guid.Parse("88ac5e6e-1c5c-4638-96e1-0d61221ad5bf")),
-                }
-            },
-        },
-        ManagementApiContentChanges = new[]
-        {
-            new ManagementApiTriggerModel
-            {
-                Operations = new []
-                {
-                    "archive",
-                    "create",
-                    "restore",
-                }
+                new AssetActionModel { Action = AssetActionEnum.Created },
+                new AssetActionModel { Action = AssetActionEnum.Changed }
             }
         },
+        Language = new LanguageTriggerModel
+        {
+            Enabled = true,
+            Actions = new []
+            {
+                new LanguageActionModel { Action = LanguageActionEnum.Created }
+            }
+        },
+        Slot = DeliverySlotModel.Published,
+        Events =  WebhookEventsFilterModel.Specific
     }
 });
