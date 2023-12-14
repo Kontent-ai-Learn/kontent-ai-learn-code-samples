@@ -6,6 +6,6 @@ const isValidSignature = (req, secret) => {
   return signatureHelper.isValidSignatureFromString(
     req.body, // Use raw body data from the request, i.e., by using body-parser
     secret,
-    req.headers['x-kc-signature']
+    req.headers['x-kontent-ai-signature']
   );
 };

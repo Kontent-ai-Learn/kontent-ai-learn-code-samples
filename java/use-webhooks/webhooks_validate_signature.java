@@ -3,7 +3,7 @@ import javax.crypto;
 import javax.crypto.spec;
 import javax.xml.bind;
 
-// Example of generating the hash to verify the notification
+// Generates a payload hash to compare with the 'X-Kontent-ai-Signature' header value
 public static String generateHash(String message, String secret) throws Exception {
     Mac sha256Hmac = Mac.getInstance("HmacSHA256");
     SecretKeySpec secretKeySpec = new SecretKeySpec(secret.getBytes(StandardCharsets.UTF_8), "HmacSHA256");

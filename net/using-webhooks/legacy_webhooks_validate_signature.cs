@@ -3,7 +3,7 @@ using System;
 using System.Security.Cryptography;
 using System.Text;
 
-// Generates a payload hash to compare with the 'X-Kontent-ai-Signature' header value
+// Example of generating the hash to verify the notification
 private static string GenerateHash(string message, string secret)
 {
     secret = secret ?? "";
