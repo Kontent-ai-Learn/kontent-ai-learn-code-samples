@@ -4,52 +4,89 @@ curl --request POST \
   --header 'Content-type: application/json' \
     --data '
 {
-    "name": "Example",
-    "url": "https://example.com",
-    "secret": "secret",
-    "triggers": {
-        "delivery_api_content_changes": [
+  "name": "Example webhook",
+  "url": "https://example.com/webhook",
+  "enabled": "true",
+  "delivery_triggers": {
+    "slot": "preview",
+    "events": "specific",
+    "content_type": {
+      "enabled": "true",
+      "actions": [
+        {
+          "action": "changed"
+        }
+      ]
+    },
+    "asset": {
+      "enabled": "true",
+      "actions": [
+        {
+          "action": "deleted"
+        }
+      ]
+    },
+    "taxonomy": {
+      "enabled": "true",
+      "actions": [
+        {
+          "action": "term_changed"
+        }
+      ]
+    },
+    "language": {
+      "enabled": "true",
+      "actions": [
+        {
+          "action": "changed"
+        },
+        {
+          "action": "created"
+        }
+      ]
+    },
+    "content_item": {
+      "enabled": "true",
+      "actions": [
+        {
+          "action": "workflow_step_changed",
+          "transition_to": [
             {
-                "type": "content_item_variant",
-                "operations": [
-                    "publish",  
-                    "unpublish" 
-                ]
+              "workflow_identifier": {
+                "id": "131a952b-ead3-448f-84f4-644d5fea49b1"
+              },
+              "step_identifier": {
+                "id": "b4363ccd-8f21-45fd-a840-5843d7b7f008"
+              }
             },
             {
-                "type": "taxonomy",
-                "operations": [
-                    "archive",
-                    "restore",
-                    "upsert" 
-                ]
+              "workflow_identifier": {
+                "id": "ee4aa121-fcdf-417e-bcc2-929a94a83727"
+              },
+              "step_identifier": {
+                "id": "88ac5e6e-1c5c-4638-96e1-0d61221ad5bf"
+              }
             }
+          ]
+        }
+      ],
+      "filters": {
+        "collections": [
+          {
+            "id": "a1b6c97b-0af1-4791-bdc8-b5d0556004ae"
+          }
         ],
-        "preview_delivery_api_content_changes": [
-            {
-                "type": "content_item_variant",
-                "operations": [
-                    "archive",  
-                    "upsert" 
-                ]
-            },
-            {
-                "type": "taxonomy",
-                "operations": [
-                    "archive",
-                    "restore",
-                    "upsert" 
-                ]
-            }
+        "content_types": [
+          {
+            "id": "99efc78f-af77-4535-a553-3ae2c5fd5385"
+          }
         ],
-        "workflow_step_changes": [
-            {
-                "type": "content_item_variant",
-                "transitions_to": [ 
-                    { "id": "b4363ccd-8f21-45fd-a840-5843d7b7f008" },
-                    { "id": "88ac5e6e-1c5c-4638-96e1-0d61221ad5bf" }
-                ]
-            }
+        "languages": [
+          {
+            "id": "16ec3fdb-cb3d-42ea-a179-6fd682d4a25b"
+          }
         ]
+      }
     }
+  }
 }'
