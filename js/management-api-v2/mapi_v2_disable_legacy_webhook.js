@@ -7,6 +7,6 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-const response = await client.disableWebhook()
+const response = await client.disableLegacyWebhook()
   .byId("5df74e27-1213-484e-b9ae-bcbe90bd5990")
   .toPromise();

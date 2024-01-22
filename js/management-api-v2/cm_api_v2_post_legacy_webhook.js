@@ -7,7 +7,7 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-const response = await client.addWebhook()
+const response = await client.addLegacyWebhook()
   .withData(
     {
       name: "Example webhook",

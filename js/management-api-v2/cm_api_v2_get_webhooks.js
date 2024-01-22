@@ -7,6 +7,5 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-const response = await client.deleteLegacyWebhook()
-  .byId("d53360f7-79e1-42f4-a524-1b53a417d03e")
+const response = await client.listWebhooks()
   .toPromise();
