@@ -11,6 +11,9 @@ var response = await client.CreateSpaceAsync(new SpaceCreateModel
     {
         Name = "Space 1", 
         Codename = "space_1",
-        WebSpotlightRootItem = Reference.ByCodename("root_item_1")
+        WebSpotlightRootItem = Reference.ByCodename("root_item_1"),
+        Collections = new Reference[] {
+            Reference.ByCodename("first_collection"), Reference.ByExternalId("external-collection")
+        }
     }
 );

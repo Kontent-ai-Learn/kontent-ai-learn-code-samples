@@ -26,6 +26,13 @@ var response = await client.ModifySpaceAsync(identifier, new SpaceOperationRepla
         {
             PropertyName = PropertyName.WebSpotlightRootItem,
             Value = Reference.ById(Guid.Parse("1024356f-858f-421a-b804-07c6bfe10ce5"))
-        } 
+        },
+        new SpaceOperationReplaceModel
+        {
+            PropertyName = PropertyName.Collections,
+            Value = new Reference[] {
+                Reference.ByCodename("first_collection"), Reference.ByCodename("extra_collection")
+            }
+        }
     }
 );
