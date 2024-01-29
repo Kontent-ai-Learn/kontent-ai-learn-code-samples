@@ -11,8 +11,3 @@ const client = new ManagementClient({
 const response = await client.listLanguageVariantsByCollection()
     .byCollectionCodename('important_collection')
     .toPromise();
-
-// Gets all pages of results
-// response = await client.listLanguageVariantsByCollection()
-//     .byCollectionCodename('important_collection')
-//     .toPromise();
