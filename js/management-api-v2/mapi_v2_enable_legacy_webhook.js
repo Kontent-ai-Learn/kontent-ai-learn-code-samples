@@ -7,6 +7,6 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-const response = await client.enableWebhook()
+const response = await client.enableLegacyWebhook()
   .byId("5df74e27-1213-484e-b9ae-bcbe90bd5990")
   .toPromise();

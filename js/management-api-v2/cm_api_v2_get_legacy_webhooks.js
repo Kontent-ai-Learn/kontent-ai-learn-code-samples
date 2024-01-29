@@ -7,5 +7,5 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-const response = await client.listWebhooks()
+const response = await client.listLegacyWebhooks()
   .toPromise();
