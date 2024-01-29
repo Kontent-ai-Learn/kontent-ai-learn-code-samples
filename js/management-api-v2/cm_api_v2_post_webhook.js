@@ -19,58 +19,58 @@ const response = await client.addWebhook()
         content_type: {
           enabled: "true",
           actions: [
-          {
-          action: "changed"
-          }
+            {
+              action: "changed"
+            }
           ]
-          },
-          asset: {
+        },
+        asset: {
           enabled: "true",
           actions: [
-          {
-          action: "deleted"
-          }
+            {
+              action: "deleted"
+            }
           ]
-          },
-          taxonomy: {
+        },
+        taxonomy: {
           enabled: "true",
           actions: [
-          {
-          action: "term_changed"
-          }
+            {
+              action: "term_changed"
+            }
           ]
-          },
-          language: {
+        },
+        language: {
           enabled: "true",
           actions: [
-          {
-          action: "changed"
-          },
-          {
-          action: "created"
-          }
+            {
+              action: "changed"
+            },
+            {
+              action: "created"
+            }
           ]
-          },
-          content_item: {
+        },
+        content_item: {
           enabled: "true",
           actions: [
-          {
-          action: "workflow_step_changed",
-          transition_to: []
-          }
+            {
+              action: "workflow_step_changed",
+              transition_to: []
+            }
           ],
           filters: {
-          collections: [
-          {}
-          ],
-          content_types: [
-          {}
-          ],
-          languages: [
-          {}
-          ]
-      }
+            collections: [
+              {}
+            ],
+            content_types: [
+              {}
+            ],
+            languages: [
+              {}
+            ]
           }
-  }
-})
+        }
+      }
+    })
   .toPromise();
