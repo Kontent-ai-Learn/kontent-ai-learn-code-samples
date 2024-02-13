@@ -12,6 +12,19 @@ var response = await client.CreateWebhookAsync(new WebhookCreateModel
     Name = "Example webhook",
     Url = "https://example.com/webhook",
     Secret = "secret_key",
+    Headers = new []
+    {
+        new CustomHeaderModel
+        {
+            Key = "key1",
+            Value = "value1"
+        },
+        new CustomHeaderModel
+        {
+            Key = "key2",
+            Value = "value2"
+        }
+    },
     DeliveryTriggers = new DeliveryTriggersModel
     {
         ContentType = new ContentTypeTriggerModel
