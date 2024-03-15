@@ -51,5 +51,14 @@ curl --request PATCH \
       "external_id": "my-new-term",
       "terms": []
     }
+  },
+  {
+    "op": "move",
+    "reference": {
+      "external_id": "my-new-term"
+    },
+    "before": {
+      "codename": "first_term"
+    }
   }
 ]'

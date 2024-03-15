@@ -33,5 +33,19 @@ curl --request PATCH \
   {
     "op": "remove",
     "path": "/elements/external_id:my-multiple-choice-id/options/codename:my_option"
+  },
+  {
+    "op": "move",
+    "path": "/elements/codename:my_metadata_snippet__my_meta_title",
+    "after": {
+      "codename": "my_metadata_snippet__my_meta_description"
+    }
+  },
+  {
+    "op": "move",
+    "path": "/elements/external_id:my-multiple-choice-id/options/id:8e6ec8b1-6510-4b9b-b4be-6c977f4bdfbc",
+    "before": {
+      "id": "6bfe5a60-5cc2-4303-8f72-9cc53431046b"
+    }
   }
 ]'

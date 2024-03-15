@@ -37,5 +37,19 @@ curl --request PATCH \
   {
    "op": "remove",
    "path": "/elements/id:e94fab1f-c2c1-4f4a-b36c-3f7a0808d2b8/allowed_blocks/text"
+  },
+  {
+    "op": "move",
+    "path": "/elements/codename:my_text_element",
+    "after": {
+      "external_id": "my-title-id"
+    }
+  },
+  {
+    "op": "move",
+    "path": "/elements/external_id:my-multiple-choice-id/options/id:d66ffa49-86ff-eeaa-c33b-e5d9eefe8b81",
+    "before": {
+      "id": "523e6231-8d80-a158-3601-dffde4e64a78"
+    }
   }
 ]'
