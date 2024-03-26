@@ -40,5 +40,15 @@ var response = await client.ModifyContentTypeSnippetAsync(identifier, new Conten
     new ContentTypeSnippetPatchRemoveModel
     {
         Path = "/elements/external_id:my-multiple-choice-id/options/codename:my_option"
+    },
+    new ContentTypeSnippetPatchMoveModel
+    {
+        Path = "/elements/codename:my_metadata_snippet__my_meta_title",
+        After = Reference.ByCodename("my_metadata_snippet__my_meta_description")
+    },
+    new ContentTypeSnippetPatchMoveModel
+    {
+        Path = "/elements/external_id:my-multiple-choice-id/options/id:8e6ec8b1-6510-4b9b-b4be-6c977f4bdfbc",
+        Before = Reference.ById(Guid.Parse("6bfe5a60-5cc2-4303-8f72-9cc53431046b"))
     }
 });

@@ -36,5 +36,15 @@ var response = await client.ModifyContentTypeAsync(identifier, new ContentTypeOp
     new ContentTypeRemovePatchModel
     {
         Path = "/elements/id:0b2015d0-16ae-414a-85f9-7e1a4b3a3eae"
+    },
+    new ContentTypeMovePatchModel
+    {
+        Path = "/elements/codename:my_text_element",
+        After = Reference.ByExternalId("my-title-id")
+    },
+    new ContentTypeMovePatchModel
+    {
+        Path = "/elements/external_id:my-multiple-choice-id/options/id:d66ffa49-86ff-eeaa-c33b-e5d9eefe8b81",
+        Before = Reference.ById(Guid.Parse("523e6231-8d80-a158-3601-dffde4e64a78"))
     }
 });
