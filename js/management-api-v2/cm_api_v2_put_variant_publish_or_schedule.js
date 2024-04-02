@@ -15,7 +15,7 @@ const response = await client.publishLanguageVariant()
   // .byLanguageCodename('es-mx')
   // To schedule publish date, use .withData({scheduled_to: 'datetime-to-publish-at'})
   .withData({
-    scheduled_to: '2038-01-19T04:14:08+01:00',
+    scheduled_to: '2038-01-19T04:14:08',
     display_timezone: "Australia/Sydney"
   })
   // To publish now, use .withoutData()

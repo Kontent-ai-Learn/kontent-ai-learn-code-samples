@@ -5,6 +5,6 @@ curl --request PUT \
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
   --header 'Content-type: application/json' \
   --data '{
-  "scheduled_to": "2038-01-19T04:14:08+01:00",
+  "scheduled_to": "2038-01-19T04:14:08",
   "display_timezone": "Europe/Prague"
 }'
