@@ -67,7 +67,7 @@ var response = await client.UpsertLanguageVariantAsync(
         },
         DueDate = new DueDateModel
         {
-            Value = DateTime.Parse("2092-01-07T06:04:00.7069564Z")
+            Value = DateTime.Parse("2024-02-26T06:04:00.7069564Z")
         },
         new WorkflowStepIdentifier(Reference.ByCodename("default"), Reference.ByCodename("review")))
     },
