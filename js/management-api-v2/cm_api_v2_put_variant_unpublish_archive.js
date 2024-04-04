@@ -15,7 +15,7 @@ const response = await client.unpublishLanguageVariant()
   .byLanguageCodename('es-mx')
   // To schedule unpublish date, use .withData({scheduled_to: 'datetime-to-unpublish-at'})
   .withData({
-    scheduled_to: '2038-01-19T04:14:08+01:00',
+    scheduled_to: '2038-01-19T04:14:08',
     display_timezone: "Australia/Sydney"
   })
   // To unpublish now, use .withoutData()

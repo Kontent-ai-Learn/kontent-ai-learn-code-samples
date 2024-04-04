@@ -9,6 +9,6 @@ curl --request PUT \
   --header 'Content-type: application/json' \
   --data '
 {
-  "scheduled_to": "2038-01-19T04:14:08+01:00",
-  "display_timezone": "Europe/Prague"
+  "scheduled_to": "2038-01-19T04:14:08",
+  "display_timezone": "Australia/Sydney"
 }'

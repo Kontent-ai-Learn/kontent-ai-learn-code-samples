@@ -20,6 +20,6 @@ await client.PublishLanguageVariantAsync(identifier);
 // Scheduled publish
 await client.SchedulePublishingOfLanguageVariantAsync(identifier, new ScheduleModel
 {
-    ScheduleTo = DateTime.Parse("2038-01-19T04:14:08+01:00"),
+    ScheduleTo = DateTime.Parse("2038-01-19T04:14:08"),
     DisplayTimeZone = "Australia/Sydney"
 });
