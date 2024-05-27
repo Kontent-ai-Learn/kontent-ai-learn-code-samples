@@ -5,5 +5,9 @@ curl --request POST \
   --data '
 {
   "name": "Develop",
-  "roles_to_activate": ["1144138e-420b-4f0f-9056-10c8c7d60869"]
+  "roles_to_activate": ["1144138e-420b-4f0f-9056-10c8c7d60869"],
+  "copy_data_options": {
+    "content_items_assets": true,
+    "content_item_version_history": false
+  }
 }'
