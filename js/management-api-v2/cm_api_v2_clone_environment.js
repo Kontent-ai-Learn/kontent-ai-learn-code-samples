@@ -11,7 +11,7 @@ const response = await client.cloneEnvironment()
     .withData(
         {
             name: "Develop",
-            roles_to_activate: ["95671d8-1234-7890-ab45-1234b0b95000"]
+            roles_to_activate: ["ee483b59-5a24-4010-b277-ae224c34bc71"]
         }
     )
     .toPromise();

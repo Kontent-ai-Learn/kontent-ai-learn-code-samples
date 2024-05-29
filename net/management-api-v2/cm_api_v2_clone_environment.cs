@@ -13,6 +13,6 @@ var response = await client.CloneEnvironmentAsync(new EnvironmentCloneModel
     Name = "New environment",
     RolesToActivate = new[]
     {
-        Guid.Parse("2f925111-1457-49d4-a595-0958feae8ae4")
+        Guid.Parse("ee483b59-5a24-4010-b277-ae224c34bc71")
     }
 });
