@@ -14,5 +14,9 @@ var response = await client.CloneEnvironmentAsync(new EnvironmentCloneModel
     RolesToActivate = new[]
     {
         Guid.Parse("ee483b59-5a24-4010-b277-ae224c34bc71")
+    },
+    CopyDataOptions = new CopyDataOptions {
+        ContentItemsAssets = true,
+        ContentItemVersionHistory = false
     }
 });
