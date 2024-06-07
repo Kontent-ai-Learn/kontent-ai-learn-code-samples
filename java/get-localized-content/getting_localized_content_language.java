@@ -8,7 +8,7 @@ DeliveryClient client = new DeliveryClient("<YOUR_ENVIRONMENT_ID>");
 // Registers the model class for articles
 client.registerType(Article.class);
 
-// Gets the Spanish variant of an article
+// Gets a specific article in Spanish
 CompletionStage<Article> item = client.getItem(
 	"about_us",
 	Article.class,

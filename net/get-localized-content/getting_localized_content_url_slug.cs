@@ -7,8 +7,8 @@ IDeliveryClient client = DeliveryClientBuilder
       .WithProjectId("8d20758c-d74c-4f59-ae04-ee928c0816b7")
       .Build();
 
-// Gets the 'About us' content item in Spanish based on the item's URL slug value
-// Create strongly typed models according to https://kontent.ai/learn/net-strong-types
+// Tip: Create strongly typed models according to https://kontent.ai/learn/net-strong-types
+// Filters all articles to find the Spanish variant by its URL slug
 IDeliveryItemListingResponse<Article> response = await client.GetItemsAsync<Article>(
     new LanguageParameter("es-ES"),
     new EqualsFilter("system.type", "article"),

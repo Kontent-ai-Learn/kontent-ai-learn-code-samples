@@ -7,6 +7,7 @@ use Kontent\Ai\Delivery\DeliveryClient;
 
 $client = new DeliveryClient('975bf280-fd91-488c-994c-2f04416e5ee3');
 
+// Gets content items in Spanish without following language fallbacks
 $items = $client->getItems((new QueryParams())
             ->language('es-ES')
             ->equals('system.language', 'es-ES'));

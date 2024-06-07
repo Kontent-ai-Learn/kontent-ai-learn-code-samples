@@ -8,7 +8,7 @@ DeliveryClient client = new DeliveryClient("<YOUR_ENVIRONMENT_ID>");
 // Registers the model class for articles
 client.registerType(Article.class);
 
-// Gets the Spanish variant of an "About us" content item that has "acerda-de-nosotros" in its "URL pattern" element
+// Filters all articles to find the Spanish variant by its URL slug
 CompletionStage<List<Article>> items = client.getItems(
     Article.class,
     DeliveryParameterBuilder.params()

@@ -1,5 +1,7 @@
+# Gets the Spanish variant of an article
 query GetArticleInSpanish {
   article(codename: "about_us", languageFilter: {languageCodename: "es-ES"}) {
     title
+    # other elements
   }
 }

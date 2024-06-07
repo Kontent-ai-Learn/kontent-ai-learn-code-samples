@@ -1,3 +1,4 @@
+# Gets a specific article in Spanish
 curl --request GET \
   --url 'https://deliver.kontent.ai/8d20758c-d74c-4f59-ae04-ee928c0816b7/items/about_us?language=es-ES' \
   --header 'content-type: application/json'

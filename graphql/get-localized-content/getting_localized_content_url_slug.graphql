@@ -1,7 +1,9 @@
+# Filters all articles to find the Spanish variant by its URL slug
 query GetArticlesByLocalizedSlug {
   article_All(where: {title: {eq: "acerda-de-nosotros"}}, languageFilter: {languageCodename: "es-ES"}) {
     items {
       title
+      # other elements
     }
   }
 }
