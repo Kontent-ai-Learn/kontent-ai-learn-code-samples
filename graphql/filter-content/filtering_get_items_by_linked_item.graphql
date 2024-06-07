@@ -1,15 +1,33 @@
-# Gets items attributed to Jane.
-query GetArticlesByAuthor {
-  article_All(where: {author: {containsAll: ["jane_doe"]}}) {
+// # Gets a list of items where the 'my_page' item is used in the 'navigation' element.
+query GetItemsByUsedIn {
+  page_All(where: {navigation: {containsAll: ["my_page"]}}) {
     items {
       title
     }
   }
 }
 
-# Gets items attributed to at least Jane, John, or both.
+# Gets items linked to at least Jane, John, or both.
 query GetArticlesByOneOfAuthors {
   article_All(where: {author: {containsAny: ["jane_doe", "john_wick"]}}) {
+    items {
+      title
+    }
+  }
+}
+
+# Gets pages linking travel insurance as their subpage.
+query GetArticlesTaggedWithATerm {
+  article_All(where: {subpages: {containsAll: ["travel_insurance"]}}) {
+    items {
+      title
+    }
+  }
+}
+
+# Gets pages linking at least travel insurance, car insurance, or both as their subpage.
+query GetArticlesTaggedWithTerms {
+  article_All(where: {subpages: {containsAny: ["travel_insurance", "car_insurance"]}}) {
     items {
       title
     }
