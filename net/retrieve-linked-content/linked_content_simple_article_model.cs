@@ -1,4 +1,4 @@
-// Create strongly typed models according to https://kontent.ai/learn/net-strong-types
+// Tip: Create strongly typed models according to https://kontent.ai/learn/net-strong-types
 
 using System;
 using System.Collections.Generic;

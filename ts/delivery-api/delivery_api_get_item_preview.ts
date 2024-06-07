@@ -1,7 +1,7 @@
 // Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
 import { IContentItem, createDeliveryClient, Elements } from '@kontent-ai/delivery-sdk';
 
-// Create strongly typed models according to https://kontent.ai/learn/tutorials/develop-apps/get-content/using-strongly-typed-models
+// Tip: Create strongly typed models according to https://kontent.ai/learn/tutorials/develop-apps/get-content/using-strongly-typed-models
 export type Article = IContentItem<{
     title: Elements.TextElement;
     summary: Elements.RichTextElement;

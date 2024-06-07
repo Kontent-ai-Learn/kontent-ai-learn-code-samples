@@ -13,6 +13,6 @@ export type Article = IContentItem<{
   related_articles: Article[];
 }>;
 
-// Create strongly typed models according to https://kontent.ai/learn/strongly-typed-models
+// Tip: Create strongly typed models according to https://kontent.ai/learn/strongly-typed-models
 const response = await deliveryClient.item<Article>('my_article')
   .toPromise();

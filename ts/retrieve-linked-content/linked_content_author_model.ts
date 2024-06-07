@@ -1,4 +1,4 @@
-// Create strongly typed models according to https://kontent.ai/learn/strongly-typed-models
+// Tip: Create strongly typed models according to https://kontent.ai/learn/strongly-typed-models
 import { IContentItem, Elements } from '@kontent-ai/delivery-sdk';
 
 export type Author = IContentItem<{

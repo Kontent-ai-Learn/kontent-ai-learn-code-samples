@@ -7,7 +7,7 @@ IDeliveryClient client = DeliveryClientBuilder
       .Build();
 
 // Gets a specific article and its linked items
-// Create strongly typed models according to https://kontent.ai/learn/net-strong-types
+// Tip: Create strongly typed models according to https://kontent.ai/learn/net-strong-types
 IDeliveryItemResponse<SimpleArticle> response = await client.GetItemAsync<SimpleArticle>("the_origin_of_coffee",
     new DepthParameter(1)
     );

@@ -4,7 +4,7 @@ import kontent.ai.delivery.*;
 // Initializes a DeliveryClient
 DeliveryClient client = new DeliveryClient("<YOUR_ENVIRONMENT_ID>");
 
-// Create strongly typed models according to https://kontent.ai/learn/strongly-typed-models
+// Tip: Create strongly typed models according to https://kontent.ai/learn/strongly-typed-models
 // Registers the model class for articles
 client.registerType(Page.class);
 

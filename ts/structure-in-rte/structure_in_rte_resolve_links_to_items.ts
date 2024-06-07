@@ -6,7 +6,7 @@ const deliveryClient = createDeliveryClient({
   environmentId: '<YOUR_ENVIRONMENT_ID>'
 });
 
-// Create strongly typed models according to https://kontent.ai/learn/strongly-typed-models
+// Tip: Create strongly typed models according to https://kontent.ai/learn/strongly-typed-models
 export type Article = IContentItem<{
   title: Elements.TextElement;
   body: Elements.RichTextElement;

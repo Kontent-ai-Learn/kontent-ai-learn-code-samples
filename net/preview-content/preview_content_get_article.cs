@@ -10,7 +10,7 @@ IDeliveryClient client = DeliveryClientBuilder
     .Build();
 
 // Gets the latest version of a content item
-// Create strongly typed models according to https://kontent.ai/learn/net-strong-types
+// Tip: Create strongly typed models according to https://kontent.ai/learn/net-strong-types
 IDeliveryItemResponse<Article> response = await client.GetItemAsync<Article>("my_article");
 
 Article item = response.Item;
