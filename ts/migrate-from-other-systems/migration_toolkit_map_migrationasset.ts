@@ -19,10 +19,10 @@ const adapter: ExportAdapter = {
         // Specifies the asset filename to use in Kontent.ai
         codename: toCodename(sourceAsset.filename),
         filename: sourceAsset.filename,
-        // Specifies the asset title.
+        // Specifies the asset title
         title: sourceAsset.title,
         // Specifies the binary file you want to upload and use for the asset
-        binaryData: readFileSync("./warrior_teaser.jpg"), // TBD
+        binaryData: readFileSync("./warrior_teaser.jpg"),
         // Specifies alt texts for the asset in multiple languages
         descriptions: [
           {
