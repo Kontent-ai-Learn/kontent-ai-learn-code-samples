@@ -1,36 +1,21 @@
 import {
-  ExportAdapter,
   MigrationAsset,
   MigrationItem,
-  exportAsync,
   importAsync,
 } from "@kontent-ai-consulting/migration-toolkit";
 
-// Specifies how to map the exported content to migration objects
-const adapter: ExportAdapter = {
-  name: "customExportAdapter",
-  exportAsync: () => {
-    // TODO: Load the exported content and map it to MigrationItems
-    const migrationItems: MigrationItem[] = [];
-    // TODO: Load the exported assets and map them to MigrationAssets
-    const migrationAssets: MigrationAsset[] = [];
+// 1. Map the exported content to MigrationItems
+const migrationItems: MigrationItem[] = [];
+// 2. Map exported files to MigrationAssets
+const migrationAssets: MigrationAsset[] = [];
 
-    return {
-      items: migrationItems,
-      assets: migrationAssets,
-    };
-  },
-};
-
-// Runs the adapter to prepare exported data for import
-const exportData = await exportAsync(adapter);
-
-// Imports the exported data to a Kontent.ai environment
+// 3. Import the exported and mapped data to Kontent.ai
 await importAsync({
-  data: exportData,
-  adapterConfig: {
-    environmentId: "YOUR_ENVIRONMENT_ID",
-    apiKey: "YOUR_MANAGEMENT_API_KEY",
-    skipFailedItems: false,
+  data: {
+    assets: migrationAssets,
+    items: migrationItems
   },
+  environmentId: "KONTENT_AI_ENVIRONMENT_ID",
+  apiKey: "MANAGEMENT_API_KEY",
+  skipFailedItems: false,
 });
