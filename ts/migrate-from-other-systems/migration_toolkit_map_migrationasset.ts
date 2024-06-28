@@ -1,7 +1,7 @@
 import {
   MigrationAsset,
 } from "@kontent-ai-consulting/migration-toolkit";
-import { readFileSync } from "fs";
+import { readFileSync } from "fs"; // Only if loading local data
 
 const migrationAssets: MigrationAsset[] = [];
 
