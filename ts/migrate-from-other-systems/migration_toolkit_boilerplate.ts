@@ -17,5 +17,4 @@ await importAsync({
   },
   environmentId: "KONTENT_AI_ENVIRONMENT_ID",
   apiKey: "MANAGEMENT_API_KEY",
-  skipFailedItems: false,
 });
