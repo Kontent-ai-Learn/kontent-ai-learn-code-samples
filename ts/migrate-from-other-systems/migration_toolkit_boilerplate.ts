@@ -9,7 +9,7 @@ const migrationItems: MigrationItem[] = [];
 // 2. Map exported files to MigrationAssets
 const migrationAssets: MigrationAsset[] = [];
 
-// 3. Import the exported and mapped data to Kontent.ai
+// 3. Import the exported and mapped data into Kontent.ai
 await importAsync({
   data: {
     assets: migrationAssets,

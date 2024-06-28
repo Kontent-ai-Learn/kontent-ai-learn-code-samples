@@ -4,13 +4,19 @@ import {
 import { readFileSync } from "fs";
 
 const migrationAssets: MigrationAsset[] = [];
+
 const asset: MigrationAsset = {
   // You can load the data from anywhere, not just from the filesystem
   binaryData: readFileSync("./path/to/file.jpg"),
-  codename: "file_codename", // // Generate a unique asset codename
-  filename: "file.jpg", // Name the binary file linked to the asset
-  title: "My asset", // Name the asset
+  // Ensure a unique asset codename. Check https://kontent.ai/learn/rules-for-codenames
+  codename: "file_codename",
+  // Name the binary file linked to the asset
+  filename: "file.jpg",
+  // Name the asset
+  title: "My asset",
+  // Asign the asset to a collection
   collection: "default",
+  // Specify localized asset descriptions
   descriptions: [
     {
       language: {
