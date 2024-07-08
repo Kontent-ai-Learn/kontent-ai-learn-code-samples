@@ -1,9 +1,5 @@
-import {
-  MigrationAsset,
-} from "@kontent-ai-consulting/migration-toolkit";
+import { MigrationAsset } from "@kontent-ai-consulting/migration-toolkit";
 import { readFileSync } from "fs"; // Only if loading local data
-
-const migrationAssets: MigrationAsset[] = [];
 
 const asset: MigrationAsset = {
   // You can load the data from anywhere, not just from the filesystem
@@ -15,16 +11,18 @@ const asset: MigrationAsset = {
   // Name the asset
   title: "My asset",
   // Asign the asset to a collection
-  collection: "default",
+  collection: {
+    codename: "default",
+  },
   // Specify localized asset descriptions
   descriptions: [
     {
       language: {
-        codename: "default"
+        codename: "default",
       },
-      description: "Alt text"
-    }
-  ]
+      description: "Alt text",
+    },
+  ],
 };
 
-migrationAssets.push(asset);
+const migrationAssets: MigrationAsset[] = [asset];

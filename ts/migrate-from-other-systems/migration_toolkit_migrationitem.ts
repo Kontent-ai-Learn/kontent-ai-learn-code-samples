@@ -13,11 +13,16 @@ const migrationItem: MigrationItem = {
     type: { codename: "article" },
     // Assign the variant to a workflow
     workflow: { codename: "default" },
-    // Put the variant in a specific workflow step
-    workflow_step: { codename: "draft" },
   },
-  elements: { // Variant's content
-    // For each element specified by the item's content type, add properties named using element codenames.
-    // Example: element_codename: elementsBuilder.textElement({ value: 'plaintext' }),
-  }
+  versions: [
+    {
+      // Put the variant in a specific workflow step
+      workflow_step: { codename: "draft" },
+      elements: {
+        // Variant's content
+        // For each element specified by the item's content type, add properties named using element codenames.
+        // Example: element_codename: elementsBuilder.textElement({ value: 'plaintext' }),
+      },
+    },
+  ],
 };
