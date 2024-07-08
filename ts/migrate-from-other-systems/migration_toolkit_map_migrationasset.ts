@@ -1,15 +1,15 @@
 import { MigrationAsset } from "@kontent-ai-consulting/migration-toolkit";
 import { readFileSync } from "fs"; // Only if loading local data
 
-const asset: MigrationAsset = {
+const coverAsset: MigrationAsset = {
   // You can load the data from anywhere, not just from the filesystem
-  binaryData: readFileSync("./path/to/file.jpg"),
+  binaryData: readFileSync("./movies/posters/warrior.jpg"),
   // Ensure a unique asset codename. Check https://kontent.ai/learn/rules-for-codenames
-  codename: "file_codename",
+  codename: "warrior_teaser",
   // Name the binary file linked to the asset
-  filename: "file.jpg",
+  filename: "warrior_teaser.jpg",
   // Name the asset
-  title: "My asset",
+  title: "Warrior cover",
   // Asign the asset to a collection
   collection: {
     codename: "default",
@@ -20,9 +20,9 @@ const asset: MigrationAsset = {
       language: {
         codename: "default",
       },
-      description: "Alt text",
+      description: "Poster for Warrior movie",
     },
   ],
 };
 
-const migrationAssets: MigrationAsset[] = [asset];
+const migrationAssets: MigrationAsset[] = [coverAsset];
