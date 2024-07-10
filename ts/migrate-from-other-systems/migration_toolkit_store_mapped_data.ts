@@ -1,12 +1,10 @@
-import {
-  storeAsync,
-} from "@kontent-ai-consulting/migration-toolkit";
+import { storeAsync } from "@kontent-ai/migration-toolkit";
 
 // Store your mapped data on the filesystem
 await storeAsync({
   data: {
     assets: migrationAssets,
-    items: migrationItems
+    items: migrationItems,
   },
-  filename: 'core_content.zip',
+  filename: "core_content.zip",
 });

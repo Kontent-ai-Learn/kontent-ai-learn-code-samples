@@ -1,3 +1,5 @@
+import { MigrationItem } from "@kontent-ai/migration-toolkit";
+
 const migrationItem: MigrationItem = {
   // Variant's metadata
   system: {

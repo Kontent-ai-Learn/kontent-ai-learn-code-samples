@@ -2,7 +2,7 @@ import {
   MigrationAsset,
   MigrationItem,
   importAsync,
-} from "@kontent-ai-consulting/migration-toolkit";
+} from "@kontent-ai/migration-toolkit";
 
 // 1. Map the exported content to MigrationItems
 const migrationItems: MigrationItem[] = [];
@@ -13,7 +13,7 @@ const migrationAssets: MigrationAsset[] = [];
 await importAsync({
   data: {
     assets: migrationAssets,
-    items: migrationItems
+    items: migrationItems,
   },
   environmentId: "KONTENT_AI_ENVIRONMENT_ID",
   apiKey: "MANAGEMENT_API_KEY",

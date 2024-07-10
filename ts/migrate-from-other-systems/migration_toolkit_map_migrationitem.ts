@@ -3,7 +3,7 @@ import {
   MigrationElements,
   MigrationItem,
   elementsBuilder,
-} from "@kontent-ai-consulting/migration-toolkit";
+} from "@kontent-ai/migration-toolkit";
 
 // Define the structure of your Kontent.ai content type
 interface MovieType extends MigrationElements {

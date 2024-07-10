@@ -1,4 +1,4 @@
-import { MigrationAsset } from "@kontent-ai-consulting/migration-toolkit";
+import { MigrationAsset } from "@kontent-ai/migration-toolkit";
 import { readFileSync } from "fs"; // Only if loading local data
 
 const coverAsset: MigrationAsset = {
