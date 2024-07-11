@@ -10,11 +10,11 @@ const coverAsset: MigrationAsset = {
   filename: "warrior_teaser.jpg",
   // Name the asset
   title: "Warrior cover",
-  // Asign the asset to a collection
+  // (Optional) Asign the asset to a collection
   collection: {
     codename: "default",
   },
-  // Specify localized asset descriptions
+  // (Optional) Specify localized asset descriptions
   descriptions: [
     {
       language: {
