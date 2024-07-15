@@ -11,7 +11,11 @@ const response = await client.cloneEnvironment()
     .withData(
         {
             name: "Develop",
-            roles_to_activate: ["ee483b59-5a24-4010-b277-ae224c34bc71"]
+            roles_to_activate: ["ee483b59-5a24-4010-b277-ae224c34bc71"],
+            copy_data_options: {
+                content_items_assets: true,
+                content_item_version_history: false,
+            }
         }
     )
     .toPromise();
