@@ -7,5 +7,5 @@ const client = new ManagementClient({
   apiKey: '<YOUR_API_KEY>'
 });
 
-const response = await client.projectInformation()
+const response = await client.environmentInformation()
   .toPromise();

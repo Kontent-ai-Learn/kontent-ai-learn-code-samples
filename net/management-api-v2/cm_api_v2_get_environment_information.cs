@@ -7,4 +7,4 @@ var client = new ManagementClient(new ManagementOptions
     ProjectId = "<YOUR_ENVIRONMENT_ID>"
 });
 
-var response = await client.GetProjectInformationAsync();
+var response = await client.GetEnvironmentInformationAsync();
