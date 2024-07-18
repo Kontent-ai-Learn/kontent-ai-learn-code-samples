@@ -25,11 +25,12 @@ const movie: MigrationItem<MovieType> = {
     type: { codename: "movie" },
     workflow: { codename: "default" },
   },
-  // Migrate up to 2 versions - latest and published. This is optional. Typically, you'd only migrate a single version of your content.
+  // Specify up to 2 versions of the variant - latest and published.
+  // The latest version can be in any workflow step.
   versions: [
     {
       workflow_step: {
-        // Tip: You can have the item published during the import or use any other workflow step
+        // You can publish the variant during the import, or use any other workflow step
         codename: "published",
       },
       elements: {
