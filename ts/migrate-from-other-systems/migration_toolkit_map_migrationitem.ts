@@ -1,26 +1,43 @@
 import {
   MigrationElementModels,
-  MigrationElements,
+  MigrationItemSystem,
   MigrationItem,
   elementsBuilder,
 } from "@kontent-ai/migration-toolkit";
 
-// Define the structure of your Kontent.ai content type
-interface MovieType extends MigrationElements {
-  title: MigrationElementModels.TextElement;
-  plot: MigrationElementModels.RichTextElement;
-  length: MigrationElementModels.NumberElement;
-  category: MigrationElementModels.MultipleChoiceElement;
-  poster: MigrationElementModels.AssetElement;
-}
+// (Optionally) Define the structure of your Kontent.ai content type
+type LanguageCodenames = "default" | "en";
+type CollectionCodenames = "default" | "global";
+type WorkflowCodenames = "default" | "custom";
+type WorkflowStepCodenames = "published" | "archived" | "draft";
 
-const movie: MigrationItem<MovieType> = {
+type MovieItem = MigrationItem<
+  {
+    title: MigrationElementModels.TextElement;
+    plot: MigrationElementModels.RichTextElement;
+    length: MigrationElementModels.NumberElement;
+    category: MigrationElementModels.MultipleChoiceElement;
+    poster: MigrationElementModels.AssetElement;
+    stars: MigrationElementModels.LinkedItemsElement;
+    seoname: MigrationElementModels.UrlSlugElement;
+    released: MigrationElementModels.DateTimeElement;
+    releasecategory: MigrationElementModels.TaxonomyElement;
+  },
+  MigrationItemSystem<
+    "movie",
+    LanguageCodenames,
+    CollectionCodenames,
+    WorkflowCodenames
+  >,
+  WorkflowStepCodenames
+>;
+
+const movie: MovieItem = {
   system: {
     name: "Warrior",
     // Ensure a unique codename. Check https://kontent.ai/learn/rules-for-codenames
     codename: "warrior",
     collection: { codename: "default" },
-    // Map your source language to the language codename in Kontent.ai
     language: { codename: "default" },
     type: { codename: "movie" },
     workflow: { codename: "default" },
@@ -58,7 +75,7 @@ const movie: MigrationItem<MovieType> = {
         plot: elementsBuilder.richTextElement({
           // Check allowed HTML elements in rich text value at https://kontent.ai/learn/rich-text-in-mapi
           value: {
-            value: `<h1>Warrior</h1><p>...</p>`, 
+            value: `<h1>Warrior</h1><p>...</p>`,
             components: [],
           },
         }),
