@@ -1,9 +1,6 @@
-import {
-  importAsync,
-  extractAsync, // Only when importing from stored archives
-} from "@kontent-ai/migration-toolkit";
+import { importAsync } from "@kontent-ai/migration-toolkit";
 
-// Import from migration objects directly
+// Import content from the migration objects
 await importAsync({
   data: {
     assets: migrationAssets,
@@ -11,19 +8,4 @@ await importAsync({
   },
   environmentId: "KONTENT_AI_ENVIRONMENT_ID",
   apiKey: "MANAGEMENT_API_KEY",
-});
-
-// Extract MigrationItem and MigrationAsset objects from archive
-const { assets, items } = await extractAsync({
-  filename: "core_content.zip",
-});
-
-// Import from stored migration objects
-await importAsync({
-  environmentId: "KONTENT_AI_ENVIRONMENT_ID",
-  apiKey: "MANAGEMENT_API_KEY",
-  data: {
-    assets: assets,
-    items: items,
-  },
 });

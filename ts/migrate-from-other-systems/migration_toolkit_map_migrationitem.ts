@@ -5,13 +5,14 @@ import {
   elementsBuilder,
 } from "@kontent-ai/migration-toolkit";
 
-// (Optionally) Define the structure of your Kontent.ai content type
+// We recommend you define the structure of your Kontent.ai content type
 type LanguageCodenames = "default" | "en";
 type CollectionCodenames = "default" | "global";
 type WorkflowCodenames = "default" | "custom";
 type WorkflowStepCodenames = "published" | "archived" | "draft";
 
 type MovieItem = MigrationItem<
+  // Defines the elements in the 'Movie' content type defined in Kontent.ai
   {
     title: MigrationElementModels.TextElement;
     plot: MigrationElementModels.RichTextElement;
@@ -24,7 +25,7 @@ type MovieItem = MigrationItem<
     releasecategory: MigrationElementModels.TaxonomyElement;
   },
   MigrationItemSystem<
-    "movie",
+    "movie", // Content type codename
     LanguageCodenames,
     CollectionCodenames,
     WorkflowCodenames
@@ -55,7 +56,6 @@ const movie: MovieItem = {
         length: elementsBuilder.numberElement({ value: 140 }),
         category: elementsBuilder.multipleChoiceElement({
           value: [
-            // Reference multiple choice options by their codenames
             {
               codename: "drama",
             },
@@ -65,7 +65,6 @@ const movie: MovieItem = {
           ],
         }),
         poster: elementsBuilder.assetElement({
-          // Reference assets by their codenames
           value: [
             {
               codename: "warrior_teaser",
@@ -80,7 +79,6 @@ const movie: MovieItem = {
           },
         }),
         releasecategory: elementsBuilder.taxonomyElement({
-          // Reference taxonomy terms by their codenames
           value: [
             {
               codename: "global_release",
@@ -98,7 +96,6 @@ const movie: MovieItem = {
           },
         }),
         stars: elementsBuilder.linkedItemsElement({
-          // Reference content items by their codenames
           value: [
             {
               codename: "tom_hardy",
