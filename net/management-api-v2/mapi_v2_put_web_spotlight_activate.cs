@@ -1,4 +1,3 @@
-// DocSection: cm_api_v2_put_web_spotlight_activate
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
 using Kontent.Ai.Management;
 
@@ -17,4 +16,3 @@ var model = new WebSpotlightActivateModel()
 }
 
 var response = await client.ActivateWebSpotlightAsync(model);
-// EndDocSection
