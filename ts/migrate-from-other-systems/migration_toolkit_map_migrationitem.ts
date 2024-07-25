@@ -11,7 +11,12 @@ type CollectionCodenames = "default" | "global";
 type WorkflowCodenames = "default" | "custom";
 type WorkflowStepCodenames = "published" | "archived" | "draft";
 type ContentTypeCodenames = "movie" | "actor";
-type ContentTypeCodename<Codename extends ContentTypeCodenames> = Codename;
+type System<Codename extends ContentTypeCodenames> = MigrationItemSystem<
+  Codename,
+  LanguageCodenames,
+  CollectionCodenames,
+  WorkflowCodenames
+>;
 
 type MovieItem = MigrationItem<
   // Defines the elements in the 'Movie' content type defined in Kontent.ai
@@ -27,7 +32,7 @@ type MovieItem = MigrationItem<
     releasecategory: MigrationElementModels.TaxonomyElement;
   },
   MigrationItemSystem<
-    ContentTypeCodename<"movie">,
+    System<"movie">,
     LanguageCodenames,
     CollectionCodenames,
     WorkflowCodenames
