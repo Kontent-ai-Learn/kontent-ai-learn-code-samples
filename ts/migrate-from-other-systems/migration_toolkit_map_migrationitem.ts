@@ -31,12 +31,7 @@ type MovieItem = MigrationItem<
     released: MigrationElementModels.DateTimeElement;
     releasecategory: MigrationElementModels.TaxonomyElement;
   },
-  MigrationItemSystem<
-    System<"movie">,
-    LanguageCodenames,
-    CollectionCodenames,
-    WorkflowCodenames
-  >,
+  System<"movie">,
   WorkflowStepCodenames
 >;
 
