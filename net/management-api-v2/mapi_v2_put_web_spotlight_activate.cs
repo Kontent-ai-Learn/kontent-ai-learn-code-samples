@@ -7,8 +7,8 @@ var client = new ManagementClient(new ManagementOptions
     ProjectId = "<YOUR_PROJECT_ID>"
 });
 
-var reference = Reference.ById(Guid.Parse("6291c693-f6e4-4a6b-ac67-5c31c32f9388"));
-// var reference = Reference.ById("my_web_root_type");
+var reference = Reference.ByCodename("custom_web_spotlight_root");
+// var reference = Reference.ById(Guid.Parse("6291c693-f6e4-4a6b-ac67-5c31c32f9388"));
 
 var model = new WebSpotlightActivateModel()
 {
