@@ -14,11 +14,13 @@ const response = await client.addAssetFolders()
         {
           id: "958001d8-2228-4373-b966-5262b5b96f71",
           name: "Downloads",
+          codename: "downloads",
           external_id: "folder-with-downloadable-assets",
           folders: [
             {
               id: "9ca927b6-6e4d-4d6b-81e3-ec5e8f7772a0",
               name: "Archives",
+              codename: "archives",
               external_id: "folder-with-downloadable-archives",
               folders: []
             }
