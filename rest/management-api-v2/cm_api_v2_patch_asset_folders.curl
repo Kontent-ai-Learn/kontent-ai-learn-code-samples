@@ -9,6 +9,7 @@ curl --request PATCH \
     "value": {
       "external_id": "another-folder",
       "name": "Another second level folder",
+      "codename": "another_second_level_folder",
       "folders": []
     },
     "reference" : {
@@ -28,7 +29,7 @@ curl --request PATCH \
     "op": "rename",
     "value":"A new name",
     "reference" : {
-      "external_id": "second-folder"
+      "codename": "second_folder"
     }
   }
 ]'

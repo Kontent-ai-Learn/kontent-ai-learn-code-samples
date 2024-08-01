@@ -15,6 +15,7 @@ var response = await client.CreateAssetFoldersAsync(new AssetFolderCreateModel
         {
             Name = "Top level folder",
             ExternalId = "top-folder",
+            Codename = "top_folder",
             Folders = new []
             {
                 new AssetFolderHierarchy
