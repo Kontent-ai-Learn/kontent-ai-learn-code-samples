@@ -14,6 +14,7 @@ const response = await client.modifyAssetFolders()
         op: "addinto",
         value: {
           external_id: "folder-with-shared-assets",
+          codename: "shared_assets",
           name: "Shared assets",
           folders: []
         },
@@ -31,7 +32,7 @@ const response = await client.modifyAssetFolders()
         op: "rename",
         value: "Legal documents",
         reference: {
-          external_id: "folder-documents"
+          codename: "folder_documents"
         }
       }
     ]
