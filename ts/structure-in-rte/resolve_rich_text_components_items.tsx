@@ -1,60 +1,35 @@
 import { Elements } from "@kontent-ai/delivery-sdk";
-import {
-  nodeParse,
-  PortableTextComponent,
-  transformToPortableText,
-} from "@kontent-ai/rich-text-resolver";
-import {
-  PortableText,
-  PortableTextComponents,
-  PortableTextTypeComponentProps,
-} from "@portabletext/react";
+import { PortableTextComponent } from "@kontent-ai/rich-text-resolver";
+import { PortableTextComponents, PortableTextTypeComponentProps, } from "@portabletext/react";
+import { React } from 'react';
 
 import { CalloutComponent } from "../components/shared/richText/Callout";
 import { contentTypes } from "../models";
 
-
-type RichTextComponentProps = {
-  richTextElement: Elements.RichTextElement;
-};
-
-const getPortableTextComponents = (
-  element: Elements.RichTextElement
-): Partial<PortableTextComponents> => ({
+const createRichTextResolver = (element: Elements.RichTextElement): Partial<PortableTextComponents> => ({
   types: {
+    // Components and content items inserted in rich text
     component: ({
       value,
     }: PortableTextTypeComponentProps<PortableTextComponent>) => {
+      // Checks if the inserted content item is included in the response
+      // Kontent.ai components are always included in the response
       const componentOrItem = element.linkedItems.find(
         (i) => i.system.codename === value.component._ref
       );
 
       if (!componentOrItem) {
-        throw new Error("Component or item not found.");
+        return (<div>The referenced content item '{componentOrItem.system.codename}' wasn't found.</div>);
       }
 
+      // Renders the component or content item based on its type
       switch (componentOrItem.system.type) {
+        // Tip: Generate models at https://kontent.ai/learn/strongly-typed-models
         case contentTypes.callout.codename:
           return <CalloutComponent item={componentOrItem} />;
         default:
-          return (
-            <div>
-              Resolution for content type {componentOrItem.system.type} not
-              implemented.
-            </div>
-          );
+          return (<div>Content based on the type '{componentOrItem.system.type}' couldn't be resolved.</div>);
       }
     },
   },
 });
-
-export const RichTextComponent: React.FC<RichTextComponentProps> = (props) => {
-  const parsedTree = nodeParse(props.richTextElement.value);
-  const portableText = transformToPortableText(parsedTree);
-  return (
-    <PortableText
-      value={portableText}
-      components={getPortableTextComponents(props.richTextElement)}
-    />
-  );
-};

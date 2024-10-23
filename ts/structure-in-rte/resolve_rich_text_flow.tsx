@@ -1,42 +1,48 @@
 import { Elements } from "@kontent-ai/delivery-sdk";
-import {
-  nodeParse,
-  transformToPortableText,
-} from "@kontent-ai/rich-text-resolver";
-import { PortableText } from "@portabletext/react";
+import { nodeParse, transformToPortableText, } from "@kontent-ai/rich-text-resolver";
+import { PortableText, PortableTextComponents } from "@portabletext/react";
+import { React } from "react";
+
+// Defines how to transform Kontent.ai-specific portable text components, as well as default blocks
+const createRichTextResolver = (element: Elements.RichTextElement): Partial<PortableTextComponents> => ({
+  // The logic for individual portable text components is explained later in the lesson
+  types: {
+    // Resolution for components and content items inserted in rich text
+    component: undefined,
+    // Resolution for tables in rich text
+    table: undefined,
+    // Resolution for assets in rich text
+    image: undefined,
+  },
+  marks: {
+    // Resolution for links to external URLs
+    link: undefined, 
+    // Resolution for links to content items
+    internalLink: undefined,
+  },
+  block: {
+    // Exmamples of custom resolution for default blocks
+    h1: undefined, // h1 headings
+    p: undefined, // paragraphs
+  },
+});
 
 type RichTextComponentProps = {
   richTextElement: Elements.RichTextElement;
 };
 
-// Defines how to transform Kontent.ai-specific portable text components, as well as default blocks
-const portableTextComponents = {
-  // The logic for each portable text component is explained later in the lesson
-  types: {
-    component: undefined, // Components and linked items in rich text
-    table: undefined, // Tables in rich text
-    image: undefined, // Assets in rich text
-  },
-  marks: {
-    link: undefined, // Links to external URLs
-    internalLink: undefined, // Links to content items
-  },
-  block: {
-    // Custom resolution for default blocks
-    h1: undefined, // h1 heading
-    p: undefined, // paragraph
-  },
-};
-
 // Custom React component that renders your rich text element
 export const RichTextComponent: React.FC<RichTextComponentProps> = (props) => {
-  // Converts Kontent.ai rich text HTML to a JSON tree
+  // Converts a Kontent.ai rich text element value to a JSON tree
   const parsedTree = nodeParse(props.richTextElement.value);
   // Converts the JSON tree to portable text
   const portableText = transformToPortableText(parsedTree);
-  // Renders portable text based on the specified portable text component transformations
+  // Renders content based on the specified transformations
   return (
-    <PortableText value={portableText} components={portableTextComponents} />
+    <PortableText
+      value={portableText}
+      components={createRichTextResolver(props.richTextElement)}
+    />
   );
 };
 

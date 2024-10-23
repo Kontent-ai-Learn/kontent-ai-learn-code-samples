@@ -1,59 +1,19 @@
 import { Elements, ILink } from "@kontent-ai/delivery-sdk";
-import {
-  nodeParse,
-  PortableTextInternalLink,
-  transformToPortableText,
-} from "@kontent-ai/rich-text-resolver";
-import {
-  PortableText,
-  PortableTextComponents,
-  PortableTextMarkComponentProps,
-} from "@portabletext/react";
-import { ReactNode } from "react";
+import { PortableTextInternalLink } from "@kontent-ai/rich-text-resolver";
+import { PortableTextComponents, PortableTextMarkComponentProps } from "@portabletext/react";
+import { React, ReactNode } from "react";
 
 import { ProductLink } from "../components";
 import { contentTypes } from "../models";
 
-type RichTextComponentProps = {
-  richTextElement: Elements.RichTextElement;
-};
-
-type ItemLinkProps = {
+type ContentItemLinkProps = {
   link: ILink;
   children: ReactNode;
 };
 
-type ProductLinkProps = {};
-
-const getPortableTextComponents = (
-  element: Elements.RichTextElement
-): Partial<PortableTextComponents> => ({
-  marks: {
-    internalLink: ({
-      value,
-      children,
-    }: PortableTextMarkComponentProps<PortableTextInternalLink>) => {
-      const link = element.links.find(
-        (l) => l.linkId === value?.reference._ref
-      );
-
-      return <ItemLink link={link!}>{children}</ItemLink>;
-    },
-  },
-});
-
-export const RichTextComponent: React.FC<RichTextComponentProps> = (props) => {
-  const parsedTree = nodeParse(props.richTextElement.value);
-  const portableText = transformToPortableText(parsedTree);
-  return (
-    <PortableText
-      value={portableText}
-      components={getPortableTextComponents(props.richTextElement)}
-    />
-  );
-};
-
-const ItemLink: React.FC<ItemLinkProps> = (props) => {
+// Custom React component for rendering links to content items
+const ContentItemLink: React.FC<ContentItemLinkProps> = (props) => {
+  // Use different resolution logic based on the content type
   switch (props.link.type) {
     case contentTypes.product.codename:
       return (
@@ -65,12 +25,28 @@ const ItemLink: React.FC<ItemLinkProps> = (props) => {
         </ProductLink>
       );
     default:
-      throw new Error(
-        `No resolution implemented for item links of type ${props.link.type}.`
-      );
+      return (<div>Link to the content item '{props.link.codename}' couldn't be resolved.</div>);
   }
 };
 
+type ProductLinkProps = {};
 const ProductLink: React.FC<ProductLinkProps> = (props) => {
-  // implementation of ProductLink component
+  // Based on your app routing, resolve links to products
 };
+
+const createRichTextResolver = (element: Elements.RichTextElement): Partial<PortableTextComponents> => ({
+  marks: {
+    // Links to content items
+    internalLink: ({
+      value, // The linked item's metadata
+      children, // Link text that might include text formatting
+    }: PortableTextMarkComponentProps<PortableTextInternalLink>) => {
+      // Gets content item link metadata from the response
+      const link = element.links.find(
+        (l) => l.linkId === value?.reference._ref
+      );
+
+      return <ContentItemLink link={link!}>{children}</ContentItemLink>;
+    },
+  },
+});
