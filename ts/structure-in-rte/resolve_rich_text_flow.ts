@@ -21,7 +21,7 @@ const createRichTextResolver = (element: Elements.RichTextElement): Partial<Port
     internalLink: undefined,
   },
   block: {
-    // Exmamples of custom resolution for default blocks
+    // Examples of custom resolution for default blocks
     h1: undefined, // h1 headings
     p: undefined, // paragraphs
   },
