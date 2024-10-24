@@ -19,7 +19,7 @@ const createRichTextResolver = (element: Elements.RichTextElement): Partial<Port
       );
 
       if (!componentOrItem) {
-        return (<div>The referenced content item '{componentOrItem.system.codename}' wasn't found.</div>);
+        return (<div>The inserted content item wasn't found.</div>);
       }
 
       // Renders the component or content item based on its type
