@@ -3,7 +3,7 @@ import { readFileSync } from "fs"; // Only if using local data
 
 const coverAsset: MigrationAsset = {
   // You can read the data from anywhere, not just from the filesystem
-  binaryData: readFileSync("./movies/posters/warrior.jpg"),
+  binary_data: readFileSync("./movies/posters/warrior.jpg"),
   // Ensure a unique asset codename. Check https://kontent.ai/learn/rules-for-codenames
   // This codename is used to reference the asset in the MigrationItem object
   codename: "warrior_teaser",
