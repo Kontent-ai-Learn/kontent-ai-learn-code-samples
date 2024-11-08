@@ -1,13 +1,18 @@
 // Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
 import KontentSmartLink, { KontentSmartLinkEvent } from '@kontent-ai/smart-link';
 
-const sdk = KontentSmartLink.initialize({ ... });
+// 
+const sdk = KontentSmartLink.initialize({
+  defaultDataAttributes: {
+    projectId: 'KONTENT_AI_ENVIRONMENT_ID',
+    languageCodename: 'default',
+  },
+});
 
 sdk.on(
   KontentSmartLinkEvent.Refresh,
   (data, metadata, originalRefresh) => {
-    // Custom refresh logic goes here
-    // ...
+    // Place for your custom refresh logic
     originalRefresh(); // If you want to refresh the page at the end
   }
 );

@@ -10,4 +10,5 @@ const response = await deliveryClient.items<Article>()
   .type('article')
   .limitParameter(3)
   .orderParameter('system.last_modified', 'desc')
+  // Or: .orderByDescending('system.last_modified')
   .toPromise();
