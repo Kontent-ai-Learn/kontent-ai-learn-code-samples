@@ -2,7 +2,7 @@
 import { createDeliveryClient } from "@kontent-ai/delivery-sdk";
 
 const deliveryClient = createDeliveryClient({
-  environmentId: "<YOUR_ENVIRONMENT_ID>",
+  environmentId: 'KONTENT_AI_ENVIRONMENT_ID'
 });
 
 const response = await deliveryClient.syncChanges().toPromise();
@@ -19,4 +19,7 @@ for (const item of response.data.items) {
 }
 
 // Synchronize the next batch of changes
-const nextResponse = await deliveryClient.syncChanges().withContinuationToken(continuationToken).toPromise();
+const nextResponse = await deliveryClient
+  .syncChanges()
+  .withContinuationToken(continuationToken)
+  .toPromise();

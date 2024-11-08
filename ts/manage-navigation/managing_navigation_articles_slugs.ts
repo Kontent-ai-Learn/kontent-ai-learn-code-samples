@@ -9,7 +9,6 @@ const deliveryClient = createDeliveryClient({
 
 // Gets navigation items and their linked items
 let root: NavigationItem;
-
 const rootResponse = await deliveryClient.item<NavigationItem>('root_navigation_item')
   .depthParameter(5)
   .toPromise();
@@ -18,7 +17,6 @@ root = rootResponse.data.item;
 
 // Gets specific elements of all articles
 let articles: Article[];
-
 const articleResponse = await deliveryClient.items<Article>()
   .type('article')
   .elementsParameter(['title', 'url'])

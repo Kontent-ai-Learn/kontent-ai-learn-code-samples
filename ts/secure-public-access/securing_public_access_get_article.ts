@@ -11,11 +11,11 @@ export type Article = IContentItem<{
 }>;
 
 const deliveryClient = createDeliveryClient({
-	environmentId: '<YOUR_ENVIRONMENT_ID>',
+	environmentId: 'KONTENT_AI_ENVIRONMENT_ID',
 	defaultQueryConfig: {
 		useSecuredMode: true // Queries the Delivery API using secure access.
 	},
-	secureApiKey: '<YOUR_API_KEY>',
+	secureApiKey: 'KONTENT_AI_DELIVERY_API_KEY',
 });
 
 const response = await deliveryClient

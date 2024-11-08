@@ -3,10 +3,10 @@ import { createDeliveryClient } from '@kontent-ai/delivery-sdk';
 import { Article } from './models/Article';
 
 const deliveryClient = createDeliveryClient({
-  environmentId: '<YOUR_ENVIRONMENT_ID>',
+  environmentId: 'KONTENT_AI_ENVIRONMENT_ID',
   previewApiKey: '<YOUR_PREVIEW_API_KEY>',
   defaultQueryConfig: {
-    usePreviewMode: true, // Queries the Delivery Preview API.
+    usePreviewMode: true, // Require Delivery Preview API
   },
 });
 
