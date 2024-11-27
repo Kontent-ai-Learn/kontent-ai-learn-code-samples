@@ -44,7 +44,7 @@ var changes = new CustomAppOperationBaseModel[]
     new CustomAppReplacePatchModel()
     {
         PropertyName = PropertyName.Config,
-        Value = "{ .. }"
+        Value = "{}"
     },
     new CustomAppReplacePatchModel()
     {
