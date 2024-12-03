@@ -7,14 +7,14 @@ curl --request PATCH \
         "op": "addInto",
         "property_name": "allowed_roles",
         "value": [
-            { "codename": "new_allowed_role_codename_to_be_add_into" }
+            { "codename": "new_allowed_role_codename_to_add" }
         ]
     },
     {
         "op": "remove",
         "property_name": "allowed_roles",
         "value": [
-            { "codename": "allowed_role_codename_to_be_removed" }
+            { "codename": "allowed_role_codename_to_remove" }
         ]
     },
     {
@@ -35,7 +35,7 @@ curl --request PATCH \
     {
         "op": "replace",
         "property_name": "config",
-        "value": "{}"
+        "value": "{\"editable\"=false}"
     },
     {
         "op": "replace",

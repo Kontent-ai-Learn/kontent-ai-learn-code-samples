@@ -14,7 +14,7 @@ var changes = new CustomAppOperationBaseModel[]
         PropertyName = PropertyName.AllowedRoles,
         Value = new[]
         {
-            Reference.ByCodename("new_allowed_role_codename_to_be_add_into")
+            Reference.ByCodename("new_allowed_role_codename_to_add")
         }
     },
     new CustomAppRemovePatchModel()
@@ -22,7 +22,7 @@ var changes = new CustomAppOperationBaseModel[]
         PropertyName = PropertyName.AllowedRoles,
         Value = new[]
         {
-            Reference.ByCodename("allowed_role_codename_to_be_removed")
+            Reference.ByCodename("allowed_role_codename_to_remove")
         }
     },
     new CustomAppReplacePatchModel()
@@ -43,7 +43,7 @@ var changes = new CustomAppOperationBaseModel[]
     new CustomAppReplacePatchModel()
     {
         PropertyName = PropertyName.Config,
-        Value = "{}"
+        Value = "{\"editable\"=false}"
     },
     new CustomAppReplacePatchModel()
     {
