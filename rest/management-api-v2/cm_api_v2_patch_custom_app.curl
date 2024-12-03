@@ -1,0 +1,47 @@
+curl -X PATCH "https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/custom-apps/f8f0b5cb-f5b7-42e8-af85-fbdab3ddfacf" \
+-H "Authorization: Bearer KONTENT_AI_MANAGEMENT_API_KEY" \
+-H "Content-Type: application/json" \
+-d '[
+    {
+        "op": "addInto",
+        "property_name": "allowed_roles",
+        "value": [
+            { "codename": "new_allowed_role_codename_to_be_add_into" }
+        ]
+    },
+    {
+        "op": "remove",
+        "property_name": "allowed_roles",
+        "value": [
+          { "codename": "allowed_role_codename_to_be_removed" }
+        ]
+    },
+    {
+        "op": "replace",
+        "property_name": "name",
+        "value": "New Custom App Name"
+    },
+    {
+        "op": "replace",
+        "property_name": "codename",
+        "value": "new_custom_app_codename"
+    },
+    {
+        "op": "replace",
+        "property_name": "source_url",
+        "value": "https://newcustomapplication.net"
+    },
+    {
+        "op": "replace",
+        "property_name": "config",
+        "value": "{}"
+    },
+    {
+        "op": "replace",
+        "property_name": "allowed_roles",
+        "value": [
+            { "codename": "allowed_role_codename" },
+            { "id": "f8f0b5cb-f5b7-42e8-af85-fbdab3ddfacf" }
+        ]
+    }
+]'
