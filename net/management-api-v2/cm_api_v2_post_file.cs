@@ -4,7 +4,7 @@ using Kontent.Ai.Management;
 var client = new ManagementClient(new ManagementOptions
 {
     ApiKey = "<YOUR_API_KEY>",
-    ProjectId = "<YOUR_ENVIRONMENT_ID>"
+    EnvironmentId = "KONTENT_AI_ENVIRONMENT_ID"
 });
 
 var filePath = Path.Combine(Environment.CurrentDirectory, "Data", "which-brewing-fits-you-1080px.jpg");

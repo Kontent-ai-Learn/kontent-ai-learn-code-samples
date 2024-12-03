@@ -1,12 +1,10 @@
-// DocSection: cm_api_v2_get_custom_apps
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
 using Kontent.Ai.Management;
 
 var client = new ManagementClient(new ManagementOptions
 {
-    ApiKey = "<YOUR_API_KEY>",
-    ProjectId = "<YOUR_PROJECT_ID>"
+    ApiKey = "KONTENT_AI_MANAGEMENT_API_KEY",
+    EnvironmentId = "KONTENT_AI_ENVIRONMENT_ID"
 });
 
 var response = await client.ListCustomAppsAsync();
-// EndDocSection

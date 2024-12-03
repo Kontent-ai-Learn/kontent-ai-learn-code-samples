@@ -1,7 +1,7 @@
 // Initializes a Delivery client
 _client = DeliveryClientBuilder
     .WithOptions(builder => builder
-        .WithProjectId("<YOUR_ENVIRONMENT_ID>")
+        .WithEnvironmentId("KONTENT_AI_ENVIRONMENT_ID")
         .UseProductionApi()
         .Build())
     .Build();

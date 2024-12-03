@@ -4,7 +4,7 @@ using Kontent.Ai.Delivery;
 // Tip: Use DI to create Delivery client https://kontent.ai/learn/net-register-client
 IDeliveryClient client = DeliveryClientBuilder
     .WithOptions(builder => builder
-        .WithProjectId("<YOUR_ENVIRONMENT_ID>")
+        .WithEnvironmentId("KONTENT_AI_ENVIRONMENT_ID")
         .UseProductionApi("<YOUR_API_KEY>")
         .Build())
     .Build();

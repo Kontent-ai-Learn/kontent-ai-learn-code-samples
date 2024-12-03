@@ -3,7 +3,7 @@ using Kontent.Ai.Delivery;
 
 // Tip: Use DI to create Delivery client https://kontent.ai/learn/net-register-client
 IDeliveryClient client = DeliveryClientBuilder
-      .WithProjectId("975bf280-fd91-488c-994c-2f04416e5ee3")
+      .WithEnvironmentId("975bf280-fd91-488c-994c-2f04416e5ee3")
       .Build();
 
 // Gets content items in Spanish without following language fallbacks

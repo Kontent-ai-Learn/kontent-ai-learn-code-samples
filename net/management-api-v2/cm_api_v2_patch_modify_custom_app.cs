@@ -1,11 +1,10 @@
-// DocSection: cm_api_v2_patch_modify_custom_app
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
 using Kontent.Ai.Management;
 
 var client = new ManagementClient(new ManagementOptions
 {
-    ApiKey = "<YOUR_API_KEY>",
-    ProjectId = "<YOUR_PROJECT_ID>"
+    ApiKey = "KONTENT_AI_MANAGEMENT_API_KEY",
+    EnvironmentId = "KONTENT_AI_ENVIRONMENT_ID"
 });
 
 var changes = new CustomAppOperationBaseModel[]
@@ -58,4 +57,3 @@ var changes = new CustomAppOperationBaseModel[]
 };
 
 var response = await client.ModifyCustomAppAsync(customAppCreateModel);
-// EndDocSection
