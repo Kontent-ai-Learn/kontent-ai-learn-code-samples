@@ -1,11 +1,12 @@
-curl -X POST "https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/custom-apps/" \
--H "Authorization: Bearer KONTENT_AI_MANAGEMENT_API_KEY" \
--H "Content-Type: application/json" \
--d '{
+curl --request POST \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/custom-apps/ \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-Type: application/json' \
+  --data '{
     "name": "Custom App Name",
     "codename": "custom_app_codename",
     "source_url": "https://customapp.net",
-    "config": "{}",
+    "config": null,
     "allowed_roles": [
         {
             "id": "7740a768-bfa5-4f64-bab4-d77cc0791d4c"

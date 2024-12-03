@@ -1,3 +1,4 @@
-curl -X GET "https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/custom-apps/" \
--H "Authorization: Bearer KONTENT_AI_MANAGEMENT_API_KEY" \
--H "Content-Type: application/json"
+curl --request GET \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/custom-apps/ \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-Type: application/json'

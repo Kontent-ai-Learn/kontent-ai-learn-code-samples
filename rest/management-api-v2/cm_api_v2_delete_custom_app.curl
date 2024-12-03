@@ -1,3 +1,4 @@
-curl -X DELETE "https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/custom-apps/f4b3fc05-e988-4dae-9ac1-a94aba566474" \
--H "Authorization: Bearer KONTENT_AI_MANAGEMENT_API_KEY" \
--H "Content-Type: application/json"
+curl --request DELETE \
+  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/custom-apps/f4b3fc05-e988-4dae-9ac1-a94aba566474 \
+  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Content-Type: application/json'
