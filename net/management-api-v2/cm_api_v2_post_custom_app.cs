@@ -12,8 +12,8 @@ var customAppCreateModel = new CustomAppCreateModel
     Name = "Custom App Name",
     Codename = "custom_app_codename",
     SourceUrl = "https://customapp.net",
-    Config = null,
-    AllowedRoles = = [
+    Config = "{\"theme\":{\"color\":\"#007BFF\",\"logo_url\":\"https://assets.customapp.net/logo.png\"},\"features\":{\"enable_notifications\":true,\"enable_advanced_mode\":false}}",
+    AllowedRoles = [
         Reference.ById(Guid.Parse("7740a768-bfa5-4f64-bab4-d77cc0791d4c")),
         Reference.ById(Guid.Parse("7a51d721-7302-4a85-b4ce-a6a3f3cce4a6"))
     ]

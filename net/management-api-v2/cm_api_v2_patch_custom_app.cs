@@ -43,7 +43,7 @@ var changes = new CustomAppOperationBaseModel[]
     new CustomAppReplacePatchModel()
     {
         PropertyName = PropertyName.Config,
-        Value = "{\"editable\"=false}"
+        Value = null
     },
     new CustomAppReplacePatchModel()
     {
