@@ -1,7 +1,7 @@
 curl --request PATCH \
   --url https://manage.kontent.ai/v2/projects/KONTENT_AI_ENVIRONMENT_ID/custom-apps/f4b3fc05-e988-4dae-9ac1-a94aba566474 \
 # --url https://manage.kontent.ai/v2/projects/KONTENT_AI_ENVIRONMENT_ID/custom-apps/codename/custom_app_codename \
-  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Authorization: Bearer KONTENT_AI_MANAGEMENT_API_KEY' \
   --header 'Content-Type: application/json' \
   --data '[
     {

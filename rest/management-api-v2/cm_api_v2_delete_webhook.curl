@@ -1,4 +1,4 @@
 curl --request DELETE \
   --url https://manage.kontent.ai/v2/projects/KONTENT_AI_ENVIRONMENT_ID/webhooks-vnext/d53360f7-79e1-42f4-a524-1b53a417d03e \
-  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Authorization: Bearer KONTENT_AI_MANAGEMENT_API_KEY' \
   --header 'Content-type: application/json'

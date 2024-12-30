@@ -2,6 +2,6 @@ curl --request GET \
   --url https://manage.kontent.ai/v2/projects/KONTENT_AI_ENVIRONMENT_ID/types/b7aa4a53-d9b1-48cf-b7a6-ed0b182c4b89/variants \
 # --url https://manage.kontent.ai/v2/projects/KONTENT_AI_ENVIRONMENT_ID/types/codename/article/variants \
 # --url https://manage.kontent.ai/v2/projects/KONTENT_AI_ENVIRONMENT_ID/types/external-id/my-article-id/variants \
-  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Authorization: Bearer KONTENT_AI_MANAGEMENT_API_KEY' \
   --header 'x-continuation: <continuation_token>' \
   --header 'Content-type: application/json'

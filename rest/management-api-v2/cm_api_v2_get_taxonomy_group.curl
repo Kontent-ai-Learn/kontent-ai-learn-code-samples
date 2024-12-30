@@ -2,5 +2,5 @@ curl --request GET \
   --url https://manage.kontent.ai/v2/projects/KONTENT_AI_ENVIRONMENT_ID/taxonomies/0be13600-e57c-577d-8108-c8d860330985 \
 # --url https://manage.kontent.ai/v2/projects/KONTENT_AI_ENVIRONMENT_ID/taxonomies/codename/personas/ \
 # --url https://manage.kontent.ai/v2/projects/KONTENT_AI_ENVIRONMENT_ID/taxonomies/external-id/Tax-Group-123 \
-  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Authorization: Bearer KONTENT_AI_MANAGEMENT_API_KEY' \
   --header 'Content-type: application/json'

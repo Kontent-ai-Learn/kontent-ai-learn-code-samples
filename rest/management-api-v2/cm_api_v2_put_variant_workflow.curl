@@ -5,5 +5,5 @@ curl --request PUT \
 # --url https://manage.kontent.ai/v2/projects/KONTENT_AI_ENVIRONMENT_ID/items/codename/my_article/variants/codename/es-ES/change-workflow \
 # --url https://manage.kontent.ai/v2/projects/KONTENT_AI_ENVIRONMENT_ID/items/external-id/59713/variants/d1f95fde-af02-b3b5-bd9e-f232311ccab8/change-workflow \
 # --url https://manage.kontent.ai/v2/projects/KONTENT_AI_ENVIRONMENT_ID/items/external-id/59713/variants/codename/es-ES/change-workflow \
-  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Authorization: Bearer KONTENT_AI_MANAGEMENT_API_KEY' \
   --header 'Content-type: application/json'

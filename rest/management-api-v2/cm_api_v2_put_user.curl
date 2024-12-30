@@ -1,7 +1,7 @@
 curl --request PUT \
   --url https://manage.kontent.ai/v2/projects/KONTENT_AI_ENVIRONMENT_ID/users/d94bc87a-c066-48a1-a910-4f991ccc1fb5/roles
 #  --url https://manage.kontent.ai/v2/projects/KONTENT_AI_ENVIRONMENT_ID/users/email/user@example.com/roles
-  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Authorization: Bearer KONTENT_AI_MANAGEMENT_API_KEY' \
   --header 'Content-type: application/json' \
   --data '
 {

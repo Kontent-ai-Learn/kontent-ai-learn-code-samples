@@ -1,5 +1,5 @@
 curl --request GET \
   --url https://manage.kontent.ai/v2/projects/KONTENT_AI_ENVIRONMENT_ID/roles/7dedb656-aef7-40ae-8158-98bbf3542f4a \
 # --url https://manage.kontent.ai/v2/projects/KONTENT_AI_ENVIRONMENT_ID/roles/codename/project-manager \
-  --header 'Authorization: Bearer <YOUR_API_KEY>' \
+  --header 'Authorization: Bearer KONTENT_AI_MANAGEMENT_API_KEY' \
   --header 'Content-type: application/json

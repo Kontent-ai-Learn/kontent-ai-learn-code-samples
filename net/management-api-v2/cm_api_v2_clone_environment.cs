@@ -4,7 +4,7 @@ using Kontent.Ai.Management.Models.Environments;
 
 var client = new ManagementClient(new ManagementOptions
 {
-    ApiKey = "<YOUR_API_KEY>",
+    ApiKey = "KONTENT_AI_MANAGEMENT_API_KEY",
     EnvironmentId = "KONTENT_AI_ENVIRONMENT_ID"
 });
 
