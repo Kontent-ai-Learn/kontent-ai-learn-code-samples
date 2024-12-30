@@ -1,5 +1,5 @@
 curl --request PUT \
-  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/web-spotlight/activate \
+  --url https://manage.kontent.ai/v2/projects/KONTENT_AI_ENVIRONMENT_ID/web-spotlight/activate \
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
   --header 'Content-type: application/json'
     --data '

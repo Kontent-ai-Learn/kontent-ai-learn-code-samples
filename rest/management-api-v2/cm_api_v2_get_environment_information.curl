@@ -1,4 +1,4 @@
 curl --request GET \
-  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID> \
+  --url https://manage.kontent.ai/v2/projects/KONTENT_AI_ENVIRONMENT_ID \
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
   --header 'Content-type: application/json'

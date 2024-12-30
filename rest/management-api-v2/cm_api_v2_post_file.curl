@@ -1,5 +1,5 @@
 curl --request POST \
-  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/files/which-brewing-fits-you-1080px.jpg \
+  --url https://manage.kontent.ai/v2/projects/KONTENT_AI_ENVIRONMENT_ID/files/which-brewing-fits-you-1080px.jpg \
   --data-binary "@which-brewing-fits-you-1080px.jpg" \
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
   --header 'Content-type: image/jpeg' \

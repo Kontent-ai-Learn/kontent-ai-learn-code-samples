@@ -1,5 +1,5 @@
 curl --request POST \
-  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/users
+  --url https://manage.kontent.ai/v2/projects/KONTENT_AI_ENVIRONMENT_ID/users
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
   --header 'Content-type: application/json' \
   --data '

@@ -1,7 +1,7 @@
 # Uses the file reference object obtained in step 1
 
 curl --request PUT \
-  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/assets/external-id/brno-cafe-image \
+  --url https://manage.kontent.ai/v2/projects/KONTENT_AI_ENVIRONMENT_ID/assets/external-id/brno-cafe-image \
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
   --header 'Content-type: application/json' \
   --data '

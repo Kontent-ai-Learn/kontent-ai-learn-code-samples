@@ -2,7 +2,7 @@
 import kontent.ai.delivery.*;
 
 // Initializes a DeliveryClient
-DeliveryClient client = new DeliveryClient("<YOUR_ENVIRONMENT_ID>");
+DeliveryClient client = new DeliveryClient("KONTENT_AI_ENVIRONMENT_ID");
 
 // Gets content items in Spanish without following language fallbacks
 CompletionsStage<ContentItemsListingResponse> listingResponse = client.getItems(

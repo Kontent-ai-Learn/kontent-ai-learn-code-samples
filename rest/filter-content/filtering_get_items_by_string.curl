@@ -1,4 +1,4 @@
 # Gets items whose Title element value equals to "Hello World"
 curl --request GET \
-  --url 'https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/items?elements.title=Hello World' \
+  --url 'https://deliver.kontent.ai/KONTENT_AI_ENVIRONMENT_ID/items?elements.title=Hello World' \
   --header 'content-type: application/json'

@@ -1,15 +1,15 @@
 # Note: Filters work with codenames of the tags.
 # Gets items tagged with one specific tag
 curl --request GET \
-  --url 'https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/items?elements.tags[contains]=kontent_ai' \
+  --url 'https://deliver.kontent.ai/KONTENT_AI_ENVIRONMENT_ID/items?elements.tags[contains]=kontent_ai' \
   --header 'content-type: application/json'
   
 # Gets items tagged with a list of specific tags
 curl --request GET \
-  --url 'https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/items?elements.tags[all]=kontent_ai,cms' \
+  --url 'https://deliver.kontent.ai/KONTENT_AI_ENVIRONMENT_ID/items?elements.tags[all]=kontent_ai,cms' \
   --header 'content-type: application/json'
 
 # Gets items tagged with at least one of multiple tags
 curl --request GET \
-  --url 'https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/items?elements.tags[any]=headless,cms' \
+  --url 'https://deliver.kontent.ai/KONTENT_AI_ENVIRONMENT_ID/items?elements.tags[any]=headless,cms' \
   --header 'content-type: application/json'

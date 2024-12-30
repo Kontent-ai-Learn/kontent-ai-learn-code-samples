@@ -4,7 +4,7 @@ import kontent.ai.delivery.*;
 // Initializes a DeliveryClient with secure access key
 DeliveryClient client = new DeliveryClient(
 	DeliveryOptions.builder()
-		.projectId("<YOUR_ENVIRONMENT_ID>")
+		.projectId("KONTENT_AI_ENVIRONMENT_ID")
 		.productionApiKey("<YOUR_API_KEY>")
 		.build()
 );

@@ -1,19 +1,19 @@
 # Gets a list of items where the 'my_page' item is used in the 'navigation' element.
 curl --request GET \
-  --url 'https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/items?elements.navigation[contains]=my_page' \
+  --url 'https://deliver.kontent.ai/KONTENT_AI_ENVIRONMENT_ID/items?elements.navigation[contains]=my_page' \
   --header 'content-type: application/json'
 
 # Gets items linked to at least Jane, John, or both.
 curl --request GET \
-  --url 'https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/items?elements.author[any]=jane_doe,john_wick' \
+  --url 'https://deliver.kontent.ai/KONTENT_AI_ENVIRONMENT_ID/items?elements.author[any]=jane_doe,john_wick' \
   --header 'content-type: application/json'
 
 # Gets pages linking travel insurance as their subpage.
 curl --request GET \
-  --url 'https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/items?elements.subpages[contains]=travel_insurance' \
+  --url 'https://deliver.kontent.ai/KONTENT_AI_ENVIRONMENT_ID/items?elements.subpages[contains]=travel_insurance' \
   --header 'content-type: application/json'
 
 # Gets pages linking at least travel insurance, car insurance, or both as their subpage.
 curl --request GET \
-  --url 'https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/items?elements.subpages[any]=travel_insurance,car_insurance' \
+  --url 'https://deliver.kontent.ai/KONTENT_AI_ENVIRONMENT_ID/items?elements.subpages[any]=travel_insurance,car_insurance' \
   --header 'content-type: application/json'

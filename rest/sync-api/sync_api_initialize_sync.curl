@@ -1,2 +1,2 @@
 curl --request POST \
-  --url https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/early-access/sync/init
+  --url https://deliver.kontent.ai/KONTENT_AI_ENVIRONMENT_ID/early-access/sync/init

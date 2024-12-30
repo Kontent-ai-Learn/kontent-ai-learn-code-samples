@@ -2,7 +2,7 @@
 import kontent.ai.delivery.*;
 
 DeliveryOptions deliveryOptions = new DeliveryOptions();
-deliveryOptions.setProjectId("<YOUR_ENVIRONMENT_ID>");
+deliveryOptions.setProjectId("KONTENT_AI_ENVIRONMENT_ID");
 deliveryOptions.setWaitForLoadingNewContent(true);
 
 DeliveryClient client = new DeliveryClient(deliveryOptions);

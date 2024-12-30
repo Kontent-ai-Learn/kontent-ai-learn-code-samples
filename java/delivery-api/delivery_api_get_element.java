@@ -2,7 +2,7 @@
 import kontent.ai.delivery.*;
 
 // Initializes a DeliveryClient
-DeliveryClient client = new DeliveryClient("<YOUR_ENVIRONMENT_ID>");
+DeliveryClient client = new DeliveryClient("KONTENT_AI_ENVIRONMENT_ID");
 
 // Gets the "title" content element from the "article" type using a simple request
 CompletionStage<Element> element = client.getContentTypeElement("article", "title");

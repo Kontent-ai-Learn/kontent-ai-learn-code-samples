@@ -5,7 +5,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 use Kontent\Ai\Delivery\DeliveryClient;
 
-$client = new DeliveryClient('<YOUR_ENVIRONMENT_ID>');
+$client = new DeliveryClient('KONTENT_AI_ENVIRONMENT_ID');
 
 $items = $client->getItems((new QueryParams())
             ->limit(3));

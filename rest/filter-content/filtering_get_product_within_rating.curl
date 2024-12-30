@@ -1,4 +1,4 @@
 # Gets items whose rating is at least 6.5 and at most 9
 curl --request GET \
-  --url 'https://deliver.kontent.ai/<YOUR_ENVIRONMENT_ID>/items?elements.product_rating[range]=6.5,9' \
+  --url 'https://deliver.kontent.ai/KONTENT_AI_ENVIRONMENT_ID/items?elements.product_rating[range]=6.5,9' \
   --header 'content-type: application/json'

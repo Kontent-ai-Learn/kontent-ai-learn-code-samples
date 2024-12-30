@@ -1,5 +1,5 @@
 curl --request GET \
-  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/assets/fcbb12e6-66a3-4672-85d9-d502d16b8d9c \
-# --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/assets/external-id/which-brewing-fits-you \
+  --url https://manage.kontent.ai/v2/projects/KONTENT_AI_ENVIRONMENT_ID/assets/fcbb12e6-66a3-4672-85d9-d502d16b8d9c \
+# --url https://manage.kontent.ai/v2/projects/KONTENT_AI_ENVIRONMENT_ID/assets/external-id/which-brewing-fits-you \
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
   --header 'Content-type: application/json

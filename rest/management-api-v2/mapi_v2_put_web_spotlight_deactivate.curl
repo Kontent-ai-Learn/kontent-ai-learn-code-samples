@@ -1,4 +1,4 @@
 curl --request PUT \
-  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/web-spotlight/deactivate \
+  --url https://manage.kontent.ai/v2/projects/KONTENT_AI_ENVIRONMENT_ID/web-spotlight/deactivate \
   --header 'Authorization: Bearer <YOUR_API_KEY>' \
   --header 'Content-type: application/json'

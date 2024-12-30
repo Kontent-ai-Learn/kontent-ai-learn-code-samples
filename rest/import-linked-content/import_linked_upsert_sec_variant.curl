@@ -1,5 +1,5 @@
 curl --request PUT \
-  --url https://manage.kontent.ai/v2/projects/<YOUR_ENVIRONMENT_ID>/items/external-id/456/variants/codename/en-US \
+  --url https://manage.kontent.ai/v2/projects/KONTENT_AI_ENVIRONMENT_ID/items/external-id/456/variants/codename/en-US \
   --header 'authorization: Bearer <YOUR_API_KEY>' \
   --header 'content-type: application/json' \
   --data '
