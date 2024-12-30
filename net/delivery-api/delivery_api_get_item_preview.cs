@@ -5,7 +5,7 @@ using Kontent.Ai.Delivery;
 IDeliveryClient client = DeliveryClientBuilder
     .WithOptions(builder => builder
         .WithEnvironmentId("KONTENT_AI_ENVIRONMENT_ID")
-        .UsePreviewApi("<YOUR_PREVIEW_API_KEY>")
+        .UsePreviewApi("KONTENT_AI_PREVIEW_API_KEY")
         .Build())
     .Build();
 

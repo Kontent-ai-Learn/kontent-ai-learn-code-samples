@@ -1,3 +1,3 @@
 curl --request GET \
   --url https://preview-deliver.kontent.ai/KONTENT_AI_ENVIRONMENT_ID/items/my_article \
-  --header 'authorization: Bearer <YOUR_PREVIEW_API_KEY>'
+  --header 'authorization: Bearer KONTENT_AI_PREVIEW_API_KEY'

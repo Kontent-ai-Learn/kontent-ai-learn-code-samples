@@ -5,7 +5,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 use Kontent\Ai\Delivery\DeliveryClient;
 
-$client = new DeliveryClient('KONTENT_AI_ENVIRONMENT_ID', '<YOUR_PREVIEW_API_KEY>');
+$client = new DeliveryClient('KONTENT_AI_ENVIRONMENT_ID', 'KONTENT_AI_PREVIEW_API_KEY');
 
 $item = $client->getItem('my_article');
 ?>

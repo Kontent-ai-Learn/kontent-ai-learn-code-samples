@@ -4,7 +4,7 @@ import { Article } from './models/Article';
 
 const deliveryClient = createDeliveryClient({
   environmentId: 'KONTENT_AI_ENVIRONMENT_ID',
-  previewApiKey: '<YOUR_PREVIEW_API_KEY>',
+  previewApiKey: 'KONTENT_AI_PREVIEW_API_KEY',
   defaultQueryConfig: {
     usePreviewMode: true, // Require Delivery Preview API
   },
