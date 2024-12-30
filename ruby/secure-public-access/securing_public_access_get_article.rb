@@ -2,7 +2,7 @@
 require 'delivery-sdk-ruby'
 
 delivery_client = Kontent::Ai::Delivery::DeliveryClient.new project_id: 'KONTENT_AI_ENVIRONMENT_ID',
-                    secure_key: '<YOUR_API_KEY>'
+                    secure_key: 'KONTENT_AI_DELIVERY_API_KEY'
 delivery_client.item('my_article').execute do |response|
   item = response.item
 end

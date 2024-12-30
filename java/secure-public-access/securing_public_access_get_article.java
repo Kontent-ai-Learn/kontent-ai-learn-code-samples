@@ -5,7 +5,7 @@ import kontent.ai.delivery.*;
 DeliveryClient client = new DeliveryClient(
 	DeliveryOptions.builder()
 		.projectId("KONTENT_AI_ENVIRONMENT_ID")
-		.productionApiKey("<YOUR_API_KEY>")
+		.productionApiKey("KONTENT_AI_DELIVERY_API_KEY")
 		.build()
 );
 
