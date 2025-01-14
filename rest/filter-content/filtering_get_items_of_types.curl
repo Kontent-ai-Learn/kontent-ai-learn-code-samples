@@ -1,4 +1,4 @@
 # Gets items based on the types Product, Article, and News
-curl --request GET \
+curl --request GET -g \
   --url 'https://deliver.kontent.ai/KONTENT_AI_ENVIRONMENT_ID/items?system.type[in]=product,article,news' \
   --header 'content-type: application/json'
