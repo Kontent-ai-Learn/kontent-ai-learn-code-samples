@@ -69,7 +69,7 @@ var response = await client.UpsertLanguageVariantAsync(
         {
             Value = DateTime.Parse("2024-02-26T06:04:00.7069564Z")
         },
-        Note = "Note about stuff.",
+        Note = "Moving this to the next workflow step.",
         Contributors = new UserIdentifier[]
         {
             UserIdentifier.ByEmail("user@kontent.ai"),
