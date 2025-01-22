@@ -24,6 +24,10 @@ await client.ChangeLanguageVariantWorkflowAsync(
         {
             Value = DateTime.UtcNow.AddDays(42)
         },
-        Contributors = new List<UserIdentifier> { UserIdentifier.ByEmail("user@kontent.ai") },
+        Contributors = new UserIdentifier[]
+        {
+            UserIdentifier.ByEmail("user@kontent.ai"),
+            UserIdentifier.ById("d94bc87a-c066-48a1-a910-4f991ccc1fb5")
+        },
         Note = "Moving this to the next workflow step."
     });
