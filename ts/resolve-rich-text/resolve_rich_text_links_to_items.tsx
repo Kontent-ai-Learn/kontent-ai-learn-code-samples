@@ -1,6 +1,5 @@
 import { Elements, ILink } from "@kontent-ai/delivery-sdk";
-import { PortableTextInternalLink } from "@kontent-ai/rich-text-resolver";
-import { PortableTextComponents, PortableTextMarkComponentProps } from "@portabletext/react";
+import { PortableTextReactResolvers } from "@kontent-ai/rich-text-resolver/utils/react";
 import { React, ReactNode } from "react";
 
 import { ProductLink } from "../components";
@@ -34,13 +33,13 @@ const ProductLink: React.FC<ProductLinkProps> = (props) => {
   // Based on your app routing, resolve links to products
 };
 
-const createRichTextResolver = (element: Elements.RichTextElement): Partial<PortableTextComponents> => ({
+const createRichTextResolver = (element: Elements.RichTextElement): PortableTextReactResolvers => ({
   marks: {
     // Links to content items
-    internalLink: ({
+    contentItemLink: ({
       value, // The linked item's metadata
       children, // Link text that might include text formatting
-    }: PortableTextMarkComponentProps<PortableTextInternalLink>) => {
+    }) => {
       // Gets content item link metadata from the response
       const link = element.links.find(
         (l) => l.linkId === value?.reference._ref
