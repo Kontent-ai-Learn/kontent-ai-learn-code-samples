@@ -69,11 +69,10 @@ var response = await client.UpsertLanguageVariantAsync(
         {
             Value = DateTime.Parse("2024-02-26T06:04:00.7069564Z")
         },
-        Note = "Moving this to the next workflow step.",
+        Note = "Make sure the graphic materials we use here are on brand.",
         Contributors = new UserIdentifier[]
         {
-            UserIdentifier.ByEmail("user@kontent.ai"),
-            UserIdentifier.ById("d94bc87a-c066-48a1-a910-4f991ccc1fb5")
+            UserIdentifier.ByEmail("user@example.com"),
         },
         new WorkflowStepIdentifier(Reference.ByCodename("default"), Reference.ByCodename("review")))
     },
