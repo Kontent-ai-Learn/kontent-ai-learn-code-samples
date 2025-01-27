@@ -18,4 +18,15 @@ var workflowStepIdentifier = Reference.ById(Guid.Parse("16221cc2-bd22-4414-a513-
 
 await client.ChangeLanguageVariantWorkflowAsync(
     new LanguageVariantIdentifier(itemIdentifier, languageIdentifier),
-    new WorkflowStepIdentifier(Reference.ById(Guid.Empty), workflowStepIdentifier)));
+    new ChangeLanguageVariantWorkflowModel(Reference.ById(Guid.Empty), workflowStepIdentifier)
+    {
+        DueDate = new DueDateModel
+        {
+            Value = DateTime.UtcNow.AddDays(42)
+        },
+        Note = "Make sure the graphic materials we use here are on brand."
+        Contributors = new UserIdentifier[]
+        {
+            UserIdentifier.ByEmail("user@example.com"),
+        }
+    });
