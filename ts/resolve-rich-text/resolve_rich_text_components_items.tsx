@@ -12,7 +12,7 @@ const createRichTextResolver = (element: Elements.RichTextElement): PortableText
       // Checks if the inserted content item is included in the response
       // Kontent.ai components are always included in the response
       const componentOrItem = element.linkedItems.find(
-        (i) => i.system.codename === value.component._ref
+        (i) => i.system.codename === value.componentOrItem._ref
       );
 
       if (!componentOrItem) {

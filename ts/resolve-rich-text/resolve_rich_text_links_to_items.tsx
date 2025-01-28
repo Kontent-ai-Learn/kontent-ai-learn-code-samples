@@ -42,7 +42,7 @@ const createRichTextResolver = (element: Elements.RichTextElement): PortableText
     }) => {
       // Gets content item link metadata from the response
       const link = element.links.find(
-        (l) => l.linkId === value?.reference._ref
+        (l) => l.linkId === value?.contentItemLink._ref
       );
 
       return <ContentItemLink link={link!}>{children}</ContentItemLink>;

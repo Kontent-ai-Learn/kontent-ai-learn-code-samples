@@ -48,7 +48,7 @@ export const RichTextComponent: React.FC<RichTextComponentProps> = (props) => {
 // In your application code, get a content item and retrieve its rich text element.
 // Tip: Learn how to get content in https://kontent.ai/learn/develop/hello-world
 const richTextElement: Elements.RichTextElement = response.data.item.elements.richtext;
-// Example: using 'MyComponent' to render your rich text
+// Example: using 'RichTextComponent' to render your rich text
 <div>
   <RichTextComponent richTextElement={richTextElement} />
 </div>
