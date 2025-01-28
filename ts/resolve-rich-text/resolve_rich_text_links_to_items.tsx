@@ -38,7 +38,7 @@ const createRichTextResolver = (element: Elements.RichTextElement): PortableText
     // Links to content items
     contentItemLink: ({
       value, // The linked item's metadata
-      children, // Link text that might include text formatting
+      children, // Link text, which might be formatted
     }) => {
       // Gets content item link metadata from the response
       const link = element.links.find(

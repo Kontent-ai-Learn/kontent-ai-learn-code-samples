@@ -27,8 +27,7 @@ const createRichTextResolver = (element: Elements.RichTextElement): PortableText
         default:
           return (
             <div>
-              Content based on the type '{componentOrItem.system.type}' couldn't
-              be resolved.
+              Content based on the type '{componentOrItem.system.type}' couldn't be resolved.
             </div>
           );
       }
