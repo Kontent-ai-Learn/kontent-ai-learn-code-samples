@@ -12,5 +12,5 @@ curl --request PUT \
   "publish_scheduled_to": "2038-01-19T04:14:08",
   "publish_display_timezone": "Australia/Sydney",
   "unpublish_scheduled_to": "2039-01-19T00:00:00",
-  "unpublish_display_timezone": "Europe/Prague",
+  "unpublish_display_timezone": "Australia/Sydney",
 }'
