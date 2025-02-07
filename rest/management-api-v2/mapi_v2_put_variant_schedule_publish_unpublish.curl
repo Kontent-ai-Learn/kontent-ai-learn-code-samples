@@ -10,7 +10,7 @@ curl --request PUT \
   --data '
 {
   "publish_scheduled_to": "2038-01-19T04:14:08",
-  "publish_display_time_zone": "Australia/Sydney",
-  "unpublish_scheduled_to": "2039-01-11T00:00:00",
-  "unpublish_display_time_zone": "Australia/Sydney"
+  "publish_display_timezone": "Australia/Sydney",
+  "unpublish_scheduled_to": "2039-01-19T00:00:00",
+  "unpublish_display_timezone": "Europe/Prague",
 }'
