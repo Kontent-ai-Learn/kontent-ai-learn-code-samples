@@ -1,4 +1,5 @@
 curl --request GET \
   --url https://manage.kontent.ai/v2/projects/KONTENT_AI_ENVIRONMENT_ID/custom-apps/ \
   --header 'Authorization: Bearer KONTENT_AI_MANAGEMENT_API_KEY' \
+   --header 'x-continuation: <continuation_token>' \
   --header 'Content-Type: application/json'
