@@ -7,6 +7,6 @@ IDeliveryClient client = DeliveryClientBuilder
     .Build();
 
 // Gets a list of recently changed content items
-IDeliverySyncResponse response = await client.GetSyncAsync("<CONTINUATION_TOKEN>");
+IDeliverySyncResponse response = await client.GetSyncAsync("KONTENT_AI_CONTINUATION_TOKEN");
 IList<ISyncItem> syncItems = response.SyncItems;
 await client.GetSyncAsync("token");

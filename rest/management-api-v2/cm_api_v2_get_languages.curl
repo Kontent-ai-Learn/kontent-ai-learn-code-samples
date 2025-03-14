@@ -1,5 +1,5 @@
 curl --request GET \
   --url https://manage.kontent.ai/v2/projects/KONTENT_AI_ENVIRONMENT_ID/languages \
   --header 'Authorization: Bearer KONTENT_AI_MANAGEMENT_API_KEY' \
-  --header 'x-continuation: <continuation_token>' \
+  --header 'x-continuation: KONTENT_AI_CONTINUATION_TOKEN' \
   --header 'Content-type: application/json'

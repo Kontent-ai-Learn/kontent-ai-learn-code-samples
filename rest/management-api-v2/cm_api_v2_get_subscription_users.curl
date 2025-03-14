@@ -1,5 +1,5 @@
 curl --request GET \
   --url https://manage.kontent.ai/v2/subscriptions/KONTENT_AI_SUBSCRIPTION_ID/users \
   --header 'Authorization: Bearer KONTENT_AI_SUBSCRIPTION_API_KEY' \
-  --header 'x-continuation: <continuation_token>' \
+  --header 'x-continuation: KONTENT_AI_CONTINUATION_TOKEN' \
   --header 'Content-type: application/json'
