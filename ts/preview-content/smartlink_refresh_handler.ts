@@ -4,7 +4,7 @@ import KontentSmartLink, { KontentSmartLinkEvent } from '@kontent-ai/smart-link'
 // 
 const sdk = KontentSmartLink.initialize({
   defaultDataAttributes: {
-    projectId: 'KONTENT_AI_ENVIRONMENT_ID',
+    environmentId: 'KONTENT_AI_ENVIRONMENT_ID',
     languageCodename: 'default',
   },
 });
