@@ -8,7 +8,7 @@ var client = new ManagementClient(new ManagementOptions
 });
 
 // Some SDK queries are available through the `EarlyAccess` client.
-// These APIs are experimental and may change without a major version bump.
+// These APIs are in early access and may evolve before general availability. 
 // Use with caution in production environments.
 
 // Minimal request
