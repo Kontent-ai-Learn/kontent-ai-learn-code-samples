@@ -7,8 +7,10 @@ const client = new ManagementClient({
 });
 
 // Some SDK queries are available under the `earlyAccess` namespace. 
-// These APIs are in early access and may evolve before general availability. 
-// Use with caution in production.
+// This endpoint is in early access and may evolve before general availability.
+// Use with caution in production environments.
+
+// Filters variants by search phrase and includes element content
 const response = await client
     .earlyAccess
     .filterLanguageVariants()

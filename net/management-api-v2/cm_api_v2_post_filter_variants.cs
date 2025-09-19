@@ -7,11 +7,10 @@ var client = new ManagementClient(new ManagementOptions
     EnvironmentId = "KONTENT_AI_ENVIRONMENT_ID"
 });
 
-// Some SDK queries are available through the `EarlyAccess` client.
-// These APIs are in early access and may evolve before general availability. 
+// This endpoint is in early access and may evolve before general availability. 
 // Use with caution in production environments.
 
-// Minimal request
+// Filters variants by language only
 var response = await client.EarlyAccess.FilterVariantsAsync(new VariantFilterRequestModel
 {
     Filters = new VariantFilterFiltersModel
@@ -20,7 +19,7 @@ var response = await client.EarlyAccess.FilterVariantsAsync(new VariantFilterReq
     }
 });
 
-// Rich request
+// Filters variants with multiple criteria and includes element content
 var response = await client.EarlyAccess.FilterVariantsAsync(new VariantFilterRequestModel
 {
     Filters = new VariantFilterFiltersModel
