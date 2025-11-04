@@ -1,5 +1,5 @@
 import { Elements } from "@kontent-ai/delivery-sdk";
-import { PortableTextReactResolvers } from "@kontent-ai/rich-text-resolver/utils/react";
+import { PortableTextReactResolvers } from "@kontent-ai/rich-text-resolver-react";
 import { React } from "react";
 
 import { CalloutComponent } from "../components/shared/richText/Callout";
