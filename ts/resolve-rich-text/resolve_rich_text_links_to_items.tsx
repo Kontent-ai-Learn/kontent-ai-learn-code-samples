@@ -1,5 +1,5 @@
 import { Elements, ILink } from "@kontent-ai/delivery-sdk";
-import { PortableTextReactResolvers } from "@kontent-ai/rich-text-resolver/utils/react";
+import { PortableTextReactResolvers } from "@kontent-ai/rich-text-resolver-react";
 import { React, ReactNode } from "react";
 
 import { ProductLink } from "../components";

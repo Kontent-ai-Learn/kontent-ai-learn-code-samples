@@ -1,6 +1,6 @@
 import { Elements } from "@kontent-ai/delivery-sdk";
 import { transformToPortableText } from "@kontent-ai/rich-text-resolver";
-import { PortableText, PortableTextReactResolvers } from "@kontent-ai/rich-text-resolver/utils/react";
+import { PortableText, PortableTextReactResolvers } from "@kontent-ai/rich-text-resolver-react";
 import { React } from "react";
 
 // Defines how to transform Kontent.ai-specific portable text components, as well as default blocks
@@ -16,7 +16,7 @@ const createRichTextResolver = (element: Elements.RichTextElement): PortableText
   },
   marks: {
     // Resolution for links to external URLs
-    link: undefined, 
+    link: undefined,
     // Resolution for links to content items
     contentItemLink: undefined,
   },
