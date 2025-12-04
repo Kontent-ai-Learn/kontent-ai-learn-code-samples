@@ -20,13 +20,11 @@ const response = await client.addTaxonomy()
           terms: [
             {
               name: 'Barista',
-              externalId: 'Tax-term-789',
-              terms: []
+              externalId: 'Tax-term-789'
             },
             {
               name: 'Cafe owner',
-              externalId: 'Tax-term-101',
-              terms: []
+              externalId: 'Tax-term-101'
             }
           ]
         },
@@ -38,14 +36,12 @@ const response = await client.addTaxonomy()
             {
               name: 'Coffee lover',
               codename: 'lover',
-              externalId: 'Tax-term-131',
-              terms: []
+              externalId: 'Tax-term-131'
             },
             {
               name: 'Coffee blogger',
               codename: 'blogger',
-              externalId: 'Tax-term-145',
-              terms: []
+              externalId: 'Tax-term-145'
             }
           ]
         }

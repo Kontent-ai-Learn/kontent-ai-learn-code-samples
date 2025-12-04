@@ -13,18 +13,15 @@ curl--request POST\
       "terms": [
         {
           "name": "Soccer",
-          "external_id": "soccer",
-          "terms": []
+          "external_id": "soccer"
         },
         {
           "name": "Ice hockey",
-          "external_id": "hockey",
-          "terms": []
+          "external_id": "hockey"
         },
         {
           "name": "Rugby",
-          "external_id": "rugby",
-          "terms": []
+          "external_id": "rugby"
         }
       ]
     },
@@ -34,18 +31,15 @@ curl--request POST\
       "terms": [
         {
           "name": "JavaScript",
-          "codename": "js",
-          "terms": []
+          "codename": "js"
         },
         {
           "name": "C#",
-          "codename": "c",
-          "terms": []
+          "codename": "c"
         },
         {
           "name": "MVC",
-          "codename": "mvc",
-          "terms": []
+          "codename": "mvc"
         }
       ]
     }

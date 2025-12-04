@@ -53,8 +53,7 @@ var response = await client.ModifyTaxonomyGroupAsync(identifier, new TaxonomyGro
         Value = new TaxonomyTermCreateModel
         {
             Name = "New taxonomy term",
-            ExternalId = "my-new-term",
-            Terms = Array.Empty<TaxonomyTermCreateModel>()
+            ExternalId = "my-new-term"
         }
     },
     new TaxonomyGroupMovePatchModel

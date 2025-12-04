@@ -12,8 +12,7 @@ curl --request POST \
         {
           "name": "Second level folder",
           "codename": "second_level_folder",
-          "external_id": "second-folder",
-          "folders": []
+          "external_id": "second-folder"
         }
       ]
     }

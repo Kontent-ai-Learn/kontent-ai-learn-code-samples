@@ -34,8 +34,7 @@ const response = await client.modifyTaxonomy()
             codename: 'second_term',
             terms: [
               {
-                name: 'Third-level taxonomy term',
-                terms: []
+                name: 'Third-level taxonomy term'
               }
             ]
           }
@@ -55,8 +54,7 @@ const response = await client.modifyTaxonomy()
         value:
         {
           name: 'New taxonomy term',
-          external_id: 'my-new-term',
-          terms: []
+          external_id: 'my-new-term'
         }
       }
     ]

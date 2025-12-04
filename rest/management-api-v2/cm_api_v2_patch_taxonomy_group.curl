@@ -28,8 +28,7 @@ curl --request PATCH \
         "codename": "second_term",
         "terms": [
           {
-            "name": "Third-level taxonomy term",
-            "terms": []
+            "name": "Third-level taxonomy term"
           }
         ]
       }
@@ -48,8 +47,7 @@ curl --request PATCH \
     },
     "value": {
       "name": "New taxonomy term",
-      "external_id": "my-new-term",
-      "terms": []
+      "external_id": "my-new-term"
     }
   },
   {

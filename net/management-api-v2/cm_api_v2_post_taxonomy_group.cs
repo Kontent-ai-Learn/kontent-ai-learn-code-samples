@@ -24,14 +24,12 @@ var response = await client.CreateTaxonomyGroupAsync(new TaxonomyGroupCreateMode
                 new TaxonomyTermCreateModel
                 {
                     Name = "Barista",
-                    ExternalId = "Tax-term-789",
-                    Terms = Enumerable.Empty<TaxonomyTermCreateModel>()
+                    ExternalId = "Tax-term-789"
                 },
                 new TaxonomyTermCreateModel
                 {
                     Name = "Cafe owner",
-                    ExternalId = "Tax-term-101",
-                    Terms = Enumerable.Empty<TaxonomyTermCreateModel>()
+                    ExternalId = "Tax-term-101"
                 }
             }
         },
@@ -46,15 +44,13 @@ var response = await client.CreateTaxonomyGroupAsync(new TaxonomyGroupCreateMode
                 {
                     Name = "Coffee lover",
                     ExternalId = "Tax-term-131",
-                    Codename = "lover",
-                    Terms = Enumerable.Empty<TaxonomyTermCreateModel>()
+                    Codename = "lover"
                 },
                 new TaxonomyTermCreateModel
                 {
                     Name = "Coffee blogger",
                     ExternalId = "Tax-term-145",
-                    Codename = "blogger",
-                    Terms = Enumerable.Empty<TaxonomyTermCreateModel>()
+                    Codename = "blogger"
                 }
             }
         }

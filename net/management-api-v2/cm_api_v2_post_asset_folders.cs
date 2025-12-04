@@ -22,7 +22,6 @@ var response = await client.CreateAssetFoldersAsync(new AssetFolderCreateModel
                 {
                     Name = "Second level folder",
                     ExternalId = "second-folder",
-                    Folders = Enumerable.Empty<AssetFolderHierarchy>(),
                 }
             }
         }

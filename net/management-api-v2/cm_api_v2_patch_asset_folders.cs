@@ -17,7 +17,6 @@ var response = await client.ModifyAssetFoldersAsync(new AssetFolderOperationBase
             ExternalId = "folder-with-shared-assets",
             Name = "Shared assets",
             Codename = "shared_assets",
-            Folders = Enumerable.Empty<AssetFolderHierarchy>(),
         },
         Before = Reference.ByExternalId("folder-with-downloadable-assets")
     },

@@ -14,8 +14,7 @@ const response = await client.modifyAssetFolders()
         value: {
           external_id: 'folder-with-shared-assets',
           codename: 'shared_assets',
-          name: 'Shared assets',
-          folders: []
+          name: 'Shared assets'
         },
         before: {
           external_id: 'folder-with-downloadable-assets'

@@ -15,13 +15,11 @@ curl --request POST \
       "terms": [
         {
           "name": "Barista",
-          "external_id": "Tax-term-789",
-          "terms": []
+          "external_id": "Tax-term-789"
         },
         {
           "name": "Cafe owner",
-          "external_id": "Tax-term-101",
-          "terms": []
+          "external_id": "Tax-term-101"
         }
       ]
     },
@@ -33,14 +31,12 @@ curl --request POST \
         {
           "name": "Coffee lover",
           "external_id": "Tax-term-131",
-          "codename": "lover",
-          "terms": []
+          "codename": "lover"
         },
         {
           "name": "Coffee blogger",
           "external_id": "Tax-term-145",
-          "codename": "blogger",
-          "terms": []
+          "codename": "blogger"
         }
       ]
     }
