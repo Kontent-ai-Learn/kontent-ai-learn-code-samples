@@ -22,20 +22,17 @@ var response = await client.CreateTaxonomyGroupAsync(new TaxonomyGroupCreateMode
                 new TaxonomyTermCreateModel
                 {
                     Name = "Soccer",
-                    ExternalId = "soccer",
-                    Terms = Enumerable.Empty<TaxonomyTermCreateModel>()
+                    ExternalId = "soccer"
                 },
                 new TaxonomyTermCreateModel
                 {
                     Name = "Ice hockey",
-                    ExternalId = "hockey",
-                    Terms = Enumerable.Empty<TaxonomyTermCreateModel>()
+                    ExternalId = "hockey"
                 },
                 new TaxonomyTermCreateModel
                 {
                     Name = "Rugby",
-                    ExternalId = "rugby",
-                    Terms = Enumerable.Empty<TaxonomyTermCreateModel>()
+                    ExternalId = "rugby"
                 },
             }
         },
@@ -48,20 +45,17 @@ var response = await client.CreateTaxonomyGroupAsync(new TaxonomyGroupCreateMode
                 new TaxonomyTermCreateModel
                 {
                     Name = "Javascript",
-                    ExternalId = "js",
-                    Terms = Enumerable.Empty<TaxonomyTermCreateModel>()
+                    ExternalId = "js"
                 },
                 new TaxonomyTermCreateModel
                 {
                     Name = "C#",
-                    ExternalId = "c",
-                    Terms = Enumerable.Empty<TaxonomyTermCreateModel>()
+                    ExternalId = "c"
                 },
                 new TaxonomyTermCreateModel
                 {
                     Name = "MVC",
-                    ExternalId = "mvc",
-                    Terms = Enumerable.Empty<TaxonomyTermCreateModel>()
+                    ExternalId = "mvc"
                 },
             }
         },

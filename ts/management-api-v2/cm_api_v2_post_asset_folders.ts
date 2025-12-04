@@ -20,16 +20,14 @@ const response = await client.addAssetFolders()
               id: '9ca927b6-6e4d-4d6b-81e3-ec5e8f7772a0',
               name: 'Archives',
               codename: 'archives',
-              external_id: 'folder-with-downloadable-archives',
-              folders: []
+              external_id: 'folder-with-downloadable-archives'
             }
           ]
         },
         {
           id: '9ca927b6-6e4d-4d6b-81e3-ec5e8f7772a0',
           name: 'Legal documents',
-          external_id: 'folder-documents',
-          folders: []
+          external_id: 'folder-documents'
         }
       ]
     }

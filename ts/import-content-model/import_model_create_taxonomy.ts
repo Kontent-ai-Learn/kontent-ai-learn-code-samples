@@ -18,18 +18,15 @@ const response = client.addTaxonomy()
           terms: [
             {
               name: 'Soccer',
-              codename: 'soccer',
-              terms: []
+              codename: 'soccer'
             },
             {
               name: 'Ice hockey',
-              codename: 'hockey',
-              terms: []
+              codename: 'hockey'
             },
             {
               name: 'Rugby',
-              codename: 'rugby',
-              terms: []
+              codename: 'rugby'
             }
           ]
         },
@@ -39,18 +36,15 @@ const response = client.addTaxonomy()
           terms: [
             {
               name: 'JavaScript',
-              codename: 'js',
-              terms: []
+              codename: 'js'
             },
             {
               name: 'C#',
-              codename: 'c',
-              terms: []
+              codename: 'c'
             },
             {
               name: 'MVC',
-              codename: 'mvc',
-              terms: []
+              codename: 'mvc'
             }
           ]
         }
