@@ -1,11 +1,13 @@
 // Tip: Find more about JS/TS SDKs at https://kontent.ai/learn/javascript
-import { signatureHelper } from '@kontent-ai/webhook-helper';
+import { isSignatureValid, SIGNATURE_HEADER } from '@kontent-ai/webhook-helper';
 
 // Example of generating the hash to verify the notification
-const isValidSignature = (req, secret) => {
-  return signatureHelper.isValidSignatureFromString(
-    req.body, // Use raw body data from the request, i.e., by using body-parser
+const isValidSignature = async (request: Request, secret: string) => {
+  const signature = request.headers.get(SIGNATURE_HEADER);
+
+  return signature ? isSignatureValid({
+    payload: await request.text(), // Use raw body data from the request
     secret,
-    req.headers['x-kontent-ai-signature']
-  );
+    signature,
+  }) : false;
 };
