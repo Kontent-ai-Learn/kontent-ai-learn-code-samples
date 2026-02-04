@@ -16,7 +16,8 @@ var customAppCreateModel = new CustomAppCreateModel
     AllowedRoles = [
         Reference.ById(Guid.Parse("7740a768-bfa5-4f64-bab4-d77cc0791d4c")),
         Reference.ById(Guid.Parse("7a51d721-7302-4a85-b4ce-a6a3f3cce4a6"))
-    ]
+    ],
+    DisplayMode = CustomAppDisplayMode.FullScreen
 };
 
 var response = await client.GetCustomAppAsync(customAppCreateModel);

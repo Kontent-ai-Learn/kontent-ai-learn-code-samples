@@ -45,5 +45,10 @@ curl --request PATCH \
             { "codename": "allowed_role_codename" },
             { "id": "f8f0b5cb-f5b7-42e8-af85-fbdab3ddfacf" }
         ]
+    },
+    {
+        "op": "replace",
+        "property_name": "display_mode",
+        "value": "dialog"
     }
 ]'
