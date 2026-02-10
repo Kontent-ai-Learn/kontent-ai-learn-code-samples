@@ -56,6 +56,11 @@ var changes = new CustomAppOperationBaseModel[]
             Reference.ByCodename("allowed_role_codename"),
             Reference.ById(new Guid("f8f0b5cb-f5b7-42e8-af85-fbdab3ddfacf"))
         }
+    },
+    new CustomAppReplacePatchModel()
+    {
+        PropertyName = PropertyName.DisplayMode,
+        Value = CustomAppDisplayMode.Dialog
     }
 };
 

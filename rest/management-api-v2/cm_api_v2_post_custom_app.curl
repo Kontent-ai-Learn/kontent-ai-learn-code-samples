@@ -14,5 +14,6 @@ curl --request POST \
         {
             "id": "7a51d721-7302-4a85-b4ce-a6a3f3cce4a6"
         }
-    ]
+    ],
+    "display_mode": "fullScreen"
 }'
