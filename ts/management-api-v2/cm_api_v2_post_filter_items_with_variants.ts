@@ -6,14 +6,8 @@ const client = new ManagementClient({
   apiKey: 'KONTENT_AI_MANAGEMENT_API_KEY'
 });
 
-// Some SDK queries are available under the `earlyAccess` namespace. 
-// This endpoint is in early access and may evolve before general availability.
-// Use with caution in production environments.
-
-// Filters variants by search phrase and includes element content
 const response = await client
-    .earlyAccess
-    .filterLanguageVariants()
+    .filterItemsWithVariants()
     .withData({
         filters: {
             search_phrase: 'home'
@@ -21,7 +15,6 @@ const response = await client
         order: {
             by: 'last_modified',
             direction: 'desc'
-        },
-        include_content: true
+        }
     })
     .toPromise(); // or `toAllPromise()`
