@@ -1,15 +1,24 @@
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
 using Kontent.Ai.Delivery;
+using Kontent.Ai.Delivery.Configuration;
 using KontentAiModels;
 
-// Tip: Use DI to create Delivery client https://kontent.ai/learn/net-register-client
-IDeliveryClient client = DeliveryClientBuilder
-      .WithEnvironmentId("8d20758c-d74c-4f59-ae04-ee928c0816b7")
-      .Build();
+// Tip: Without DI, build the client via DeliveryClientBuilder.WithOptions(...)
+using var container = DeliveryClientBuilder
+    .WithOptions(builder => builder
+        .WithEnvironmentId("8d20758c-d74c-4f59-ae04-ee928c0816b7")
+        .UseProductionApi()
+        .Build())
+    .Build();
 
-// Gets a content item by codename and maps it to the item's strongly typed model
-IDeliveryItemResponse<Homepage> response = await client.GetItemAsync<Homepage>("hello_caas_world");
+IDeliveryClient client = container.Client;
 
-var homepage = response.Item;
-// Use homepage
-// Console.WriteLine(homepage.Headline);
+// Gets a content item by codename and maps it to the strongly typed model
+var result = await client.GetItem<Homepage>("hello_caas_world").ExecuteAsync();
+
+if (result.IsSuccess)
+{
+    var homepage = result.Value.Elements;
+    // Use homepage
+    // Console.WriteLine(homepage.Headline);
+}

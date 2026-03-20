@@ -3,21 +3,34 @@ using Kontent.Ai.Delivery;
 
 // Tip: Use DI for this in your apps https://kontent.ai/learn/net-register-client
 IDeliveryClient client = DeliveryClientBuilder
-      .WithEnvironmentId("8d20758c-d74c-4f59-ae04-ee928c0816b7")
-      .Build();
+    .WithOptions(builder => builder
+        .WithEnvironmentId("8d20758c-d74c-4f59-ae04-ee928c0816b7")
+        .UseProductionApi()
+        .Build())
+    .Build();
 
 // Gets navigation items and their linked items
 // Tip: Create strongly typed models according to https://kontent.ai/learn/net-strong-types
-IDeliveryItemResponse<NavigationItem> rootResponse = await client.GetItemAsync<NavigationItem>("root_navigation_item",
-    new DepthParameter(5)
-    );
+var rootResult = await client.GetItem<NavigationItem>("root_navigation_item")
+    .Depth(5)
+    .ExecuteAsync();
 
-NavigationItem root = rootResponse.Item;
+if (!rootResult.IsSuccess)
+{
+    return;
+}
+
+var root = rootResult.Value;
 
 // Gets specific elements of all articles
-IDeliveryItemListingResponse<Article> articleResponse = await client.GetItemsAsync<Article>(
-    new EqualsFilter("system.type", "article"),
-    new ElementsParameter("title", "url")
-    );
+// With source-generated strongly typed models, GetItems<Article>() adds system.type automatically.
+var articleResult = await client.GetItems<Article>()
+    .WithElements("title", "url")
+    .ExecuteAsync();
 
-var articles = articleResponse.Items;
+if (!articleResult.IsSuccess)
+{
+    return;
+}
+
+var articles = articleResult.Value.Items;

@@ -1,29 +1,30 @@
-// Create a delivery client using the builder pattern
-using var clientContainer = DeliveryClientBuilder
+// Initializes a Delivery client
+_client = DeliveryClientBuilder
     .WithOptions(builder => builder
-        .WithEnvironmentId("your-environment-id")
+        .WithEnvironmentId("KONTENT_AI_ENVIRONMENT_ID")
         .UseProductionApi()
         .Build())
     .Build();
 
-// Get the client from the container
-var client = clientContainer.Client;
-
-// Retrieve a strongly-typed content item
-var response = await client.GetItem<Article>("my_article").ExecuteAsync();
-
-if (response.IsSuccess)
+// Retrieves a content item
+var result = await _client.GetItem<Article>("my_article").ExecuteAsync();
+if (!result.IsSuccess)
 {
-    // Gets the image from an asset element named Hero Image
-    var imageWithRendition = response.Value.Elements.HeroImage
-        .SingleOrDefault(x => x.Name == "construction-insurance-header.jpg");
-
-    if (imageWithRendition is not null)
-    {
-        // Gets the asset rendition query from the image
-        var renditionQuery = imageWithRendition.Renditions["default"].Query;
-
-        // Combines the original image URL with the asset rendition query, if the image specifies a query
-        var assetUrl = $"{imageWithRendition.Url}?{renditionQuery}";
-    }
+    return;
 }
+
+// Gets the image from an asset element named Teaser Image
+var imageWithRendition = result.Value.Elements.TeaserImage?
+    .SingleOrDefault(x => x.Name == "construction-insurance-header.jpg");
+if (imageWithRendition is null)
+{
+    return;
+}
+
+// Gets the "default" asset rendition URL when available
+if (!imageWithRendition.Renditions.TryGetValue("default", out var rendition))
+{
+    return;
+}
+
+var assetUrl = rendition.Url;

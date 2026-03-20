@@ -3,16 +3,26 @@ using System;
 using System.Security.Cryptography;
 using System.Text;
 
-// Generates a payload hash to compare with the 'X-Kontent-ai-Signature' header value
-private static string GenerateHash(string message, string secret)
+// Validates the 'X-Kontent-ai-Signature' header against the raw webhook payload.
+static bool IsWebhookSignatureValid(string payload, string sharedSecret, string signatureHeader)
 {
-    secret = secret ?? "";
-    UTF8Encoding SafeUTF8 = new UTF8Encoding(encoderShouldEmitUTF8Identifier: false, throwOnInvalidBytes: true);
-    byte[] keyBytes = SafeUTF8.GetBytes(secret);
-    byte[] messageBytes = SafeUTF8.GetBytes(message);
-    using (HMACSHA256 hmacsha256 = new HMACSHA256(keyBytes))
+    if (string.IsNullOrWhiteSpace(signatureHeader))
     {
-        byte[] hashmessage = hmacsha256.ComputeHash(messageBytes);
-        return Convert.ToBase64String(hashmessage);
+        return false;
     }
+
+    // Header values can be quoted depending on hosting pipeline/proxy behavior.
+    var normalizedSignature = signatureHeader.Trim().Trim('"');
+
+    var payloadBytes = Encoding.UTF8.GetBytes(payload ?? string.Empty);
+    var keyBytes = Encoding.UTF8.GetBytes(sharedSecret ?? string.Empty);
+
+    using var hmac = new HMACSHA256(keyBytes);
+    var computedBytes = hmac.ComputeHash(payloadBytes);
+    var computedSignature = Convert.ToBase64String(computedBytes);
+
+    // Use constant-time comparison to avoid timing attacks.
+    var providedBytes = Encoding.UTF8.GetBytes(normalizedSignature);
+    var expectedBytes = Encoding.UTF8.GetBytes(computedSignature);
+    return CryptographicOperations.FixedTimeEquals(providedBytes, expectedBytes);
 }
