@@ -1,19 +1,16 @@
-public class CustomContentLinkUrlResolver : IContentLinkUrlResolver
+using Kontent.Ai.Delivery.Abstractions;
+
+namespace KontentAiSamples.StructureInRte;
+
+public static class CustomContentLinkResolverSample
 {
-    public Task<string> ResolveLinkUrlAsync(IContentLink link)
+    public static ValueTask<string> ResolveLinkUrlAsync(IContentItemLink link)
     {
-        // Resolves URLs to content items based on the Article content type
-        if (link.ContentTypeCodename == "article")
+        if (link.Metadata?.ContentTypeCodename == "article")
         {
-            return Task.FromResult($"/articles/{link.UrlSlug}");
+            return ValueTask.FromResult($"/articles/{link.Metadata?.UrlSlug}");
         }
 
-        // TODO: Add the rest of the resolver logic
-    }
-
-    public Task<string> ResolveBrokenLinkUrlAsync()
-    {
-        // Resolves URLs to unavailable content items
-        return Task.FromResult("/404");
+        return ValueTask.FromResult("/404");
     }
 }

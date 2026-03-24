@@ -1,8 +1,17 @@
-// You can also register the resolver in IServiceCollection or another framework for dependency injection: https://kontent.ai/learn/net-register-resolver
-using Kontent.Ai.Delivery;
+using Kontent.Ai.Delivery.Abstractions;
+using Kontent.Ai.Delivery.ContentItems.RichText.Resolution;
 
-IDeliveryClient client = DeliveryClientBuilder
-    .WithEnvironmentId("KONTENT_AI_ENVIRONMENT_ID")
-    // Registers the resolver
-    .WithContentLinkUrlResolver(new CustomContentLinkUrlResolver())
-    .Build();
+namespace KontentAiSamples.StructureInRte;
+
+public static class StructureInRteRegisterLinkResolverSample
+{
+    public static IHtmlResolver CreateResolver()
+    {
+        return new HtmlResolverBuilder()
+            .WithContentItemLinkResolver("article", (link, _) =>
+                ValueTask.FromResult($"/articles/{link.Metadata?.UrlSlug}"))
+            .WithContentItemLinkResolver((_, _) =>
+                ValueTask.FromResult("/404"))
+            .Build();
+    }
+}

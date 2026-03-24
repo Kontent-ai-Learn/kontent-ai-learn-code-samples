@@ -1,12 +1,15 @@
-// You can also register it in IServiceCollection or another framework for dependency injection: https://github.com/kontent-ai/delivery-sdk-net/blob/master/docs/customization-and-extensibility/rich-text/string-based-linked-items-rendering.md#registering-a-resolver
+using Kontent.Ai.Delivery.Abstractions;
+using Kontent.Ai.Delivery.ContentItems.RichText.Resolution;
 
-using Kontent.Ai.Delivery;
-using Kontent.Ai.Delivery.InlineContentItems;
+namespace KontentAiSamples.StructureInRte;
 
-IDeliveryClient client = DeliveryClientBuilder
-    .WithEnvironmentId("KONTENT_AI_ENVIRONMENT_ID")
-    // Registers a content item resolver for tweets
-    .WithInlineContentItemsResolver(new TweetResolver())
-    // Registers the generated strongly typed models
-    .WithTypeProvider(new CustomTypeProvider())
-    .Build();
+public static class StructureInRteRegisterResolverSample
+{
+    public static IHtmlResolver CreateResolver()
+    {
+        return new HtmlResolverBuilder()
+            .WithContentResolver<Tweet>(tweet =>
+                $"<blockquote class=\"twitter-tweet\"><a href=\"{tweet.Elements.TweetLink}\"></a></blockquote>")
+            .Build();
+    }
+}
