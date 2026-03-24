@@ -1,15 +1,17 @@
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
 using Kontent.Ai.Delivery;
 
-// Initializes a client
-IDeliveryClient client = DeliveryClientBuilder
+// Create a delivery client using the builder pattern
+using var clientContainer = DeliveryClientBuilder
     .WithOptions(builder => builder
-        .WithEnvironmentId("KONTENT_AI_ENVIRONMENT_ID")
+        .WithEnvironmentId("your-environment-id")
         .UseProductionApi()
         .Build())
     .Build();
 
-// Gets a content item and bypasses SDK local cache for this request path
+var client = clientContainer.Client;
+
+// Gets a content item; asks the API to return the latest content if it changed since the last request
 // Tip: Create strongly typed models according to https://kontent.ai/learn/net-strong-types
 var result = await client.GetItem<Article>("my_article")
     .WaitForLoadingNewContent(true)
@@ -17,5 +19,5 @@ var result = await client.GetItem<Article>("my_article")
 
 if (result.IsSuccess)
 {
-    var item = result.Value;
+    Article item = result.Value.Elements;
 }

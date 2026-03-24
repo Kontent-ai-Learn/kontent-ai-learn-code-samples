@@ -3,15 +3,15 @@ using Kontent.Ai.Delivery;
 using Kontent.Ai.Delivery.Configuration;
 using KontentAiModels;
 
-// Tip: Without DI, build the client via DeliveryClientBuilder.WithOptions(...)
-using var container = DeliveryClientBuilder
+// Create a delivery client using the builder pattern
+using var clientContainer = DeliveryClientBuilder
     .WithOptions(builder => builder
-        .WithEnvironmentId("8d20758c-d74c-4f59-ae04-ee928c0816b7")
+        .WithEnvironmentId("your-environment-id")
         .UseProductionApi()
         .Build())
     .Build();
 
-IDeliveryClient client = container.Client;
+var client = clientContainer.Client;
 
 // Gets a content item by codename and maps it to the strongly typed model
 var result = await client.GetItem<Homepage>("hello_caas_world").ExecuteAsync();

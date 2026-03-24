@@ -1,18 +1,17 @@
-﻿// Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
+// Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
 using Kontent.Ai.Sync;
 using Kontent.Ai.Sync.Abstractions;
-using Microsoft.Extensions.DependencyInjection;
 
-// Tip: Use DI to create Sync client
-var services = new ServiceCollection();
+// Register a Sync client
 services.AddSyncClient(options =>
 {
-    options.EnvironmentId = "KONTENT_AI_ENVIRONMENT_ID";
+    options.EnvironmentId = "your-environment-id";
     options.ApiMode = ApiMode.Preview;
-    options.ApiKey = "KONTENT_AI_PREVIEW_API_KEY";
+    options.ApiKey = "your-preview-api-key";
 });
-using var serviceProvider = services.BuildServiceProvider();
-var syncClient = serviceProvider.GetRequiredService<ISyncClient>();
+
+// Resolve via DI (e.g., constructor injection)
+// ISyncClient syncClient = ...
 
 // Initializes Sync API v2 and gets the initial sync token.
 var result = await syncClient.InitializeSyncAsync();
