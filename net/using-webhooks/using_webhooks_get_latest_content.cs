@@ -1,17 +1,18 @@
-// Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
-using Kontent.Ai.Delivery;
-
-// Initializes a client that retrieves the latest version of published content
-IDeliveryClient client = DeliveryClientBuilder
+// For other means of creating a client, see https://github.com/kontent-ai/delivery-sdk-net#setting-up-the-delivery-client
+using var client = DeliveryClientBuilder
     .WithOptions(builder => builder
-        .WithEnvironmentId("KONTENT_AI_ENVIRONMENT_ID")
-        .UseProductionApi
-        .WaitForLoadingNewContent
+        .WithEnvironmentId("your-environment-id")
+        .UseProductionApi()
         .Build())
     .Build();
 
-// Gets a content item
+// Gets a content item; asks the API to return the latest content if it changed since the last request
 // Tip: Create strongly typed models according to https://kontent.ai/learn/net-strong-types
-IDeliveryItemResponse<Article> response = await client.GetItemAsync<Article>("my_article");
+var result = await client.GetItem<Article>("my_article")
+    .WaitForLoadingNewContent(true)
+    .ExecuteAsync();
 
-Article item = response.Item;
+if (result.IsSuccess)
+{
+    Article item = result.Value.Elements;
+}

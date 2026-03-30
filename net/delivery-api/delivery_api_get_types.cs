@@ -1,14 +1,17 @@
-// Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
-using Kontent.Ai.Delivery;
-
-// Tip: Use DI to create Delivery client https://kontent.ai/learn/net-register-client
-IDeliveryClient client = DeliveryClientBuilder
-      .WithEnvironmentId("KONTENT_AI_ENVIRONMENT_ID")
-      .Build();
+// For other means of creating a client, see https://github.com/kontent-ai/delivery-sdk-net#setting-up-the-delivery-client
+using var client = DeliveryClientBuilder
+    .WithOptions(builder => builder
+        .WithEnvironmentId("your-environment-id")
+        .UseProductionApi()
+        .Build())
+    .Build();
 
 // Gets 3 content types
-IDeliveryTypeListingResponse response = await client.GetTypesAsync(
-    new LimitParameter(3)
-    );
+var result = await client.GetTypes()
+    .Limit(3)
+    .ExecuteAsync();
 
-IList<IContentType> types = response.Types;
+if (result.IsSuccess)
+{
+    IReadOnlyList<IContentType> types = result.Value.Types;
+}

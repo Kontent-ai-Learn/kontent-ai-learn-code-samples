@@ -1,19 +1,19 @@
-// Gets a list of items where the 'my_page' item is used in the 'navigation' element.
-IDeliveryItemListingResponse<object> response = await deliveryClient.GetItemsAsync<object>(
-    new ContainsFilter("elements.navigation", "my_page")
-);
+// Gets items where the 'navigation' linked items element contains 'my_page'.
+var result = await client.GetItems()
+    .Where(item => item.Element("navigation").Contains("my_page"))
+    .ExecuteAsync();
 
 // Gets items linked to at least Jane, John, or both.
-IDeliveryItemListingResponse<object> response = await deliveryClient.GetItemsAsync<object>(
-    new AnyFilter("elements.author", "jane_doe", "john_wick")
-);
+var result = await client.GetItems()
+    .Where(item => item.Element("author").ContainsAny("jane_doe", "john_wick"))
+    .ExecuteAsync();
 
 // Gets pages linking travel insurance as their subpage.
-IDeliveryItemListingResponse<object> response = await deliveryClient.GetItemsAsync<object>(
-  new ContainsFilter("elements.subpages", "travel_insurance")
-);
+var result = await client.GetItems()
+    .Where(item => item.Element("subpages").Contains("travel_insurance"))
+    .ExecuteAsync();
 
 // Gets pages linking at least travel insurance, car insurance, or both as their subpage.
-IDeliveryItemListingResponse<object> response = await deliveryClient.GetItemsAsync<object>(
-  new AnyFilter("elements.subpages", "travel_insurance", "car_insurance")
-);
+var result = await client.GetItems()
+    .Where(item => item.Element("subpages").ContainsAny("travel_insurance", "car_insurance"))
+    .ExecuteAsync();

@@ -1,19 +1,11 @@
-public class CustomContentLinkUrlResolver : IContentLinkUrlResolver
+using Kontent.Ai.Delivery.ContentItems.RichText.Resolution;
+
+// Define URL patterns for resolving content item links by content type
+// Available placeholders: {codename}, {type}, {urlslug}, {id}
+var linkResolver = DefaultResolvers.UrlPatternResolver(new Dictionary<string, string>
 {
-    public Task<string> ResolveLinkUrlAsync(IContentLink link)
-    {
-        // Resolves URLs to content items based on the Article content type
-        if (link.ContentTypeCodename == "article")
-        {
-            return Task.FromResult($"/articles/{link.UrlSlug}");
-        }
+    ["article"] = "/articles/{urlslug}"
+});
 
-        // TODO: Add the rest of the resolver logic
-    }
-
-    public Task<string> ResolveBrokenLinkUrlAsync()
-    {
-        // Resolves URLs to unavailable content items
-        return Task.FromResult("/404");
-    }
-}
+// For other means of resolving links, see SDK docs:
+// https://github.com/kontent-ai/delivery-sdk-net/blob/master/docs/rich-text-customization.md#content-item-link-resolvers

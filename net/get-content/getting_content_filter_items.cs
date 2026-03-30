@@ -1,15 +1,17 @@
-// Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
-using Kontent.Ai.Delivery;
-
-// Tip: Use DI to create Delivery client https://kontent.ai/learn/net-register-client
-IDeliveryClient client = DeliveryClientBuilder
-      .WithEnvironmentId("8d20758c-d74c-4f59-ae04-ee928c0816b7")
-      .Build();
+// For other means of creating a client, see https://github.com/kontent-ai/delivery-sdk-net#setting-up-the-delivery-client
+using var client = DeliveryClientBuilder
+    .WithOptions(builder => builder
+        .WithEnvironmentId("your-environment-id")
+        .UseProductionApi()
+        .Build())
+    .Build();
 
 // Gets all articles
-// Tip: Create strongly typed models according to https://kontent.ai/learn/net-strong-types
-IDeliveryItemListingResponse<Article> response = await client.GetItemsAsync<Article>(
-    new EqualsFilter("system.type", "article")
-);
+// Note: When using strongly typed models with [ContentTypeCodename("article")],
+// the system.type filter is added automatically for GetItems<Article>()
+var result = await client.GetItems<Article>().ExecuteAsync();
 
-IList<Article> items = response.Items;
+if (result.IsSuccess)
+{
+    IReadOnlyList<IContentItem<Article>> items = result.Value.Items;
+}
