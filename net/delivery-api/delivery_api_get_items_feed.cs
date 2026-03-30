@@ -7,7 +7,7 @@ using var client = DeliveryClientBuilder
     .Build();
 
 // Enumerates all articles in the project
-// Note: When using source generation with [ContentTypeCodename("article")],
+// Note: When using strongly typed models with [ContentTypeCodename("article")],
 // the system.type filter is added automatically for GetItemsFeed<Article>()
 await foreach (var article in client.GetItemsFeed<Article>().EnumerateAsync())
 {

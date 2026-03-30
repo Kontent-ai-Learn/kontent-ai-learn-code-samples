@@ -7,7 +7,7 @@ using var client = DeliveryClientBuilder
     .Build();
 
 // Gets 3 articles ordered by the "Post date" element
-// Note: When using source generation with [ContentTypeCodename("article")],
+// Note: When using strongly typed models with [ContentTypeCodename("article")],
 // the system.type filter is added automatically for GetItems<Article>()
 var result = await client.GetItems<Article>()
     .OrderBy("elements.post_date", OrderingMode.Descending)

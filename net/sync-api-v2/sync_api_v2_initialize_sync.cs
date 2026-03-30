@@ -1,7 +1,3 @@
-// Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
-using Kontent.Ai.Sync;
-using Kontent.Ai.Sync.Abstractions;
-
 // Register a Sync client
 services.AddSyncClient(options =>
 {
