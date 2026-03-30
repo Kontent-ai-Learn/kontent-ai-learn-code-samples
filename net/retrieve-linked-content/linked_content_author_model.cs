@@ -1,10 +1,8 @@
 using Kontent.Ai.Delivery.ContentItems.RichText;
 
-namespace KontentAiSamples.RetrieveLinkedContent;
-
+// Tip: Generate models via https://github.com/kontent-ai/model-generator-net
 public record Author
 {
     public string? Name { get; init; }
-
     public RichTextContent? Bio { get; init; }
 }

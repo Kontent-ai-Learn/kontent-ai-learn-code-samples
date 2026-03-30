@@ -1,22 +1,8 @@
-using Kontent.Ai.Delivery;
-using Kontent.Ai.Delivery.Abstractions;
+var result = await client.GetItem<SimpleArticle>("my_article").ExecuteAsync();
 
-namespace KontentAiSamples.StructureInRte;
-
-public static class StructureInRteRetrieveArticleSample
+if (result.IsSuccess)
 {
-    public static async Task<string?> GetArticleBodyAsHtmlAsync(
-        IDeliveryClient client,
-        string codename = "my_article")
-    {
-        var result = await client.GetItem<KontentAiSamples.RetrieveLinkedContent.SimpleArticle>(codename)
-            .ExecuteAsync();
-
-        if (!result.IsSuccess || result.Value.Elements.Body is null)
-        {
-            return null;
-        }
-
-        return await result.Value.Elements.Body.ToHtmlAsync();
-    }
+    // Resolve the rich text body to HTML
+    // _resolver can be a local variable or resolved from DI (IHtmlResolver)
+    string html = await result.Value.Elements.Body.ToHtmlAsync(_resolver);
 }

@@ -1,14 +1,11 @@
-namespace KontentAiSamples.StructureInRte;
+using Kontent.Ai.Delivery.ContentItems.RichText.Resolution;
 
-public record Tweet
-{
-    public string? Theme { get; init; }
-
-    public string? TweetLink { get; init; }
-}
-
-public static class TweetResolverSample
-{
-    public static string Resolve(Tweet data) =>
-        $"<blockquote class=\"twitter-tweet\" data-lang=\"en\" data-theme=\"{data.Theme}\"><a href=\"{data.TweetLink}\"></a></blockquote>";
-}
+// Build an HTML resolver for embedded content items and content item links
+var resolver = new HtmlResolverBuilder()
+    // Render embedded Tweet components
+    .WithContentResolver<Tweet>(tweet =>
+        $"<blockquote class=\"twitter-tweet\" data-lang=\"en\" data-theme=\"{tweet.Elements.Theme}\"><a href=\"{tweet.Elements.TweetLink}\"></a></blockquote>")
+    // Render embedded YouTube video components
+    .WithContentResolver<Video>(video =>
+        $"<iframe src=\"https://youtube.com/embed/{video.Elements.VideoId}\"></iframe>")
+    .Build();
