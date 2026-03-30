@@ -7,11 +7,8 @@ var client = new ManagementClient(new ManagementOptions
     EnvironmentId = "KONTENT_AI_ENVIRONMENT_ID"
 });
 
-// This endpoint is in early access and may evolve before general availability. 
-// Use with caution in production environments.
-
 // Filters variants by language only
-var response = await client.EarlyAccess.FilterVariantsAsync(new VariantFilterRequestModel
+var response = await client.FilterItemsWithVariantsAsync(new ItemWithVariantFilterRequestModel
 {
     Filters = new VariantFilterFiltersModel
     {
@@ -19,8 +16,8 @@ var response = await client.EarlyAccess.FilterVariantsAsync(new VariantFilterReq
     }
 });
 
-// Filters variants with multiple criteria and includes element content
-var response = await client.EarlyAccess.FilterVariantsAsync(new VariantFilterRequestModel
+// Filters variants with multiple criteria
+var response = await client.FilterItemsWithVariantsAsync(new ItemWithVariantFilterRequestModel
 {
     Filters = new VariantFilterFiltersModel
     {
@@ -39,6 +36,5 @@ var response = await client.EarlyAccess.FilterVariantsAsync(new VariantFilterReq
     {
         By = "name",
         Direction = VariantFilterOrderDirection.Ascending
-    },
-    IncludeContent = true
+    }
 });
