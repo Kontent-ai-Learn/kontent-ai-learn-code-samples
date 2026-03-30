@@ -1,13 +1,10 @@
-// Create a delivery client using the builder pattern
-using var clientContainer = DeliveryClientBuilder
+// For other means of creating a client, see https://github.com/kontent-ai/delivery-sdk-net#setting-up-the-delivery-client
+using var client = DeliveryClientBuilder
       .WithOptions(builder => builder
             .WithEnvironmentId("your-environment-id")
             .UseProductionApi()
             .Build())
       .Build();
-
-// Get the client from the container
-var client = clientContainer.Client;
 
 // Gets the model of a specific element within a specific content type
 var result = await client.GetContentElement("article", "title").ExecuteAsync();
