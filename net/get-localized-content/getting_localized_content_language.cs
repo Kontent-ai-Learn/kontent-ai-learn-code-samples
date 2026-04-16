@@ -1,15 +1,18 @@
-// Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
-using Kontent.Ai.Delivery;
+// For other means of creating a client, see https://github.com/kontent-ai/delivery-sdk-net#setting-up-the-delivery-client
+using var client = DeliveryClientBuilder
+    .WithOptions(builder => builder
+        .WithEnvironmentId("your-environment-id")
+        .UseProductionApi()
+        .Build())
+    .Build();
 
-// Tip: Use DI to create Delivery client https://kontent.ai/learn/net-register-client
-IDeliveryClient client = DeliveryClientBuilder
-      .WithEnvironmentId("8d20758c-d74c-4f59-ae04-ee928c0816b7")
-      .Build();
+// Tip: Generate models via https://github.com/kontent-ai/model-generator-net
+// Gets a specific article in Spanish (with language fallbacks enabled by default)
+var result = await client.GetItem<Article>("about_us")
+    .WithLanguage("es-ES")
+    .ExecuteAsync();
 
-// Tip: Create strongly typed models according to https://kontent.ai/learn/net-strong-types
-// Gets a specific article in Spanish
-IDeliveryItemResponse<Article> response = await client.GetItemAsync<Article>("about_us",
-    new LanguageParameter("es-ES")
-);
-
-Article item = response.Item;
+if (result.IsSuccess)
+{
+    Article item = result.Value.Elements;
+}

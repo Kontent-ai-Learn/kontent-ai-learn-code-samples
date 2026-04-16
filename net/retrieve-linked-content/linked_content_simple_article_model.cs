@@ -1,21 +1,10 @@
-// Tip: Create strongly typed models according to https://kontent.ai/learn/net-strong-types
-
-using System;
-using System.Collections.Generic;
 using Kontent.Ai.Delivery.Abstractions;
+using Kontent.Ai.Delivery.ContentItems.RichText;
 
-namespace KontentAiModels
+// Tip: Generate models via https://github.com/kontent-ai/model-generator-net
+public record SimpleArticle
 {
-    public partial class SimpleArticle
-    {
-        public const string Codename = "simple_article";
-        public const string TitleCodename = "title";
-        public const string BodyCodename = "body";
-        public const string AuthorCodename = "author";
-
-        public string Title { get; set; }
-        public string Body { get; set; }
-        public IEnumerable<object> Author { get; set; }
-        public IContentItemSystemAttributes System { get; set; }
-    }
+    public string? Title { get; init; }
+    public RichTextContent? Body { get; init; }
+    public IEnumerable<IEmbeddedContent>? Author { get; init; }
 }

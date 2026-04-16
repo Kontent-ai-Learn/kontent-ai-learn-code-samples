@@ -1,14 +1,23 @@
-﻿// Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
-using Kontent.Ai.Delivery;
-
-// Tip: Use DI to create Delivery client https://kontent.ai/learn/net-register-client
-IDeliveryClient client = DeliveryClientBuilder
-    .WithEnvironmentId("KONTENT_AI_ENVIRONMENT_ID")
+// For other means of creating a client, see https://github.com/kontent-ai/sync-sdk-net#quick-start
+await using var client = SyncClientBuilder
+    .WithOptions(builder => builder
+        .WithEnvironmentId("your-environment-id")
+        .UsePreviewApi("your-preview-api-key")
+        .Build())
     .Build();
 
-// Gets a list of recently changed content items
-IDeliverySyncResponse response = await client.GetSyncV2Async("KONTENT_AI_CONTINUATION_TOKEN");
-IList<ISyncV2Item> syncItems = response.SyncItems;
-IList<ISyncV2ContentType> syncTypes = response.SyncTypes;
-IList<ISyncV2Taxonomy> syncTaxonomies = response.SyncTaxonomies;
-IList<ISyncV2Language> syncLanguages = response.SyncLanguages;
+// Gets a page of changes since the last stored sync token.
+var result = await client.GetDeltaAsync("your-sync-token");
+if (!result.IsSuccess)
+{
+    throw new InvalidOperationException(result.Error?.Message ?? "Sync failed.");
+}
+
+var delta = result.Value;
+var syncItems = delta.Items;
+var syncTypes = delta.Types;
+var syncTaxonomies = delta.Taxonomies;
+var syncLanguages = delta.Languages;
+
+// Persist this token and use it in the next synchronization call.
+string? nextSyncToken = result.SyncToken;
