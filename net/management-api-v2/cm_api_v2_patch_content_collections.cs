@@ -1,14 +1,19 @@
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
 using Kontent.Ai.Management;
+using Kontent.Ai.Management.Configuration;
+using Kontent.Ai.Management.Models.Collections;
+using Kontent.Ai.Management.Models.Collections.Patch;
+using Kontent.Ai.Management.Models.Shared;
 
-var client = new ManagementClient(new ManagementOptions
+// Or register it through DI with services.AddManagementClient()
+using var client = new ManagementClient(new ManagementOptions
 {
     ApiKey = "KONTENT_AI_MANAGEMENT_API_KEY",
     EnvironmentId = "KONTENT_AI_ENVIRONMENT_ID"
 });
 
-var response = await client.ModifyCollectionAsync(new CollectionOperationBaseModel[]
-{
+var response = (await client.ModifyCollectionsAsync(
+[
     new CollectionAddIntoPatchModel
     {
         Value = new CollectionCreateModel
@@ -26,12 +31,11 @@ var response = await client.ModifyCollectionAsync(new CollectionOperationBaseMod
     },
     new CollectionRemovePatchModel
     {
-        CollectionIdentifier = Reference.ByCodename("extra_collection")
+        Reference = Reference.ByCodename("extra_collection")
     },
     new CollectionReplacePatchModel
     {
-        PropertyName = Models.Collections.Patch.PropertyName.Name,
         Value = "A new name",
         Reference = Reference.ByCodename("second_collection")
     }
-});
+])).EnsureSuccess();

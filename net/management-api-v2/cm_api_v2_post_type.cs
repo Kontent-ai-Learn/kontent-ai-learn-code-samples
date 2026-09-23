@@ -1,19 +1,25 @@
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
 using Kontent.Ai.Management;
+using Kontent.Ai.Management.Configuration;
+using Kontent.Ai.Management.Models.Shared;
+using Kontent.Ai.Management.Models.Types;
+using Kontent.Ai.Management.Models.Types.Elements;
+using Kontent.Ai.Management.Models.Types.Elements.DefaultValues;
 
-var client = new ManagementClient(new ManagementOptions
+// Or register it through DI with services.AddManagementClient()
+using var client = new ManagementClient(new ManagementOptions
 {
     ApiKey = "KONTENT_AI_MANAGEMENT_API_KEY",
     EnvironmentId = "KONTENT_AI_ENVIRONMENT_ID"
 });
 
-var response = await client.CreateContentTypeAsync(new ContentTypeCreateModel
+var response = (await client.CreateContentTypeAsync(new ContentTypeCreateModel
 {
     ExternalId = "article",
     Name = "Article",
     Codename = "my_article",
-    ContentGroups = new[]
-    {
+    ContentGroups =
+    [
         new ContentGroupModel
         {
             Name = "Article Copy",
@@ -22,23 +28,17 @@ var response = await client.CreateContentTypeAsync(new ContentTypeCreateModel
         new ContentGroupModel
         {
             Name = "Author",
-            CodeName = "author",
+            Codename = "author",
         }
-    },
-    Elements = new ElementMetadataBase[]
-    {
+    ],
+    Elements =
+    [
         new TextElementMetadataModel
         {
             Name = "Article title",
             Codename = "title",
             ContentGroup = Reference.ByCodename("article-copy"),
-            DefaultValue = new TextElementDefaultValueModel
-            {
-                Global = new TypeValue<string>()
-                {
-                    Value = "This is the default value of the text element."
-                }
-            }
+            DefaultValue = new TextElementDefaultValueModel("This is the default value of the text element.")
         },
         new RichTextElementMetadataModel
         {
@@ -50,12 +50,8 @@ var response = await client.CreateContentTypeAsync(new ContentTypeCreateModel
         {
             Name = "Author bio",
             Codename = "bio",
-            AllowedBlocks = new HashSet<RichTextBlockType>()
-            {
-                RichTextBlockType.Images,
-                RichTextBlockType.Text
-            },
+            AllowedBlocks = [RichTextBlockType.Images, RichTextBlockType.Text],
             ContentGroup = Reference.ByCodename("author"),
         },
-    }
-});
+    ]
+})).EnsureSuccess();

@@ -1,12 +1,12 @@
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
 using Kontent.Ai.Management;
+using Kontent.Ai.Management.Configuration;
 
-var client = new ManagementClient(new ManagementOptions
+// Or register it through DI with services.AddManagementClient()
+using var client = new ManagementClient(new ManagementOptions
 {
     ApiKey = "KONTENT_AI_SUBSCRIPTION_API_KEY",
-    SubscriptionId = "KONTENT_AI_SUBSCRIPTION_ID",
-    // Required by the SDK for client creation
-    EnvironmentId = "KONTENT_AI_ENVIRONMENT_ID"
+    SubscriptionId = "KONTENT_AI_SUBSCRIPTION_ID"
 });
 
-var response = await client.ListSubscriptionProjectsAsync();
+var count = (await client.ListSubscriptionProjectsAsync()).EnsureSuccess().Count;

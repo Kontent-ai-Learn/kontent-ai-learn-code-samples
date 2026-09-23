@@ -1,7 +1,10 @@
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
 using Kontent.Ai.Management;
+using Kontent.Ai.Management.Configuration;
+using Kontent.Ai.Management.Models.Assets;
 
-var client = new ManagementClient(new ManagementOptions
+// Or register it through DI with services.AddManagementClient()
+using var client = new ManagementClient(new ManagementOptions
 {
     ApiKey = "KONTENT_AI_MANAGEMENT_API_KEY",
     EnvironmentId = "KONTENT_AI_ENVIRONMENT_ID"
@@ -11,4 +14,4 @@ var filePath = Path.Combine(Environment.CurrentDirectory, "Data", "which-brewing
 var contentType = "image/jpeg";
 
 // Binary file reference to be used when adding a new asset
-var response = await client.UploadFileAsync(new FileContentSource(filePath, contentType));
+var response = (await client.UploadFileAsync(new FileContentSource(filePath, contentType))).EnsureSuccess();
