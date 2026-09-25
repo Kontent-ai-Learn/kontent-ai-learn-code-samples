@@ -6,14 +6,13 @@ const client = new ManagementClient({
   apiKey: 'KONTENT_AI_MANAGEMENT_API_KEY'
 });
 
-// Updates an existing asset
-const response = await client.updateAsset()
+// Updates an asset's metadata without replacing the file
+const updateResponse = await client.upsertAsset()
   .byAssetExternalId('which-brewing-fits-you')
   // .byAssetId('fcbb12e6-66a3-4672-85d9-d502d16b8d9c')
   .withData((builder) => {
     return {
       title: 'Coffee Brewing Techniques',
-      assetId: 'fcbb12e6-66a3-4672-85d9-d502d16b8d9c',
       descriptions: [
         {
           language: {
@@ -48,7 +47,7 @@ const response = await client.updateAsset()
   .toPromise();
 
 // Creates a new asset or updates an existing one
-const response = await client.upsertAsset()
+const upsertResponse = await client.upsertAsset()
   .byAssetExternalId('which-brewing-fits-you')
   // .byAssetId('fcbb12e6-66a3-4672-85d9-d502d16b8d9c')
   .withData((builder) => {
@@ -60,7 +59,6 @@ const response = await client.upsertAsset()
         type: 'internal'
       },
       title: 'Coffee Brewing Techniques',
-      external_id: 'which-brewing-fits-you',
       descriptions: [
         {
           language: {
