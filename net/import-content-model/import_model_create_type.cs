@@ -61,7 +61,7 @@ var response = (await client.CreateContentTypeAsync(new ContentTypeCreateModel
         },
         new TaxonomyElementMetadataModel
         {
-            TaxonomyGroup = Reference.ByExternalId("blog_topic"),
+            TaxonomyGroup = Reference.ByCodename("blog_topic"),
             Codename = "taxonomy",
             ContentGroup = Reference.ByExternalId("topic")
         }

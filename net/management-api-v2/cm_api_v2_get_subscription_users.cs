@@ -9,4 +9,4 @@ using var client = new ManagementClient(new ManagementOptions
     SubscriptionId = "KONTENT_AI_SUBSCRIPTION_ID"
 });
 
-var count = (await client.ListSubscriptionUsersAsync()).EnsureSuccess().Count;
+var response = (await client.ListSubscriptionUsersAsync()).EnsureSuccess();

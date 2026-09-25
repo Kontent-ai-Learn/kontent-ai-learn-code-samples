@@ -9,4 +9,4 @@ using var client = new ManagementClient(new ManagementOptions
     EnvironmentId = "KONTENT_AI_ENVIRONMENT_ID"
 });
 
-var count = (await client.ListTaxonomyGroupsAsync()).EnsureSuccess().Count;
+var response = (await client.ListTaxonomyGroupsAsync()).EnsureSuccess();

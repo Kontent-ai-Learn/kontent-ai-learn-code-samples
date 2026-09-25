@@ -15,7 +15,7 @@ var identifier = Reference.ByExternalId("which-brewing-fits-you");
 // var identifier = Reference.ById(Guid.Parse("fcbb12e6-66a3-4672-85d9-d502d16b8d9c"));
 
 // Used when updating an existing asset
-var updatedAssetResponse = await client.UpsertAssetAsync(identifier, new AssetUpsertModel
+var updatedAssetResponse = (await client.UpsertAssetAsync(identifier, new AssetUpsertModel
 {
     Title = "Coffee Brewing Techniques",
     Collection = new AssetCollectionReference { Reference = Reference.ByCodename("first_collection") },
@@ -44,10 +44,10 @@ var updatedAssetResponse = await client.UpsertAssetAsync(identifier, new AssetUp
             ]
         }
     ]
-});
+})).EnsureSuccess();
 
 // Used when creating a new asset or updating an existing one
-var createdAssetResponse = await client.UpsertAssetAsync(Reference.ByExternalId("which-brewing-fits-you"), new AssetUpsertModel
+var createdAssetResponse = (await client.UpsertAssetAsync(Reference.ByExternalId("which-brewing-fits-you"), new AssetUpsertModel
 {
     // 'fileReference' is only required when creating a new asset
     // To create a file reference, see the "Upload a binary file" endpoint
@@ -82,4 +82,4 @@ var createdAssetResponse = await client.UpsertAssetAsync(Reference.ByExternalId(
             ]
         }
     ]
-});
+})).EnsureSuccess();

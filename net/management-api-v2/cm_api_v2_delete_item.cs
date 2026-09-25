@@ -14,4 +14,4 @@ var identifier = Reference.ById(Guid.Parse("f4b3fc05-e988-4dae-9ac1-a94aba566474
 // var identifier = Reference.ByCodename("my_article");
 // var identifier = Reference.ByExternalId("59713");
 
-await client.DeleteContentItemAsync(identifier);
+(await client.DeleteContentItemAsync(identifier)).EnsureSuccess();

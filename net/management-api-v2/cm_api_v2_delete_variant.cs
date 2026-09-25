@@ -13,4 +13,4 @@ using var client = new ManagementClient(new ManagementOptions
 var identifier = LanguageVariantIdentifier.ByIds(Guid.Parse("f4b3fc05-e988-4dae-9ac1-a94aba566474"), Guid.Parse("d1f95fde-af02-b3b5-bd9e-f232311ccab8"));
 // var identifier = LanguageVariantIdentifier.ByCodenames("my_article", "es-ES");
 
-await client.DeleteLanguageVariantAsync(identifier);
+(await client.DeleteLanguageVariantAsync(identifier)).EnsureSuccess();

@@ -9,4 +9,4 @@ using var client = new ManagementClient(new ManagementOptions
     EnvironmentId = "KONTENT_AI_ENVIRONMENT_ID"
 });
 
-var result = await client.ListAsyncValidationTaskIssuesAsync(Guid.Parse("88d94fed-4899-4944-9b4b-c919b11a9db0"));
+var response = (await client.ListAsyncValidationTaskIssuesAsync(Guid.Parse("88d94fed-4899-4944-9b4b-c919b11a9db0"))).EnsureSuccess();

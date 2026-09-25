@@ -14,4 +14,4 @@ var identifier = Reference.ById(Guid.Parse("baf884be-531f-441f-ae88-64205efdd0f6
 // var identifier = Reference.ByCodename("metadata");
 // var identifier = Reference.ByExternalId("snippet-type-123");
 
-await client.DeleteContentTypeSnippetAsync(identifier);
+(await client.DeleteContentTypeSnippetAsync(identifier)).EnsureSuccess();

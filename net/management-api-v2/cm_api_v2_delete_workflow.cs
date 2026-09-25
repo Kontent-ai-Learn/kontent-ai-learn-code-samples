@@ -13,4 +13,4 @@ using var client = new ManagementClient(new ManagementOptions
 var identifier = Reference.ById(Guid.Parse("f9f28df0-9dec-4ee3-b087-c501e4b75347"));
 // var identifier = Reference.ByCodename("my_workflow");
 
-await client.DeleteWorkflowAsync(identifier);
+(await client.DeleteWorkflowAsync(identifier)).EnsureSuccess();

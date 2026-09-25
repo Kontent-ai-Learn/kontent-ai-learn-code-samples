@@ -15,4 +15,4 @@ var identifier = Reference.ById(Guid.Parse("0be13600-e57c-577d-8108-c8d860330985
 // var identifier = Reference.ByCodename("personas");
 // var identifier = Reference.ByExternalId("Tax-Group-123");
 
-await client.DeleteTaxonomyGroupAsync(identifier);
+(await client.DeleteTaxonomyGroupAsync(identifier)).EnsureSuccess();

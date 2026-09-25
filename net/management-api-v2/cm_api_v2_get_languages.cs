@@ -9,4 +9,4 @@ using var client = new ManagementClient(new ManagementOptions
     EnvironmentId = "KONTENT_AI_ENVIRONMENT_ID"
 });
 
-var count = (await client.ListLanguagesAsync()).EnsureSuccess().Count;
+var response = (await client.ListLanguagesAsync()).EnsureSuccess();

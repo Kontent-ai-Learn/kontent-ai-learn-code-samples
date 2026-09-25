@@ -26,7 +26,7 @@ var workflowStepIdentifier = Reference.ById(Guid.Parse("16221cc2-bd22-4414-a513-
         {
             DueDate = new DueDateModel
             {
-                Value = DateTime.UtcNow.AddDays(42)
+                Value = DateTimeOffset.UtcNow.AddDays(42)
             },
             Note = "Make sure the graphic materials we use here are on brand.",
             Contributors = [UserIdentifier.ByEmail("user@example.com")]

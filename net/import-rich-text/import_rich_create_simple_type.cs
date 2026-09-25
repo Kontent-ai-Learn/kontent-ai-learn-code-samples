@@ -13,8 +13,8 @@ using var client = new ManagementClient(new ManagementOptions
 
 var response = (await client.CreateContentTypeAsync(new ContentTypeCreateModel
 {
+    ExternalId = "simple-rich-text",
     Name = "Simple Rich Text",
-    Codename = "simple-rich-text",
     Elements =
     [
         new RichTextElementMetadataModel

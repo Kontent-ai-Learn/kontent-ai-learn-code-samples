@@ -9,4 +9,4 @@ using var client = new ManagementClient(new ManagementOptions
     EnvironmentId = "KONTENT_AI_ENVIRONMENT_ID"
 });
 
-await client.DeleteEnvironmentAsync();
+(await client.DeleteEnvironmentAsync()).EnsureSuccess();

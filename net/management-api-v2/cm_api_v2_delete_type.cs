@@ -14,4 +14,4 @@ var identifier = Reference.ById(Guid.Parse("269202ad-1d9d-47fd-b3e8-bdb05b3e3cf0
 // var identifier = Reference.ByCodename("hosted_video");
 // var identifier = Reference.ByExternalId("Content-Type-123");
 
-await client.DeleteContentTypeAsync(identifier);
+(await client.DeleteContentTypeAsync(identifier)).EnsureSuccess();

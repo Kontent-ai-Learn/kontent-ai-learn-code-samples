@@ -14,12 +14,12 @@ using var client = new ManagementClient(new ManagementOptions
 var identifier = LanguageVariantIdentifier.ByIds(Guid.Parse("f4b3fc05-e988-4dae-9ac1-a94aba566474"), Guid.Parse("d1f95fde-af02-b3b5-bd9e-f232311ccab8"));
 // var identifier = LanguageVariantIdentifier.ByCodenames("my_article", "es-ES");
 
-// Immediate publish
-(await client.PublishLanguageVariantAsync(identifier)).EnsureSuccess();
-
 // Scheduled publish
 (await client.SchedulePublishingOfLanguageVariantAsync(identifier, new ScheduleModel
 {
     ScheduledTo = new DateTimeOffset(2038, 1, 19, 4, 14, 8, TimeSpan.Zero),
     DisplayTimeZone = "Australia/Sydney"
 })).EnsureSuccess();
+
+// To publish now, use PublishLanguageVariantAsync instead
+// (await client.PublishLanguageVariantAsync(identifier)).EnsureSuccess();
