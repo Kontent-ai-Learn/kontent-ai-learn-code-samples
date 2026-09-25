@@ -5,5 +5,5 @@ var result = await client.GetItems()
 
 // Note: When using generated models with [ContentTypeCodename("product")] attribute,
 // the type filter is added automatically and this manual filter is not needed.
-var result = await client.GetItems<Product>()
+var result2 = await client.GetItems<Product>()
     .ExecuteAsync();

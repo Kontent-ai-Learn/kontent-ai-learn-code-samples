@@ -7,10 +7,10 @@ var result = await client.GetItems()
         .IsWithinRange("2020-05-05T10:30:00Z", "2020-05-07T07:00:00Z"))
     .ExecuteAsync();
 
-// Equivalent using DateTime overload (SDK implicitly serializes DateTime as UTC if not specified)
+// Equivalent using DateTime overload
 var result2 = await client.GetItems()
     .Where(item => item.System("last_modified")
         .IsWithinRange(
-            new DateTime(2020, 5, 5, 10, 30, 0),
-            new DateTime(2020, 5, 7, 7, 0, 0)))
+            new DateTime(2020, 5, 5, 10, 30, 0, DateTimeKind.Utc),
+            new DateTime(2020, 5, 7, 7, 0, 0, DateTimeKind.Utc)))
     .ExecuteAsync();

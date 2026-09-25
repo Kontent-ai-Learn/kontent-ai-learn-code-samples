@@ -8,4 +8,4 @@ var linkResolver = DefaultResolvers.UrlPatternResolver(new Dictionary<string, st
 });
 
 // For other means of resolving links, see SDK docs:
-// https://github.com/kontent-ai/delivery-sdk-net/blob/master/docs/rich-text-customization.md#content-item-link-resolvers
+// https://github.com/kontent-ai/dotnet/blob/main/src/delivery/docs/rich-text-customization.md#content-item-link-resolvers

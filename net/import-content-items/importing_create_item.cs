@@ -1,12 +1,16 @@
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
 using Kontent.Ai.Management;
+using Kontent.Ai.Management.Configuration;
+using Kontent.Ai.Management.Models.Items;
+using Kontent.Ai.Management.Models.Shared;
 
-var client = new ManagementClient(new ManagementOptions
+// Or register it through DI with services.AddManagementClient()
+using var client = new ManagementClient(new ManagementOptions
 {
     ApiKey = "KONTENT_AI_MANAGEMENT_API_KEY",
     EnvironmentId = "KONTENT_AI_ENVIRONMENT_ID"
 });
 
-await client.UpsertContentItemAsync(
+(await client.UpsertContentItemAsync(
     Reference.ByExternalId("ext-cafe-brno"),
-    new ContentItemUpsertModel { Name = "Brno", Type = Reference.ByExternalId("cafe") });
+    new ContentItemUpsertModel { Name = "Brno", Type = Reference.ByExternalId("cafe") })).EnsureSuccess();

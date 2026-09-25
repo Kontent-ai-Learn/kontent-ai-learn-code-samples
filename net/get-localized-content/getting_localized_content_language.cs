@@ -1,12 +1,7 @@
-// For other means of creating a client, see https://github.com/kontent-ai/delivery-sdk-net#setting-up-the-delivery-client
-using var client = DeliveryClientBuilder
-    .WithOptions(builder => builder
-        .WithEnvironmentId("your-environment-id")
-        .UseProductionApi()
-        .Build())
-    .Build();
+// Or register it through DI with services.AddDeliveryClient()
+using var client = DeliveryClient.Create(new DeliveryOptions { EnvironmentId = "your-environment-id" }.UseProductionApi());
 
-// Tip: Generate models via https://github.com/kontent-ai/model-generator-net
+// Tip: Generate models via https://github.com/kontent-ai/dotnet/tree/main/src/model-generator
 // Gets a specific article in Spanish (with language fallbacks enabled by default)
 var result = await client.GetItem<Article>("about_us")
     .WithLanguage("es-ES")

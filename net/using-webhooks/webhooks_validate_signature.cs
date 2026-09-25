@@ -1,28 +1,13 @@
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
-using System;
-using System.Security.Cryptography;
-using System.Text;
+using Kontent.Ai.AspNetCore.Webhooks;
+using Microsoft.AspNetCore.Builder;
 
 // Validates the 'X-Kontent-ai-Signature' header against the raw webhook payload.
-static bool IsWebhookSignatureValid(string payload, string sharedSecret, string signatureHeader)
-{
-    if (string.IsNullOrWhiteSpace(signatureHeader))
-    {
-        return false;
-    }
+// Rejects requests to /webhooks that Kontent.ai did not sign with the webhook's secret.
+// Requires the Kontent.Ai.AspNetCore package; the secret goes to "WebhookOptions:Secret" in appsettings.json.
+var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
 
-    // Header values can be quoted depending on hosting pipeline/proxy behavior.
-    var normalizedSignature = signatureHeader.Trim().Trim('"');
-
-    var payloadBytes = Encoding.UTF8.GetBytes(payload ?? string.Empty);
-    var keyBytes = Encoding.UTF8.GetBytes(sharedSecret ?? string.Empty);
-
-    using var hmac = new HMACSHA256(keyBytes);
-    var computedBytes = hmac.ComputeHash(payloadBytes);
-    var computedSignature = Convert.ToBase64String(computedBytes);
-
-    // Use constant-time comparison to avoid timing attacks.
-    var providedBytes = Encoding.UTF8.GetBytes(normalizedSignature);
-    var expectedBytes = Encoding.UTF8.GetBytes(computedSignature);
-    return CryptographicOperations.FixedTimeEquals(providedBytes, expectedBytes);
-}
+app.UseWebhookSignatureValidator(
+    context => context.Request.Path.StartsWithSegments("/webhooks", StringComparison.OrdinalIgnoreCase),
+    builder.Configuration.GetSection(nameof(WebhookOptions)));
