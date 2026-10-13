@@ -1,58 +1,61 @@
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
 using Kontent.Ai.Management;
+using Kontent.Ai.Management.Configuration;
+using Kontent.Ai.Management.Models.TaxonomyGroups;
 
-var client = new ManagementClient(new ManagementOptions
+// Or register it through DI with services.AddManagementClient()
+using var client = new ManagementClient(new ManagementOptions
 {
     ApiKey = "KONTENT_AI_MANAGEMENT_API_KEY",
     EnvironmentId = "KONTENT_AI_ENVIRONMENT_ID"
 });
 
-var response = await client.CreateTaxonomyGroupAsync(new TaxonomyGroupCreateModel
+var response = (await client.CreateTaxonomyGroupAsync(new TaxonomyGroupCreateModel
 {
     Name = "Personas",
     ExternalId = "Tax-Group-123",
     Codename = "people",
-    Terms = new TaxonomyTermCreateModel[]
-    {
+    Terms =
+    [
         new TaxonomyTermCreateModel
         {
             Name = "Coffee expert",
             Codename = "expert",
             ExternalId = "Tax-term-456",
-            Terms = new TaxonomyTermCreateModel[]
-            {
+            Terms =
+            [
                 new TaxonomyTermCreateModel
                 {
                     Name = "Barista",
-                    ExternalId = "Tax-term-789"
+                    ExternalId = "Tax-term-789",
                 },
                 new TaxonomyTermCreateModel
                 {
                     Name = "Cafe owner",
-                    ExternalId = "Tax-term-101"
+                    ExternalId = "Tax-term-101",
                 }
-            }
+            ]
         },
         new TaxonomyTermCreateModel
         {
             Name = "Coffee enthusiast",
             Codename = "enthusiast",
             ExternalId = "Tax-term-112",
-            Terms = new TaxonomyTermCreateModel[]
-            {
+            Terms =
+            [
                 new TaxonomyTermCreateModel
                 {
                     Name = "Coffee lover",
                     ExternalId = "Tax-term-131",
-                    Codename = "lover"
+                    Codename = "lover",
                 },
                 new TaxonomyTermCreateModel
                 {
                     Name = "Coffee blogger",
                     ExternalId = "Tax-term-145",
-                    Codename = "blogger"
+                    Codename = "blogger",
                 }
-            }
+            ]
         }
-    }
-});
+    ]
+})).EnsureSuccess();

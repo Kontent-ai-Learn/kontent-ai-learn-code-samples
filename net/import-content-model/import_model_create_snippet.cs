@@ -1,18 +1,22 @@
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
 using Kontent.Ai.Management;
+using Kontent.Ai.Management.Configuration;
+using Kontent.Ai.Management.Models.TypeSnippets;
+using Kontent.Ai.Management.Models.Types.Elements;
 
-var client = new ManagementClient(new ManagementOptions
+// Or register it through DI with services.AddManagementClient()
+using var client = new ManagementClient(new ManagementOptions
 {
     ApiKey = "KONTENT_AI_MANAGEMENT_API_KEY",
     EnvironmentId = "KONTENT_AI_ENVIRONMENT_ID"
 });
 
-var response = await client.CreateContentTypeSnippetAsync(new ContentTypeSnippetCreateModel
+var response = (await client.CreateContentTypeSnippetAsync(new ContentTypeSnippetCreateModel
 {
     Name = "Metadata",
     Codename = "metadata",
-    Elements = new ElementMetadataBase[]
-    {
+    Elements =
+    [
         new TextElementMetadataModel
         {
             Name = "Title",
@@ -28,5 +32,5 @@ var response = await client.CreateContentTypeSnippetAsync(new ContentTypeSnippet
             Name = "Description",
             Codename = "description",
         },
-    }
-});
+    ]
+})).EnsureSuccess();

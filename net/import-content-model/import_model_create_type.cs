@@ -1,18 +1,24 @@
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
 using Kontent.Ai.Management;
+using Kontent.Ai.Management.Configuration;
+using Kontent.Ai.Management.Models.Shared;
+using Kontent.Ai.Management.Models.Types;
+using Kontent.Ai.Management.Models.Types.Elements;
+using Kontent.Ai.Management.Models.Types.Elements.DefaultValues;
 
-var client = new ManagementClient(new ManagementOptions
+// Or register it through DI with services.AddManagementClient()
+using var client = new ManagementClient(new ManagementOptions
 {
     ApiKey = "KONTENT_AI_MANAGEMENT_API_KEY",
     EnvironmentId = "KONTENT_AI_ENVIRONMENT_ID"
 });
 
-var response = await client.CreateContentTypeAsync(new ContentTypeCreateModel
+var response = (await client.CreateContentTypeAsync(new ContentTypeCreateModel
 {
     Name = "Blogpost",
     Codename = "blogpost",
-    ContentGroups = new[]
-    {
+    ContentGroups =
+    [
         new ContentGroupModel
         {
             Name = "Content",
@@ -28,20 +34,14 @@ var response = await client.CreateContentTypeAsync(new ContentTypeCreateModel
             Name = "Topic",
             ExternalId = "topic",
         }
-    },
-    Elements = new ElementMetadataBase[]
-    {
+    ],
+    Elements =
+    [
         new TextElementMetadataModel
         {
             Name = "Title",
             ContentGroup = Reference.ByExternalId("content"),
-            DefaultValue = new TextElementDefaultValueModel
-            {
-                Global = new TypeValue<string>()
-                {
-                    Value = "This is the default value of the text element."
-                }
-            }
+            DefaultValue = new TextElementDefaultValueModel("This is the default value of the text element.")
         },
         new AssetElementMetadataModel
         {
@@ -55,15 +55,15 @@ var response = await client.CreateContentTypeAsync(new ContentTypeCreateModel
         },
         new ContentTypeSnippetElementMetadataModel
         {
-            SnippetIdentifier = Reference.ByCodename("metadata"),
+            Snippet = Reference.ByCodename("metadata"),
             Codename = "metadata",
             ContentGroup = Reference.ByExternalId("metadata")
         },
         new TaxonomyElementMetadataModel
         {
-            TaxonomyGroup = Reference.ByExternalId("blog_topic"),
+            TaxonomyGroup = Reference.ByCodename("blog_topic"),
             Codename = "taxonomy",
             ContentGroup = Reference.ByExternalId("topic")
         }
-    }
-});
+    ]
+})).EnsureSuccess();

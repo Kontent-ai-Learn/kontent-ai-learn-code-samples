@@ -1,7 +1,11 @@
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
 using Kontent.Ai.Management;
+using Kontent.Ai.Management.Configuration;
+using Kontent.Ai.Management.Models.Assets;
+using Kontent.Ai.Management.Models.Shared;
 
-var client = new ManagementClient(new ManagementOptions
+// Or register it through DI with services.AddManagementClient()
+using var client = new ManagementClient(new ManagementOptions
 {
     ApiKey = "KONTENT_AI_MANAGEMENT_API_KEY",
     EnvironmentId = "KONTENT_AI_ENVIRONMENT_ID"
@@ -10,15 +14,13 @@ var client = new ManagementClient(new ManagementOptions
 var identifier = Reference.ByExternalId("which-brewing-fits-you");
 // var identifier = Reference.ById(Guid.Parse("fcbb12e6-66a3-4672-85d9-d502d16b8d9c"));
 
-// Used when creating a new asset or updating an existing one
-var updatedAssetResponse = await client.UpsertAssetAsync(identifier, new AssetUpsertModel
+// Used when updating an existing asset
+var updatedAssetResponse = (await client.UpsertAssetAsync(identifier, new AssetUpsertModel
 {
     Title = "Coffee Brewing Techniques",
-    Collection = new AssetCollectionReference {
-        Reference = Reference.ByCodename("first_collection")
-    },
-    Descriptions = new List<AssetDescription>
-    {
+    Collection = new AssetCollectionReference { Reference = Reference.ByCodename("first_collection") },
+    Descriptions =
+    [
         new AssetDescription
         {
             Description = "Coffee Brewing Techniques",
@@ -29,35 +31,34 @@ var updatedAssetResponse = await client.UpsertAssetAsync(identifier, new AssetUp
             Description = "Técnicas para hacer café",
             Language = Reference.ByCodename("es-ES")
         }
-    },
-    Elements = ElementBuilder.GetElementsAsDynamic(
-        new TaxonomyElement
+    ],
+    Elements =
+    [
+        new AssetTaxonomyElement
         {
             Element = Reference.ByCodename("taxonomy-categories"),
-            Value = new[]
-            {
+            Value =
+            [
                 Reference.ByCodename("coffee"),
                 Reference.ByCodename("brewing"),
-            }
-        })
-});
+            ]
+        }
+    ]
+})).EnsureSuccess();
 
 // Used when creating a new asset or updating an existing one
-var createdAssetResponse = await client.UpsertAssetAsync(Reference.ByExternalId("which-brewing-fits-you"), new AssetUpsertModel
+var createdAssetResponse = (await client.UpsertAssetAsync(Reference.ByExternalId("which-brewing-fits-you"), new AssetUpsertModel
 {
     // 'fileReference' is only required when creating a new asset
     // To create a file reference, see the "Upload a binary file" endpoint
     FileReference = new FileReference
     {
-        Id = "ab7bdf75-781b-4bf9-aed8-501048860402",
-        Type = FileReferenceTypeEnum.Internal
+        Id = "ab7bdf75-781b-4bf9-aed8-501048860402"
     },
     Title = "Coffee Brewing Techniques",
-    Collection = new AssetCollectionReference {
-        Reference = Reference.ByCodename("first_collection")
-    },
-    Descriptions = new AssetDescription[]
-    {
+    Collection = new AssetCollectionReference { Reference = Reference.ByCodename("first_collection") },
+    Descriptions =
+    [
         new AssetDescription
         {
             Description = "Coffee Brewing Techniques",
@@ -68,15 +69,17 @@ var createdAssetResponse = await client.UpsertAssetAsync(Reference.ByExternalId(
             Description = "Técnicas para hacer café",
             Language = Reference.ByCodename("es-ES")
         }
-    },
-    Elements = ElementBuilder.GetElementsAsDynamic(
-        new TaxonomyElement
+    ],
+    Elements =
+    [
+        new AssetTaxonomyElement
         {
             Element = Reference.ByCodename("taxonomy-categories"),
-            Value = new[]
-            {
+            Value =
+            [
                 Reference.ByCodename("coffee"),
                 Reference.ByCodename("brewing"),
-            }
-        })
-});
+            ]
+        }
+    ]
+})).EnsureSuccess();

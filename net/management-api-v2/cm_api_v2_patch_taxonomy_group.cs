@@ -1,7 +1,12 @@
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
 using Kontent.Ai.Management;
+using Kontent.Ai.Management.Configuration;
+using Kontent.Ai.Management.Models.Shared;
+using Kontent.Ai.Management.Models.TaxonomyGroups;
+using Kontent.Ai.Management.Models.TaxonomyGroups.Patch;
 
-var client = new ManagementClient(new ManagementOptions
+// Or register it through DI with services.AddManagementClient()
+using var client = new ManagementClient(new ManagementOptions
 {
     ApiKey = "KONTENT_AI_MANAGEMENT_API_KEY",
     EnvironmentId = "KONTENT_AI_ENVIRONMENT_ID"
@@ -11,38 +16,23 @@ var identifier = Reference.ById(Guid.Parse("0be13600-e57c-577d-8108-c8d860330985
 // var identifier = Reference.ByCodename("personas");
 // var identifier = Reference.ByExternalId("Tax-Group-123");
 
-var response = await client.ModifyTaxonomyGroupAsync(identifier, new TaxonomyGroupOperationBaseModel[]
-{
-    new TaxonomyGroupReplacePatchModel
-    {
-        PropertyName = PropertyName.Name,
-        Value = "Categories"
-    },
-    new TaxonomyGroupReplacePatchModel
-    {
-        PropertyName = PropertyName.Codename,
-        Value = "category"
-    },
-    new TaxonomyGroupReplacePatchModel
-    {
-        Reference = Reference.ByCodename("first_term"),
-        PropertyName = PropertyName.Terms,
-        Value = new TaxonomyGroupCreateModel[]
+var response = (await client.ModifyTaxonomyGroupAsync(identifier,
+[
+    TaxonomyGroupPatch.ReplaceName(identifier, "Categories"),
+    TaxonomyGroupPatch.ReplaceCodename(identifier, "category"),
+    TaxonomyGroupPatch.ReplaceTerms(Reference.ByCodename("first_term"),
+        new TaxonomyTermCreateModel
         {
-            new TaxonomyGroupCreateModel
-            {
-                Name = "Second-level taxonomy term",
-                Codename = "second_term",
-                Terms = new TaxonomyTermCreateModel[]
+            Name = "Second-level taxonomy term",
+            Codename = "second_term",
+            Terms =
+            [
+                new TaxonomyTermCreateModel
                 {
-                    new TaxonomyTermCreateModel
-                    {
-                        Name = "Third-level taxonomy term",
-                    }
+                    Name = "Third-level taxonomy term",
                 }
-            }
-        }
-    },
+            ]
+        }),
     new TaxonomyGroupRemovePatchModel
     {
         Reference = Reference.ByExternalId("unused-taxonomy-term")
@@ -53,7 +43,7 @@ var response = await client.ModifyTaxonomyGroupAsync(identifier, new TaxonomyGro
         Value = new TaxonomyTermCreateModel
         {
             Name = "New taxonomy term",
-            ExternalId = "my-new-term"
+            ExternalId = "my-new-term",
         }
     },
     new TaxonomyGroupMovePatchModel
@@ -61,4 +51,4 @@ var response = await client.ModifyTaxonomyGroupAsync(identifier, new TaxonomyGro
         Reference = Reference.ByExternalId("my-new-term"),
         Before = Reference.ByCodename("first_term")
     }
-});
+])).EnsureSuccess();

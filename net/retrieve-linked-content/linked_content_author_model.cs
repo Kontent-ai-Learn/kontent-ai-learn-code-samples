@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 using Kontent.Ai.Delivery.Attributes;
 using Kontent.Ai.Delivery.ContentItems.RichText;
 
-// Tip: Generate models via https://github.com/kontent-ai/model-generator-net
+// Tip: Generate models via https://github.com/kontent-ai/dotnet/tree/main/src/model-generator
 
 namespace KontentAiModels;
 

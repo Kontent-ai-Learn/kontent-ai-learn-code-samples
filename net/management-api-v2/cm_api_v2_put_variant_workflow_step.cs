@@ -1,7 +1,11 @@
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
 using Kontent.Ai.Management;
+using Kontent.Ai.Management.Configuration;
+using Kontent.Ai.Management.Models.LanguageVariants;
+using Kontent.Ai.Management.Models.Shared;
 
-var client = new ManagementClient(new ManagementOptions
+// Or register it through DI with services.AddManagementClient()
+using var client = new ManagementClient(new ManagementOptions
 {
     ApiKey = "KONTENT_AI_MANAGEMENT_API_KEY",
     EnvironmentId = "KONTENT_AI_ENVIRONMENT_ID"
@@ -16,17 +20,15 @@ var languageIdentifier = Reference.ById(Guid.Parse("d1f95fde-af02-b3b5-bd9e-f232
 
 var workflowStepIdentifier = Reference.ById(Guid.Parse("16221cc2-bd22-4414-a513-f3e555c0fc93"));
 
-await client.ChangeLanguageVariantWorkflowAsync(
-    new LanguageVariantIdentifier(itemIdentifier, languageIdentifier),
-    new ChangeLanguageVariantWorkflowModel(Reference.ById(Guid.Empty), workflowStepIdentifier)
-    {
-        DueDate = new DueDateModel
+(await client.ChangeLanguageVariantWorkflowAsync(
+        new LanguageVariantIdentifier(itemIdentifier, languageIdentifier),
+        new ChangeLanguageVariantWorkflowModel(Reference.ByDefaultId(), workflowStepIdentifier)
         {
-            Value = DateTime.UtcNow.AddDays(42)
-        },
-        Note = "Make sure the graphic materials we use here are on brand."
-        Contributors = new UserIdentifier[]
-        {
-            UserIdentifier.ByEmail("user@example.com"),
+            DueDate = new DueDateModel
+            {
+                Value = DateTimeOffset.UtcNow.AddDays(42)
+            },
+            Note = "Make sure the graphic materials we use here are on brand.",
+            Contributors = [UserIdentifier.ByEmail("user@example.com")]
         }
-    });
+        )).EnsureSuccess();

@@ -1,5 +1,4 @@
 // Tip: Find more about .NET SDKs at https://kontent.ai/learn/net
-using System;
 using System.Security.Cryptography;
 using System.Text;
 
