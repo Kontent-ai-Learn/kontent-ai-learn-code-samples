@@ -1,11 +1,21 @@
-using Kontent.Ai.Delivery.ContentItems.RichText.Resolution;
+using System.Text.Encodings.Web;
+using Kontent.Ai.Delivery.Abstractions;
 
-// Define URL patterns for resolving content item links by content type
-// Available placeholders: {codename}, {type}, {urlslug}, {id}
-var linkResolver = DefaultResolvers.UrlPatternResolver(new Dictionary<string, string>
+BlockResolver<IContentItemLink> linkResolver = async (link, resolveChildren) =>
 {
-    ["article"] = "/articles/{urlslug}"
-});
+    // The link text with its formatting, already rendered to HTML, so don't encode it
+    var text = await resolveChildren(link.Children);
 
-// For other means of resolving links, see SDK docs:
-// https://github.com/kontent-ai/dotnet/blob/main/src/delivery/docs/rich-text-customization.md#content-item-link-resolvers
+    // Metadata is null when the linked item isn't available, such as when it's deleted or unpublished
+    var metadata = link.Metadata;
+    var slug = metadata is { UrlSlug.Length: > 0 } ? metadata.UrlSlug : metadata?.Codename;
+
+    var url = metadata?.ContentTypeCodename switch
+    {
+        "article" => $"/articles/{slug}",
+        "product" => $"/products/{slug}",
+        _ => null
+    };
+
+    return url is null ? text : $"<a href=\"{HtmlEncoder.Default.Encode(url)}\">{text}</a>";
+};
